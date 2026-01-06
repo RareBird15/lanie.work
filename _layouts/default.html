@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' | replace: '_', '-' | strip }}">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,19 +7,35 @@
     <title>{{ page.title | default: site.title }}</title>
     {%- seo -%}
     {%- feed_meta -%}
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/avatar-simple.svg' | relative_url }}">
+    <link rel="mask-icon" href="{{ '/assets/images/avatar-simple.svg' | relative_url }}" color="#222222">
+    <link rel="apple-touch-icon" href="{{ '/assets/images/avatar-vector.svg' | relative_url }}">
+    <link rel="manifest" href="{{ '/assets/manifest.json' | relative_url }}">
+    <link rel="shortcut icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/nav.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/writing.css' | relative_url }}" />
   </head>
   <body>
-    <nav aria-label="Main navigation">
-      <ul class="site-nav">
-        {% for item in site.nav %}
-          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-    <main>
+    <a class="skip-link sr-only" href="#main">Skip to content</a>
+    <div id="a11y-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+    <header class="site-header">
+      <div class="site-brand">
+        <a href="{{ '/' | relative_url }}" class="brand-link" aria-label="Home">
+          <img src="{{ '/assets/images/avatar-vector.svg' | relative_url }}" alt="RareBird logo" width="40" height="40" />
+        </a>
+        <nav aria-label="Main navigation">
+          <ul class="site-nav">
+            {% for item in site.nav %}
+              <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
       <h1>{{ page.title | default: site.title }}</h1>
       {{ content }}
     </main>
+    <script src="{{ '/assets/js/writing.js' | relative_url }}"></script>
   </body>
 </html>

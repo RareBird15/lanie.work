@@ -1,3 +1,85 @@
 // Only the main Sass file needs front matter (the dashes are enough)
 
 /* Custom styles can go here. */
+
+/* Utility: visually-hidden / screen-reader-only content */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Skip link: hidden until keyboard focus */
+.skip-link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #ffffff;
+  color: #000000;
+  padding: 8px 12px;
+  z-index: 9999;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 4px;
+  transform: translateY(-120%);
+  transition: transform 120ms ease-in-out;
+}
+.skip-link:focus, .skip-link:active {
+  transform: translateY(4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Accessibility: improve touch target size and spacing for interactive controls */
+/* Ensure a minimum tappable area ~44x44px and clear focus styles */
+@media (any-pointer: coarse), (pointer: fine) {
+  .tag-filter,
+  .site-button,
+  .site-button.btn-reset,
+  .nav-list-expander,
+  .search-button,
+  a.read-link,
+  #pagination button,
+  .btn-reset {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    min-width: 44px;
+    min-height: 44px;
+    margin: 4px;
+    line-height: 1;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+  /* Tag chips should wrap but keep spacing between them */
+  #tag-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  /* Make inline tag links easier to tap on touch devices */
+  .tag-link-inline {
+    padding: 6px 8px;
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Visible focus for keyboard users */
+:focus-visible {
+  outline: 3px solid rgba(21, 156, 228, 0.9);
+  outline-offset: 2px;
+}
+
+/* Ensure links that look like buttons have sufficient hit area */
+a.read-link {
+  text-decoration: none;
+}
