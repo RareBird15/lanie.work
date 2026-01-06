@@ -106,69 +106,70 @@ jobs:
 
       - name: Publish accessibility artifacts to PR (create gist + comment)
         if: always()
-        uses: actions/github-script@v6
         env:
           GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
-        with:
-          script: |
-            const fs = require('fs');
-            const path = require('path');
-            const repo = context.repo;
-            const files = {};
-            const reportDir = path.join(process.cwd(), 'reports');
-            if (fs.existsSync(reportDir)) {
-              for (const name of fs.readdirSync(reportDir)) {
-                const full = path.join(reportDir, name);
-                if (fs.statSync(full).isFile()) {
-                  try {
-                    const content = fs.readFileSync(full, 'utf8');
-                    files[`reports/${name}`] = { content };
-                  } catch (e) {
-                    core.warning(`Failed to read report file ${full}: ${e.message}`);
-                  }
-                }
-              }
-            }
-            const pa11yPath = path.join(process.cwd(), 'pa11y-output.txt');
-            if (fs.existsSync(pa11yPath)) {
-              files['pa11y-output.txt'] = { content: fs.readFileSync(pa11yPath, 'utf8') };
-            }
-            if (Object.keys(files).length === 0) {
-              core.info('No artifact files found to publish as gist.');
-              return;
-            }
-            // Try to create a public gist. Prefer a user-provided secret with gist scope when available.
-            try {
-              let gistUrl = null;
-              if (process.env.GIST_TOKEN) {
-                // Create a dedicated Octokit client with the provided PAT
-                const { Octokit } = require('@octokit/rest');
-                const client = new Octokit({ auth: process.env.GIST_TOKEN });
-                const created = await client.gists.create({ files, public: true, description: `Accessibility artifacts for ${repo.owner}/${repo.repo} (run ${context.runId})` });
-                gistUrl = created.data.html_url;
-              } else {
-                // Fall back to the pre-authenticated github client (uses GITHUB_TOKEN)
-                const created = await github.rest.gists.create({ files, public: true, description: `Accessibility artifacts for ${repo.owner}/${repo.repo} (run ${context.runId})` });
-                gistUrl = created.data.html_url;
-              }
-              if (context.payload.pull_request) {
-                const prNumber = context.payload.pull_request.number;
-                const body = `Accessibility artifacts for run ${context.runId}: ${gistUrl}`;
-                await github.rest.issues.createComment({ owner: repo.owner, repo: repo.repo, issue_number: prNumber, body });
-              } else {
-                core.info(`Gist created: ${gistUrl}`);
-              }
-            } catch (err) {
-              core.warning(`Gist creation failed: ${err.message}`);
-              // Fallback: post a PR comment linking to the Actions run page where artifacts are available.
-              if (context.payload.pull_request) {
-                const prNumber = context.payload.pull_request.number;
-                const runUrl = `https://github.com/${repo.owner}/${repo.repo}/actions/runs/${context.runId}`;
-                const body = `Accessibility artifacts for run ${context.runId} are available on the Actions run page: ${runUrl}`;
-                await github.rest.issues.createComment({ owner: repo.owner, repo: repo.repo, issue_number: prNumber, body });
-                core.info(`Posted fallback PR comment linking to run ${context.runId}`);
-              } else {
-                const runUrl = `https://github.com/${repo.owner}/${repo.repo}/actions/runs/${context.runId}`;
-                core.info(`Artifacts available at: ${runUrl}`);
-              }
-            }
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          payload=/tmp/gist_payload.json
+          echo "Building gist payload from reports/ and pa11y-output.txt"
+          python3 - <<'PY' > "$payload"
+          import os,sys,json
+          files={}
+          rep='reports'
+          if os.path.isdir(rep):
+            for name in os.listdir(rep):
+              full=os.path.join(rep,name)
+              if os.path.isfile(full):
+                with open(full,'r',encoding='utf8') as fh:
+                  files[f"reports/{name}"]={'content': fh.read()}
+          if os.path.exists('pa11y-output.txt'):
+            with open('pa11y-output.txt','r',encoding='utf8') as fh:
+              files['pa11y-output.txt']={'content': fh.read()}
+          if not files:
+            # print empty object
+            print('{}')
+            sys.exit(0)
+          obj={'files': files, 'public': True, 'description': f"Accessibility artifacts for {os.environ.get('GITHUB_REPOSITORY')} (run {os.environ.get('GITHUB_RUN_ID')})"}
+          print(json.dumps(obj))
+          PY
+
+          if [ ! -s "$payload" ]; then
+            echo "No artifact files found to publish as gist."
+            exit 0
+          fi
+
+          echo "Attempting to create gist using ${GIST_TOKEN:+provided GIST_TOKEN}"
+          if [ -n "${GIST_TOKEN:-}" ]; then
+            status=$(curl -s -o /tmp/gist_response.json -w "%{http_code}" -H "Authorization: token $GIST_TOKEN" -H "Content-Type: application/json" -d @"$payload" https://api.github.com/gists)
+          else
+            status=$(curl -s -o /tmp/gist_response.json -w "%{http_code}" -H "Authorization: token $GITHUB_TOKEN" -H "Content-Type: application/json" -d @"$payload" https://api.github.com/gists)
+          fi
+
+          if [ "$status" = "201" ]; then
+            gist_url=$(jq -r '.html_url' /tmp/gist_response.json)
+            echo "Gist created: $gist_url"
+            if [ -f "$GITHUB_EVENT_PATH" ]; then
+              pr=$(jq -r '.pull_request.number // empty' "$GITHUB_EVENT_PATH")
+              if [ -n "$pr" ]; then
+                body="Accessibility artifacts for run $GITHUB_RUN_ID: $gist_url"
+                curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Content-Type: application/json" -d "{\"body\": \"$body\"}" "https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$pr/comments" >/dev/null
+              fi
+            fi
+          else
+            echo "Gist creation failed (HTTP $status):"
+            cat /tmp/gist_response.json || true
+            if [ -f "$GITHUB_EVENT_PATH" ]; then
+              pr=$(jq -r '.pull_request.number // empty' "$GITHUB_EVENT_PATH")
+              if [ -n "$pr" ]; then
+                run_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+                body="Accessibility artifacts for run $GITHUB_RUN_ID are available on the Actions run page: $run_url"
+                curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Content-Type: application/json" -d "{\"body\": \"$body\"}" "https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$pr/comments" >/dev/null
+                echo "Posted fallback PR comment linking to run $GITHUB_RUN_ID"
+              else
+                echo "Artifacts available at: https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+              fi
+            else
+              echo "Artifacts available at: https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+            fi
+          fi
