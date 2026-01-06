@@ -108,7 +108,9 @@ jobs:
                   try {
                     const content = fs.readFileSync(full, 'utf8');
                     files[`reports/${name}`] = { content };
-                  } catch (e) {}
+                  } catch (e) {
+                    core.warning(`Failed to read report file ${full}: ${e.message}`);
+                  }
                 }
               }
             }
@@ -120,12 +122,28 @@ jobs:
               core.info('No artifact files found to publish as gist.');
               return;
             }
-            const gist = await gh.rest.gists.create({ files, public: true, description: `Accessibility artifacts for ${repo.owner}/${repo.repo} (run ${context.runId})` });
-            const gistUrl = gist.data.html_url;
-            if (context.payload.pull_request) {
-              const prNumber = context.payload.pull_request.number;
-              const body = `Accessibility artifacts for run ${context.runId}: ${gistUrl}`;
-              await gh.rest.issues.createComment({ owner: repo.owner, repo: repo.repo, issue_number: prNumber, body });
-            } else {
-              core.info(`Gist created: ${gistUrl}`);
+            // Try to create a public gist. GITHUB_TOKEN often lacks 'gists' scope, so fall back to posting a PR comment with the run link.
+            try {
+              const gist = await gh.rest.gists.create({ files, public: true, description: `Accessibility artifacts for ${repo.owner}/${repo.repo} (run ${context.runId})` });
+              const gistUrl = gist.data.html_url;
+              if (context.payload.pull_request) {
+                const prNumber = context.payload.pull_request.number;
+                const body = `Accessibility artifacts for run ${context.runId}: ${gistUrl}`;
+                await gh.rest.issues.createComment({ owner: repo.owner, repo: repo.repo, issue_number: prNumber, body });
+              } else {
+                core.info(`Gist created: ${gistUrl}`);
+              }
+            } catch (err) {
+              core.warning(`Gist creation failed: ${err.message}`);
+              // Fallback: post a PR comment linking to the Actions run page where artifacts are available.
+              if (context.payload.pull_request) {
+                const prNumber = context.payload.pull_request.number;
+                const runUrl = `https://github.com/${repo.owner}/${repo.repo}/actions/runs/${context.runId}`;
+                const body = `Accessibility artifacts for run ${context.runId} are available on the Actions run page: ${runUrl}`;
+                await gh.rest.issues.createComment({ owner: repo.owner, repo: repo.repo, issue_number: prNumber, body });
+                core.info(`Posted fallback PR comment linking to run ${context.runId}`);
+              } else {
+                const runUrl = `https://github.com/${repo.owner}/${repo.repo}/actions/runs/${context.runId}`;
+                core.info(`Artifacts available at: ${runUrl}`);
+              }
             }
