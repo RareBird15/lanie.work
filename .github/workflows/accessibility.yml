@@ -1,6 +1,7 @@
 name: Accessibility Scan
 
 on:
+  workflow_dispatch:
   pull_request:
   push:
 
@@ -41,4 +42,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: accessibility-reports
-          path: accessibility-reports/**
+          path: |
+            reports/**
+            pa11y-output.txt
+            lh-*.json
+            accessibility-reports/**
