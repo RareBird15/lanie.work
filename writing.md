@@ -19,7 +19,7 @@ A personal account of my experiences as a blind, multiply disabled student in a 
 systemic failures and their long-term impact on health, functioning, and safety. (Includes discussion of medical trauma
 and institutional harm.)
 
-→ [Read the narrative](/writing/blind-multiply-disabled/)
+<span aria-hidden="true">→</span> <a href="/writing/blind-multiply-disabled/">Read the narrative</a>
 
 ### The Value of Self-Paced Education for Learners with Multiple Disabilities
 
@@ -28,7 +28,7 @@ _December 21, 2025_
 An in-depth essay exploring the challenges faced by multiply disabled learners in traditional education settings, and
 how self-paced education can provide a more accessible and flexible alternative.
 
-→ [Read the essay](/writing/self-paced-education/)
+<span aria-hidden="true">→</span> <a href="/writing/self-paced-education/">Read the essay</a>
 
 ### What It's Like Gaming as a Blind, Autistic, Chronically Ill Woman
 
@@ -37,4 +37,4 @@ _December 2024_
 A short reflection on accessibility, incremental games, and what makes gaming possible — or impossible — for me as a
 multiply disabled player.
 
-→ [Read the post](/writing/blind-autistic-gamer/)
+<span aria-hidden="true">→</span> <a href="/writing/blind-autistic-gamer/">Read the post</a>
