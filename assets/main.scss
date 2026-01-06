@@ -83,3 +83,22 @@
 a.read-link {
   text-decoration: none;
 }
+
+/* Respect users' reduced motion preference: remove non-essential motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .skip-link {
+    transition: none !important;
+    transform: none !important;
+  }
+
+  :focus-visible {
+    outline-width: 4px;
+  }
+}

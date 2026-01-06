@@ -18,7 +18,7 @@
   "MD031": false,
   "MD032": false,
   "MD033": {
-    "allowed_elements": ["iframe", "a", "br", "details", "summary", "script", "div", "p", "small"]
+    "allowed_elements": ["iframe", "a", "br", "details", "summary", "script", "div", "p", "small", "span"]
   },
   "MD034": false,
   "MD036": false,
