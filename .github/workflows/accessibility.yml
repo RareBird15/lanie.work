@@ -2,6 +2,11 @@ name: Accessibility Scan
 
 on:
   workflow_dispatch:
+    inputs:
+      threshold:
+        description: "Fail the job when violations >= this severity (minor|moderate|serious|critical)"
+        required: false
+        default: 'serious'
   pull_request:
   push:
 
@@ -47,3 +52,68 @@ jobs:
             pa11y-output.txt
             lh-*.json
             accessibility-reports/**
+
+      - name: Check Axe violations against threshold
+        if: always()
+        env:
+          THRESHOLD: ${{ github.event.inputs.threshold || 'serious' }}
+        run: |
+          case "$THRESHOLD" in
+            minor) MIN=1;;
+            moderate) MIN=2;;
+            serious) MIN=3;;
+            critical) MIN=4;;
+            *) echo "Unknown threshold '$THRESHOLD'"; exit 1;;
+          esac
+
+          count=0
+          for f in reports/axe-*.json; do
+            [ -f "$f" ] || continue
+            add=$(jq --argjson min "$MIN" '[.violations[] | select((if .impact=="critical" then 4 elif .impact=="serious" then 3 elif .impact=="moderate" then 2 elif .impact=="minor" then 1 else 0 end) >= $min)] | length' "$f" 2>/dev/null || echo 0)
+            count=$((count + add))
+          done
+          echo "Violations at or above $THRESHOLD: $count"
+          if [ "$count" -gt 0 ]; then
+            echo "Failing job due to violations >= $THRESHOLD"
+            exit 1
+          fi
+
+      - name: Publish accessibility artifacts to PR (create gist + comment)
+        if: always()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            const gh = github;
+            const repo = context.repo;
+            const files = {};
+            const reportDir = path.join(process.cwd(), 'reports');
+            if (fs.existsSync(reportDir)) {
+              for (const name of fs.readdirSync(reportDir)) {
+                const full = path.join(reportDir, name);
+                if (fs.statSync(full).isFile()) {
+                  try {
+                    const content = fs.readFileSync(full, 'utf8');
+                    files[`reports/${name}`] = { content };
+                  } catch (e) {}
+                }
+              }
+            }
+            const pa11yPath = path.join(process.cwd(), 'pa11y-output.txt');
+            if (fs.existsSync(pa11yPath)) {
+              files['pa11y-output.txt'] = { content: fs.readFileSync(pa11yPath, 'utf8') };
+            }
+            if (Object.keys(files).length === 0) {
+              core.info('No artifact files found to publish as gist.');
+              return;
+            }
+            const gist = await gh.rest.gists.create({ files, public: true, description: `Accessibility artifacts for ${repo.owner}/${repo.repo} (run ${context.runId})` });
+            const gistUrl = gist.data.html_url;
+            if (context.payload.pull_request) {
+              const prNumber = context.payload.pull_request.number;
+              const body = `Accessibility artifacts for run ${context.runId}: ${gistUrl}`;
+              await gh.rest.issues.createComment({ owner: repo.owner, repo: repo.repo, issue_number: prNumber, body });
+            } else {
+              core.info(`Gist created: ${gistUrl}`);
+            }
