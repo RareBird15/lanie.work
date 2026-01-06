@@ -121,8 +121,10 @@ jobs:
             for name in os.listdir(rep):
               full=os.path.join(rep,name)
               if os.path.isfile(full):
+                # Use a safe filename for Gist (no directory separators).
+                safe_name = f"reports-{os.path.basename(name)}"
                 with open(full,'r',encoding='utf8') as fh:
-                  files[f"reports/{name}"]={'content': fh.read()}
+                  files[safe_name]={'content': fh.read()}
           if os.path.exists('pa11y-output.txt'):
             with open('pa11y-output.txt','r',encoding='utf8') as fh:
               files['pa11y-output.txt']={'content': fh.read()}
