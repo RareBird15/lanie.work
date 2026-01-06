@@ -6,7 +6,7 @@ on:
       threshold:
         description: "Fail the job when violations >= this severity (minor|moderate|serious|critical)"
         required: false
-        default: 'serious'
+        default: "serious"
   pull_request:
   push:
 
@@ -38,10 +38,22 @@ jobs:
 
       - name: Serve built site
         run: npx http-server ./_site -p 4001 -c-1 &
+      - name: Prepare reports directory
+        run: mkdir -p reports
 
       - name: Run accessibility checks (pa11y-ci)
         run: |
-          pa11y-ci --config .pa11yci.json || true
+          # Ensure pa11y output is captured so artifacts can be uploaded and published
+          pa11y-ci --config .pa11yci.json 2>&1 | tee pa11y-output.txt || true
+
+      - name: Summarize pa11y output
+        run: |
+          echo "# Pa11y output" > reports/PA11Y_SUMMARY.md
+          if [ -f pa11y-output.txt ]; then
+            cat pa11y-output.txt >> reports/PA11Y_SUMMARY.md
+          else
+            echo "No pa11y output captured." >> reports/PA11Y_SUMMARY.md
+          fi
 
       - name: Upload accessibility reports
         uses: actions/upload-artifact@v4
