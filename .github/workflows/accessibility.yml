@@ -90,14 +90,29 @@ jobs:
             exit 1
           fi
 
+      - name: "Debug: GIST_TOKEN presence and scopes"
+        if: always()
+        env:
+          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
+        run: |
+          echo "Checking for GIST_TOKEN presence (token will not be printed)"
+          if [ -n "$GIST_TOKEN" ]; then
+            echo "GIST_TOKEN is set"
+            # Show OAuth scopes associated with the token (no token value printed)
+            curl -sI -H "Authorization: token $GIST_TOKEN" https://api.github.com/user | grep -i 'x-oauth-scopes' || echo "No scope header returned"
+          else
+            echo "GIST_TOKEN is not set in this job environment"
+          fi
+
       - name: Publish accessibility artifacts to PR (create gist + comment)
         if: always()
         uses: actions/github-script@v6
+        env:
+          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
         with:
           script: |
             const fs = require('fs');
             const path = require('path');
-            const gh = github;
             const repo = context.repo;
             const files = {};
             const reportDir = path.join(process.cwd(), 'reports');
@@ -122,14 +137,24 @@ jobs:
               core.info('No artifact files found to publish as gist.');
               return;
             }
-            // Try to create a public gist. GITHUB_TOKEN often lacks 'gists' scope, so fall back to posting a PR comment with the run link.
+            // Try to create a public gist. Prefer a user-provided secret with gist scope when available.
             try {
-              const gist = await gh.rest.gists.create({ files, public: true, description: `Accessibility artifacts for ${repo.owner}/${repo.repo} (run ${context.runId})` });
-              const gistUrl = gist.data.html_url;
+              let gistUrl = null;
+              if (process.env.GIST_TOKEN) {
+                // Create a dedicated Octokit client with the provided PAT
+                const { Octokit } = require('@octokit/rest');
+                const client = new Octokit({ auth: process.env.GIST_TOKEN });
+                const created = await client.gists.create({ files, public: true, description: `Accessibility artifacts for ${repo.owner}/${repo.repo} (run ${context.runId})` });
+                gistUrl = created.data.html_url;
+              } else {
+                // Fall back to the pre-authenticated github client (uses GITHUB_TOKEN)
+                const created = await github.rest.gists.create({ files, public: true, description: `Accessibility artifacts for ${repo.owner}/${repo.repo} (run ${context.runId})` });
+                gistUrl = created.data.html_url;
+              }
               if (context.payload.pull_request) {
                 const prNumber = context.payload.pull_request.number;
                 const body = `Accessibility artifacts for run ${context.runId}: ${gistUrl}`;
-                await gh.rest.issues.createComment({ owner: repo.owner, repo: repo.repo, issue_number: prNumber, body });
+                await github.rest.issues.createComment({ owner: repo.owner, repo: repo.repo, issue_number: prNumber, body });
               } else {
                 core.info(`Gist created: ${gistUrl}`);
               }
@@ -140,7 +165,7 @@ jobs:
                 const prNumber = context.payload.pull_request.number;
                 const runUrl = `https://github.com/${repo.owner}/${repo.repo}/actions/runs/${context.runId}`;
                 const body = `Accessibility artifacts for run ${context.runId} are available on the Actions run page: ${runUrl}`;
-                await gh.rest.issues.createComment({ owner: repo.owner, repo: repo.repo, issue_number: prNumber, body });
+                await github.rest.issues.createComment({ owner: repo.owner, repo: repo.repo, issue_number: prNumber, body });
                 core.info(`Posted fallback PR comment linking to run ${context.runId}`);
               } else {
                 const runUrl = `https://github.com/${repo.owner}/${repo.repo}/actions/runs/${context.runId}`;
