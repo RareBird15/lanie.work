@@ -2,6 +2,7 @@
 layout: page
 title: Accessibility Notes
 permalink: /accessibility-notes/
+lang: en-US
 ---
 
 This page documents **recurring accessibility barriers** I encounter in games and interactive media.

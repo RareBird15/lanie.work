@@ -2,6 +2,7 @@
 title: Work and Learning
 permalink: /work-and-learning/
 layout: page
+lang: en-US
 ---
 
 I don't focus on building polished products for show. Most of my work is exploratory, accessibility-focused, or rooted

@@ -2,6 +2,7 @@
 title: About Lanie Carmelo
 permalink: /about/
 layout: page
+lang: en-US
 ---
 
 Hi, I'm Lanie.

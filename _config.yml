@@ -20,7 +20,7 @@ plugins:
   - jekyll-feed
 
 # Site settings
-lang: en_US
+lang: en-US
 timezone: America/Denver
 
 exclude:

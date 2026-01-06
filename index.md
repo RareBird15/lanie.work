@@ -2,6 +2,7 @@
 layout: default
 title: Lanie (RareBird15)
 permalink: /
+lang: en-US
 ---
 
 Working at the intersection of faith, technology, and disability advocacy.

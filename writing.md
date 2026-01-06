@@ -2,6 +2,7 @@
 title: Writing
 permalink: /writing/
 layout: page
+lang: en-US
 ---
 
 I don't publish frequently, but sometimes I write longer pieces that I want to preserve — especially around
