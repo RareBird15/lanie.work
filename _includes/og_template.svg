@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="og-title">
+  <title id="og-title">{{ page.title | default: site.title }}</title>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0b3b5c" />
+      <stop offset="100%" stop-color="#1b6a88" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)" />
+  <g>
+    <text x="50%" y="46%" font-family="Arial,Helvetica,sans-serif" font-size="48" fill="#ffffff" text-anchor="middle">
+      {{ page.title | default: site.title }}
+    </text>
+    <text x="50%" y="58%" font-family="Arial,Helvetica,sans-serif" font-size="24" fill="#e6f0f6" text-anchor="middle">
+      {{ page.description | default: site.description }}
+    </text>
+  </g>
+  <g transform="translate(40,40)">
+    <image href="{{ '/assets/images/avatar-vector.svg' | relative_url }}" width="80" height="80" aria-hidden="true" />
+  </g>
+</svg>
