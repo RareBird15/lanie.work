@@ -93,6 +93,13 @@ a.read-link {
     scroll-behavior: auto !important;
   }
 
+  /* Ensure vendor/theme animations are fully disabled */
+  *, *::before, *::after {
+    animation-name: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
   .skip-link {
     transition: none !important;
     transform: none !important;
