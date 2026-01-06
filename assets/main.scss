@@ -1,3 +1,53 @@
 // Only the main Sass file needs front matter (the dashes are enough)
 
 /* Custom styles can go here. */
+
+/* Accessibility: improve touch target size and spacing for interactive controls */
+/* Ensure a minimum tappable area ~44x44px and clear focus styles */
+@media (any-pointer: coarse), (pointer: fine) {
+  .tag-filter,
+  .site-button,
+  .site-button.btn-reset,
+  .nav-list-expander,
+  .search-button,
+  a.read-link,
+  #pagination button,
+  .btn-reset {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    min-width: 44px;
+    min-height: 44px;
+    margin: 4px;
+    line-height: 1;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+  /* Tag chips should wrap but keep spacing between them */
+  #tag-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  /* Make inline tag links easier to tap on touch devices */
+  .tag-link-inline {
+    padding: 6px 8px;
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Visible focus for keyboard users */
+:focus-visible {
+  outline: 3px solid rgba(21, 156, 228, 0.9);
+  outline-offset: 2px;
+}
+
+/* Ensure links that look like buttons have sufficient hit area */
+a.read-link {
+  text-decoration: none;
+}
