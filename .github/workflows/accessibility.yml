@@ -1,0 +1,44 @@
+name: Accessibility Scan
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  build-and-accessibility:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+
+      - name: Install Ruby dependencies
+        run: bundle install --jobs 4 --retry 3
+
+      - name: Build site
+        run: bundle exec jekyll build
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install pa11y-ci
+        run: npm install -g pa11y-ci
+
+      - name: Serve built site
+        run: npx http-server ./_site -p 4001 -c-1 &
+
+      - name: Run accessibility checks (pa11y-ci)
+        run: |
+          pa11y-ci --config .pa11yci.json || true
+
+      - name: Upload accessibility reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: accessibility-reports
+          path: accessibility-reports/**
