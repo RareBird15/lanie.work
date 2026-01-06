@@ -2,6 +2,7 @@
 title: "Blind, Multiply Disabled, and Pushed Beyond Capacity: A Personal Narrative"
 date: 2026-01-04
 layout: article
+permalink: /writing/blind-multiply-disabled/
 summary:
   "A personal account of my experiences as a blind, multiply disabled student in a residential school setting,
   highlighting systemic failures and their long-term impact on health, functioning, and safety."
