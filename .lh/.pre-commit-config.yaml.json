@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1774990514797,
@@ -12,6 +12,14 @@
                 {
                     "date": 1775001673521,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n # Setup: uv pip install pre-commit && pre-commit install\n # Run manually: pre-commit run --all-files\n \n # Global exclusions to prevent scanning generated files or virtual environments\n-exclude: ^(output/|\\.venv/|venv/|__pycache__/|node_modules/|vendor/)\n+exclude: ^(output/|\\.venv/|venv/|__pycache__/|node_modules/|vendor/|\\.lh/|typings/)\n \n repos:\n   # General file checks\n   - repo: https://github.com/pre-commit/pre-commit-hooks\n@@ -16,13 +16,13 @@\n         name: Fix end of files\n       - id: check-yaml\n         name: Check YAML syntax\n       - id: check-added-large-files\n-        args: ['--maxkb=1000']\n+        args: [\"--maxkb=1000\"]\n       - id: check-case-conflict\n       - id: check-merge-conflict\n       - id: mixed-line-ending\n-        args: ['--fix=lf']\n+        args: [\"--fix=lf\"]\n       - id: check-json\n \n   # Markdown linting\n   - repo: https://github.com/igorshubovych/markdownlint-cli\n@@ -38,14 +38,14 @@\n     rev: v1.37.1\n     hooks:\n       - id: yamllint\n         name: Lint YAML files\n-        args: ['-c', '.yamllint.yml']\n+        args: [\"-c\", \".yamllint.yml\"]\n \n   # Check for common spelling mistakes\n   - repo: https://github.com/codespell-project/codespell\n     rev: v2.4.1\n     hooks:\n       - id: codespell\n         name: Check spelling\n-        args: ['--ignore-words=.codespell-ignore.txt']\n+        args: [\"--ignore-words=.codespell-ignore.txt\"]\n         exclude: ^(package(-lock)?\\.json|LICENSE|CNAME)$\n"
+                },
+                {
+                    "date": 1775002855305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n # Setup: uv pip install pre-commit && pre-commit install\n # Run manually: pre-commit run --all-files\n \n # Global exclusions to prevent scanning generated files or virtual environments\n-exclude: ^(output/|\\.venv/|venv/|__pycache__/|node_modules/|vendor/|\\.lh/|typings/)\n+exclude: ^(output/|\\.venv/|venv/|__pycache__/|node_modules/|vendor/|\\.lh/|typings/|reports/)\n \n repos:\n   # General file checks\n   - repo: https://github.com/pre-commit/pre-commit-hooks\n"
+                },
+                {
+                    "date": 1775002975052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n # Setup: uv pip install pre-commit && pre-commit install\n # Run manually: pre-commit run --all-files\n \n # Global exclusions to prevent scanning generated files or virtual environments\n-exclude: ^(output/|\\.venv/|venv/|__pycache__/|node_modules/|vendor/|\\.lh/|typings/|reports/)\n+exclude: ^(output/|\\.venv/|venv/|__pycache__/|node_modules/|vendor/|\\.lh/|typings/|reports/|themes/)\n \n repos:\n   # General file checks\n   - repo: https://github.com/pre-commit/pre-commit-hooks\n"
                 }
             ],
             "date": 1774990514797,

@@ -3,7 +3,7 @@
 # Run manually: pre-commit run --all-files
 
 # Global exclusions to prevent scanning generated files or virtual environments
-exclude: ^(output/|\.venv/|venv/|__pycache__/|node_modules/|vendor/|\.lh/|typings/)
+exclude: ^(output/|\.venv/|venv/|__pycache__/|node_modules/|vendor/|\.lh/|typings/|reports/|themes/)
 
 repos:
   # General file checks
