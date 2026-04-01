@@ -1,98 +1,97 @@
 # Contributing Guidelines
 
-Thank you for your interest in contributing to this project!
+Thank you for your interest in contributing to my digital garden!
+
+Because this site serves as a live accessibility testing ground and my personal workspace, contributions that improve
+screen reader navigation, semantic structure, or workflow automation are always deeply appreciated.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Ruby (version 3.0 or higher)
-- Python (version 3.8 or higher for pre-commit)
-- Bundler: `gem install bundler`
+- Python (version 3.10 or higher)
+- `uv` (Fast Python package installer and resolver)
 - Git
 
 ### Setup
 
-1. Clone the repository
-2. Run `make install` to install all dependencies and set up pre-commit hooks
-3. Run `make serve` to start the local development server
+1. Clone the repository: `git clone https://github.com/RareBird15/lanie.work.git`
+2. Navigate to the directory: `cd lanie.work`
+3. Install dependencies and set up pre-commit hooks (if configured): `uv pip install pre-commit && pre-commit install`
+4. Start the local development server: `uv run make serve`
 
 ## Development Workflow
 
 ### Running Locally
 
 ```bash
-# Start development server with live reload
-make serve
+# Start the local development server with live reload
+uv run make serve
 
-# Build the site for production
-make build
+# Build the static site for production
+uv run make html
 
-# Run linters
-make lint
+# Run linters manually (if pre-commit is installed)
+pre-commit run --all-files
 
 # Clean generated files
-make clean
+uv run make clean
 ```
 
 ### Pre-commit Hooks
 
-This project uses pre-commit hooks to maintain code quality. Hooks are automatically run before each commit and include:
+This project uses `pre-commit` to maintain code quality and prevent accessibility regressions. Hooks run automatically
+before each commit and include:
 
 - Trailing whitespace removal
 - End-of-file fixing
 - YAML syntax checking
-- Markdown linting
-- Spelling checks
+- Markdown linting (with custom rules to allow Pelican templating)
 
-To run hooks manually:
-```bash
-make lint
-```
+To skip hooks in an emergency (not recommended):
 
-To skip hooks (not recommended):
 ```bash
 git commit --no-verify
 ```
 
-## Code Style
+## Code & Content Style
 
 ### Markdown
 
-- Use ATX-style headers (`#` syntax)
-- Keep line length under 120 characters for readability
-- Use dashes for unordered lists
-- Leave blank lines around headers and code blocks
+- **Headers:** Use ATX-style headers (`#` syntax) strictly sequentially. Do not skip heading levels (e.g., jumping from
+  `##` to `####`), as this disrupts screen reader navigation.
+- **Line Length:** Keep line length under 120 characters (prose-wrap preferred) to make raw files readable.
+- **Lists:** Use dashes (`-`) or asterisks (`*`) for unordered lists. Keep list items concise to respect cognitive load.
+- **Code Blocks:** Always specify a language for fenced code blocks (e.g., `bash`, `python`, `c`).
 
-### YAML
+### Frontmatter (YAML)
 
-- Use 2 spaces for indentation
-- Keep line length under 120 characters
-- Use lowercase `true`/`false` for booleans
+- Use Title Case for keys (e.g., `Title`, `Date`, `Category`).
+- Do not put a space before the colon (use `Key: Value`, not `Key : Value`).
+- Always include a `Summary` for `content/writing/` posts so the automated Pelican index renders correctly.
 
-### Accessibility
+### Accessibility Standards
 
-- All images must have alt text
-- Use semantic HTML
-- Ensure sufficient color contrast
-- Test with screen readers when possible
+This site is built around a **Persistent Text** and **Keyboard-First** interaction model.
 
-## Testing
-
-Before submitting changes:
-
-1. Run `make lint` to check for issues
-2. Run `make build` to ensure the site builds successfully
-3. Test accessibility features
-4. Check that all links work
+- **Alt Text:** All images must have descriptive alt text. Avoid phrases like "Image of" or "Picture of"—screen readers
+  announce this automatically.
+- **Semantic HTML:** Rely on native HTML5 landmarks (nav, main, footer) provided by the Flex theme.
+- **Link Clarity:** Never use "Click here" or "Read more." Link text must describe its destination independently of the
+  surrounding text.
+- **Sensory Agnostic:** Do not provide instructions that rely on spatial relationships (e.g., "click the button on the
+  right") or color alone.
+- **Testing:** If making structural changes, test with NVDA (or another screen reader) and ensure the site remains fully
+  operable via keyboard.
 
 ## Submitting Changes
 
-1. Create a new branch for your changes
-2. Make your changes with clear, descriptive commits
-3. Ensure all tests pass
-4. Push your branch and create a pull request
+1. Create a new branch for your changes (`git checkout -b feature/your-feature-name`).
+2. Make your changes with clear, descriptive commits.
+3. Ensure the site builds successfully (`uv run make html`).
+4. Push your branch and create a Pull Request.
 
 ## Questions?
 
-Feel free to open an issue for any questions or concerns!
+Feel free to open an issue for any questions or concerns! If you are proposing a major structural change, please open an
+issue first to discuss whether it aligns with the site's low-cognitive-load philosophy.

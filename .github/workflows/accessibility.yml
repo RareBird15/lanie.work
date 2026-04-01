@@ -16,17 +16,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
         with:
-          ruby-version: "3.2"
-          bundler-cache: true
+          enable-cache: true
 
-      - name: Install Ruby dependencies
-        run: bundle install --jobs 4 --retry 3
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Pelican
+        run: uv pip install --system pelican markdown
 
       - name: Build site
-        run: bundle exec jekyll build
+        run: pelican content -s publishconf.py -o output
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -37,7 +41,7 @@ jobs:
         run: npm install -g pa11y-ci
 
       - name: Serve built site
-        run: npx http-server ./_site -p 4001 -c-1 &
+        run: npx http-server ./output -p 4001 -c-1 &
       - name: Prepare reports directory
         run: mkdir -p reports
 

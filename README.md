@@ -1,177 +1,113 @@
-# laniecarmelo.tech
+# lanie.work
 
-<!-- markdownlint-disable MD013 -->
+[![CI](https://github.com/RareBird15/lanie.work/actions/workflows/pelican-gh-pages.yml/badge.svg)](https://github.com/RareBird15/lanie.work/actions/workflows/pelican-gh-pages.yml)
 
-[![CI](https://github.com/Lanie-Carmelo/laniecarmelo.tech/actions/workflows/ci.yml/badge.svg)](https://github.com/Lanie-Carmelo/laniecarmelo.tech/actions/workflows/ci.yml)
-
-Homepage and resource hub for Lanie Carmelo: Christian, blind programmer, disability advocate, and student. Includes
-faith reflections, accessible tech tips, and recommended tools.
+Homepage and resource hub for Lanie Carmelo: Christian, accessibility tester, neurodivergent programmer, and disability
+advocate. This site documents my access needs, technical workflows, and personal essays.
 
 ## 🌟 Features
 
-- **Accessible Design**: Built with accessibility in mind, tested with screen readers
-- **SEO Optimized**: Enhanced with Jekyll SEO plugins and proper meta tags
-- **Automated Quality Checks**: Pre-commit hooks ensure code quality
-- **CI/CD Pipeline**: GitHub Actions for automated testing and validation
-- **Responsive**: Mobile-friendly design that works on all devices
+- **Accessible Design:** Built with low cognitive load in mind. Tested extensively with NVDA.
+- **Python-Powered:** Generated statically using **Pelican** and managed with **`uv`**.
+- **Automated Indexing:** Articles and essays are automatically organized without manual curation.
+- **Keyboard-Centric:** Designed for screen reader and keyboard navigation from the ground up.
 
-### Layouts
+## 📝 Writing Workflow (Automated)
 
-This site uses three layouts for accessibility and simplicity:
+You no longer need to manually update a `writing.md` list. Pelican handles the routing and index generation
+automatically.
 
-- **default**: Homepage and landing pages
-- **page**: Informational pages (about, accessibility notes, etc.)
-- **article**: Essays and long-form writing (shows publish date)
+To add a new essay or article:
 
-### Writing Workflow
+1. Create a new markdown file in the `content/writing/` folder.
+2. Add the standard Pelican YAML frontmatter (fenced by `---`):
 
-- Featured writing is manually curated in `writing.md` for accessibility and ease of use.
-- To add a new essay or article:
-  1. Create a new markdown file in the `writing/` folder.
-  2. Use `layout: article` and add a `date:` in the front matter.
-  3. Add a summary and link to the new file in `writing.md`.
+   ```yaml
+   ---
+   Title: Your Article Title
+   Date: YYYY-MM-DD
+   Category: Writing
+   Slug: your-custom-slug
+   Summary: A short description for the index page.
+   ---
+   ```
+
+3. Write your content below the frontmatter.
+4. Commit and push. The CI/CD pipeline will automatically build and publish the new article to the `/writing/` index.
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
-- Node.js (version 20 or higher)
-- Python (version 3.8 or higher)
+- Python (3.10+)
+- `uv` (Fast Python package installer and resolver)
 - Git
 
-**For development:**
-
-- Pre-commit: `pipx install pre-commit` or use a Python virtual environment
-- markdownlint-cli: Installed automatically by pre-commit
-
-### Installation
+### Local Development Setup
 
 ```bash
 # Clone the repository
-git clone https://github.com/Lanie-Carmelo/laniecarmelo.tech.git
-cd laniecarmelo.tech
+git clone [https://github.com/RareBird15/lanie.work.git](https://github.com/RareBird15/lanie.work.git)
+cd lanie.work
 
-# Install all dependencies and set up pre-commit hooks
-make install
+# Build the site
+uv run make html
 
-# Start the development server
-make serve
+# Start the local development server (live preview)
+uv run make serve
 ```
 
-Visit `http://localhost:4000` to view your site.
+Visit `http://localhost:8000` to view the site locally.
 
-## 🛠️ Development
+## 🛠️ Project Structure
 
-### Available Commands
-
-```bash
-make help      # Show all available commands
-make serve     # Run local development server with live reload
-make build     # Build the site for production
-make lint      # Run all linters and quality checks
-make fix       # Auto-fix linting issues where possible
-make clean     # Clean generated files
-make test      # Build and test the site
-```
-
-### Pre-commit Hooks
-
-This project uses [pre-commit](https://pre-commit.com/) to maintain code quality. Hooks run automatically before each
-commit and include:
-
-- ✅ Trailing whitespace removal
-- ✅ End-of-file fixing
-- ✅ YAML syntax checking
-- ✅ Markdown linting (using Node.js markdownlint-cli)
-- ✅ Spelling checks
-
-To run hooks manually: `make lint`
-
-### Project Structure
+This project uses a clean separation of static pages and chronological writing.
 
 ```text
-laniecarmelo.tech/
-├── _config.yml              # Jekyll configuration
-├── about.md                 # About page
-├── CNAME                    # Custom domain
-├── CONTRIBUTING.md          # Contribution guidelines
-├── Gemfile                  # Ruby dependencies (for Jekyll)
-├── index.md                 # Homepage content
-├── LICENSE                  # License
-├── Makefile                 # Build automation
-├── projects.md              # Projects summary
-├── QUICKREF.md              # Quick reference card
-├── README.md                # Project overview
-├── robots.txt               # Crawler rules
-├── SECURITY.md              # Security policy
-├── SETUP.md                 # Setup instructions
-├── writing.md               # Writing index
-├── .editorconfig            # Editor configuration
+lanie.work/
+├── pelicanconf.py           # Main Pelican configuration
+├── publishconf.py           # Production build settings
+├── content/
+│   ├── pages/               # Static navigation pages (About, Work, Accessibility Notes)
+│   └── writing/             # Chronological essays and articles
+├── themes/
+│   └── Flex/                # Accessible, responsive theme
 ├── .github/
 │   └── workflows/
-│       └── ci.yml           # CI/CD pipeline
-├── .markdownlint.json       # Markdown linting rules (Node.js)
-├── .pre-commit-config.yaml  # Pre-commit hooks configuration
-├── .yamllint.yml            # YAML linting rules
-└── writing/
-    └── blind-autistic-gamer.md  # Example longform post
-    └── ... (other posts)
+│       └── pelican-gh-pages.yml # CI/CD deployment pipeline
+├── .markdownlint.json       # Minimal markdown linting rules
+└── README.md                # Project overview
 ```
 
-## 📝 Content Guidelines
+## 📐 Content Guidelines
 
-### Markdown
+### Markdown & Formatting
 
-- Use ATX-style headers (`#` syntax)
-- Keep line length under 120 characters
-- Use dashes for unordered lists
-- Always include alt text for images
-- Specify a language for fenced code blocks (e.g., `bash`, `text`)
-- For essays/articles, use `layout: article` and include a publish date in the front matter.
+- Use **ATX-style headers** (`#` syntax) for logical screen reader navigation.
+- Keep line length to 120 characters (Prose-wrap preferred).
+- Always include descriptive `alt` text for images.
+- Specify a language for fenced code blocks (e.g., `bash`, `python`, `c`).
 
-### Accessibility
+### Accessibility Philosophy
 
-- All images must have descriptive alt text
-- Use semantic HTML elements
-- Maintain sufficient color contrast
-- Test with screen readers when possible
-- Manual curation of writing index for easier navigation and less cognitive load
+- **Text over Audio:** Provide persistent text for all critical information.
+- **Low Cognitive Load:** Use clear bullet points and avoid "walls of text."
+- **No Spatial Reliance:** Avoid directions or instructions that require mental mapping or visual-only placement.
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the
-process for submitting pull requests.
-
-## 📄 License
-
-This project is licensed under the terms specified in [LICENSE](LICENSE).
+Contributions are welcome! Please read `CONTRIBUTING.md` for details on our code of conduct and the process for
+submitting pull requests.
 
 ## 🔗 Links
 
-- **Website**: [laniecarmelo.tech](https://laniecarmelo.tech)
-- **Mastodon**: [@RareBird15@allovertheplace.ca](https://allovertheplace.ca/@RareBird15)
-- **X/Twitter**: [@RareBird_15](https://x.com/RareBird_15)
-- **LinkedIn**: [lanie-carmelo](https://www.linkedin.com/in/lanie-carmelo)
-- **GitHub**: [Lanie-Carmelo](https://github.com/lanie-carmelo)
+- **Website:** [lanie.work](https://lanie.work)
+- **Mastodon:** [@RareBird15@allovertheplace.ca](https://allovertheplace.ca/@RareBird15)
+- **GitHub:** [RareBird15](https://github.com/RareBird15)
+- **LinkedIn:** [laniecarmelo](https://www.linkedin.com/in/laniecarmelo/)
+- **Code::Stats:** [RareBird15](https://codestats.net/users/RareBird15)
 
 ## 🙏 Acknowledgments
 
-Built with [Jekyll](https://jekyllrb.com/) and hosted on [GitHub Pages](https://pages.github.com/).
-
-Note about dependencies: this repository uses the `github-pages` gem (see `SETUP.md`) so GitHub's Pages build
-environment provides the Jekyll version and common plugins (for example, `jekyll-seo-tag`, `jekyll-sitemap`, and
-`jekyll-feed`). The `github-pages` gem pins the exact versions of Jekyll and supported plugins used by GitHub Pages; if
-you require newer plugin releases or plugins not included in the Pages bundle, switch to a standalone Jekyll setup and
-add a CI workflow to build and publish the generated `_site`. See `SETUP.md` for full details and guidance.
-
----
-
-**Note:** Markdown linting is now handled by [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli)
-(Node.js version) via pre-commit. The old Ruby `.mdlrc` config is no longer used.
-
----
-
-## Quote
-
-_"Together, let's explore faith, technology, advocacy, and life—and work toward making the world more inclusive for
-everyone."_
+Powered by [Pelican](https://getpelican.com/), styled with the [Flex](https://github.com/alexandrevicenzi/Flex) theme,
+and hosted on [GitHub Pages](https://pages.github.com/).

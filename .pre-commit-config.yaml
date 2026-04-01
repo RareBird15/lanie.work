@@ -1,7 +1,9 @@
-# Pre-commit hooks configuration for GitHub Pages site
-# Install: pip install pre-commit
-# Setup: pre-commit install
+# Pre-commit hooks configuration for Pelican site
+# Setup: uv pip install pre-commit && pre-commit install
 # Run manually: pre-commit run --all-files
+
+# Global exclusions to prevent scanning generated files or virtual environments
+exclude: ^(output/|\.venv/|venv/|__pycache__/|node_modules/|vendor/|\.lh/|typings/)
 
 repos:
   # General file checks
@@ -10,42 +12,26 @@ repos:
     hooks:
       - id: trailing-whitespace
         name: Trim trailing whitespace
-        exclude: (\b|/)node_modules/|(\b|/)vendor/|(\b|/)\.venv/|(\b|/)venv/
       - id: end-of-file-fixer
         name: Fix end of files
-        exclude: (\b|/)node_modules/|(\b|/)vendor/|(\b|/)\.venv/|(\b|/)venv/
       - id: check-yaml
         name: Check YAML syntax
-        args: ['--unsafe']  # Allows custom YAML tags used by Jekyll
-        exclude: (\b|/)node_modules/|(\b|/)vendor/|(\b|/)\.venv/|(\b|/)venv/
       - id: check-added-large-files
-        name: Check for large files
-        args: ['--maxkb=1000']
-        exclude: (\b|/)node_modules/|(\b|/)vendor/|(\b|/)\.venv/|(\b|/)venv/
+        args: ["--maxkb=1000"]
       - id: check-case-conflict
-        name: Check for case conflicts
-        exclude: (\b|/)node_modules/|(\b|/)vendor/|(\b|/)\.venv/|(\b|/)venv/
       - id: check-merge-conflict
-        name: Check for merge conflicts
-        exclude: (\b|/)node_modules/|(\b|/)vendor/|(\b|/)\.venv/|(\b|/)venv/
       - id: mixed-line-ending
-        name: Fix mixed line endings
-        args: ['--fix=lf']
-        exclude: (\b|/)node_modules/|(\b|/)vendor/|(\b|/)\.venv/|(\b|/)venv/
+        args: ["--fix=lf"]
       - id: check-json
-        name: Check JSON syntax
-        exclude: (\b|/)node_modules/|(\b|/)vendor/|(\b|/)\.venv/|(\b|/)venv/
 
   # Markdown linting
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.47.0
     hooks:
       - id: markdownlint
-        name: Lint Markdown files (Node)
-        language: system
+        name: Lint Markdown files
         args: [--config, .markdownlint.json]
         files: \.md$
-        exclude: (\b|/)node_modules/|(\b|/)vendor/|(\b|/)\.venv/|(\b|/)venv/
 
   # YAML linting
   - repo: https://github.com/adrienverge/yamllint
@@ -53,8 +39,7 @@ repos:
     hooks:
       - id: yamllint
         name: Lint YAML files
-        args: ['-c', '.yamllint.yml']
-        exclude: (\b|/)node_modules/|(\b|/)vendor/|(\b|/)\.venv/|(\b|/)venv/
+        args: ["-c", ".yamllint.yml"]
 
   # Check for common spelling mistakes
   - repo: https://github.com/codespell-project/codespell
@@ -62,5 +47,5 @@ repos:
     hooks:
       - id: codespell
         name: Check spelling
-        args: ['--ignore-words=.codespell-ignore.txt']
-        exclude: (\b|/)node_modules/|(\b|/)vendor/|(\b|/)\.venv/|(\b|/)venv/|^package(-lock)?\.json$|^LICENSE$|^CNAME$
+        args: ["--ignore-words=.codespell-ignore.txt"]
+        exclude: ^(package(-lock)?\.json|LICENSE|CNAME)$

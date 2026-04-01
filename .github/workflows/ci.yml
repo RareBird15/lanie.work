@@ -7,55 +7,26 @@ on:
     branches: [main]
 
 jobs:
-  lint:
+  lint-and-test-build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
 
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.12"
 
-      - name: Install pre-commit
-        run: |
-          pip install pre-commit
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: '20'
-
-      - name: Install markdownlint-cli
-        run: npm install -g markdownlint-cli
+      - name: Install Dependencies
+        run: uv pip install --system pre-commit pelican markdown invoke livereload
 
       - name: Run pre-commit hooks
-        run: |
-          pre-commit run --all-files
+        run: pre-commit run --all-files
 
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v6
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.1'
-          bundler-cache: true
-
-      - name: Install dependencies
-        run: bundle install
-
-      - name: Build Jekyll site
-        run: bundle exec jekyll build
-        env:
-          JEKYLL_ENV: production
-
-      - name: Test HTML with htmlproofer
-        run: |
-          gem install html-proofer
-          htmlproofer ./_site --disable-external --allow-hash-href \
-            --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+      - name: Test Pelican Build
+        run: pelican content -s pelicanconf.py -o output

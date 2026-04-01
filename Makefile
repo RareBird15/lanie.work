@@ -1,43 +1,72 @@
-.PHONY: help install serve build clean lint fix
+PY?=
+PELICAN?=pelican
+PELICANOPTS=
 
-help: ## Show this help message
-	@echo 'Usage: make [target]'
-	@echo ''
-	@echo 'Available targets:'
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2}'
+BASEDIR=$(CURDIR)
+INPUTDIR=$(BASEDIR)/content
+OUTPUTDIR=$(BASEDIR)/output
+CONFFILE=$(BASEDIR)/pelicanconf.py
+PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-install: ## Install all dependencies
-	@echo "Configuring Bundler for local installation..."
-	bundle config set --local path 'vendor/bundle'
-	@echo "Installing Ruby dependencies..."
-	bundle install
-	@echo "Installing pre-commit..."
-	pip install pre-commit
-	@echo "Setting up pre-commit hooks..."
-	pre-commit install
-	@echo "✓ Installation complete!"
 
-serve: ## Run local development server
-	bundle exec jekyll serve --livereload --drafts
+DEBUG ?= 0
+ifeq ($(DEBUG), 1)
+	PELICANOPTS += -D
+endif
 
-build: ## Build the site for production
-	JEKYLL_ENV=production bundle exec jekyll build
+RELATIVE ?= 0
+ifeq ($(RELATIVE), 1)
+	PELICANOPTS += --relative-urls
+endif
 
-clean: ## Clean generated files
-	bundle exec jekyll clean
-	rm -rf _site .jekyll-cache
+SERVER ?= "0.0.0.0"
 
-lint: ## Run all linters
-	@echo "Running pre-commit hooks..."
-	pre-commit run --all-files
+PORT ?= 0
+ifneq ($(PORT), 0)
+	PELICANOPTS += -p $(PORT)
+endif
 
-fix: ## Auto-fix linting issues where possible
-	@echo "Fixing trailing whitespace..."
-	find . -type f \( -name "*.md" -o -name "*.yml" -o -name "*.yaml" \) -not -path "./.git/*" -not -path "./_site/*" -exec sed -i 's/[[:space:]]*$$//' {} +
-	@echo "Running linters..."
-	pre-commit run --all-files || true
 
-test: build ## Build and test the site
-	@echo "Testing HTML..."
-	gem install html-proofer
-	htmlproofer ./_site --disable-external --allow-hash-href --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+help:
+	@echo 'Makefile for a pelican Web site                                           '
+	@echo '                                                                          '
+	@echo 'Usage:                                                                    '
+	@echo '   make html                           (re)generate the web site          '
+	@echo '   make clean                          remove the generated files         '
+	@echo '   make regenerate                     regenerate files upon modification '
+	@echo '   make publish                        generate using production settings '
+	@echo '   make serve [PORT=8000]              serve site at http://localhost:8000'
+	@echo '   make serve-global [SERVER=0.0.0.0]  serve (as root) to $(SERVER):80    '
+	@echo '   make devserver [PORT=8000]          serve and regenerate together      '
+	@echo '   make devserver-global               regenerate and serve on 0.0.0.0    '
+	@echo '                                                                          '
+	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
+	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
+	@echo '                                                                          '
+
+html:
+	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
+
+clean:
+	[ ! -d "$(OUTPUTDIR)" ] || rm -rf "$(OUTPUTDIR)"
+
+regenerate:
+	"$(PELICAN)" -r "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
+
+serve:
+	"$(PELICAN)" -l "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
+
+serve-global:
+	"$(PELICAN)" -l "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS) -b $(SERVER)
+
+devserver:
+	"$(PELICAN)" -lr "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
+
+devserver-global:
+	"$(PELICAN)" -lr "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS) -b 0.0.0.0
+
+publish:
+	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
+
+
+.PHONY: html help clean regenerate serve serve-global devserver devserver-global publish

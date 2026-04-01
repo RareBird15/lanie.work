@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://laniecarmelo.tech/sitemap.xml

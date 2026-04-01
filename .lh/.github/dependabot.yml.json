@@ -1,0 +1,18 @@
+{
+    "sourceFile": ".github/dependabot.yml",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1774996176515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1774996176515,
+            "name": "Commit-0",
+            "content": "# Dependabot configuration for automated dependency updates\nversion: 2\nupdates:\n  # GitHub Actions\n  - package-ecosystem: \"github-actions\"\n    directory: \"/\"\n    schedule:\n      interval: \"weekly\"\n    labels:\n      - \"dependencies\"\n      - \"github-actions\"\n\n  # Python dependencies (replaces Bundler/Ruby)\n  - package-ecosystem: \"pip\"\n    directory: \"/\"\n    schedule:\n      interval: \"weekly\"\n    labels:\n      - \"dependencies\"\n      - \"python\"\n"
+        }
+    ]
+}

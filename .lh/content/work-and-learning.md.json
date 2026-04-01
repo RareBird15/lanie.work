@@ -1,0 +1,26 @@
+{
+    "sourceFile": "content/work-and-learning.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1774982195379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1774982222763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n ---\n-title: Work and Learning\n+Title: Work and Learning\n permalink: /work-and-learning/\n layout: page\n lang: en-US\n ---\n"
+                },
+                {
+                    "date": 1774983264936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,27 +3,19 @@\n permalink: /work-and-learning/\n layout: page\n lang: en-US\n ---\n+\n I don't focus on building polished products for show. Most of my work is exploratory, accessibility-focused, or rooted\n in lived experience. This page highlights the kinds of projects I spend time on rather than a list of finished\n deliverables.\n \n+---\n \n ## Accessibility & Usability Testing\n \n I regularly test websites, apps, and software for accessibility, with a focus on:\n----\n-Title: Work and Learning\n-Date: 2026-03-31\n-Category: Projects\n-Slug: work-and-learning\n-Summary: Highlights of accessibility-focused and exploratory projects rooted in lived experience.\n----\n \n-I don't focus on building polished products for show. Most of my work is exploratory, accessibility-focused, or rooted\n-in lived experience. This page highlights the kinds of projects I spend time on rather than a list of finished\n-\n - Screen reader usability (NVDA, JAWS, VoiceOver)\n - Keyboard navigation\n - Cognitive and sensory accessibility\n - Real-world usability for multiply disabled users\n"
+                }
+            ],
+            "date": 1774982195379,
+            "name": "Commit-0",
+            "content": "---\ntitle: Work and Learning\npermalink: /work-and-learning/\nlayout: page\nlang: en-US\n---\n\nI don't focus on building polished products for show. Most of my work is exploratory, accessibility-focused, or rooted\nin lived experience. This page highlights the kinds of projects I spend time on rather than a list of finished\ndeliverables.\n\n---\n\n## Accessibility & Usability Testing\n\nI regularly test websites, apps, and software for accessibility, with a focus on:\n\n- Screen reader usability (NVDA, JAWS, VoiceOver)\n- Keyboard navigation\n- Cognitive and sensory accessibility\n- Real-world usability for multiply disabled users\n\nSome of this work is paid usability testing; some is informal feedback, bug reports, or advocacy.\n\n---\n\n## Learning & Technical Exploration\n\nAs a self-paced computer science and full-stack student, I work on:\n\n- Small coding exercises and experiments\n- Learning projects from Codecademy and other curricula\n- Exploring how accessibility fits into real-world development workflows\n\nMost of this work lives on GitHub rather than as standalone apps.\n\n---\n\n## Self-Hosted & Personal Tools\n\nI experiment with self-hosting tools and services, including:\n\n- Personal websites (GitHub Pages + Cloudflare)\n- LanguageTool servers\n- Bookmark managers and monitoring tools\n- Accessibility-related configurations and workflows\n\nThese projects help me understand both technical systems and the user experience of maintaining them.\n\n---\n\n## Advocacy & Community Work\n\nSome of my most meaningful “projects” aren't code:\n\n- Disability advocacy and peer support\n- Moderating and co-leading online disability communities\n- Writing and speaking about accessibility, faith, and technology\n\nThis work informs everything else I do.\n\n---\n\n## Code & Repositories\n\nIf you're interested in the technical side of my work, you can find my code and experiments here:\n\n- [GitHub: lanie-carmelo](https://github.com/lanie-carmelo)\n"
+        }
+    ]
+}

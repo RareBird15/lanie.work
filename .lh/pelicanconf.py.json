@@ -1,0 +1,114 @@
+{
+    "sourceFile": "pelicanconf.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 24,
+            "patches": [
+                {
+                    "date": 1774979161378,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1774979392190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n AUTHOR_FEED_RSS = None\n \n # Blogroll\n LINKS = (\n-    (\"Pelican\", \"https://getpelican.com/\"),\n+    (\"LinkedIn\", \"https://getpelican.com/\"),\n     (\"Python.org\", \"https://www.python.org/\"),\n     (\"Jinja2\", \"https://palletsprojects.com/p/jinja/\"),\n     (\"You can modify those links in your config file\", \"#\"),\n )\n"
+                },
+                {
+                    "date": 1774979459115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,10 @@\n AUTHOR_FEED_RSS = None\n \n # Blogroll\n LINKS = (\n-    (\"LinkedIn\", \"https://getpelican.com/\"),\n-    (\"Python.org\", \"https://www.python.org/\"),\n+    (\"LinkedIn\", \"https://www.linkedin.com/in/laniecarmelo/\"),\n+    (\"GitHub\", \"https://github.com/RareBird15\"),\n     (\"Jinja2\", \"https://palletsprojects.com/p/jinja/\"),\n     (\"You can modify those links in your config file\", \"#\"),\n )\n \n"
+                },
+                {
+                    "date": 1774979571150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n # Blogroll\n LINKS = (\n     (\"LinkedIn\", \"https://www.linkedin.com/in/laniecarmelo/\"),\n     (\"GitHub\", \"https://github.com/RareBird15\"),\n-    (\"Jinja2\", \"https://palletsprojects.com/p/jinja/\"),\n+    (\"Code::Stats\", \"https://codestats.net/users/RareBird15\"),\n     (\"You can modify those links in your config file\", \"#\"),\n )\n \n # Social widget\n"
+                },
+                {
+                    "date": 1774979631593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,14 +19,14 @@\n LINKS = (\n     (\"LinkedIn\", \"https://www.linkedin.com/in/laniecarmelo/\"),\n     (\"GitHub\", \"https://github.com/RareBird15\"),\n     (\"Code::Stats\", \"https://codestats.net/users/RareBird15\"),\n-    (\"You can modify those links in your config file\", \"#\"),\n+    (\"Reddit\", \"https://www.reddit.com/user/Laniebird91/\"),\n )\n \n # Social widget\n SOCIAL = (\n-    (\"You can add links in your config file\", \"#\"),\n+    (\"Mastodon\", \"https://\"),\n     (\"Another social link\", \"#\"),\n )\n \n DEFAULT_PAGINATION = False\n"
+                },
+                {
+                    "date": 1774979660694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n )\n \n # Social widget\n SOCIAL = (\n-    (\"Mastodon\", \"https://\"),\n+    (\"Mastodon\", \"https://allovertheplace.ca/@RareBird15\"),\n     (\"Another social link\", \"#\"),\n )\n \n DEFAULT_PAGINATION = False\n"
+                },
+                {
+                    "date": 1774979698442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,18 @@\n DEFAULT_PAGINATION = False\n \n # Uncomment following line if you want document-relative URLs when developing\n # RELATIVE_URLS = True\n+# Clean URLs\n+ARTICLE_URL = \"writing/{slug}/\"\n+ARTICLE_SAVE_AS = \"writing/{slug}/index.html\"\n+PAGE_URL = \"{slug}/\"\n+PAGE_SAVE_AS = \"{slug}/index.html\"\n \n+# If you want your writing list to be at lanie.work/writing/\n+CATEGORY_URL = \"{slug}/\"\n+CATEGORY_SAVE_AS = \"{slug}/index.html\"\n+\n MARKDOWN = {\n     \"extension_configs\": {\n         \"markdown.extensions.meta\": {},\n         \"markdown.extensions.extra\": {},\n"
+                },
+                {
+                    "date": 1774979738446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+\"\"\"Configuration file for my Pelican site\"\"\"\n+\n AUTHOR = \"Lanie\"\n SITENAME = \"Lanie: Faith, Tech & Advocacy\"\n SITEURL = \"\"\n \n"
+                },
+                {
+                    "date": 1774979757354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n \n DEFAULT_PAGINATION = False\n \n # Uncomment following line if you want document-relative URLs when developing\n-# RELATIVE_URLS = True\n+RELATIVE_URLS = True\n # Clean URLs\n ARTICLE_URL = \"writing/{slug}/\"\n ARTICLE_SAVE_AS = \"writing/{slug}/index.html\"\n PAGE_URL = \"{slug}/\"\n"
+                },
+                {
+                    "date": 1774980951785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,9 @@\n DEFAULT_PAGINATION = False\n \n # Uncomment following line if you want document-relative URLs when developing\n RELATIVE_URLS = True\n+\n # Clean URLs\n ARTICLE_URL = \"writing/{slug}/\"\n ARTICLE_SAVE_AS = \"writing/{slug}/index.html\"\n PAGE_URL = \"{slug}/\"\n@@ -51,4 +52,7 @@\n         \"markdown.extensions.extra\": {},\n     },\n     \"output_format\": \"html5\",\n }\n+\n+# Theme\n+THEME = \"themes/Flex\"\n"
+                },
+                {
+                    "date": 1774980957737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,4 +55,5 @@\n }\n \n # Theme\n THEME = \"themes/Flex\"\n+display_categories_on_menu = True\n"
+                },
+                {
+                    "date": 1774981007990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,4 +56,23 @@\n \n # Theme\n THEME = \"themes/Flex\"\n display_categories_on_menu = True\n+\n+# Flex specific settings\n+SITELOGO = \"/images/avatar-simple.svg\"\n+BROWSER_COLOR = \"#333333\"\n+ROBOTS = \"index, follow\"\n+\n+# This adds the \"intersection of faith...\" line right under your title in the sidebar\n+SITESUBTITLE = (\n+    \"Working at the intersection of faith, technology, and disability advocacy.\"\n+)\n+\n+# Copyright and Footer\n+COPYRIGHT_YEAR = 2026\n+MAIN_MENU = True\n+MENUITEMS = (\n+    (\"Archives\", \"/archives.html\"),\n+    (\"Categories\", \"/categories.html\"),\n+    (\"Tags\", \"/tags.html\"),\n+)\n"
+                },
+                {
+                    "date": 1774981203295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,8 +49,12 @@\n MARKDOWN = {\n     \"extension_configs\": {\n         \"markdown.extensions.meta\": {},\n         \"markdown.extensions.extra\": {},\n+        \"markdown.extensions.toc\": {\n+            \"title\": \"Table of Contents\"\n+        },  # Helpful for long essays\n+        \"markdown.extensions.admonition\": {},  # For \"Note\" or \"Warning\" blocks\n     },\n     \"output_format\": \"html5\",\n }\n \n"
+                },
+                {
+                    "date": 1774981236742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-\"\"\"Configuration file for my Pelican site\"\"\"\n+\"\"\"Configuration file for my Pelican site.\"\"\"\n \n AUTHOR = \"Lanie\"\n SITENAME = \"Lanie: Faith, Tech & Advocacy\"\n SITEURL = \"\"\n"
+                },
+                {
+                    "date": 1774981246173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n     \"extension_configs\": {\n         \"markdown.extensions.meta\": {},\n         \"markdown.extensions.extra\": {},\n         \"markdown.extensions.toc\": {\n-            \"title\": \"Table of Contents\"\n+            \"title\": \"Table of Contents\",\n         },  # Helpful for long essays\n         \"markdown.extensions.admonition\": {},  # For \"Note\" or \"Warning\" blocks\n     },\n     \"output_format\": \"html5\",\n"
+                },
+                {
+                    "date": 1774981369736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \n AUTHOR = \"Lanie\"\n SITENAME = \"Lanie: Faith, Tech & Advocacy\"\n SITEURL = \"\"\n+SITELOGO = \"/images/avatar-simple.svg\"\n \n PATH = \"content\"\n \n TIMEZONE = \"America/Chicago\"\n"
+                },
+                {
+                    "date": 1774981465826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,12 +26,9 @@\n     (\"Reddit\", \"https://www.reddit.com/user/Laniebird91/\"),\n )\n \n # Social widget\n-SOCIAL = (\n-    (\"Mastodon\", \"https://allovertheplace.ca/@RareBird15\"),\n-    (\"Another social link\", \"#\"),\n-)\n+SOCIAL = ((\"Mastodon\", \"https://allovertheplace.ca/@RareBird15\"),)\n \n DEFAULT_PAGINATION = False\n \n # Uncomment following line if you want document-relative URLs when developing\n"
+                },
+                {
+                    "date": 1774981675014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,16 +19,17 @@\n AUTHOR_FEED_RSS = None\n \n # Blogroll\n LINKS = (\n-    (\"LinkedIn\", \"https://www.linkedin.com/in/laniecarmelo/\"),\n     (\"GitHub\", \"https://github.com/RareBird15\"),\n     (\"Code::Stats\", \"https://codestats.net/users/RareBird15\"),\n     (\"Reddit\", \"https://www.reddit.com/user/Laniebird91/\"),\n )\n \n # Social widget\n-SOCIAL = ((\"Mastodon\", \"https://allovertheplace.ca/@RareBird15\"),)\n+SOCIAL = ((\"Mastodon\", \"https://allovertheplace.ca/@RareBird15\"),\n+              (\"LinkedIn\", \"https://www.linkedin.com/in/laniecarmelo/\"),\n+,)\n \n DEFAULT_PAGINATION = False\n \n # Uncomment following line if you want document-relative URLs when developing\n"
+                },
+                {
+                    "date": 1774981708351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,11 +25,12 @@\n     (\"Reddit\", \"https://www.reddit.com/user/Laniebird91/\"),\n )\n \n # Social widget\n-SOCIAL = ((\"Mastodon\", \"https://allovertheplace.ca/@RareBird15\"),\n-              (\"LinkedIn\", \"https://www.linkedin.com/in/laniecarmelo/\"),\n-,)\n+SOCIAL = (\n+    (\"Mastodon\", \"https://allovertheplace.ca/@RareBird15\"),\n+    (\"LinkedIn\", \"https://www.linkedin.com/in/laniecarmelo/\"),\n+)\n \n DEFAULT_PAGINATION = False\n \n # Uncomment following line if you want document-relative URLs when developing\n"
+                },
+                {
+                    "date": 1774981778448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,15 +21,16 @@\n # Blogroll\n LINKS = (\n     (\"GitHub\", \"https://github.com/RareBird15\"),\n     (\"Code::Stats\", \"https://codestats.net/users/RareBird15\"),\n-    (\"Reddit\", \"https://www.reddit.com/user/Laniebird91/\"),\n+    (\"Email\", \"mailto:lanie.rarebird15@gmail.com\"),\n )\n \n # Social widget\n SOCIAL = (\n     (\"Mastodon\", \"https://allovertheplace.ca/@RareBird15\"),\n     (\"LinkedIn\", \"https://www.linkedin.com/in/laniecarmelo/\"),\n+    (\"Reddit\", \"https://www.reddit.com/user/Laniebird91/\"),\n )\n \n DEFAULT_PAGINATION = False\n \n"
+                },
+                {
+                    "date": 1774981831550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,11 +26,11 @@\n )\n \n # Social widget\n SOCIAL = (\n-    (\"Mastodon\", \"https://allovertheplace.ca/@RareBird15\"),\n-    (\"LinkedIn\", \"https://www.linkedin.com/in/laniecarmelo/\"),\n-    (\"Reddit\", \"https://www.reddit.com/user/Laniebird91/\"),\n+    (\"mastodon\", \"https://allovertheplace.ca/@RareBird15\"),\n+    (\"linkedin\", \"https://www.linkedin.com/in/laniecarmelo/\"),\n+    (\"reddit\", \"https://www.reddit.com/user/Laniebird91/\"),\n )\n \n DEFAULT_PAGINATION = False\n \n"
+                },
+                {
+                    "date": 1774981878126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,4 +80,15 @@\n     (\"Archives\", \"/archives.html\"),\n     (\"Categories\", \"/categories.html\"),\n     (\"Tags\", \"/tags.html\"),\n )\n+\n+MENUITEMS = (\n+    (\"Archives\", \"/archives/\"),\n+    (\"Categories\", \"/categories/\"),\n+    (\"Tags\", \"/tags/\"),\n+)\n+\n+# And add these to ensure Pelican generates those folders:\n+ARCHIVES_SAVE_AS = \"archives/index.html\"\n+CATEGORIES_SAVE_AS = \"categories/index.html\"\n+TAGS_SAVE_AS = \"tags/index.html\"\n"
+                },
+                {
+                    "date": 1774981913124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,8 +74,10 @@\n )\n \n # Copyright and Footer\n COPYRIGHT_YEAR = 2026\n+\n+# Menus\n MAIN_MENU = True\n MENUITEMS = (\n     (\"Archives\", \"/archives.html\"),\n     (\"Categories\", \"/categories.html\"),\n"
+                },
+                {
+                    "date": 1774981954414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,96 +1,78 @@\n-\"\"\"Configuration file for my Pelican site.\"\"\"\n+\"\"\"Configuration file for Lanie's Pelican site.\"\"\"\n \n AUTHOR = \"Lanie\"\n SITENAME = \"Lanie: Faith, Tech & Advocacy\"\n-SITEURL = \"\"\n+SITESUBTITLE = (\n+    \"Working at the intersection of faith, technology, and disability advocacy.\"\n+)\n+SITEURL = \"\"  # Leave blank for local development\n SITELOGO = \"/images/avatar-simple.svg\"\n \n PATH = \"content\"\n-\n TIMEZONE = \"America/Chicago\"\n-\n DEFAULT_LANG = \"en\"\n \n-# Feed generation is usually not desired when developing\n+# --- Feed settings ---\n FEED_ALL_ATOM = None\n CATEGORY_FEED_ATOM = None\n TRANSLATION_FEED_ATOM = None\n AUTHOR_FEED_ATOM = None\n AUTHOR_FEED_RSS = None\n \n-# Blogroll\n+# --- Blogroll (Text Links) ---\n LINKS = (\n     (\"GitHub\", \"https://github.com/RareBird15\"),\n     (\"Code::Stats\", \"https://codestats.net/users/RareBird15\"),\n     (\"Email\", \"mailto:lanie.rarebird15@gmail.com\"),\n )\n \n-# Social widget\n+# --- Social widget (Icon Links) ---\n SOCIAL = (\n     (\"mastodon\", \"https://allovertheplace.ca/@RareBird15\"),\n     (\"linkedin\", \"https://www.linkedin.com/in/laniecarmelo/\"),\n     (\"reddit\", \"https://www.reddit.com/user/Laniebird91/\"),\n )\n \n-DEFAULT_PAGINATION = False\n-\n-# Uncomment following line if you want document-relative URLs when developing\n-RELATIVE_URLS = True\n-\n-# Clean URLs\n+# --- URL Settings (Clean URLs) ---\n ARTICLE_URL = \"writing/{slug}/\"\n ARTICLE_SAVE_AS = \"writing/{slug}/index.html\"\n PAGE_URL = \"{slug}/\"\n PAGE_SAVE_AS = \"{slug}/index.html\"\n-\n-# If you want your writing list to be at lanie.work/writing/\n CATEGORY_URL = \"{slug}/\"\n CATEGORY_SAVE_AS = \"{slug}/index.html\"\n \n+# These ensure the Archives/Tags/Categories pages also use Clean URLs\n+ARCHIVES_SAVE_AS = \"archives/index.html\"\n+CATEGORIES_SAVE_AS = \"categories/index.html\"\n+TAGS_SAVE_AS = \"tags/index.html\"\n+\n+DEFAULT_PAGINATION = False\n+RELATIVE_URLS = True  # Better for testing locally in WSL\n+\n+# --- Markdown Extensions ---\n MARKDOWN = {\n     \"extension_configs\": {\n         \"markdown.extensions.meta\": {},\n         \"markdown.extensions.extra\": {},\n-        \"markdown.extensions.toc\": {\n-            \"title\": \"Table of Contents\",\n-        },  # Helpful for long essays\n-        \"markdown.extensions.admonition\": {},  # For \"Note\" or \"Warning\" blocks\n+        \"markdown.extensions.toc\": {\"title\": \"Table of Contents\"},\n+        \"markdown.extensions.admonition\": {},\n     },\n     \"output_format\": \"html5\",\n }\n \n-# Theme\n+# --- Theme and UI ---\n THEME = \"themes/Flex\"\n-display_categories_on_menu = True\n+DISPLAY_CATEGORIES_ON_MENU = True\n+MAIN_MENU = True\n+COPYRIGHT_YEAR = 2026\n \n # Flex specific settings\n-SITELOGO = \"/images/avatar-simple.svg\"\n BROWSER_COLOR = \"#333333\"\n ROBOTS = \"index, follow\"\n \n-# This adds the \"intersection of faith...\" line right under your title in the sidebar\n-SITESUBTITLE = (\n-    \"Working at the intersection of faith, technology, and disability advocacy.\"\n-)\n-\n-# Copyright and Footer\n-COPYRIGHT_YEAR = 2026\n-\n-# Menus\n-MAIN_MENU = True\n+# This maps the top navigation bar to your clean URLs\n MENUITEMS = (\n-    (\"Archives\", \"/archives.html\"),\n-    (\"Categories\", \"/categories.html\"),\n-    (\"Tags\", \"/tags.html\"),\n-)\n-\n-MENUITEMS = (\n     (\"Archives\", \"/archives/\"),\n     (\"Categories\", \"/categories/\"),\n     (\"Tags\", \"/tags/\"),\n )\n-\n-# And add these to ensure Pelican generates those folders:\n-ARCHIVES_SAVE_AS = \"archives/index.html\"\n-CATEGORIES_SAVE_AS = \"categories/index.html\"\n-TAGS_SAVE_AS = \"tags/index.html\"\n"
+                },
+                {
+                    "date": 1774984596492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,4 +75,7 @@\n     (\"Archives\", \"/archives/\"),\n     (\"Categories\", \"/categories/\"),\n     (\"Tags\", \"/tags/\"),\n )\n+\n+# Save the 'blog' index elsewhere if you want a static home page\n+INDEX_SAVE_AS = \"writing/index.html\"\n"
+                }
+            ],
+            "date": 1774979161378,
+            "name": "Commit-0",
+            "content": "AUTHOR = \"Lanie\"\nSITENAME = \"Lanie: Faith, Tech & Advocacy\"\nSITEURL = \"\"\n\nPATH = \"content\"\n\nTIMEZONE = \"America/Chicago\"\n\nDEFAULT_LANG = \"en\"\n\n# Feed generation is usually not desired when developing\nFEED_ALL_ATOM = None\nCATEGORY_FEED_ATOM = None\nTRANSLATION_FEED_ATOM = None\nAUTHOR_FEED_ATOM = None\nAUTHOR_FEED_RSS = None\n\n# Blogroll\nLINKS = (\n    (\"Pelican\", \"https://getpelican.com/\"),\n    (\"Python.org\", \"https://www.python.org/\"),\n    (\"Jinja2\", \"https://palletsprojects.com/p/jinja/\"),\n    (\"You can modify those links in your config file\", \"#\"),\n)\n\n# Social widget\nSOCIAL = (\n    (\"You can add links in your config file\", \"#\"),\n    (\"Another social link\", \"#\"),\n)\n\nDEFAULT_PAGINATION = False\n\n# Uncomment following line if you want document-relative URLs when developing\n# RELATIVE_URLS = True\n\nMARKDOWN = {\n    \"extension_configs\": {\n        \"markdown.extensions.meta\": {},\n        \"markdown.extensions.extra\": {},\n    },\n    \"output_format\": \"html5\",\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "sourceFile": "content/pages/contact.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1774987254921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1774987278122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,10 @@\n few days to respond. I value clear, direct, and thoughtful communication.\n \n ## Where to Find Me\n \n-- **Email:** [lanie.rarebird15@gmail.com](mailto:lanie.rarebird15@gmail.com) — Best for professional inquiries,\n-  usability testing, or long-form thoughts.\n+- **Email:** [lanie.rarebird15@gmail.com](mailto:lanie.rarebird15@gmail.com): Best for professional inquiries, usability\n+  testing, or long-form thoughts.\n - **Mastodon:** [@RareBird15@allovertheplace.ca](https://allovertheplace.ca/@RareBird15) — My primary social home base\n   for accessibility advocacy and tech talk.\n - **Professional:** [LinkedIn](https://www.linkedin.com/in/laniecarmelo/) or [GitHub](https://github.com/RareBird15).\n \n"
+                },
+                {
+                    "date": 1774987292640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n ## Where to Find Me\n \n - **Email:** [lanie.rarebird15@gmail.com](mailto:lanie.rarebird15@gmail.com): Best for professional inquiries, usability\n   testing, or long-form thoughts.\n-- **Mastodon:** [@RareBird15@allovertheplace.ca](https://allovertheplace.ca/@RareBird15) — My primary social home base\n+- **Mastodon:** [@RareBird15@allovertheplace.ca](https://allovertheplace.ca/@RareBird15): My primary social home base\n   for accessibility advocacy and tech talk.\n - **Professional:** [LinkedIn](https://www.linkedin.com/in/laniecarmelo/) or [GitHub](https://github.com/RareBird15).\n \n ## Communication Preferences\n"
+                },
+                {
+                    "date": 1774987331233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,12 +20,12 @@\n ## Communication Preferences\n \n To respect my cognitive load and accessibility needs:\n \n-1.  **Text over Voice:** I do not do well with voice calls or \"ephemeral\" audio. Please send a text-based message so I\n-    can process it at my own pace.\n-2.  **Explicit Context:** When reaching out, please be clear about your intent. \"Query over memory\" applies here too—I\n-    appreciate it when the subject line tells me exactly what the message is about.\n-3.  **Accessibility First:** If you are a developer seeking a usability audit, please include a link to your project or\n-    documentation so I can evaluate if it fits my interaction model.\n+1. **Text over Voice:** I do not do well with voice calls or \"ephemeral\" audio. Please send a text-based message so I\n+   can process it at my own pace.\n+2. **Explicit Context:** When reaching out, please be clear about your intent. \"Query over memory\" applies here too—I\n+   appreciate it when the subject line tells me exactly what the message is about.\n+3. **Accessibility First:** If you are a developer seeking a usability audit, please include a link to your project or\n+   documentation so I can evaluate if it fits my interaction model.\n \n _Thank you for respecting my time and energy._\n"
+                },
+                {
+                    "date": 1774987337472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,8 @@\n 1. **Text over Voice:** I do not do well with voice calls or \"ephemeral\" audio. Please send a text-based message so I\n    can process it at my own pace.\n 2. **Explicit Context:** When reaching out, please be clear about your intent. \"Query over memory\" applies here too—I\n    appreciate it when the subject line tells me exactly what the message is about.\n-3. **Accessibility First:** If you are a developer seeking a usability audit, please include a link to your project or\n+3. **Accessibility First:** If you're a developer seeking a usability audit, please include a link to your project or\n    documentation so I can evaluate if it fits my interaction model.\n \n _Thank you for respecting my time and energy._\n"
+                }
+            ],
+            "date": 1774987254921,
+            "name": "Commit-0",
+            "content": "---\nTitle: Contact\nSlug: contact\nSummary: How to reach me and what to expect regarding communication and energy-based planning.\n---\n\nThe best way to reach me is via **email** or **Mastodon**.\n\nBecause I manage my life and work using **energy-based planning**, I am selective about my commitments and may take a\nfew days to respond. I value clear, direct, and thoughtful communication.\n\n## Where to Find Me\n\n- **Email:** [lanie.rarebird15@gmail.com](mailto:lanie.rarebird15@gmail.com) — Best for professional inquiries,\n  usability testing, or long-form thoughts.\n- **Mastodon:** [@RareBird15@allovertheplace.ca](https://allovertheplace.ca/@RareBird15) — My primary social home base\n  for accessibility advocacy and tech talk.\n- **Professional:** [LinkedIn](https://www.linkedin.com/in/laniecarmelo/) or [GitHub](https://github.com/RareBird15).\n\n## Communication Preferences\n\nTo respect my cognitive load and accessibility needs:\n\n1.  **Text over Voice:** I do not do well with voice calls or \"ephemeral\" audio. Please send a text-based message so I\n    can process it at my own pace.\n2.  **Explicit Context:** When reaching out, please be clear about your intent. \"Query over memory\" applies here too—I\n    appreciate it when the subject line tells me exactly what the message is about.\n3.  **Accessibility First:** If you are a developer seeking a usability audit, please include a link to your project or\n    documentation so I can evaluate if it fits my interaction model.\n\n_Thank you for respecting my time and energy._\n"
+        }
+    ]
+}

@@ -1,6 +1,4 @@
 # Dependabot configuration for automated dependency updates
-# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates
-
 version: 2
 updates:
   # GitHub Actions
@@ -12,12 +10,11 @@ updates:
       - "dependencies"
       - "github-actions"
 
-  # Bundler (Ruby dependencies)
-  - package-ecosystem: "bundler"
+  # Python dependencies (replaces Bundler/Ruby)
+  - package-ecosystem: "pip"
     directory: "/"
     schedule:
       interval: "weekly"
     labels:
       - "dependencies"
-      - "ruby"
-    open-pull-requests-limit: 5
+      - "python"
