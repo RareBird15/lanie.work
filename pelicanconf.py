@@ -38,8 +38,8 @@ ARTICLE_URL = "writing/{slug}/"
 ARTICLE_SAVE_AS = "writing/{slug}/index.html"
 PAGE_URL = "{slug}/"
 PAGE_SAVE_AS = "{slug}/index.html"
-CATEGORY_URL = "{slug}/"
-CATEGORY_SAVE_AS = "{slug}/index.html"
+CATEGORY_URL = "category/{slug}/"
+CATEGORY_SAVE_AS = "category/{slug}/index.html"
 
 # These ensure the Archives/Tags/Categories pages also use Clean URLs
 ARCHIVES_SAVE_AS = "archives/index.html"

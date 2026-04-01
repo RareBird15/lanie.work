@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 24,
+            "activePatchIndex": 28,
             "patches": [
                 {
                     "date": 1774979161378,
@@ -104,6 +104,22 @@
                 {
                     "date": 1774984596492,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,4 +75,7 @@\n     (\"Archives\", \"/archives/\"),\n     (\"Categories\", \"/categories/\"),\n     (\"Tags\", \"/tags/\"),\n )\n+\n+# Save the 'blog' index elsewhere if you want a static home page\n+INDEX_SAVE_AS = \"writing/index.html\"\n"
+                },
+                {
+                    "date": 1775004288870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n ARTICLE_SAVE_AS = \"writing/{slug}/index.html\"\n PAGE_URL = \"{slug}/\"\n PAGE_SAVE_AS = \"{slug}/index.html\"\n CATEGORY_URL = \"{slug}/\"\n-CATEGORY_SAVE_AS = \"{slug}/index.html\"\n+CATEGORY_SAVE_AS = \"category/{slug}/index.html\"\n \n # These ensure the Archives/Tags/Categories pages also use Clean URLs\n ARCHIVES_SAVE_AS = \"archives/index.html\"\n CATEGORIES_SAVE_AS = \"categories/index.html\"\n"
+                },
+                {
+                    "date": 1775004324747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n ARTICLE_URL = \"writing/{slug}/\"\n ARTICLE_SAVE_AS = \"writing/{slug}/index.html\"\n PAGE_URL = \"{slug}/\"\n PAGE_SAVE_AS = \"{slug}/index.html\"\n-CATEGORY_URL = \"{slug}/\"\n+CATEGORY_URL = \"category/{slug}/\"\n CATEGORY_SAVE_AS = \"category/{slug}/index.html\"\n \n # These ensure the Archives/Tags/Categories pages also use Clean URLs\n ARCHIVES_SAVE_AS = \"archives/index.html\"\n"
+                },
+                {
+                    "date": 1775007767159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n     \"output_format\": \"html5\",\n }\n \n # --- Theme and UI ---\n-THEME = \"themes/Flex\"\n+THEME = \"themes/flex\"\n DISPLAY_CATEGORIES_ON_MENU = True\n MAIN_MENU = True\n COPYRIGHT_YEAR = 2026\n \n"
+                },
+                {
+                    "date": 1775007906044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n     \"output_format\": \"html5\",\n }\n \n # --- Theme and UI ---\n-THEME = \"themes/flex\"\n+THEME = \"themes/Flex\"\n DISPLAY_CATEGORIES_ON_MENU = True\n MAIN_MENU = True\n COPYRIGHT_YEAR = 2026\n \n"
                 }
             ],
             "date": 1774979161378,
