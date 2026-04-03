@@ -1,10 +1,13 @@
 [project]
 name = "lanie-work"
 version = "0.1.0"
-description = "Add your description here"
+description = "Personal blog and portfolio built with Pelican and Python."
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "markdown>=3.10.2",
-    "pelican[markdown]>=4.11.0.post0",
+  "markdown>=3.10.2",
+  "pelican-readtime>=0.2.1",
+  "pelican-seo>=1.4.0",
+  "pelican-sitemap>=1.2.2",
+  "pelican[markdown]>=4.11.0.post0",
 ]

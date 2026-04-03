@@ -2,6 +2,8 @@
 #    uv pip compile pyproject.toml -o requirements.txt
 anyio==4.13.0
     # via watchfiles
+beautifulsoup4==4.14.3
+    # via pelican-seo
 blinker==1.9.0
     # via pelican
 docutils==0.22.4
@@ -25,6 +27,16 @@ mdurl==0.1.2
 ordered-set==4.1.0
     # via pelican
 pelican==4.11.0.post0
+    # via
+    #   lanie-work (pyproject.toml)
+    #   pelican-readtime
+    #   pelican-seo
+    #   pelican-sitemap
+pelican-readtime==0.2.1
+    # via lanie-work (pyproject.toml)
+pelican-seo==1.4.0
+    # via lanie-work (pyproject.toml)
+pelican-sitemap==1.2.2
     # via lanie-work (pyproject.toml)
 pygments==2.18.0
     # via
@@ -36,6 +48,10 @@ rich==14.3.3
     # via pelican
 six==1.17.0
     # via python-dateutil
+soupsieve==2.8.3
+    # via beautifulsoup4
+typing-extensions==4.15.0
+    # via beautifulsoup4
 unidecode==1.4.0
     # via pelican
 watchfiles==1.1.1

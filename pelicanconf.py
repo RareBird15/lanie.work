@@ -79,3 +79,16 @@ MENUITEMS = (
 
 # Save the 'blog' index elsewhere if you want a static home page
 INDEX_SAVE_AS = "writing/index.html"
+
+PLUGINS = [
+    "pelican.plugins.seo",
+    "pelican.plugins.sitemap",
+    "pelican.plugins.readtime",
+]
+
+# Set once: Sitemaps help search engines crawl your site
+SITEMAP = {
+    "format": "xml",
+    "priorities": {"articles": 0.5, "indexes": 0.5, "pages": 0.5},
+    "frequencies": {"articles": "monthly", "indexes": "daily", "pages": "monthly"},
+}
