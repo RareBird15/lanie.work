@@ -18,6 +18,7 @@ markdown==3.10.2
     # via
     #   lanie-work (pyproject.toml)
     #   pelican
+    #   pelican-yaml-metadata
 markdown-it-py==4.0.0
     # via rich
 markupsafe==3.0.3
@@ -32,11 +33,14 @@ pelican==4.11.0.post0
     #   pelican-readtime
     #   pelican-seo
     #   pelican-sitemap
+    #   pelican-yaml-metadata
 pelican-readtime==0.2.1
     # via lanie-work (pyproject.toml)
 pelican-seo==1.4.0
     # via lanie-work (pyproject.toml)
 pelican-sitemap==1.2.2
+    # via lanie-work (pyproject.toml)
+pelican-yaml-metadata==2.1.2
     # via lanie-work (pyproject.toml)
 pygments==2.18.0
     # via
@@ -44,6 +48,8 @@ pygments==2.18.0
     #   rich
 python-dateutil==2.9.0.post0
     # via pelican
+pyyaml==6.0.3
+    # via pelican-yaml-metadata
 rich==14.3.3
     # via pelican
 six==1.17.0

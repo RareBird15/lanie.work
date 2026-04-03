@@ -9,5 +9,6 @@ dependencies = [
   "pelican-readtime>=0.2.1",
   "pelican-seo>=1.4.0",
   "pelican-sitemap>=1.2.2",
+  "pelican-yaml-metadata>=2.1.2",
   "pelican[markdown]>=4.11.0.post0",
 ]
