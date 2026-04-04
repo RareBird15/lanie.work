@@ -84,6 +84,7 @@ PLUGINS = [
     "pelican.plugins.seo",
     "pelican.plugins.sitemap",
     "pelican.plugins.readtime",
+    "yaml_metadata",
 ]
 
 # Set once: Sitemaps help search engines crawl your site
