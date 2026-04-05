@@ -1,2 +1,5 @@
 # Ignore Jekyll layout files to prevent Prettier from reformatting Liquid tags
 _layouts/*.html
+
+# Ignore Flex theme templates, which contain complex Liquid tags that Prettier may misformat
+themes/Flex/templates/**/*.html

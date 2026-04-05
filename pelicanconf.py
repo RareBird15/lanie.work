@@ -2,6 +2,7 @@
 
 AUTHOR = "Lanie"
 SITENAME = "Lanie: Faith, Tech & Advocacy"
+SITETITLE = "Lanie"
 SITESUBTITLE = (
     "Working at the intersection of faith, technology, and disability advocacy."
 )
