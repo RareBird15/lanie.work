@@ -41,3 +41,19 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+
+# Python tooling caches and reports
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+
+# Local report artifacts
+seo_report.html
+
+# Local history and generated site output
+.lh/
+output/
