@@ -2,7 +2,9 @@
 Title: Accessibility Notes
 Slug: accessibility-notes
 Date: 2026-03-31
-Summary: My consistent interaction model: Why text-first, keyboard-centric, and query-based systems work for my neurodivergent profile.
+Summary:
+  "My consistent interaction model: Why text-first, keyboard-centric, and query-based systems work for my neurodivergent
+  profile."
 ---
 
 This page documents my **consistent interaction model**. My access needs aren't just preferences; they are the framework
