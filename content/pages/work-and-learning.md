@@ -59,3 +59,52 @@ If you're interested in the "raw" side of my learning, you can find my experimen
 - **[GitHub: RareBird15](https://github.com/RareBird15)** – My scripts, dotfiles, and learning projects.
 - **[Code::Stats](https://codestats.net/users/RareBird15)** – A real-time look at the languages I'm currently
   practicing.
+
+## Featured Projects
+
+### Terminal Bible Reader
+
+The **Bible Reader** is a lightweight, terminal-based workflow designed for daily scripture reading. It focuses on logic
+and accessibility rather than visual polish, serving as a practical tool for users who prefer text-centric environments.
+
+#### Core Functionality
+
+The project automates the transition from complex digital formats to a simple, day-by-day terminal interface:
+
+- **EPUB Processing**: It imports WorldBiblePlans-style EPUBs and converts them into a normalized markdown plan.
+- **Modular Content**: The system splits full plans into individual files, separating scripture from commentary to allow
+  for focused reading.
+- **Progress Tracking**: It utilizes standard Linux (XDG) directories to maintain local state, tracking which day the
+  user is on without cluttering the home folder.
+
+#### Accessibility and Design Philosophy
+
+Accessibility is treated as a core technical requirement rather than a cosmetic feature:
+
+- **Screen Reader Optimization**: Output is formatted as plain, readable text with predictable headings, avoiding
+  decorative ASCII art or color-dependent information.
+- **Low Cognitive Load**: The design emphasizes clarity and predictability, making it suitable for users who value
+  humane technology.
+- **Keyboard-Centricity**: As a CLI tool, it is fully navigable via keyboard, fitting into a streamlined Linux
+  development environment.
+
+#### Integration and Tooling
+
+Built as a modern Python package, it integrates directly into a CLI-driven workflow:
+
+- **Shell Integration**: The `maybe-read-bible` command can be added to shell startup files (like `.bashrc`), prompting
+  the user to read exactly once per day.
+- **State Management**: It uses file locking to prevent multiple terminal instances from overwriting progress
+  concurrently.
+- **Modern Stack**: The project is maintained using tools like `uv` for dependency management and `ruff` for code
+  quality.
+
+#### Project Purpose
+
+This tool represents an intersection of faith and technical systems, prioritizing robust code that serves the user’s
+specific needs over following frontend trends.
+
+#### Link to Repository
+
+- **[Terminal Bible Reader on GitHub](https://github.com/rarebird15/bible-reader)**: Explore the code, contribute, or
+  use it for your own daily scripture reading.
