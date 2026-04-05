@@ -3,7 +3,12 @@ Title: "Blind, Multiply Disabled, and Pushed Beyond Capacity: A Personal Narrati
 Date: 2026-01-04
 Modified: 2026-03-31
 Category: Writing
-Tags: advocacy, medical-trauma, blindness, neurodivergent, personal
+Tags:
+  - advocacy
+  - medical-trauma
+  - blindness
+  - neurodivergent
+  - personal
 Slug: blind-multiply-disabled
 Summary:
   A personal account of my experiences as a blind, multiply disabled student in a residential school setting,
