@@ -23,7 +23,6 @@ AUTHOR_FEED_RSS = None
 LINKS = (
     ("GitHub", "https://github.com/RareBird15"),
     ("Code::Stats", "https://codestats.net/users/RareBird15"),
-    ("Email", "mailto:lanie.rarebird15@gmail.com"),
 )
 
 # --- Social widget (Icon Links) ---
