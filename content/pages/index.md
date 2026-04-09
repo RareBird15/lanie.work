@@ -18,7 +18,7 @@ humane, predictable, and inclusive.
   real-world barriers that automated testing often misses.
 - **Low-Cognitive-Load Systems:** Developing and promoting designs that respect a user's sensory needs and mental
   energy.
-- **Self-Paced Systems Learning:** Studying Computer Science (Python, C, Lua) and Linux systems (Arch/WSL) with an
+- **Self-Paced Systems Learning:** Studying Computer Science (Python, SQL, Lua) and Linux systems (Arch/WSL) with an
   emphasis on keyboard-centric, CLI-driven workflows.
 - **Faith-Informed Advocacy:** Approaching technology and disability rights through a lens of service and spiritual
   exploration, currently focused on broader Christian history and Gnosticism.

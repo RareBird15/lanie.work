@@ -21,7 +21,7 @@ I'm a self-paced Computer Science student. Because traditional education often l
 accommodations, I’ve built my own curriculum centered on logic, systems, and low-cognitive-load design. My current focus
 includes:
 
-- **Computer Science & Systems:** Deepening my understanding of Python, C, Lua, and SQL through Codecademy and Exercism.
+- **Computer Science & Systems:** Deepening my understanding of Python, Lua, and SQL through Codecademy and Exercism.
 - **Linux & Tooling:** Mastering Arch Linux (via WSL), CLI-driven workflows, and automation tools like `chezmoi` and
   `uv`.
 - **Theology & History:** Exploring broader Christian history and Gnosticism. I value spiritual exploration that looks

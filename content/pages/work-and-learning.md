@@ -32,7 +32,7 @@ I'm currently a self-paced student moving through a rigorous Computer Science cu
 frontend trends, I focus on the "bones" of computing:
 
 - **Programming:** Working through the **Codecademy Computer Science path** (currently ~22% complete), with a focus on
-  **Python, C, Lua, and SQL**.
+  **Python, Lua, and SQL**.
 - **Linux Mastery:** Running **Arch Linux via WSL** as my primary development environment.
 - **Dotfile Management:** Using **`chezmoi`** to maintain a consistent, accessible CLI environment across Windows and
   Linux.
