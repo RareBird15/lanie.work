@@ -13,4 +13,11 @@ dependencies = [
   "pelican-sitemap>=1.2.2",
   "pelican-yaml-metadata>=2.1.2",
   "pelican[markdown]>=4.11.0.post0",
+  "pelican-related-posts>=1.0.0",
+  "pelican-share-post>=1.2.1",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.5.1",
 ]

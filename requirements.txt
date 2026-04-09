@@ -3,9 +3,19 @@
 anyio==4.13.0
     # via watchfiles
 beautifulsoup4==4.14.3
-    # via pelican-seo
+    # via
+    #   pelican-seo
+    #   pelican-share-post
 blinker==1.9.0
     # via pelican
+blurhash==1.1.5
+    # via mastodon-py
+certifi==2026.2.25
+    # via requests
+charset-normalizer==3.4.7
+    # via requests
+decorator==5.2.1
+    # via mastodon-py
 docutils==0.22.4
     # via pelican
 feedgenerator==2.2.1
@@ -13,7 +23,9 @@ feedgenerator==2.2.1
 feedparser==6.0.12
     # via lanie-work (pyproject.toml)
 idna==3.11
-    # via anyio
+    # via
+    #   anyio
+    #   requests
 jinja2==3.1.6
     # via pelican
 markdown==3.10.2
@@ -21,12 +33,12 @@ markdown==3.10.2
     #   lanie-work (pyproject.toml)
     #   pelican
     #   pelican-yaml-metadata
-mastodon-py==2.1.4
-    # via lanie-work (pyproject.toml)
 markdown-it-py==4.0.0
     # via rich
 markupsafe==3.0.3
     # via jinja2
+mastodon-py==2.1.4
+    # via lanie-work (pyproject.toml)
 mdurl==0.1.2
     # via markdown-it-py
 ordered-set==4.1.0
@@ -35,12 +47,18 @@ pelican==4.11.0.post0
     # via
     #   lanie-work (pyproject.toml)
     #   pelican-readtime
+    #   pelican-related-posts
     #   pelican-seo
+    #   pelican-share-post
     #   pelican-sitemap
     #   pelican-yaml-metadata
 pelican-readtime==0.2.1
     # via lanie-work (pyproject.toml)
+pelican-related-posts==1.0.0
+    # via lanie-work (pyproject.toml)
 pelican-seo==1.4.0
+    # via lanie-work (pyproject.toml)
+pelican-share-post==1.2.1
     # via lanie-work (pyproject.toml)
 pelican-sitemap==1.2.2
     # via lanie-work (pyproject.toml)
@@ -51,11 +69,19 @@ pygments==2.18.0
     #   pelican
     #   rich
 python-dateutil==2.9.0.post0
-    # via pelican
+    # via
+    #   mastodon-py
+    #   pelican
+python-magic==0.4.27
+    # via mastodon-py
 pyyaml==6.0.3
     # via pelican-yaml-metadata
+requests==2.33.1
+    # via mastodon-py
 rich==14.3.3
     # via pelican
+sgmllib3k==1.0.0
+    # via feedparser
 six==1.17.0
     # via python-dateutil
 soupsieve==2.8.3
@@ -64,5 +90,7 @@ typing-extensions==4.15.0
     # via beautifulsoup4
 unidecode==1.4.0
     # via pelican
+urllib3==2.6.3
+    # via requests
 watchfiles==1.1.1
     # via pelican

@@ -83,8 +83,10 @@ INDEX_SAVE_AS = "writing/index.html"
 PLUGINS = [
     "pelican.plugins.seo",
     "pelican.plugins.sitemap",
-    "pelican.plugins.readtime",
     "yaml_metadata",
+    "pelican.plugins.share_post",
+    "pelican.plugins.related_posts",
+    "pelican.plugins.readtime",
 ]
 
 # Set once: Sitemaps help search engines crawl your site
