@@ -34,8 +34,8 @@ SOCIAL = (
 )
 
 # --- URL Settings (Clean URLs) ---
-ARTICLE_URL = "writing/{slug}/"
-ARTICLE_SAVE_AS = "writing/{slug}/index.html"
+ARTICLE_URL = "{category}/{slug}/"
+ARTICLE_SAVE_AS = "{category}/{slug}/index.html"
 PAGE_URL = "{slug}/"
 PAGE_SAVE_AS = "{slug}/index.html"
 CATEGORY_URL = "category/{slug}/"
