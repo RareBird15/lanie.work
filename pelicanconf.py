@@ -6,7 +6,7 @@ SITETITLE = "Lanie"
 SITESUBTITLE = (
     "Working at the intersection of faith, technology, and disability advocacy."
 )
-SITEURL = ""  # Leave blank for local development
+SITEURL = "https://lanie.work"  # Leave blank for local development
 SITELOGO = "/images/avatar-simple.svg"
 
 PATH = "content"
@@ -54,7 +54,7 @@ MARKDOWN = {
     "extension_configs": {
         "markdown.extensions.meta": {},
         "markdown.extensions.extra": {},
-        "markdown.extensions.toc": {"title": "Table of Contents"},
+        "markdown.extensions.toc": {"title": ""},
         "markdown.extensions.admonition": {},
     },
     "output_format": "html5",

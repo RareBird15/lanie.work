@@ -1,17 +1,21 @@
 ---
 Title: "Building a Franken-System: When Ecosystems Fail Disabled Users"
 Date: 2026-04-04
-Category: Writing
+Category: Technology
 Tags:
-  - accessibility
-  - disability
-  - technology
-  - workflow
+  - Accessibility
+  - Disability
+  - Technology
+  - Workflow
 Slug: franken-system
 Summary:
   A personal look at the "accessibility tax" and why multiply-disabled users are forced to build fragmented, fragile
   tech stacks just to function.
 ---
+
+## Table of Contents
+
+[TOC]
 
 ## The Myth of the Seamless Ecosystem
 

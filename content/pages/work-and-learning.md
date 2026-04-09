@@ -5,6 +5,10 @@ Date: 2026-03-31
 Summary: A summary of my professional usability testing, self-paced Computer Science studies, and technical interests.
 ---
 
+## Table of Contents
+
+[TOC]
+
 I don't focus on building polished products for show. Most of my work is exploratory, rooted in lived experience, or
 focused on making systems more robust. This page highlights my active roles and the technical systems I'm currently
 mastering.

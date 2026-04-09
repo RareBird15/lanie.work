@@ -5,6 +5,10 @@ Date: 2026-03-31
 Summary: Christian, programmer, and accessibility advocate working at the intersection of faith and technology.
 ---
 
+## Table of Contents
+
+[TOC]
+
 Hi, I'm Lanie.
 
 I'm a Christian, a blind, autistic, chronically ill programmer, and a freelance usability tester. My work is driven by a

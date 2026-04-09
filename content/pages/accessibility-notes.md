@@ -7,6 +7,10 @@ Summary:
   profile."
 ---
 
+## Table of Contents
+
+[TOC]
+
 This page documents my **consistent interaction model**. My access needs aren't just preferences; they are the framework
 that makes programming, gaming, and digital life possible for me as a blind, neurodivergent, and chronically ill user.
 

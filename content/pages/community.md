@@ -5,6 +5,10 @@ Date: 2026-04-05
 Summary: Dedicated spaces for peer support, resource sharing, and connection within the disabled community.
 ---
 
+## Table of Contents
+
+[TOC]
+
 My advocacy is rooted in the belief that technology should be an act of care. I lead and facilitate several text-centric
 communities designed to reduce cognitive load and provide humane alternatives to traditional social media.
 

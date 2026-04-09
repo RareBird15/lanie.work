@@ -2,18 +2,22 @@
 Title: What It's Like Gaming as a Blind, Neurodivergent, Chronically Ill Woman
 Date: 2024-12-08
 Modified: 2026-03-31
-Category: Writing
+Category: Gaming
 Tags:
-  - accessibility
-  - neurodivergent
-  - blindness
-  - chronic-illness
-  - gaming
+  - Accessibility
+  - Neurodivergent
+  - Blindness
+  - Chronic Illness
+  - Gaming
 Slug: blind-neurodivergent-gamer
 Summary:
   A personal reflection on the barriers and joys of gaming with multiple disabilities, focusing on why text-first,
   untimed systems are essential for my access.
 ---
+
+## Table of Contents
+
+[TOC]
 
 Gaming has been a part of my life for as long as I can remember. From puzzles as a child to text-based adventures in
 school, games have always been a place of joy, challenge, and escape.

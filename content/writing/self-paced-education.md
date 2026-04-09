@@ -2,19 +2,23 @@
 Title: The Value of Self-Paced Education for Learners with Multiple Disabilities
 Date: 2025-12-21
 Modified: 2026-03-31
-Category: Writing
+Category: Education
 Tags:
-  - accessibility
-  - neurodivergent
-  - blindness
-  - chronic-illness
-  - education
-  - advocacy
+  - Accessibility
+  - Neurodivergent
+  - Blindness
+  - Chronic Illness
+  - Education
+  - Advocacy
 Slug: self-paced-education
 Summary:
   An in-depth essay exploring the challenges faced by multiply disabled learners in traditional education settings, and
   how self-paced education provides a more accessible and flexible alternative.
 ---
+
+## Table of Contents
+
+[TOC]
 
 ## Introduction: Why Self-Paced Education Matters
 
