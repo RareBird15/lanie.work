@@ -30,7 +30,8 @@ humane, predictable, and inclusive.
 - **[About Me]({filename}/pages/about.md):** My background, current roles, and learning path.
 - **[Work and Learning]({filename}/pages/work-and-learning.md):** My technical stack, professional testing focus, and
   active projects.
-- **[Writing]({category}writing):** Selected essays and reflections on technology and life.
+- **Writing:** Explore my thoughts on [Technology]({category}technology), [Gaming]({category}gaming),
+  [Education]({category}education), and [Advocacy]({category}advocacy).
 
 ---
 
