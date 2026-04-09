@@ -24,6 +24,7 @@ class FeedEntry(Protocol):
 
     link: str
     title: str
+    tags: Sequence[dict[str, str]]
 
 
 class ParsedFeed(Protocol):
@@ -47,21 +48,11 @@ class MastodonStatus(Protocol):
 class MastodonClient(Protocol):
     """The subset of Mastodon client APIs used by this script."""
 
-    def account_verify_credentials(self) -> MastodonAccount:
-        """Return the authenticated account information."""
-        ...
-
+    def account_verify_credentials(self) -> MastodonAccount: ...
     def account_statuses(
-        self,
-        account_id: int | str,
-        limit: int = RECENT_STATUS_LIMIT,
-    ) -> Sequence[MastodonStatus]:
-        """Return recent statuses for the given account id."""
-        ...
-
-    def status_post(self, status: str) -> object:
-        """Publish a new status and return Mastodon's response object."""
-        ...
+        self, account_id: int | str, limit: int = RECENT_STATUS_LIMIT
+    ) -> Sequence[MastodonStatus]: ...
+    def status_post(self, status: str) -> object: ...
 
 
 def setup_logging() -> None:
@@ -69,15 +60,16 @@ def setup_logging() -> None:
     logging.basicConfig(level=logging.INFO, format="%(message)s")
 
 
-def get_latest_post(feed_url: str) -> tuple[str, str] | None:
-    """Return the latest `(title, url)` pair from the RSS feed, if available."""
+def get_latest_post(feed_url: str) -> tuple[str, str, list[str]] | None:
+    """Return the latest `(title, url, tags)` triple from the RSS feed, if available."""
     feedparser_module: Any = feedparser
     parsed_feed = cast("ParsedFeed", feedparser_module.parse(feed_url))
     if not parsed_feed.entries:
         return None
 
     latest_entry = parsed_feed.entries[0]
-    return latest_entry.title, latest_entry.link
+    tags = [tag["term"].replace(" ", "") for tag in latest_entry.get("tags", [])]
+    return latest_entry.title, latest_entry.link, tags
 
 
 def build_mastodon_client() -> MastodonClient:
@@ -93,10 +85,7 @@ def build_mastodon_client() -> MastodonClient:
 
 
 def is_duplicate_post(
-    client: MastodonClient,
-    post_url: str,
-    *,
-    recent_limit: int = RECENT_STATUS_LIMIT,
+    client: MastodonClient, post_url: str, *, recent_limit: int = RECENT_STATUS_LIMIT
 ) -> bool:
     """Check whether a post URL appears in the account's recent statuses."""
     account = client.account_verify_credentials()
@@ -104,10 +93,13 @@ def is_duplicate_post(
     return any(post_url in status.content for status in recent_statuses)
 
 
-def publish_post(client: MastodonClient, post_title: str, post_url: str) -> None:
+def publish_post(
+    client: MastodonClient, post_title: str, post_url: str, tags: list[str]
+) -> None:
     """Publish a formatted post announcement to Mastodon."""
-    message = f"New post: {post_title}\n\n{post_url}"
-    client.status_post(message)
+    hashtags = " ".join([f"#{tag}" for tag in tags])
+    message = f"New post: {post_title}\n\n{post_url}\n\n{hashtags}"
+    client.status_post(message.strip())
 
 
 def main() -> int:
@@ -119,14 +111,14 @@ def main() -> int:
         logger.info("Feed is empty. Nothing to post.")
         return 0
 
-    post_title, post_url = latest_post
+    post_title, post_url, tags = latest_post
     mastodon_client = build_mastodon_client()
 
     if is_duplicate_post(mastodon_client, post_url):
         logger.info("Duplicate prevented: '%s' was already posted.", post_title)
         return 0
 
-    publish_post(mastodon_client, post_title, post_url)
+    publish_post(mastodon_client, post_title, post_url, tags)
     logger.info("Successfully posted: %s", post_title)
     return 0
 
