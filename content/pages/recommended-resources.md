@@ -30,6 +30,8 @@ These are the primary tools that make my digital life and programming work possi
   organize my thoughts.
 - **[Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/):** I use this to run a Linux
   environment while still benefiting from the accessibility features of Windows.
+- **[1Password](https://1password.com/):** I rely on this for secure password management, which is crucial for my online
+  security and peace of mind.
 
 ## Services and Platforms
 
@@ -44,6 +46,9 @@ These platforms support my work, learning, and health management.
   with other Google services.
 - **[PureTalk](https://www.puretalk.com/):** A mobile service provider that offers affordable plans, which is crucial
   for staying connected without excessive costs.
+- **[Guava Health](https://guavahealth.com/):** A health tracking and management platform that I use to monitor my
+  symptoms, medications, and overall health trends. This data-driven approach helps me and my healthcare providers make
+  informed decisions about my care.
 
 ## Tactile Hardware
 
@@ -51,6 +56,8 @@ Precision and physical feedback are crucial for my setup.
 
 - **[Keychron K10 Max](https://www.keychron.com/):** This mechanical keyboard provides the tactile response I need to
   know exactly where my hands are. I've customized the firmware to make the layout more predictable and efficient.
+- **[Humanware Brailliant BI 40X](https://www.humanware.com/en-us/products/brailliant-bi-40x):** My refreshable braille
+  display, which is essential for reading and navigating digital content in a way that works for me.
 - **[HydroFlask](https://www.hydroflask.com/):** Staying hydrated is a mechanical necessity for managing my health. I
   use these because they're durable and keep water at a consistent temperature, which helps with my symptoms.
 
