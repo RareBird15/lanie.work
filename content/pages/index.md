@@ -30,6 +30,8 @@ humane, predictable, and inclusive.
 - **[About Me]({filename}/pages/about.md):** My background, current roles, and learning path.
 - **[Work and Learning]({filename}/pages/work-and-learning.md):** My technical stack, professional testing focus, and
   active projects.
+- **[Usability Testing]({filename}/pages/usability-testing.md):** Want me to test your product? Here's how I approach
+  usability testing and what I can offer.
 - **[Accessibility Notes]({filename}/pages/accessibility-notes.md):** Notes on what does and doesn't work for me in
   digital products.
 - **[Community]({filename}/pages/community.md):** Links to online groups I run.
