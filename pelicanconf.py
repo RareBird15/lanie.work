@@ -6,7 +6,7 @@ SITETITLE = "Lanie"
 SITESUBTITLE = (
     "Working at the intersection of faith, technology, and disability advocacy."
 )
-SITEURL = "https://lanie.work"  # Leave blank for local development
+SITEURL = ""  # Leave blank for local development
 SITELOGO = "/images/avatar-simple.svg"
 
 PATH = "content"
@@ -81,12 +81,13 @@ MENUITEMS = (
 INDEX_SAVE_AS = "writing/index.html"
 
 PLUGINS = [
-    "pelican.plugins.seo",
+    # "pelican.plugins.seo",
     "pelican.plugins.sitemap",
-    "yaml_metadata",
+    "pelican.plugins.yaml_metadata",
     "pelican.plugins.share_post",
     "pelican.plugins.related_posts",
     "pelican.plugins.readtime",
+    "pelican.plugins.search",  # The new addition
 ]
 
 # Set once: Sitemaps help search engines crawl your site
@@ -94,4 +95,11 @@ SITEMAP = {
     "format": "xml",
     "priorities": {"articles": 0.5, "indexes": 0.5, "pages": 0.5},
     "changefreqs": {"articles": "monthly", "indexes": "daily", "pages": "monthly"},
+}
+
+# Stork Search Configuration
+STORK_INPUT_OPTIONS = {
+    "base_directory": "content",
+    "url_prefix": SITEURL,
+    "html_selector": "main",
 }

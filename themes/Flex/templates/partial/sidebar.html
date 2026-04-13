@@ -21,9 +21,10 @@
     <form class="navbar-search" action="{{ SITEURL }}/search.html" role="search">
       <input type="text" name="q" id="tipue_search_input" placeholder="{{ _('Search...') }}">
     </form>
-    {% elif 'pelican.plugins.search' in PLUGINS %}
+    {% elif 'search' in PLUGINS or 'pelican.plugins.search' in PLUGINS %}
     <div class="stork">
-      <input class="stork-input" type="text" autocomplete="off" name="q" data-stork="sitesearch" placeholder="{{ _('Search...') }}" onclick="loadStorkIndex()"/>
+      <h2 class="stork-title">{{ _('Search') }}</h2>
+      <input class="stork-input" type="text" autocomplete="off" name="q" data-stork="sitesearch" placeholder="{{ _('Search...') }}" onfocus="loadStorkIndex()"/>
       <div class="stork-output" data-stork="sitesearch-output"></div>
     </div>
     {% endif %}

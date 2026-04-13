@@ -15,9 +15,12 @@ dependencies = [
   "pelican[markdown]>=4.11.0.post0",
   "pelican-related-posts>=1.0.0",
   "pelican-share-post>=1.2.1",
+  "pelican-search>=1.1.1",
+  "djlint>=1.36.4",
 ]
 
 [dependency-groups]
 dev = [
+    "djlint>=1.36.4",
     "pre-commit>=4.5.1",
 ]

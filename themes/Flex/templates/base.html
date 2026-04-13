@@ -77,7 +77,7 @@
     href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch.min.css" />
   {% endif %}
 
-  {% if 'pelican.plugins.search' in PLUGINS %}
+    {% if PLUGINS and ('search' in PLUGINS or 'pelican.plugins.search' in PLUGINS) %}
   <link rel="stylesheet"
         type="text/css"
         href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/stork/stork.css" />
@@ -184,6 +184,13 @@
   {% include 'partial/stork.html' %}
   {% include 'partial/cf_analytics.html' %}
 
-  {% block additional_js %}{% endblock %}
+  {% block additional_js %}
+  <script src="https://files.stork-search.net/releases/v1.6.0/stork.js"></script>
+<script>
+    function loadStorkIndex() {
+        stork.register("sitesearch", "{{ SITEURL }}/search-index.st");
+    }
+</script>
+{% endblock additional_js%}
 </body>
 </html>

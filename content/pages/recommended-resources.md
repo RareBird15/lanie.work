@@ -38,6 +38,8 @@ These tools form my backend-focused development environment.
   environment (Arch Linux) while still benefiting from the accessibility features of Windows.
 - **[Vestige](https://github.com/samvallad33/vestige):** An MCP server that gives GitHub Copilot a better memory. I can
   tell it my accessibility needs, and it remembers them across sessions, which is a game-changer for my workflow.
+- **[GitHub Copilot](https://github.com/features/copilot):** An AI-powered code completion tool that helps me write code
+  faster and with fewer errors.
 
 ## Productivity and Digital Security
 
@@ -59,6 +61,10 @@ These tools reduce my cognitive load and keep my digital life organized and secu
   which is crucial for staying connected.
 - **[Gmail](https://mail.google.com/):** My primary email service. I rely on its accessibility features and integration
   with other Google services.
+- **[Google Calendar](https://calendar.google.com/):** I use this to manage my schedule and appointments. Its
+  accessibility features allow me to navigate and organize my calendar effectively.
+- [Google Tasks](https://tasks.google.com/): I use this for task management and to keep track of my to-do lists. It
+  integrates well with Google Calendar and Gmail, which helps me stay organized.
 
 ## Hardware and Custom Solutions
 
@@ -84,6 +90,11 @@ Managing multiple chronic conditions requires a systems-based approach to health
 - **MediClear Plus:** A medical food powder from Thorne I use for nutritional support when my digestive system is
   struggling.
 - **UltraMeal:** A medical food powder from Metagenics designed to support metabolic health.
+- **[TheraBath paraffin bath](https://www.therabath.com/):** I use this for heat therapy to manage pain and improve
+  circulation in my hands.
+- **[Almay deodorant](https://www.almay.com/products/deodorant/):** I use this deodorant because it's gentle on my skin
+  and doesn't cause irritation, which is important for managing my sensory sensitivities. Unlike most deodorants, it
+  doesn't trigger my skin issues, making it a reliable choice for daily use.
 
 ## Learning and Theology
 
@@ -103,7 +114,9 @@ These platforms provide accessible entertainment and information that I can enjo
 interfaces.
 
 - **[YouTube](https://www.youtube.com/):** I use YouTube for a wide range of content, from educational videos to
-  entertainment. The platform's accessibility features allow me to navigate and consume content effectively.
+  entertainment. The platform's accessibility features allow me to navigate and consume content effectively. YouTube is
+  great for those days when I don't feel well enough to read or watch something that requires a lot of attention, but I
+  still want to engage with content.
 - **[Spotify](https://www.spotify.com/):** My go-to music streaming service. I rely on its accessibility features to
   discover and enjoy music without needing to navigate complex menus.
 - **[Audible](https://www.audible.com/):** I use Audible for audiobooks and podcasts. The platform's accessibility
@@ -121,6 +134,8 @@ I recommend these games because they prioritize menus and systems over spatial n
 - **[EmpireMUD](https://empiremud.net/):** A text game that uses coordinates and pathing to help me navigate without
   needing a mental map.
 - **[Stellar Aeon](https://stellaraeon.com:4081/):** A text-based space exploration game that emphasizes strategy.
+- **[Erion](https://erionmud.com/):** A MUD (Multi-User Dungeon) that focuses on exploration and social interaction
+  through text commands.
 
 ## Technical and Disability Communities
 

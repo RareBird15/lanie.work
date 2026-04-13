@@ -48,6 +48,7 @@ pelican==4.11.0.post0
     #   lanie-work (pyproject.toml)
     #   pelican-readtime
     #   pelican-related-posts
+    #   pelican-search
     #   pelican-seo
     #   pelican-share-post
     #   pelican-sitemap
@@ -55,6 +56,8 @@ pelican==4.11.0.post0
 pelican-readtime==0.2.1
     # via lanie-work (pyproject.toml)
 pelican-related-posts==1.0.0
+    # via lanie-work (pyproject.toml)
+pelican-search==1.1.1
     # via lanie-work (pyproject.toml)
 pelican-seo==1.4.0
     # via lanie-work (pyproject.toml)
@@ -80,6 +83,8 @@ requests==2.33.1
     # via mastodon-py
 rich==14.3.3
     # via pelican
+rtoml==0.13.0
+    # via pelican-search
 sgmllib3k==1.0.0
     # via feedparser
 six==1.17.0

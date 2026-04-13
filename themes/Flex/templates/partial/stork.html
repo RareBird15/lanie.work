@@ -1,4 +1,4 @@
-{% if 'pelican.plugins.search' in PLUGINS %}
+{% if PLUGINS and ('search' in PLUGINS or 'pelican.plugins.search' in PLUGINS) %}
   <script>
     window.loadStorkIndex = function () {
       {% if not STORK_VERSION %}
