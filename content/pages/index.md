@@ -30,6 +30,11 @@ humane, predictable, and inclusive.
 - **[About Me]({filename}/pages/about.md):** My background, current roles, and learning path.
 - **[Work and Learning]({filename}/pages/work-and-learning.md):** My technical stack, professional testing focus, and
   active projects.
+- **[Accessibility Notes]({filename}/pages/accessibility-notes.md):** Notes on what does and doesn't work for me in
+  digital products.
+- **[Community]({filename}/pages/community.md):** Links to online groups I run.
+- **[Human Terms]({filename}/pages/human-terms.md):** Plain-language explanations of how my conditions affect me.
+- **[Contact]({filename}/pages/contact.md):** How to reach me for work, questions, or just to say hi.
 - **Writing:** Explore my thoughts on [Technology]({category}technology), [Gaming]({category}gaming),
   [Education]({category}education), and [Advocacy]({category}advocacy).
 
