@@ -34,6 +34,8 @@ humane, predictable, and inclusive.
   usability testing and what I can offer.
 - **[Accessibility Notes]({filename}/pages/accessibility-notes.md):** Notes on what does and doesn't work for me in
   digital products.
+- **[Recommended Resources]({filename}/pages/recommended-resources.md):** A curated list of tools, platforms, and people
+  that help me manage my life, health, and work.
 - **[Community]({filename}/pages/community.md):** Links to online groups I run.
 - **[Human Terms]({filename}/pages/human-terms.md):** Plain-language explanations of how my conditions affect me.
 - **[Contact]({filename}/pages/contact.md):** How to reach me for work, questions, or just to say hi.
