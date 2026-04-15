@@ -1,0 +1,18 @@
+<footer>
+  {% if CC_LICENSE %}
+    {% include "partial/cc_license.html" %}
+  {% else %}
+    {% include "partial/copyright.html" %}
+  {% endif %}
+  {% include "partial/reflex.html" %}
+  {% if CC_LICENSE['icon'] == True or STATUSCAKE %}
+  <p>
+    {% if CC_LICENSE['icon'] == True %}
+      {% include "partial/cc_license_icon.html" %}
+    {% endif %}
+    {% if STATUSCAKE %}
+      {% include "partial/statuscake.html" %}
+    {% endif %}
+  </p>
+  {% endif %}
+</footer>

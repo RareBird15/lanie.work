@@ -29,6 +29,13 @@ jobs:
       - name: Install Pelican
         run: uv pip install --system pelican markdown
 
+      - name: Verify theme exists
+        run: |
+          if [ ! -d themes/reflex/templates ]; then
+            echo "Missing theme at themes/reflex. Ensure the theme files are committed (or checkout submodules if using a submodule)."
+            exit 1
+          fi
+
       - name: Build site
         run: pelican content -s publishconf.py -o output
 

@@ -25,6 +25,13 @@ jobs:
       - name: Install Dependencies
         run: uv pip install --system pre-commit pelican markdown invoke livereload
 
+      - name: Verify theme exists
+        run: |
+          if [ ! -d themes/reflex/templates ]; then
+            echo "Missing theme at themes/reflex. Ensure the theme files are committed (or checkout submodules if using a submodule)."
+            exit 1
+          fi
+
       - name: Run pre-commit hooks
         run: pre-commit run --all-files
 

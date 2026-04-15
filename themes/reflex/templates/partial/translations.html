@@ -1,0 +1,30 @@
+{# Language code to flag emoji and full name mapping. Missing your language? Please open a PR to add it! #} {% set
+lang_data = {'ar': ('🇸🇦', 'Arabic'), 'cs': ('🇨🇿', 'Czech'), 'da': ('🇩🇰', 'Danish'), 'de': ('🇩🇪', 'German'), 'el': ('🇬🇷',
+'Greek'), 'en': ('🇺🇸', 'English'), 'es': ('🇪🇸', 'Spanish'), 'fi': ('🇫🇮', 'Finnish'), 'fr': ('🇫🇷', 'French'), 'he':
+('🇮🇱', 'Hebrew'), 'hi': ('🇮🇳', 'Hindi'), 'hu': ('🇭🇺', 'Hungarian'), 'id': ('🇮🇩', 'Indonesian'), 'it': ('🇮🇹', 'Italian'),
+'ja': ('🇯🇵', 'Japanese'), 'ko': ('🇰🇷', 'Korean'), 'nl': ('🇳🇱', 'Dutch'), 'no': ('🇳🇴', 'Norwegian'), 'pl': ('🇵🇱',
+'Polish'), 'pt': ('🇵🇹', 'Portuguese'), 'ro': ('🇷🇴', 'Romanian'), 'ru': ('🇷🇺', 'Russian'), 'sv': ('🇸🇪', 'Swedish'), 'th':
+('🇹🇭', 'Thai'), 'tr': ('🇹🇷', 'Turkish'), 'uk': ('🇺🇦', 'Ukrainian'), 'vi': ('🇻🇳', 'Vietnamese'), 'zh': ('🇨🇳', 'Chinese')}
+%} {% macro translations_for(article) %} {% if article.translations %}
+<nav class="translations" aria-label="{{ _('Available translations') }}">
+  {% set info = lang_data.get(article.lang, (article.lang, article.lang)) %}
+  <a
+    class="active"
+    href="{{ SITEURL }}/{{ article.url }}"
+    title="{{ info[1] }}"
+    aria-label="{{ _('Read in %(lang)s', lang=info[1]) }}"
+    aria-current="page"
+    ><span aria-hidden="true">{{ info[0] }}</span></a
+  >
+  {% for translation in article.translations %} {% set info = lang_data.get(translation.lang, (translation.lang,
+  translation.lang)) %}
+  <a
+    href="{{ SITEURL }}/{{ translation.url }}"
+    title="{{ info[1] }}"
+    hreflang="{{ translation.lang }}"
+    aria-label="{{ _('Read in %(lang)s', lang=info[1]) }}"
+    ><span aria-hidden="true">{{ info[0] }}</span></a
+  >
+  {% endfor %}
+</nav>
+{% endif %} {% endmacro %}
