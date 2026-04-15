@@ -36,7 +36,7 @@ article.title|striptags|escape }} {% endblock title %} {% block content %}
     </ul>
   </nav>
   {% endif %}
-  {% include "partial/neighbors.html" %} {% if article.related_posts %}
+  {% include "partial/neighbors.html" %} {% include "partial/share_post.html" %} {% if article.related_posts %}
   <div class="related-posts">
     <h2>{{ _("You might enjoy") }}</h2>
     <ul class="related-posts">
