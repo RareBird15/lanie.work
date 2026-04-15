@@ -53,6 +53,15 @@ help:
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
 	@echo '                                                                          '
 
+STORK_VERSION := v1.6.0
+
+install_stork:
+	@if [ ! -f "./stork" ]; then \
+		echo "Downloading Stork binary..."; \
+		curl -L https://github.com/jameslittle230/stork/releases/download/$(STORK_VERSION)/stork-ubuntu-latest -o stork; \
+		chmod +x stork; \
+	fi
+
 html:
 	$(PELICAN) "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
@@ -74,8 +83,7 @@ devserver:
 devserver-global:
 	$(PELICAN) -lr "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS) -b 0.0.0.0
 
-publish: clean
-	$(PELICAN) "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
-
+publish: clean install_stork
+	PATH=".:$(PATH)" $(PELICAN) "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
 
 .PHONY: html help clean regenerate serve serve-global devserver devserver-global publish
