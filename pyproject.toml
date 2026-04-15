@@ -17,10 +17,19 @@ dependencies = [
   "pelican-share-post>=1.2.1",
   "pelican-search>=1.1.1",
   "djlint>=1.36.4",
+  "pelican-neighbors>=1.2.0",
+  "pelican-minify>=2.0.1",
+  "pelican-statistics>=1.0.0",
 ]
 
 [dependency-groups]
-dev = [
-    "djlint>=1.36.4",
-    "pre-commit>=4.5.1",
-]
+dev = ["djlint>=1.36.4", "pre-commit>=4.5.1"]
+
+[tool.djlint]
+exclude = "output/"
+ignore = "H006,H023,H031"
+
+[tool.jinja-lsp]
+templates = "./themes/reflex/templates"
+backend = ["./pelicanconf.py", "./pelican_context.py"]
+lang = "python"

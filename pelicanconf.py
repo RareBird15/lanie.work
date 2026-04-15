@@ -1,5 +1,7 @@
 """Configuration file for Lanie's Pelican site."""
 
+THEME = "themes/reflex"
+
 AUTHOR = "Lanie"
 SITENAME = "Lanie: Faith, Tech & Advocacy"
 SITETITLE = "Lanie"
@@ -60,13 +62,11 @@ MARKDOWN = {
     "output_format": "html5",
 }
 
-# --- Theme and UI ---
-THEME = "themes/Flex"
 DISPLAY_CATEGORIES_ON_MENU = True
 MAIN_MENU = True
 COPYRIGHT_YEAR = 2026
 
-# Flex specific settings
+# Reflex specific settings
 BROWSER_COLOR = "#333333"
 ROBOTS = "index, follow"
 
@@ -86,8 +86,10 @@ PLUGINS = [
     "pelican.plugins.yaml_metadata",
     "pelican.plugins.share_post",
     "pelican.plugins.related_posts",
-    "pelican.plugins.readtime",
+    # "pelican.plugins.readtime",
     "pelican.plugins.search",  # The new addition
+    "pelican.plugins.neighbors",
+    "pelican.plugins.statistics",
 ]
 
 # Set once: Sitemaps help search engines crawl your site
@@ -102,4 +104,22 @@ STORK_INPUT_OPTIONS = {
     "base_directory": "content",
     "url_prefix": SITEURL,
     "html_selector": "main",
+}
+
+CC_LICENSE = {
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License",
+    "version": "4.0",
+    "slug": "by-nc-sa",
+}
+
+MINIFY = {
+    "host": "localhost",
+    "port": 8000,
+    "webpath": "/",
+    "cachepath": "./cache",
+    "css_min": True,
+    "js_min": True,
+    "html_min": True,
+    "inline_css_min": True,
+    "inline_js_min": True,
 }

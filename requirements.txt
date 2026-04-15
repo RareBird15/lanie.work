@@ -6,6 +6,7 @@ beautifulsoup4==4.14.3
     # via
     #   pelican-seo
     #   pelican-share-post
+    #   pelican-statistics
 blinker==1.9.0
     # via pelican
 blurhash==1.1.5
@@ -14,10 +15,22 @@ certifi==2026.2.25
     # via requests
 charset-normalizer==3.4.7
     # via requests
+click==8.3.2
+    # via djlint
+colorama==0.4.6
+    # via djlint
+cssbeautifier==1.15.4
+    # via djlint
 decorator==5.2.1
     # via mastodon-py
+djlint==1.36.4
+    # via lanie-work (pyproject.toml)
 docutils==0.22.4
     # via pelican
+editorconfig==0.17.1
+    # via
+    #   cssbeautifier
+    #   jsbeautifier
 feedgenerator==2.2.1
     # via pelican
 feedparser==6.0.12
@@ -28,6 +41,12 @@ idna==3.11
     #   requests
 jinja2==3.1.6
     # via pelican
+jsbeautifier==1.15.4
+    # via
+    #   cssbeautifier
+    #   djlint
+json5==0.14.0
+    # via djlint
 markdown==3.10.2
     # via
     #   lanie-work (pyproject.toml)
@@ -41,18 +60,29 @@ mastodon-py==2.1.4
     # via lanie-work (pyproject.toml)
 mdurl==0.1.2
     # via markdown-it-py
+minify-html==0.18.1
+    # via pelican-minify
 ordered-set==4.1.0
     # via pelican
+pathspec==1.0.4
+    # via djlint
 pelican==4.11.0.post0
     # via
     #   lanie-work (pyproject.toml)
+    #   pelican-minify
+    #   pelican-neighbors
     #   pelican-readtime
     #   pelican-related-posts
     #   pelican-search
     #   pelican-seo
     #   pelican-share-post
     #   pelican-sitemap
+    #   pelican-statistics
     #   pelican-yaml-metadata
+pelican-minify==2.0.1
+    # via lanie-work (pyproject.toml)
+pelican-neighbors==1.2.0
+    # via lanie-work (pyproject.toml)
 pelican-readtime==0.2.1
     # via lanie-work (pyproject.toml)
 pelican-related-posts==1.0.0
@@ -64,6 +94,10 @@ pelican-seo==1.4.0
 pelican-share-post==1.2.1
     # via lanie-work (pyproject.toml)
 pelican-sitemap==1.2.2
+    # via lanie-work (pyproject.toml)
+pelican-statistics==1.0.0
+    # via lanie-work (pyproject.toml)
+pelican-theme-reflex==3.2.0
     # via lanie-work (pyproject.toml)
 pelican-yaml-metadata==2.1.2
     # via lanie-work (pyproject.toml)
@@ -78,7 +112,11 @@ python-dateutil==2.9.0.post0
 python-magic==0.4.27
     # via mastodon-py
 pyyaml==6.0.3
-    # via pelican-yaml-metadata
+    # via
+    #   djlint
+    #   pelican-yaml-metadata
+regex==2026.4.4
+    # via djlint
 requests==2.33.1
     # via mastodon-py
 rich==14.3.3
@@ -88,9 +126,14 @@ rtoml==0.13.0
 sgmllib3k==1.0.0
     # via feedparser
 six==1.17.0
-    # via python-dateutil
+    # via
+    #   cssbeautifier
+    #   jsbeautifier
+    #   python-dateutil
 soupsieve==2.8.3
     # via beautifulsoup4
+tqdm==4.67.3
+    # via djlint
 typing-extensions==4.15.0
     # via beautifulsoup4
 unidecode==1.4.0

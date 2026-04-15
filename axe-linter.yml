@@ -1,0 +1,9 @@
+# axe-linter configuration
+#
+# These rules are disabled because all HTML files in this project are Jinja2
+# templates. The static linter cannot evaluate Jinja2 expressions at parse time,
+# which causes false positives for the rules below. The rendered output is
+# always valid – the violations only exist in the template source.
+rules:
+  html-lang-valid: false # lang attr is set via Jinja; evaluates to valid BCP47 at render time
+  list: false # {% for %}/{% if %} Jinja tags inside <ul> are not HTML nodes

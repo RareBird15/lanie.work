@@ -30,7 +30,7 @@ To respect my cognitive load and accessibility needs:
 
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
-<form action="https://usebasin.com/f/00901f061293" method="POST">
+<form action="https://usebasin.com/f/00901f061293" method="post">
   <div>
     <label for="name">Name:</label>
     <br>
