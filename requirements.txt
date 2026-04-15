@@ -119,7 +119,7 @@ regex==2026.4.4
     # via djlint
 requests==2.33.1
     # via mastodon-py
-rich==14.3.3
+rich==15.0.0
     # via pelican
 rtoml==0.13.0
     # via pelican-search
