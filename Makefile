@@ -58,7 +58,7 @@ STORK_VERSION := v1.6.0
 install_stork:
 	@if [ ! -f "./stork" ]; then \
 		echo "Downloading Stork binary..."; \
-		curl -L https://github.com/jameslittle230/stork/releases/download/$(STORK_VERSION)/stork-ubuntu-latest -o stork; \
+		curl -SL "https://github.com/jameslittle230/stork/releases/download/$(STORK_VERSION)/stork-ubuntu-22-04" -o stork; \
 		chmod +x stork; \
 	fi
 
