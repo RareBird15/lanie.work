@@ -13,6 +13,7 @@ SITESUBTITLE = (
 )
 SITEURL = ""  # Leave blank for local development
 SITELOGO = "/images/avatar-simple.svg"
+OG_IMAGE = "images/social-card.png"
 
 PATH = "content"
 TIMEZONE = "America/Chicago"
@@ -93,6 +94,7 @@ PLUGINS = [
     "pelican.plugins.search",  # The new addition
     "pelican.plugins.neighbors",
     "pelican.plugins.statistics",
+    "pelican.plugins.image_process",
 ]
 
 # Set once: Sitemaps help search engines crawl your site
@@ -107,6 +109,7 @@ STORK_INPUT_OPTIONS = {
     "base_directory": "content",
     "url_prefix": SITEURL,
     "html_selector": "main",
+    "exclude_html_selector": "nav, footer, .related-posts, .post-info",
 }
 
 CC_LICENSE = {
@@ -125,4 +128,9 @@ MINIFY = {
     "html_min": True,
     "inline_css_min": True,
     "inline_js_min": True,
+}
+
+# --- Image Processing ---
+IMAGE_PROCESS = {
+    "article-image": ["scale_in 800 800 True"],
 }

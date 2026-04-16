@@ -4,6 +4,7 @@ anyio==4.13.0
     # via watchfiles
 beautifulsoup4==4.14.3
     # via
+    #   pelican-image-process
     #   pelican-seo
     #   pelican-share-post
     #   pelican-statistics
@@ -47,6 +48,8 @@ jsbeautifier==1.15.4
     #   djlint
 json5==0.14.0
     # via djlint
+lxml==6.0.4
+    # via pelican-image-process
 markdown==3.10.2
     # via
     #   lanie-work (pyproject.toml)
@@ -69,6 +72,7 @@ pathspec==1.0.4
 pelican==4.11.0.post0
     # via
     #   lanie-work (pyproject.toml)
+    #   pelican-image-process
     #   pelican-minify
     #   pelican-neighbors
     #   pelican-readtime
@@ -79,6 +83,8 @@ pelican==4.11.0.post0
     #   pelican-sitemap
     #   pelican-statistics
     #   pelican-yaml-metadata
+pelican-image-process==3.3.0
+    # via lanie-work (pyproject.toml)
 pelican-minify==2.0.1
     # via lanie-work (pyproject.toml)
 pelican-neighbors==1.2.0
@@ -97,10 +103,10 @@ pelican-sitemap==1.2.2
     # via lanie-work (pyproject.toml)
 pelican-statistics==1.0.0
     # via lanie-work (pyproject.toml)
-pelican-theme-reflex==3.2.0
-    # via lanie-work (pyproject.toml)
 pelican-yaml-metadata==2.1.2
     # via lanie-work (pyproject.toml)
+pillow==12.2.0
+    # via pelican-image-process
 pygments==2.18.0
     # via
     #   pelican

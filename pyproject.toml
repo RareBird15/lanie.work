@@ -20,6 +20,7 @@ dependencies = [
   "pelican-neighbors>=1.2.0",
   "pelican-minify>=2.0.1",
   "pelican-statistics>=1.0.0",
+  "pelican-image-process>=3.3.0",
 ]
 
 [dependency-groups]
