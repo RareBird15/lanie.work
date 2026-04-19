@@ -10,8 +10,6 @@ beautifulsoup4==4.14.3
     #   pelican-statistics
 blinker==1.9.0
     # via pelican
-blurhash==1.1.5
-    # via mastodon-py
 certifi==2026.2.25
     # via requests
 charset-normalizer==3.4.7
@@ -115,8 +113,8 @@ python-dateutil==2.9.0.post0
     # via
     #   mastodon-py
     #   pelican
-python-magic==0.4.27
-    # via mastodon-py
+python-dotenv==1.2.2
+    # via lanie-work (pyproject.toml)
 pyyaml==6.0.3
     # via
     #   djlint
