@@ -1,17 +1,13 @@
 """Cloudflare worker for contact form with Turnstile verification."""
 
+import json
 from typing import TYPE_CHECKING, Protocol
+from urllib.parse import urlencode
 
 if TYPE_CHECKING:
-    from js import JSON, fetch  # type: ignore[import-not-found]
-    from workers import (  # type: ignore[import-not-found]
-        Request,
-        Response,
-        WorkerEntrypoint,
-    )
+    from workers import fetch as workers_fetch, Request, Response, WorkerEntrypoint  # type: ignore[import-not-found]  # noqa: I001
 else:
-    from js import JSON, fetch
-    from workers import Request, Response, WorkerEntrypoint
+    from workers import fetch as workers_fetch, Request, Response, WorkerEntrypoint  # noqa: I001
 
 
 class Env(Protocol):
@@ -38,28 +34,32 @@ class Default(WorkerEntrypoint):
             token = form_data.get('cf-turnstile-response')
             if not token:
                 return Response('Spam check missing.', status=400)
+            token = str(token)
 
             # 2. Verify the token with Cloudflare
             # We use a URL-encoded body as required by the Turnstile API
-            verify_body = f'secret={env.TURNSTILE_SECRET_KEY}&response={token}'
+            verify_body = urlencode(
+                {'secret': env.TURNSTILE_SECRET_KEY, 'response': token},
+            )
 
-            verify_res = await fetch(
+            verify_res = await workers_fetch(
                 'https://challenges.cloudflare.com/turnstile/v0/siteverify',
-                {
-                    'method': 'POST',
-                    'headers': {'Content-Type': 'application/x-www-form-urlencoded'},
-                    'body': verify_body,
-                },
+                method='POST',
+                headers={'Content-Type': 'application/x-www-form-urlencoded'},
+                body=verify_body,
             )
 
             verify_data = await verify_res.json()
-            if not verify_data.success:
+            if not verify_data.get('success'):
                 return Response('Spam check failed.', status=403)
 
             # 3. If human, proceed with email logic
             user_name = form_data.get('name') or 'Anonymous'
             user_email = form_data.get('email') or 'No Email'
             user_message = form_data.get('message') or 'No Message'
+            user_name = str(user_name)
+            user_email = str(user_email)
+            user_message = str(user_message)
 
             email_payload = {
                 'sender': {
@@ -76,17 +76,15 @@ class Default(WorkerEntrypoint):
                 ),
             }
 
-            await fetch(
+            await workers_fetch(
                 'https://api.brevo.com/v3/smtp/email',
-                {
-                    'method': 'POST',
-                    'headers': {
-                        'accept': 'application/json',
-                        'content-type': 'application/json',
-                        'api-key': env.BREVO_API_KEY,
-                    },
-                    'body': JSON.stringify(email_payload),
+                method='POST',
+                headers={
+                    'accept': 'application/json',
+                    'content-type': 'application/json',
+                    'api-key': env.BREVO_API_KEY,
                 },
+                body=json.dumps(email_payload),
             )
 
             return Response('Success! Your message was sent.', status=200)
