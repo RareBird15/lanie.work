@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
   "feedparser>=6.0.11",
-  "Mastodon.py>=2.0.1",
+  "mastodon-py>=2.0.1",
   "markdown>=3.10.2",
   "pelican-readtime>=0.2.1",
   "pelican-seo>=1.4.0",
@@ -21,6 +21,7 @@ dependencies = [
   "pelican-minify>=2.0.1",
   "pelican-statistics>=1.0.0",
   "pelican-image-process>=3.3.0",
+  "python-dotenv>=1.2.2",
 ]
 
 [dependency-groups]

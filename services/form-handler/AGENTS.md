@@ -8,7 +8,7 @@ any Workers, KV, R2, D1, Durable Objects, Queues, Vectorize, AI, or Agents SDK t
 - https://developers.cloudflare.com/workers/
 - MCP: `https://docs.mcp.cloudflare.com/mcp`
 
-For all limits and quotas, retrieve from the product's `/platform/limits/` page. eg. `/workers/platform/limits`
+For all limits and quotas, retrieve from the product's `/platform/limits/` page. e.g. `/workers/platform/limits`
 
 ## Commands
 
