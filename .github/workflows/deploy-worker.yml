@@ -16,7 +16,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v6
 
       - name: Deploy Worker
         uses: cloudflare/wrangler-action@v3.15.0
