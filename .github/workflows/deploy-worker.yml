@@ -1,11 +1,13 @@
 name: Deploy Form Handler Worker
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
     paths:
       - "services/form-handler/**" # Only trigger if files in this folder change
+      - ".github/workflows/deploy-worker.yml"
 
 jobs:
   deploy:
