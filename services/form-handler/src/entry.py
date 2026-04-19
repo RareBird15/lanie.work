@@ -32,7 +32,7 @@ class Default(WorkerEntrypoint):
             return Response('Method Not Allowed', status=405)
 
         try:
-            form_data = await request.formData()
+            form_data = await request.form_data()
 
             # 1. Extract the Turnstile token
             token = form_data.get('cf-turnstile-response')
