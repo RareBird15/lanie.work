@@ -13,6 +13,7 @@ few days to respond. I value clear, direct, and thoughtful communication.
 
 - **Mastodon:** [@RareBird15@allovertheplace.ca](https://allovertheplace.ca/@RareBird15): My primary social home base
   for accessibility advocacy and tech talk.
+- **Facebook:** [RareBirdLanie](https://www.facebook.com/RareBirdLanie/): My visual and community branding home.
 - **Professional:** [LinkedIn](https://www.linkedin.com/in/laniecarmelo/) or [GitHub](https://github.com/RareBird15).
 
 ## Communication Preferences
@@ -30,7 +31,7 @@ To respect my cognitive load and accessibility needs:
 
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
-<form action="https://usebasin.com/f/00901f061293" method="post">
+<form action="https://form-handler.lanie.workers.dev" method="post">
   <div>
     <label for="name">Name:</label>
     <br>
@@ -41,6 +42,12 @@ To respect my cognitive load and accessibility needs:
     <label for="email">Email Address:</label>
     <br>
     <input type="email" id="email" name="email" required>
+  </div>
+  <br>
+  <div>
+    <label for="subject">Subject:</label>
+    <br>
+    <input type="text" id="subject" name="subject" required>
   </div>
   <br>
   <div>
