@@ -1,0 +1,25 @@
+name: Deploy Form Handler Worker
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "services/form-handler/**" # Only trigger if files in this folder change
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6.0.2
+
+      - name: Deploy Worker
+        uses: cloudflare/wrangler-action@v3.15.0
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: "services/form-handler"
+          command: deploy
