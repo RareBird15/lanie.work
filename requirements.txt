@@ -59,7 +59,7 @@ markdown-it-py==4.0.0
     # via rich
 markupsafe==3.0.3
     # via jinja2
-mastodon-py==2.1.4
+mastodon-py==2.2.1
     # via lanie-work (pyproject.toml)
 mdurl==0.1.2
     # via markdown-it-py
