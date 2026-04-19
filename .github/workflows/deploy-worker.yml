@@ -19,6 +19,8 @@ jobs:
         uses: actions/checkout@v6.0.2
 
       - name: Deploy Worker
+        id: deploy
+        continue-on-error: true
         uses: cloudflare/wrangler-action@v3.15.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -26,3 +28,19 @@ jobs:
           wranglerVersion: 4.83.0
           workingDirectory: "services/form-handler"
           command: deploy
+
+      - name: Print Wrangler output
+        if: always()
+        env:
+          WRANGLER_STDOUT: ${{ steps.deploy.outputs.command-output }}
+          WRANGLER_STDERR: ${{ steps.deploy.outputs.command-stderr }}
+        run: |
+          echo "Wrangler stdout:"
+          echo "$WRANGLER_STDOUT"
+          echo
+          echo "Wrangler stderr:"
+          echo "$WRANGLER_STDERR"
+
+      - name: Fail if deploy failed
+        if: steps.deploy.outcome == 'failure'
+        run: exit 1
