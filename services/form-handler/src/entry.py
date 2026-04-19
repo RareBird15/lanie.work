@@ -56,9 +56,11 @@ class Default(WorkerEntrypoint):
             # 3. If human, proceed with email logic
             user_name = form_data.get('name') or 'Anonymous'
             user_email = form_data.get('email') or 'No Email'
+            user_subject = form_data.get('subject') or 'No Subject'
             user_message = form_data.get('message') or 'No Message'
             user_name = str(user_name)
             user_email = str(user_email)
+            user_subject = str(user_subject)
             user_message = str(user_message)
 
             email_payload = {
@@ -68,10 +70,11 @@ class Default(WorkerEntrypoint):
                 },
                 'to': [{'email': 'lanie@lanie.work'}],
                 'replyTo': {'email': user_email, 'name': user_name},
-                'subject': f'New Message from {user_name}',
+                'subject': f'[{user_subject}] Message from {user_name}',
                 'textContent': (
                     f'Name: {user_name}\n'
                     f'Email: {user_email}\n\n'
+                    f'Subject: {user_subject}\n\n'
                     f'Message:\n{user_message}'
                 ),
             }
