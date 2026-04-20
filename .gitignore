@@ -57,3 +57,4 @@ seo_report.html
 # Local history and generated site output
 .lh/
 output/
+.env

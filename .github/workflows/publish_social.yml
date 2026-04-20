@@ -27,6 +27,8 @@ jobs:
           MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
+          LI_PERSONAL_TOKEN: ${{ secrets.LI_PERSONAL_TOKEN }}
+          LI_PERSON_URN: ${{ secrets.LI_PERSON_URN }}
         # uv run automatically handles dependencies if they are in your pyproject.toml
         # or we can specify them inline for a "zero-config" approach:
         run: |

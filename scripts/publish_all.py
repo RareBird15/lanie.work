@@ -1,9 +1,10 @@
-"""Master script to publish the latest Pelican post to Mastodon and Facebook."""
+"""Master script to publish the latest Pelican post to social media."""
 
 from __future__ import annotations
 
 import logging
 import os
+from pathlib import Path
 from typing import TYPE_CHECKING, Any, Final, Protocol, cast
 
 import requests
@@ -12,11 +13,13 @@ from dotenv import load_dotenv
 if TYPE_CHECKING:
     from collections.abc import Sequence
 
-import feedparser  # pyright: ignore[reportMissingTypeStubs]
-from mastodon import Mastodon  # pyright: ignore[reportMissingTypeStubs]
+import feedparser
+from mastodon import Mastodon
 
 # Load local .env
-load_dotenv()
+ROOT_DIR: Final = Path(__file__).resolve().parent.parent
+ENV_FILE: Final = ROOT_DIR / '.env'
+load_dotenv(dotenv_path=ENV_FILE, override=True)
 
 # Constants
 FEED_URL: Final = 'https://lanie.work/feeds/all.rss.xml'
@@ -38,16 +41,89 @@ class ParsedFeed(Protocol):
     entries: Sequence[FeedEntry]
 
 
+def get_required_env(name: str) -> str | None:
+    """Return a normalized env value, or None if missing/blank."""
+    value = os.environ.get(name)
+    if value is None:
+        return None
+    value = value.strip()
+    return value or None
+
+
 # --- Platform Handlers ---
+
+
+def publish_to_linkedin(title: str, url: str, tags: list[str]) -> bool:
+    """Announce post on LinkedIn Personal Profile."""
+    token = get_required_env('LI_PERSONAL_TOKEN')
+    urn = get_required_env('LI_PERSON_URN')
+    missing = [
+        name
+        for name, value in (
+            ('LI_PERSONAL_TOKEN', token),
+            ('LI_PERSON_URN', urn),
+        )
+        if not value
+    ]
+    if missing:
+        logger.error('LinkedIn: Missing environment variables: %s', ', '.join(missing))
+        return False
+
+    endpoint = 'https://api.linkedin.com/v2/ugcPosts'
+    headers = {
+        'Authorization': f'Bearer {token}',
+        'Content-Type': 'application/json',
+        'X-Restli-Protocol-Version': '2.0.0',
+    }
+
+    # Format tags into hashtags
+    hashtags = ' '.join([f'#{tag}' for tag in tags])
+    message = f'New Blog Post: {title}\n\n{hashtags}'
+
+    payload = {
+        'author': urn,
+        'lifecycleState': 'PUBLISHED',
+        'specificContent': {
+            'com.linkedin.ugc.ShareContent': {
+                'shareCommentary': {'text': message},
+                'shareMediaCategory': 'ARTICLE',
+                'media': [
+                    {'status': 'READY', 'originalUrl': url, 'title': {'text': title}}
+                ],
+            }
+        },
+        'visibility': {'com.linkedin.ugc.MemberNetworkVisibility': 'PUBLIC'},
+    }
+
+    try:
+        response = requests.post(endpoint, headers=headers, json=payload, timeout=10)
+    except Exception:
+        logger.exception('LinkedIn Exception')
+        return False
+    else:
+        if response.status_code == 201:
+            logger.info("LinkedIn: Successfully posted '%s'", title)
+            return True
+        if response.status_code == 422 and 'DUPLICATE_POST' in response.text:
+            logger.info("LinkedIn: Duplicate prevented for '%s'", title)
+            return True
+        logger.error('LinkedIn Error (%s): %s', response.status_code, response.text)
+        return False
 
 
 def publish_to_mastodon(title: str, url: str, tags: list[str]) -> bool:
     """Announce post on Mastodon with duplicate detection."""
     try:
+        # Check if token exists before initializing
+        m_token = get_required_env('MASTODON_TOKEN')
+        if not m_token:
+            logger.error('Mastodon: Missing MASTODON_TOKEN')
+            return False
+
         client = cast(
             'Any',
             Mastodon(
-                access_token=os.environ['MASTODON_TOKEN'],
+                access_token=m_token,
                 api_base_url=MASTODON_BASE_URL,
             ),
         )
@@ -72,8 +148,20 @@ def publish_to_mastodon(title: str, url: str, tags: list[str]) -> bool:
 
 def publish_to_facebook(title: str, url: str) -> bool:
     """Announce post on Facebook Page via Graph API."""
-    page_id = os.environ['FB_PAGE_ID']
-    access_token = os.environ['FB_ACCESS_TOKEN']
+    page_id = get_required_env('FB_PAGE_ID')
+    access_token = get_required_env('FB_ACCESS_TOKEN')
+    missing = [
+        name
+        for name, value in (
+            ('FB_PAGE_ID', page_id),
+            ('FB_ACCESS_TOKEN', access_token),
+        )
+        if not value
+    ]
+    if missing:
+        logger.error('Facebook: Missing environment variables: %s', ', '.join(missing))
+        return False
+
     endpoint = f'https://graph.facebook.com/v21.0/{page_id}/feed'
 
     payload = {
@@ -110,13 +198,17 @@ def main() -> int:
 
     latest = parsed_feed.entries[0]
     title, url = latest.title, latest.link
+
+    # Process tags: replaces spaces to make valid hashtags
     tags = [tag['term'].replace(' ', '') for tag in latest.tags]
 
     # 2. Distribute
     m_success = publish_to_mastodon(title, url, tags)
     f_success = publish_to_facebook(title, url)
+    l_success = publish_to_linkedin(title, url, tags)
 
-    return 0 if (m_success and f_success) else 1
+    # Return 0 only if all enabled platforms succeed
+    return 0 if (m_success and f_success and l_success) else 1
 
 
 if __name__ == '__main__':
