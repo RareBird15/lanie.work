@@ -105,7 +105,7 @@ pelican-yaml-metadata==2.1.2
     # via lanie-work (pyproject.toml)
 pillow==12.2.0
     # via pelican-image-process
-pygments==2.18.0
+pygments==2.19.2
     # via
     #   pelican
     #   rich
