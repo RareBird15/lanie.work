@@ -34,7 +34,7 @@ feedgenerator==2.2.1
     # via pelican
 feedparser==6.0.12
     # via lanie-work (pyproject.toml)
-idna==3.11
+idna==3.12
     # via
     #   anyio
     #   requests
