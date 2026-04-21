@@ -46,7 +46,7 @@ jsbeautifier==1.15.4
     #   djlint
 json5==0.14.0
     # via djlint
-lxml==6.0.4
+lxml==6.1.0
     # via pelican-image-process
 markdown==3.10.2
     # via
