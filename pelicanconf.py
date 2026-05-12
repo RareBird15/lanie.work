@@ -141,8 +141,5 @@ IMAGE_PROCESS = {
 }
 
 # Math rendering settings
-MATH_JAX = {
-    'align': 'left',  # Left alignment is generally easier to track with a screen reader
-    'color': 'inherit',  # Ensures the math matches your site's existing text color
-    'responsive': True,
-}
+MATH_ALIGN = 'left'  # Accurately sets text alignment to the left
+MATH_COLOR = 'inherit'  # Custom color selection strings passed directly to MathJax
