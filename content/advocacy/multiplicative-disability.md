@@ -12,7 +12,7 @@ Tags:
   - Disability
   - Philosophy
 Slug: multiplicative-disability
-Summary:
+Summary: >
   The common assumption is that multiple disabilities are additive: two disabilities means twice the difficulty.
   This is wrong. Disabilities compound multiplicatively, and accessibility design that ignores this causes active harm.
 ---
