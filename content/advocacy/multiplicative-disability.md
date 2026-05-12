@@ -1,5 +1,5 @@
 ---
-Title: The Multiplicative Nature of Disability: Why 1+1 Equals a System Crash
+Title: "The Multiplicative Nature of Disability: Why 1+1 Equals a System Crash"
 Date: 2026-05-11
 Modified: 2026-05-11
 Category: Advocacy
