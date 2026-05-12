@@ -98,6 +98,8 @@ PLUGINS = [
     'pelican.plugins.neighbors',
     'pelican.plugins.statistics',
     'pelican.plugins.image_process',
+    'pelican.plugins.minify',
+    'pelican.plugins.render_math',
 ]
 
 # Set once: Sitemaps help search engines crawl your site
@@ -136,4 +138,11 @@ MINIFY = {
 # --- Image Processing ---
 IMAGE_PROCESS = {
     'article-image': ['scale_in 800 800 True'],
+}
+
+# Math rendering settings
+MATH_JAX = {
+    'align': 'left',  # Left alignment is generally easier to track with a screen reader
+    'color': 'inherit',  # Ensures the math matches your site's existing text color
+    'responsive': True,
 }
