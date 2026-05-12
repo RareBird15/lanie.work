@@ -21,7 +21,7 @@ Summary: >
 
 [TOC]
 
-> **Sourcing Note:** The examples in this article are not hypotheticals. They are extracted from my own captured daily logs, technical sessions, and lived experiences. For a plain-language breakdown of the physical mechanics behind my diagnoses, see my [Human Terms summary]({filename}human-terms.md).
+> **Sourcing Note:** The examples in this article are not hypotheticals. They are extracted from my own captured daily logs, technical sessions, and lived experiences. For a plain-language breakdown of the physical mechanics behind my diagnoses, see my [Human Terms summary]({filename}/pages/human-terms.md).
 
 ## The Comfortable Lie of the Sum
 
