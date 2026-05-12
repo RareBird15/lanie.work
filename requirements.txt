@@ -75,6 +75,7 @@ pelican==4.11.0.post0
     #   pelican-neighbors
     #   pelican-readtime
     #   pelican-related-posts
+    #   pelican-render-math
     #   pelican-search
     #   pelican-seo
     #   pelican-share-post
@@ -90,6 +91,8 @@ pelican-neighbors==1.2.0
 pelican-readtime==0.2.1
     # via lanie-work (pyproject.toml)
 pelican-related-posts==1.0.0
+    # via lanie-work (pyproject.toml)
+pelican-render-math==1.0.5
     # via lanie-work (pyproject.toml)
 pelican-search==1.1.1
     # via lanie-work (pyproject.toml)

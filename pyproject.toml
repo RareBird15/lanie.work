@@ -22,6 +22,7 @@ dependencies = [
   "pelican-statistics>=1.0.0",
   "pelican-image-process>=3.3.0",
   "python-dotenv>=1.2.2",
+  "pelican-render-math>=1.0.5",
 ]
 
 [dependency-groups]
