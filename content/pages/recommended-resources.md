@@ -10,7 +10,7 @@ Summary: A curated list of tools, platforms, and people that help me manage my l
 [TOC]
 
 I'm often asked about the specific tools I use to navigate a world that isn't always built for my needs. This page is a
-collection of resources I trust and use regularly.
+collection of resources I trust and use regularly. Note: This page may contain affiliate links, which means I may earn a small commission if you purchase through them at no extra cost to you. I only recommend products and services that I have personally used and found helpful in managing my life and health. My goal is to share resources that can make a positive difference for others in similar situations.
 
 ## How I Access Technology
 
@@ -22,6 +22,10 @@ These are the essential tools that bridge the gap between my senses and the digi
   display. It's essential for reading and navigating digital content in a way that works for me.
 - **[VoiceOver](https://www.apple.com/accessibility/vision/):** I use this on my iPhone for mobile accessibility. It
   allows me to interact with my phone using gestures and provides auditory feedback.
+- **TextExpander:** This tool is crucial for managing repetitive typing and reducing the physical fatigue of typing. It allows me to
+  create custom snippets for frequently used text, which saves time and energy. If you purchase a plan through my referral link, I can earn up to 2 months of free access. [Sign up for TextExpander here](https://textexpander.com/?refby=84d64a7104eb90b1).
+- **[Google Chrome](https://www.google.com/chrome/):** My preferred browser for all web-based tasks. Its accessibility features are essential for navigating the web efficiently.
+- **[Pieces OS](https://pieces.app/):** A developer tool I use for managing code snippets and maintaining long-term memory of my work. It connects snippets to their sources and context automatically.
 
 ## Programming and Site Building
 
@@ -40,6 +44,9 @@ These tools form my backend-focused development environment.
   tell it my accessibility needs, and it remembers them across sessions, which is a game-changer for my workflow.
 - **[GitHub Copilot](https://github.com/features/copilot):** An AI-powered code completion tool that helps me write code
   faster and with fewer errors.
+- **[fzf](https://github.com/junegunn/fzf), [ripgrep](https://github.com/BurntSushi/ripgrep), and [fd](https://github.com/sharkdp/fd):** Command-line search and navigation tools I use daily. They're keyboard-first, produce clean text output, and let me browse filesystems and codebases without relying on visual interfaces.
+- **[tmux](https://github.com/tmux/tmux):** A terminal multiplexer that keeps my sessions alive across disconnects. I use it to run persistent processes on my headless Raspberry Pi server.
+- **[Arch Linux](https://archlinux.org/):** My Linux distribution, running inside WSL. It gives me full control over my development environment while staying on a Windows machine with reliable screen reader support.
 
 ## Productivity and Digital Security
 
@@ -53,6 +60,7 @@ These tools reduce my cognitive load and keep my digital life organized and secu
   security and peace of mind.
 - **[Foam](https://foambubble.github.io/foam/):** The tool I use inside VS Code to manage this digital garden and
   organize my thoughts.
+- **[Ledgeroo](https://ledgeroo.com/):** A gamified accounting program I use to learn bookkeeping for my family's business. The progressive challenge system works well for my learning style — it turns what could be dry accounting concepts into something I can work through incrementally.
 - **[Google Gemini](https://gemini.google.com/):** I use this for AI-assisted writing, brainstorming, and research. It
   helps me structure my thoughts when I'm feeling overwhelmed.
 - **[Cloudflare](https://www.cloudflare.com/):** I use this for DNS and domain management. This website is hosted on
@@ -65,6 +73,22 @@ These tools reduce my cognitive load and keep my digital life organized and secu
   accessibility features allow me to navigate and organize my calendar effectively.
 - [Google Tasks](https://tasks.google.com/): I use this for task management and to keep track of my to-do lists. It
   integrates well with Google Calendar and Gmail, which helps me stay organized.
+- **[Tailscale](https://tailscale.com/):** A zero-config VPN that connects all my devices into a private network. I use it to SSH into my headless Raspberry Pi and access it from anywhere without exposing ports or dealing with complex network setup.
+- **[XMPP](https://xmpp.org/) / [Snikket](https://snikket.org/):** I use XMPP for lightweight, decentralized messaging. I run my own Snikket server as my hosted XMPP provider — it's simple to self-host and gives me full control over my communication.
+- **[JMP.chat](https://jmp.chat/):** A bridge service that lets me send and receive SMS and MMS from my computer. It integrates with XMPP, so I can text from my PC with my screen reader. Referral codes for JMP.chat are available upon request.
+- **[Discord](https://discord.com/):** I use Discord for community chat and to interface with my AI agent, Hermes. Its API integration capabilities make it a useful platform for workflow automation.
+- **[Unigram (Telegram)](https://unigramdev.github.io/):** My preferred Telegram client on Windows. Its accessibility makes it a reliable messaging platform on both desktop and mobile.
+- **[Pushover](https://pushover.net/):** A notification service that delivers alerts I can't miss — like cron job results, health reminders, or critical system failures. It works across my phone and browser.
+
+## Automation & Agent Infrastructure
+
+These tools power the automated workflows and AI agents that extend my capabilities and reduce cognitive overhead.
+
+- **[Hermes Agent](https://hermes-agent.nousresearch.com/):** My AI agent platform that runs automated workflows, daily briefings, and cron jobs. It integrates with my calendar, email, GitHub, and long-term memory system — acting as a bridge between my intentions and execution.
+- **[Pieces OS](https://pieces.app/):** Beyond code snippets, Pieces serves as my long-term memory system. It captures workstream events, clipboard history, and browser activity — giving my AI agent context about what I'm working on across sessions.
+- **[Inngest](https://www.inngest.com/):** A serverless background workflow platform I use for reliable, durable function execution. It handles multi-step workflows that need persistence and retry logic.
+- **[Nous Portal](https://nousresearch.com/portal):** An AI subscription service that powers Hermes Agent with additional tools like web search, image generation, and browser automation — no need to manage individual API keys or infrastructure.
+- **[Composio](https://www.composio.dev):** A framework that connects AI agents to external applications (Gmail, Slack, GitHub, and more). It handles the OAuth connections and provides tool schemas so my agent can call real-world services safely.
 
 ## Hardware and Custom Solutions
 
@@ -102,6 +126,8 @@ These resources support my self-paced education and my spiritual exploration.
 
 - **[Exercism](https://exercism.org/):** A platform I highly recommend for structured, hands-on coding practice.
 - **[Codecademy](https://www.codecademy.com/):** My primary source for self-paced computer science tracks.
+- **[Boot.dev](https://www.boot.dev/):** An interactive platform with backend-focused tracks in Python, Linux, and
+  Git. I'm currently working through it and recommend it for hands-on CS fundamentals. This has quickly become my favorite platform to get a computer science education.
 - **[World Bible Plans](https://www.worldbibleplans.com/):** A resource I use for structured study and reading plans.
 - **[BibleGateway](https://www.biblegateway.com/):** A persistent text resource for looking up and comparing different
   translations.
