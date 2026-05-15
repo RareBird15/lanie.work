@@ -86,7 +86,7 @@ These tools power the automated workflows and AI agents that extend my capabilit
 
 - **[Hermes Agent](https://hermes-agent.nousresearch.com/):** My AI agent platform that runs automated workflows, daily briefings, and cron jobs. It integrates with my calendar, email, GitHub, and long-term memory system — acting as a bridge between my intentions and execution.
 - **[Pieces OS](https://pieces.app/):** Beyond code snippets, Pieces serves as my long-term memory system. It captures workstream events, clipboard history, and browser activity — giving my AI agent context about what I'm working on across sessions.
-- **[Inngest](https://www.inngest.com/):** A serverless background workflow platform I use for reliable, durable function execution. It handles multi-step workflows that need persistence and retry logic.
+- **[Inngest](https://www.inngest.com/):** A serverless background workflow platform I use for reliable, durable function execution. It handles multistep workflows that need persistence and retry logic.
 - **[Nous Portal](https://nousresearch.com/portal):** An AI subscription service that powers Hermes Agent with additional tools like web search, image generation, and browser automation — no need to manage individual API keys or infrastructure.
 - **[Composio](https://www.composio.dev):** A framework that connects AI agents to external applications (Gmail, Slack, GitHub, and more). It handles the OAuth connections and provides tool schemas so my agent can call real-world services safely.
 
