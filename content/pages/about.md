@@ -48,7 +48,7 @@ I value **slower, thoughtful problem-solving**. In a world of high-velocity tech
 
 ## Home Base
 
-This site is my "digital garden." It is intentionally small, updated selectively, and focused on clarity over volume. I
+This site is my "digital garden." It's intentionally small, updated selectively, and focused on clarity over volume. I
 spend my free time experimenting with assistive technology, loom knitting, and playing deep, text-based automation games
 like _Trimps_ and _Evolve_.
 

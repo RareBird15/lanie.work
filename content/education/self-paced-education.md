@@ -22,10 +22,10 @@ Summary:
 
 ## Introduction: Why Self-Paced Education Matters
 
-As someone with multiple disabilities—including total blindness, neurodivergence, and chronic health conditions—I have
-found that traditional educational settings often fail to accommodate my unique learning needs. I have attempted college
-online four times and community college once in person. Each attempt was met with significant challenges that hindered
-my ability to succeed.
+As someone with multiple disabilities - including total blindness, neurodivergence, and chronic health conditions - I
+have found that traditional educational settings often fail to accommodate my unique learning needs. I have attempted
+college online four times and community college once in person. Each attempt was met with significant challenges that
+hindered my ability to succeed.
 
 Barriers included rigid schedules, campuses that required physical navigation and mental mapping, rigid expectations
 around learning styles, a lack of understanding from educators on how to support diverse needs, and financial aid that
@@ -38,16 +38,16 @@ financial constraints, and a vision for more inclusive educational models for mu
 
 ## What “Self-Paced” Really Means
 
-Many people think of self-paced education as simply learning at one’s own speed. While that is a key component, true
+Many people think of self-paced education as simply learning at one's own speed. While that's a key component, true
 self-paced education encompasses much more. It involves having the freedom to choose when, where, and how to learn. It
 means being able to select the resources and methods that work best for an individual’s unique needs.
 
 For me, this has meant utilizing a variety of tools and strategies, such as online courses that allow for flexible
 deadlines, interactive projects, and assistive technologies that cater to my blindness and neurodivergence. This
-includes screen readers and artificial intelligence tools—which are often considered a gray area at traditional
+includes screen readers and artificial intelligence tools - which are often considered a gray area at traditional
 institutions. Self-paced education also allows for breaks when needed, which is crucial for managing my chronic health
-conditions. Ultimately, it is about creating a learning environment that is adaptable and responsive, rather than
-forcing the learner to conform to a rigid system.
+conditions. Ultimately, it's about creating a learning environment that's adaptable and responsive, rather than forcing
+the learner to conform to a rigid system.
 
 Another key aspect is finding your own way to learn, rather than being confined to a single method that may not suit
 you. Throughout my attempts at traditional education, I was often expected to learn in a way that did not work for me,
@@ -66,7 +66,7 @@ while pursuing educational goals.
 
 ## Learning While Multiply Disabled
 
-Learning while multiply disabled is not simply the sum of several separate challenges. Disabilities interact with one
+Learning while multiply disabled isn't simply the sum of several separate challenges. Disabilities interact with one
 another in ways that compound difficulty and unpredictability. An accommodation that supports one disability may worsen
 the impact of another, and systems designed with a single access need in mind often fail when multiple needs are present
 at the same time. For example, tools that rely heavily on video may exclude blind learners, while fast-paced,
@@ -89,18 +89,18 @@ rarely recognized or supported in traditional settings.
 **The barrier for multiply disabled learners is rarely a lack of ability or motivation.** What we lack is educational
 infrastructure designed for lives marked by complexity, uncertainty, and limited reserves. Self-paced education
 acknowledges this reality. It creates space for learners to engage when they are able, to pause when they must, and to
-return without penalty or shame. For multiply disabled people, this is not a luxury or a preference. It is often the
+return without penalty or shame. For multiply disabled people, this isn't a luxury or a preference. It's often the
 difference between being able to learn at all and being forced to give up.
 
 ## Why Traditional Education Models Fall Short
 
-Conventional education programs are often built around rigid structures that do not accommodate the diverse needs of all
+Conventional education programs are often built around rigid structures that don't accommodate the diverse needs of all
 learners. These models typically require students to adhere to fixed schedules, attend classes in person or at specific
 times, and complete assignments within strict deadlines. Such inflexibility can create significant barriers for students
 who need to take health breaks, require alternative learning methods, or need additional time to process information.
 
 Additionally, traditional education often emphasizes a one-size-fits-all approach to assessment, which disadvantages
-students who do not fit the standard mold. For example, students with disabilities may struggle with standardized tests
+students who don't fit the standard mold. For example, students with disabilities may struggle with standardized tests
 or group projects that ignore their unique challenges. Furthermore, a lack of understanding and support from educators
 can lead to profound isolation and frustration.
 
@@ -112,7 +112,7 @@ significant part of the grade.
 When I asked disability services about this, I was told that discussion posts were considered "participation" and
 therefore not eligible for extensions. I had some instructors who were kind enough to give me extensions anyway, but
 this often left me behind the next week and struggling to catch up. In the end, I had to withdraw from the courses
-because I simply could not maintain the pace while managing my health, and trying to do so was making me physically
+because I simply couldn't maintain the pace while managing my health, and trying to do so was making me physically
 sicker.
 
 Finally, in traditional education settings, you must prove your disability repeatedly to access accommodations. This
@@ -139,7 +139,7 @@ handle just to maintain my financial aid, which ultimately led to worsened healt
 There are vocational rehabilitation programs designed to help people with disabilities get training for in-demand jobs.
 However, these programs often have strict requirements and limited funding. I have had to walk away from vocational
 rehabilitation services multiple times because they failed to consider all of my disabilities, spoke down to me, or
-insisted I could only receive help if I attended a state college full-time—an impossible requirement for me.
+insisted I could only receive help if I attended a state college full-time - an impossible requirement for me.
 
 ## What Has Helped Me Learn Anyway
 
@@ -148,7 +148,7 @@ learning journey. Embracing self-paced education has been a crucial factor. By c
 for flexibility in scheduling and pacing, I have been able to tailor my learning experience to my unique needs.
 
 I now learn using a combination of platforms like Codecademy and Exercism, while mastering my own systems using Arch
-Linux, Python, and CLI-driven workflows. I am also exploring broader Christian history and Gnosticism at my own pace.
+Linux, Python, and CLI-driven workflows. I'm also exploring broader Christian history and Gnosticism at my own pace.
 These resources allow me to learn, take breaks when needed, and revisit material as often as necessary. I have also
 found that engaging in project-based learning and hands-on activities helps me retain information far better than
 traditional lecture-based methods.
@@ -166,7 +166,7 @@ take notes, I have been able to focus purely on comprehension and retention.
 
 Finally, using AI tools has revolutionized my learning process. These tools assist me in generating summaries,
 explaining complex concepts, and providing alternative explanations when I struggle to grasp a topic. AI has become an
-invaluable resource, allowing me to overcome barriers that traditional methods could not address.
+invaluable resource, allowing me to overcome barriers that traditional methods couldn't address.
 
 ## The Value of Self-Paced Education
 
@@ -181,13 +181,13 @@ structured interaction with peers and instructors can lead to feelings of isolat
 
 Furthermore, a major invisible burden of self-paced learning is the complete absence of a disability services office. In
 traditional settings, there is at least a theoretical framework for requesting accommodations. In self-directed
-learning, if a course, platform, or tool is inaccessible, the responsibility falls entirely on the learner. I am left to
+learning, if a course, platform, or tool is inaccessible, the responsibility falls entirely on the learner. I'm left to
 either engineer my own accessibility workarounds or abandon the resource and find an alternative. This constant need to
 self-advocate and troubleshoot drains the very energy reserves that self-paced learning is meant to protect.
 
 Despite these hurdles, the benefits far outweigh the drawbacks for learners like me. Self-paced education offers a level
-of personalization that traditional models simply cannot provide. Unfortunately, it is often viewed as less legitimate
-by employers and society at large. This stigma results in fewer student resources, discounts, and financial aid options,
+of personalization that traditional models simply can't provide. Unfortunately, it's often viewed as less legitimate by
+employers and society at large. This stigma results in fewer student resources, discounts, and financial aid options,
 alongside less recognition for the credentials earned.
 
 ## A Vision for Something Better
@@ -203,7 +203,7 @@ changes and promoting awareness, we can work towards creating an environment tha
 reach their full potential.
 
 That same inclusivity must extend to how financial support is structured. I envision scholarships and financial aid
-models that do not require full-time or even half-time enrollment to be considered valid. Learning should not be
+models that don't require full-time or even half-time enrollment to be considered valid. Learning shouldn't be
 contingent on a student’s ability to maintain a specific pace, especially when that pace may be incompatible with their
 health or disabilities. Financial support should recognize intent, effort, and persistence over time, rather than
 enforcing rigid enrollment thresholds. When funding accommodates reduced course loads, pauses, and nonlinear progress,
@@ -217,7 +217,7 @@ frequently failed to accommodate my needs, I have fully embraced self-paced lear
 able to construct an educational experience that aligns with my abilities and circumstances.
 
 While this autonomous approach requires significant effort to maintain, it offers a level of flexibility that
-traditional models cannot match. As we look to the future, it is essential to advocate for inclusive and accessible
+traditional models can't match. As we look to the future, it's essential to advocate for inclusive and accessible
 systems that recognize and support the diverse needs of all learners. By doing so, we can create a more equitable
-educational landscape for everyone. This is not about doing more or moving faster. It is about making learning possible,
+educational landscape for everyone. This isn't about doing more or moving faster. It's about making learning possible,
 sustainable, and humane.

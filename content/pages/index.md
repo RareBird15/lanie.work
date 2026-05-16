@@ -44,6 +44,6 @@ humane, predictable, and inclusive.
 
 ---
 
-_Faith, technology, and disability advocacy — working toward a more accessible world._
+_Faith, technology, and disability advocacy - working toward a more accessible world._
 
 _This site is intentionally small, updated selectively, and designed for clarity over volume._

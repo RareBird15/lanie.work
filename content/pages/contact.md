@@ -6,8 +6,8 @@ Summary: How to reach me and what to expect regarding communication and energy-b
 
 The best way to reach me is via the **contact form** below or **Mastodon**.
 
-Because I manage my life and work using **energy-based planning**, I am selective about my commitments and may take a
-few days to respond. I value clear, direct, and thoughtful communication.
+Because I manage my life and work using **energy-based planning**, I'm selective about my commitments and may take a few
+days to respond. I value clear, direct, and thoughtful communication.
 
 ## Where to Find Me
 
@@ -20,9 +20,9 @@ few days to respond. I value clear, direct, and thoughtful communication.
 
 To respect my cognitive load and accessibility needs:
 
-1. **Text over Voice:** I do not do well with voice calls or "ephemeral" audio. Please send a text-based message so I
-   can process it at my own pace.
-2. **Explicit Context:** When reaching out, please be clear about your intent. "Query over memory" applies here too—I
+1. **Text over Voice:** I don't do well with voice calls or "ephemeral" audio. Please send a text-based message so I can
+   process it at my own pace.
+2. **Explicit Context:** When reaching out, please be clear about your intent. "Query over memory" applies here too - I
    appreciate it when the subject line tells me exactly what the message is about.
 3. **Accessibility First:** If you're a developer seeking a usability audit, please include a link to your project or
    documentation so I can evaluate if it fits my interaction model.

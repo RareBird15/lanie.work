@@ -47,10 +47,10 @@ My choice of hardware is driven by a need for stability, precision, and low phys
 I struggle with systems that are "ephemeral" (information that appears once and vanishes) or that require spatial
 processing.
 
-- **Audio-Heavy Systems:** Audio is ephemeral. If I miss a sound or a voice cue, it’s gone. I cannot "reread" a sound.
+- **Audio-Heavy Systems:** Audio is ephemeral. If I miss a sound or a voice cue, it's gone. I can't "reread" a sound.
   Text works better because I can re-process it as many times as needed.
-- **Spatial Navigation:** Because of **topographical agnosia**, I cannot build mental maps of 2D or 3D spaces.
-- **Real-Time Reactions:** My nervous system requires "slower, thoughtful problem-solving." I cannot use systems that
+- **Spatial Navigation:** Because of **topographical agnosia**, I can't build mental maps of 2D or 3D spaces.
+- **Real-Time Reactions:** My nervous system requires "slower, thoughtful problem-solving." I can't use systems that
   penalize me for taking time to think.
 - **Passive Learning:** Watching videos or listening to lectures without hands-on interaction leads to zero retention
   for me.
@@ -62,15 +62,15 @@ processing.
 ### Programming & Tooling
 
 This is why I prefer **VS Code and the CLI** over mobile or web apps. The CLI is a persistent text stream that I can
-query and manipulate. It’s also why I focus on **Python and Backend Tooling** rather than frontend—it’s about logic and
-systems, not visual layouts.
+query and manipulate. It's also why I focus on **Python and Backend Tooling** rather than frontend - it's about logic
+and systems, not visual layouts.
 
 ### Gaming & Interactive Media
 
 - **Audiogames:** Most "blind-accessible" games rely on directional audio and spatial awareness. For me, this is sensory
   overload and provides no persistent information.
 - **MUDs (Text Games):** I love text-based worlds, but only if they offer coordinates or pathing (like _EmpireMUD_). If
-  a game requires me to "Map the forest" in my head, it is a hard barrier.
+  a game requires me to "Map the forest" in my head, it's a hard barrier.
 - **Automation:** I enjoy games like _Trimps_ and _Evolve_ because they are menu-driven and allow me to query the state
   of my systems at any time.
 

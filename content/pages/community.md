@@ -65,6 +65,6 @@ A dedicated space for Christians with any form of disability to find peer suppor
 
 In all these spaces, I prioritize:
 
-- **Low Cognitive Load:** Predictable systems that do not overwhelm the nervous system.
+- **Low Cognitive Load:** Predictable systems that don't overwhelm the nervous system.
 - **Accessibility First:** Tools that are fully navigable via screen readers (specifically NVDA) and keyboard.
 - **Energy-Based Planning:** Workflows that respect limited physical and cognitive energy.

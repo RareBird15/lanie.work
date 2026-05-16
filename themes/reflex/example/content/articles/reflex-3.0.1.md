@@ -7,7 +7,7 @@ Slug: reflex-3.0.1
 Reflex 3.0.1 is a bugfix release.
 
 It fixes the Python package structure, which was buggy and made it unusable.
-I also upgraded all NPM dependencies to latest versions, but that is only relevant for theme developers.
+I also upgraded all NPM dependencies to latest versions, but that's only relevant for theme developers.
 
 Reflex is now available on PyPI as [pelican-theme-reflex](https://pypi.org/project/pelican-theme-reflex/).
 It can be installed as a normal package:

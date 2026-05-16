@@ -27,17 +27,17 @@ This is a personal narrative about my experience as a blind, multiply disabled s
 It reflects my lived experience and my understanding as an adult, informed by later medical and psychological
 evaluation.
 
-This account is not intended as an attack on individual staff members. It is an account of systemic failure, medical
+This account isn't intended as an attack on individual staff members. It's an account of systemic failure, medical
 misattribution, and institutional decision-making, and of the long-term impact those failures have had on my health,
 functioning, and sense of safety.
 
-I am sharing this because I believe these patterns matter, not only for understanding my own life, but because I am
+I'm sharing this because I believe these patterns matter, not only for understanding my own life, but because I'm
 concerned they may still affect other students.
 
 ## Early Experiences and Context
 
-I am blind and grew up in a rural area with limited access to specialized services. Beginning around age six, I attended
-summer programs at the Texas School for the Blind and Visually Impaired (TSBVI). These programs were not primarily about
+I'm blind and grew up in a rural area with limited access to specialized services. Beginning around age six, I attended
+summer programs at the Texas School for the Blind and Visually Impaired (TSBVI). These programs weren't primarily about
 instruction for me; I received Braille education and other blindness-related training at home.
 
 The summer programs mattered because they provided something else: community. I was around other blind children, in an
@@ -67,7 +67,7 @@ Because of the misdiagnosis and the intensity of the pain, light sensitivity, an
 next, I ultimately had my eye surgically removed. After I healed, I returned to school under the assumption, shared by
 staff, that the medical problem had been resolved.
 
-It was not.
+It wasn't.
 
 The underlying neurological condition was never properly identified or treated. From that point forward, ongoing pain,
 neurological symptoms, and reduced tolerance for stress and demand were consistently interpreted as psychological,
@@ -90,7 +90,7 @@ The evaluation conducted that year did not include comprehensive neuropsychologi
 diagnosis given to me (PDD-NOS) functioned largely as a catch-all and was treated differently, and with fewer supports,
 than a full autism diagnosis. The testing approach also mixed child and adult instruments in a way that later evaluators
 have told me was inappropriate. Neuropsychology should have been involved much earlier. This explains why many of my
-needs were missed. As a result, I have been unable to access appropriate supports. I am now seeking a full reevaluation.
+needs were missed. As a result, I've been unable to access appropriate supports. I'm now seeking a full reevaluation.
 
 Despite this, the institution treated my difficulties as failures of coping or compliance rather than signs of serious
 neurological and developmental mismatch.
@@ -114,12 +114,12 @@ longer worthy of recognition, resources, or care.
 
 ## What Was Missed
 
-I was diagnosed as a baby with optic nerve hypoplasia. I did not learn until adulthood that this diagnosis is commonly
+I was diagnosed as a baby with optic nerve hypoplasia. I didn't learn until adulthood that this diagnosis is commonly
 associated with septo-optic dysplasia, a condition that warrants neurological and endocrinological evaluation and
 monitoring.
 
 None of this was pursued when I was a child. Neurology and endocrinology were never meaningfully involved. Everything
-was assumed to be blindness-related. I was my parents' first child, so I do not blame them for not knowing better, but
+was assumed to be blindness-related. I was my parents' first child, so I don't blame them for not knowing better, but
 the medical system also failed me.
 
 Only in my thirties did I begin to understand that many of my lifelong difficulties, including executive dysfunction,
@@ -129,26 +129,26 @@ by institutional trauma.
 
 ## Long-Term Impact
 
-I am now thirty-four years old. It is 2026.
+I'm now thirty-four years old. It's 2026.
 
 I continue to struggle with severe executive dysfunction and task initiation. Efforts toward independence are often met
 not with empowerment, but with shutdown, because my nervous system learned, repeatedly, that trying harder led to pain,
 punishment, and loss.
 
-This is not a failure to apply tools or strategies. It is the long-term impact of being pushed beyond capacity,
+This isn't a failure to apply tools or strategies. It's the long-term impact of being pushed beyond capacity,
 disbelieved, and abandoned at a critical developmental stage.
 
-## Why I Am Sharing This
+## Why I'm Sharing This
 
 I am not sharing this to relive the past or to assign individual blame.
 
-I am sharing it because I am concerned that the same philosophical framing—treating blindness as a single-axis
+I'm sharing it because I'm concerned that the same philosophical framing - treating blindness as a single-axis
 explanation and prioritizing independence without sufficient attention to multiple disabilities, neurological safety, or
-trauma—may still be causing harm.
+trauma - may still be causing harm.
 
 If this happened to me, it may be happening to others.
 
 I believe that blind, multiply disabled students deserve environments that prioritize safety, accurate medical
 understanding, and definitions of success that include interdependence and support, not punishment for collapse.
 
-This is my story. I am still living with its consequences. It does not need to be this way for others.
+This is my story. I'm still living with its consequences. It doesn't need to be this way for others.

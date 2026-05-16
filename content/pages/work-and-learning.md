@@ -89,7 +89,7 @@ Accessibility is treated as a core technical requirement rather than a cosmetic 
   decorative ASCII art or color-dependent information.
 - **Low Cognitive Load**: The design emphasizes clarity and predictability, making it suitable for users who value
   humane technology.
-- **Keyboard-Centricity**: As a CLI tool, it is fully navigable via keyboard, fitting into a streamlined Linux
+- **Keyboard-Centricity**: As a CLI tool, it's fully navigable via keyboard, fitting into a streamlined Linux
   development environment.
 
 #### Integration and Tooling
