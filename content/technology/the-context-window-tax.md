@@ -9,6 +9,7 @@ tags:
   - Technology
   - Workflow
   - Automation
+slug: context-window-tax
 summary: >
   Autonomous agents promise to be powerful assistive tools for disabled people, but their usage-based token models can
   quickly become financially unsustainable for those on fixed incomes. This article explores the "context window tax"
