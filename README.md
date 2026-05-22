@@ -1,105 +1,165 @@
 # lanie.work
 
-[![CI](https://github.com/RareBird15/lanie.work/actions/workflows/pelican-gh-pages.yml/badge.svg)](https://github.com/RareBird15/lanie.work/actions/workflows/pelican-gh-pages.yml)
+[![Deploy](https://github.com/RareBird15/lanie.work/actions/workflows/deploy.yml/badge.svg)](https://github.com/RareBird15/lanie.work/actions/workflows/deploy.yml)
 
 Homepage and resource hub for Lanie Carmelo: Christian, accessibility tester, neurodivergent programmer, and disability
-advocate. This site documents my access needs, technical workflows, and personal essays.
+advocate. This site documents my access needs, technical workflows, personal essays, faith reflections, and advocacy
+work.
 
-## 🌟 Features
+## Features
 
-- **Accessible Design:** Built with low cognitive load in mind. Tested extensively with NVDA.
-- **Python-Powered:** Generated statically using **Pelican** and managed with **`uv`**.
-- **Automated Indexing:** Articles and essays are automatically organized without manual curation.
-- **Keyboard-Centric:** Designed for screen reader and keyboard navigation from the ground up.
+- **Accessible design:** Built with low cognitive load, keyboard navigation, and screen reader usability in mind.
+- **Static site:** Built with [Hugo](https://gohugo.io/) for fast, reliable static publishing.
+- **Automated deployment:** Deployed through GitHub Actions and Cloudflare Pages.
+- **Social publishing helper:** Python helper scripts can queue new posts to Buffer-connected social channels.
+- **Contact form:** A Cloudflare Worker handles contact form submissions with Turnstile spam protection.
 
-## 📝 Writing Workflow (Automated)
-
-You no longer need to manually update a `writing.md` list. Pelican handles the routing and index generation
-automatically.
+## Writing Workflow
 
 To add a new essay or article:
 
-1. Create a new markdown file in the `content/writing/` folder.
-2. Add the standard Pelican YAML frontmatter (fenced by `---`):
+1. Create a new Markdown file in the appropriate Hugo content folder.
+2. Add TOML front matter.
+3. Write the post content below the front matter.
+4. Build and preview locally.
+5. Commit and push.
 
-   ```yaml
-   ---
-   Title: Your Article Title
-   Date: YYYY-MM-DD
-   Category: Writing
-   Slug: your-custom-slug
-   Summary: A short description for the index page.
-   ---
-   ```
+Example post front matter:
 
-3. Write your content below the frontmatter.
-4. Commit and push. The CI/CD pipeline will automatically build and publish the new article to the `/writing/` index.
+```toml
++++
+title = "Your Article Title"
+date = 2026-05-21
+description = "A short description for summaries and previews."
+draft = false
+tags = ["accessibility", "technology"]
+categories = ["Technology"]
++++
+```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
-- Python (3.10+)
-- `uv` (Fast Python package installer and resolver)
+- [Hugo](https://gohugo.io/)
+- Python 3.14 or newer
+- [uv](https://docs.astral.sh/uv/)
 - Git
 
 ### Local Development Setup
 
 ```bash
 # Clone the repository
-git clone [https://github.com/RareBird15/lanie.work.git](https://github.com/RareBird15/lanie.work.git)
+git clone https://github.com/RareBird15/lanie.work.git
 cd lanie.work
 
-# Build the site
-uv run make html
+# Install Python helper dependencies
+uv sync
 
-# Start the local development server (live preview)
-uv run make serve
+# Start Hugo's local development server
+hugo server
 ```
 
-Visit `http://localhost:8000` to view the site locally.
+Visit the local URL printed by Hugo to view the site.
 
-## 🛠️ Project Structure
+### Production Build
 
-This project uses a clean separation of static pages and chronological writing.
+```bash
+hugo
+```
+
+This generates the static site in:
+
+```text
+public/
+```
+
+## Buffer Publishing Scripts
+
+This repository includes Python helper scripts for Buffer-based social publishing.
+
+The main publish script reads the generated Hugo RSS feed, finds the latest post, queues it to Buffer, and records what
+has already been queued so rebuilds do not repeatedly queue the same post.
+
+Required environment variables:
+
+```bash
+BUFFER_API_KEY=your_buffer_api_key
+BUFFER_CHANNEL_IDS=comma,separated,buffer,channel,ids
+BUFFER_FACEBOOK_CHANNEL_IDS=comma,separated,facebook,channel,ids
+```
+
+Useful scripts:
+
+```bash
+# List Buffer organizations and channels
+uv run ./scripts/get_buffer_org_ids.py
+
+# Queue a harmless test post
+uv run ./scripts/test_buffer_post.py
+
+# Queue the latest generated RSS post to Buffer
+uv run ./scripts/publish_latest_to_buffer.py
+```
+
+Before running the publish script, build the site so the RSS feed exists:
+
+```bash
+hugo
+uv run ./scripts/publish_latest_to_buffer.py
+```
+
+The publish state is stored in:
+
+```text
+data/buffer-published.json
+```
+
+## Project Structure
 
 ```text
 lanie.work/
-├── pelicanconf.py           # Main Pelican configuration
-├── publishconf.py           # Production build settings
-├── content/
-│   ├── pages/               # Static navigation pages (About, Work, Accessibility Notes)
-│   └── writing/             # Chronological essays and articles
-├── themes/
-│   └── Flex/                # Accessible, responsive theme
+├── content/                         # Hugo content files
+├── data/                            # Data files, including Buffer publish state
+├── layouts/                         # Hugo layout overrides, if any
+├── public/                          # Generated site output
+├── scripts/                         # Python helper scripts
+├── static/                          # Static assets
+├── themes/                          # Hugo theme files or modules, if used
+├── workers/                         # Cloudflare Worker code
 ├── .github/
-│   └── workflows/
-│       └── pelican-gh-pages.yml # CI/CD deployment pipeline
-├── .markdownlint.json       # Minimal markdown linting rules
-└── README.md                # Project overview
+│   └── workflows/                   # CI/CD workflows
+├── pyproject.toml                   # Python helper dependencies
+├── requirements.txt                 # Compiled Python requirements, if needed
+└── README.md                        # Project overview
 ```
 
-## 📐 Content Guidelines
+## Content Guidelines
 
-### Markdown & Formatting
+### Markdown and Formatting
 
-- Use **ATX-style headers** (`#` syntax) for logical screen reader navigation.
-- Keep line length to 120 characters (Prose-wrap preferred).
+- Use ATX-style headers (`#` syntax) for logical screen reader navigation.
+- Do not skip heading levels.
+- Keep paragraphs short and scannable.
 - Always include descriptive `alt` text for images.
-- Specify a language for fenced code blocks (e.g., `bash`, `python`, `c`).
+- Specify a language for fenced code blocks, such as `bash`, `python`, `toml`, or `text`.
+- Use descriptive link text. Avoid vague links like “click here” or “read more.”
 
 ### Accessibility Philosophy
 
-- **Text over Audio:** Provide persistent text for all critical information.
-- **Low Cognitive Load:** Use clear bullet points and avoid "walls of text."
-- **No Spatial Reliance:** Avoid directions or instructions that require mental mapping or visual-only placement.
+- **Text over audio:** Provide persistent text for all critical information.
+- **Low cognitive load:** Use clear structure, short sections, and plain language where possible.
+- **Keyboard-first:** Pages and interactive elements should work without a mouse.
+- **No spatial reliance:** Avoid instructions that depend on visual placement, color alone, or layout alone.
 
-## 🤝 Contributing
+## Contributing
 
-Contributions are welcome! Please read `CONTRIBUTING.md` for details on our code of conduct and the process for
-submitting pull requests.
+Contributions are welcome, especially improvements to accessibility, semantic structure, documentation, and workflow
+automation.
 
-## 🔗 Links
+Please read `CONTRIBUTING.md` before submitting changes.
+
+## Links
 
 - **Website:** [lanie.work](https://lanie.work)
 - **Mastodon:** [@RareBird15@allovertheplace.ca](https://allovertheplace.ca/@RareBird15)
@@ -107,7 +167,7 @@ submitting pull requests.
 - **LinkedIn:** [laniecarmelo](https://www.linkedin.com/in/laniecarmelo/)
 - **Code::Stats:** [RareBird15](https://codestats.net/users/RareBird15)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-Powered by [Pelican](https://getpelican.com/), styled with the [Flex](https://github.com/alexandrevicenzi/Flex) theme,
-and hosted on [GitHub Pages](https://pages.github.com/).
+Built with [Hugo](https://gohugo.io/), hosted on [Cloudflare Pages](https://pages.cloudflare.com/), and supported by
+small Python helper scripts managed with [uv](https://docs.astral.sh/uv/).

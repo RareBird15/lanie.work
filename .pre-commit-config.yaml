@@ -1,9 +1,8 @@
-# Pre-commit hooks configuration for Pelican site
-# Setup: uv pip install pre-commit && pre-commit install
-# Run manually: pre-commit run --all-files
+# Pre-commit hooks configuration for Hugo site
+# Setup: uv run pre-commit install
+# Run manually: uv run pre-commit run --all-files
 
-# Global exclusions to prevent scanning generated files or virtual environments
-exclude: ^(output/|\.venv/|venv/|__pycache__/|node_modules/|vendor/|\.lh/|typings/|reports/|themes/)
+exclude: ^(public/|resources/_gen/|\.hugo_build\.lock|\.venv/|\.venv-workers/|venv/|__pycache__/|node_modules/|vendor/|reports/|\.wrangler/|services/form-handler/python_modules/|themes/)
 
 repos:
   # General file checks
@@ -16,13 +15,28 @@ repos:
         name: Fix end of files
       - id: check-yaml
         name: Check YAML syntax
+      - id: check-toml
+        name: Check TOML syntax
+      - id: check-json
+        name: Check JSON syntax
       - id: check-added-large-files
         args: ["--maxkb=1000"]
       - id: check-case-conflict
       - id: check-merge-conflict
       - id: mixed-line-ending
         args: ["--fix=lf"]
-      - id: check-json
+      - id: debug-statements
+        name: Check Python debug statements
+
+  # Python linting and formatting
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.14
+    hooks:
+      - id: ruff
+        name: Ruff lint Python
+        args: ["--fix"]
+      - id: ruff-format
+        name: Ruff format Python
 
   # Markdown linting
   - repo: https://github.com/igorshubovych/markdownlint-cli
@@ -30,7 +44,7 @@ repos:
     hooks:
       - id: markdownlint
         name: Lint Markdown files
-        args: [--config, .markdownlint.json]
+        args: ["--config", ".markdownlint.json"]
         files: \.md$
 
   # YAML linting
@@ -48,4 +62,18 @@ repos:
       - id: codespell
         name: Check spelling
         args: ["--ignore-words=.codespell-ignore.txt"]
-        exclude: ^(package(-lock)?\.json|LICENSE|CNAME)$
+        exclude: ^(package(-lock)?\.json|LICENSE|CNAME|go\.sum|uv\.lock|data/buffer-published\.json)$
+
+  # Shell script linting
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.11.0.1
+    hooks:
+      - id: shellcheck
+        name: ShellCheck shell scripts
+
+  # GitHub Actions linting
+  - repo: https://github.com/rhysd/actionlint
+    rev: v1.7.8
+    hooks:
+      - id: actionlint
+        name: Lint GitHub Actions workflows

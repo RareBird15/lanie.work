@@ -1,9 +1,11 @@
 ---
-Title: "The Multiplicative Nature of Disability: Why 1+1 Equals a System Crash"
-Date: 2026-05-11
-Modified: 2026-05-11
-Category: Advocacy
-Tags:
+title: "The Multiplicative Nature of Disability: Why 1+1 Equals a System Crash"
+date: 2026-05-11
+lastmod: 2026-05-11
+math: true
+categories:
+  - Advocacy
+tags:
   - Accessibility
   - Advocacy
   - Blindness
@@ -11,26 +13,22 @@ Tags:
   - Chronic Illness
   - Disability
   - Philosophy
-Slug: multiplicative-disability
-Summary: >
+slug: multiplicative-disability
+description: >
   The common assumption is that multiple disabilities are additive: two disabilities means twice the difficulty. This is
   wrong. Disabilities compound multiplicatively, and accessibility design that ignores this causes active harm.
 ---
 
-## Table of Contents
-
-[TOC]
-
 > **Sourcing Note:** The examples in this article are not hypotheticals. They are extracted from my own captured daily
 > logs, technical sessions, and lived experiences. For a plain-language breakdown of the physical mechanics behind my
-> diagnoses, see my [Human Terms summary]({filename}/pages/human-terms.md).
+> diagnoses, see my [Human Terms summary](/human-terms/).
 
 ## The Comfortable Lie of the Sum
 
 There's a model of disability that feels mathematically tidy and is almost entirely wrong.
 
 It goes like this: a person has Disability A and Disability B. Their overall difficulty is therefore $A + B$. If we
-build an accommodation for A, we’ve reduced the total load to just $B$. Progress has been made. The spreadsheet
+build an accommodation for A, we've reduced the total load to just $B$. Progress has been made. The spreadsheet
 balances. Everyone goes home feeling useful.
 
 In reality, disability isn't an additive sum, but rather a **resource contention issue**. The correct relationship is
@@ -39,7 +37,7 @@ closer to:
 $$\text{Lived Difficulty} = (A \times B \times C) \cdot \text{System Design}$$
 
 When the system design ignores the interaction between variables, when the accommodation built for Disability A requires
-a resource already depleted by Disability B, it acts as a multiplier. The result isn't a reduction in load; it’s a
+a resource already depleted by Disability B, it acts as a multiplier. The result isn't a reduction in load; it's a
 **buffer overflow**.
 
 ## System Specifications: Operating in "Manual Mode"
@@ -279,7 +277,7 @@ that a solution for one user can be an active harm to another.
 I'm not an edge case. I'm the predictable result of a world that designed for one disability at a time and then
 encountered a user running multiple high-overhead processes on a system with no reserve capacity.
 
-The math was never going to balance using addition. It’s time to change the operator.
+The math was never going to balance using addition. It's time to change the operator.
 
 ---
 

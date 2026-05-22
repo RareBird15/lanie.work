@@ -3,23 +3,24 @@ name: Deploy Form Handler Worker
 on:
   workflow_dispatch:
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
-      - "services/form-handler/**" # Only trigger if files in this folder change
+      - "services/form-handler/**"
       - ".github/workflows/deploy-worker.yml"
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     permissions:
       contents: read
+
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v6
+      - name: Checkout repository
+        uses: actions/checkout@v6.0.2
 
       - name: Deploy Worker
-        uses: cloudflare/wrangler-action@v3.15.0
+        uses: cloudflare/wrangler-action@v4.0.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           wranglerVersion: 4.83.0

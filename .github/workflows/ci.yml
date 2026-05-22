@@ -7,33 +7,34 @@ on:
     branches: [main]
 
 jobs:
-  lint-and-test-build:
+  lint-and-build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout repository
+        uses: actions/checkout@v6.0.2
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v3.2.1
+        with:
+          hugo-version: latest
+          extended: true
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v7
+        uses: astral-sh/setup-uv@v8.1.0
         with:
           enable-cache: true
 
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v6.2.0
         with:
-          python-version: "3.12"
+          python-version: "3.14"
 
-      - name: Install Dependencies
-        run: uv pip install --system pre-commit pelican markdown invoke livereload
-
-      - name: Verify theme exists
-        run: |
-          if [ ! -d themes/reflex/templates ]; then
-            echo "Missing theme at themes/reflex. Ensure the theme files are committed (or checkout submodules if using a submodule)."
-            exit 1
-          fi
+      - name: Install Python dependencies
+        run: uv sync
 
       - name: Run pre-commit hooks
-        run: pre-commit run --all-files
+        run: uv run pre-commit run --all-files
 
-      - name: Test Pelican Build
-        run: pelican content -s pelicanconf.py -o output
+      - name: Build Hugo site
+        run: hugo --minify

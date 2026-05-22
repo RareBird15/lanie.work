@@ -1,5 +1,5 @@
-# Dependabot configuration for automated dependency updates
 version: 2
+
 updates:
   # GitHub Actions
   - package-ecosystem: "github-actions"
@@ -10,7 +10,7 @@ updates:
       - "dependencies"
       - "github-actions"
 
-  # Python dependencies (replaces Bundler/Ruby)
+  # Python helper dependencies
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
@@ -18,3 +18,13 @@ updates:
     labels:
       - "dependencies"
       - "python"
+
+  # Hugo modules
+  - package-ecosystem: "gomod"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "hugo"
+      - "go"
