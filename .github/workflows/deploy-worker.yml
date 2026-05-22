@@ -3,19 +3,20 @@ name: Deploy Form Handler Worker
 on:
   workflow_dispatch:
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
-      - "services/form-handler/**" # Only trigger if files in this folder change
+      - "services/form-handler/**"
       - ".github/workflows/deploy-worker.yml"
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     permissions:
       contents: read
+
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v6
 
       - name: Deploy Worker

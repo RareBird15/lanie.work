@@ -1,35 +1,62 @@
 name: Publish to Socials
+
 on:
   check_run:
     types: [completed]
 
 jobs:
   publish:
-    # Only run if Cloudflare Pages deployment succeeded
     if: github.event.check_run.conclusion == 'success' && github.event.check_run.name == 'Cloudflare Pages'
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: latest
+          extended: true
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v8.1.0
+        uses: astral-sh/setup-uv@v8
         with:
           enable-cache: true
-          version: "latest"
 
       - name: Set up Python
-        run: uv python install 3.12
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
 
-      - name: Run Master Publisher
+      - name: Install Python dependencies
+        run: uv sync
+
+      - name: Build Hugo site
+        run: hugo --minify
+
+      - name: Queue latest post in Buffer
         env:
-          MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
-          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
-          FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
-          LI_PERSONAL_TOKEN: ${{ secrets.LI_PERSONAL_TOKEN }}
-          LI_PERSON_URN: ${{ secrets.LI_PERSON_URN }}
-        # uv run automatically handles dependencies if they are in your pyproject.toml
-        # or we can specify them inline for a "zero-config" approach:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_CHANNEL_IDS: ${{ secrets.BUFFER_CHANNEL_IDS }}
+          BUFFER_FACEBOOK_CHANNEL_IDS: ${{ secrets.BUFFER_FACEBOOK_CHANNEL_IDS }}
+        run: uv run ./scripts/publish_latest_to_buffer.py
+
+      - name: Commit Buffer publish state
         run: |
-          uv run --with feedparser --with mastodon.py --with requests --with python-dotenv scripts/publish_all.py
+          if git diff --quiet -- data/buffer-published.json; then
+            echo "No Buffer publish state changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add data/buffer-published.json
+          git commit -m "Update Buffer publish state"
+          git push

@@ -1,23 +1,20 @@
 ---
-Title: "Blind, Multiply Disabled, and Pushed Beyond Capacity: A Personal Narrative"
-Date: 2026-01-04
-Modified: 2026-03-31
-Category: Advocacy
-Tags:
+title: "Blind, Multiply Disabled, and Pushed Beyond Capacity: A Personal Narrative"
+date: 2026-01-04
+lastmod: 2026-03-31
+categories:
+  - Advocacy
+tags:
   - advocacy
   - medical-trauma
   - blindness
   - neurodivergent
   - personal
-Slug: blind-multiply-disabled
-Summary:
+slug: blind-multiply-disabled
+description: >
   A personal account of my experiences as a blind, multiply disabled student in a residential school setting,
   highlighting systemic failures and their long-term impact on health, functioning, and safety.
 ---
-
-## Table of Contents
-
-[TOC]
 
 > **Content Note:** This narrative discusses medical trauma and institutional harm.
 
@@ -97,7 +94,7 @@ neurological and developmental mismatch.
 
 ## Withdrawal of Support and Punitive Actions
 
-After I could no longer meet the EXIT program’s demands, I was sent home with no meaningful support in place.
+After I could no longer meet the EXIT program's demands, I was sent home with no meaningful support in place.
 
 In addition to being removed from the program:
 

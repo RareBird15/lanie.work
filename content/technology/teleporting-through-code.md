@@ -1,33 +1,31 @@
 ---
-Title: "Teleporting Through the Code: Why I Traded Spatial Maps for Semantic Logic"
-Date: 2026-04-08
-Modified: 2026-04-08
-Category: Technology
-Tags:
-  - Accessibility
-  - CLI
-  - Chronic Illness
-  - Neurodivergent
-  - Philosophy
-  - Python
-  - Topographical Agnosia
-Slug: teleporting-through-code
-Summary:
+title: "Teleporting Through the Code: Why I Traded Spatial Maps for Semantic Logic"
+date: 2026-04-08
+lastmod: 2026-04-08
+categories:
+  - Technology
+tags:
+  - accessibility
+  - cli
+  - chronic-illness
+  - neurodivergent
+  - philosophy
+  - python
+  - topographical-agnosia
+slug: teleporting-through-code
+description: >
   A personal exploration of how severe Topographical Agnosia shaped my transition from the visual chaos of frontend
   development to the semantic stability of the CLI and backend logic.
+showTableOfContents: true
 ---
-
-## Table of Contents
-
-[TOC]
 
 ## The Broken Autopilot: Defining the Terrain
 
 Have you ever considered how much of your life is handled by background processes? For most people, basic functions like
 swallowing and breathing are automatic, handled by the system's kernel without any conscious input. For me, these are
-manual system calls. I call this "Manual Mode." I don’t have a background thread for swallowing. Every single swallow is
-a conscious execution; if I lose focus, I find myself choking or realizing I’ve stopped clearing my throat entirely. My
-breathing follows a similar logic. While my body technically keeps me alive, it doesn't do it efficiently. If I’m deep
+manual system calls. I call this "Manual Mode." I don't have a background thread for swallowing. Every single swallow is
+a conscious execution; if I lose focus, I find myself choking or realizing I've stopped clearing my throat entirely. My
+breathing follows a similar logic. While my body technically keeps me alive, it doesn't do it efficiently. If I'm deep
 in a coding problem, I forget the instruction to breathe deeply. My system starts running on shallow air, my
 intracranial pressure spikes, and I end up with a system crash in the form of a debilitating headache. Every breath is a
 manual command, and the CPU cycles required to keep my physical hardware running are cycles I can't use for anything
@@ -41,7 +39,7 @@ begins.
 
 If the manual effort of breathing and swallowing is the physical tax I pay to keep my body running, Topographical
 Agnosia (TA) is the logic tax I pay to exist in space. Most people have an internal sense of direction that
-automatically knows the layout of a building. My brain doesn't store that data. For me, living in a house, even one I’ve
+automatically knows the layout of a building. My brain doesn't store that data. For me, living in a house, even one I've
 lived in for three years, is like following a set of text-based directions where I can only see one line at a time. As
 soon as I act on a direction, the instruction disappears.
 
@@ -61,7 +59,7 @@ around and use visual cues to deduce their location. As a totally blind person w
 anxiety and exhaustion. The world is a maze without landmarks, and every step is a gamble. However, in the realm of
 programming, especially with tools like the Command Line Interface (CLI), I found a refuge. In programming, you don't
 have to walk through a directory structure or visually scan for files. You can call a name, and the data appears. In a
-terminal, a file's location isn't a point in space; it’s a string of characters. I don't need a map to find it; I just
+terminal, a file's location isn't a point in space; it's a string of characters. I don't need a map to find it; I just
 need its name. This is what I call teleportation. The logic of code allows me to bypass the need for spatial navigation
 entirely. Instead of trying to build a mental map of my codebase, I can rely on semantic logic to get me where I need to
 go. This is why I transitioned from frontend development, which relies heavily on spatial metaphors, to backend
@@ -73,12 +71,12 @@ development and CLI tools that allow for this kind of teleportation.
 
 My early days with web development were deceptively comfortable because of HTML. To a screen reader, and to my brain,
 HTML is just a nested list of facts. An `<h1>` isn't "big text at the top of the page"; it's simply the First Important
-Thing. An `<ul>` isn't a vertical list on the left sidebar; it’s a Collection of Related Items. A `<main>` element feels
+Thing. An `<ul>` isn't a vertical list on the left sidebar; it's a Collection of Related Items. A `<main>` element feels
 like a labeled container for the main content. A `<nav>` is a container for navigation links, something that as a screen
 reader user, I can easily understand and identify. HTML leverages my verbal memory. I don't need to visualize where a
 button sits on a screen; I just need to know what that button is. In this world, everything has a name and a role.
 
-It’s a predictable environment where "what" is always more important than "where." As long as I stayed within the
+It's a predictable environment where "what" is always more important than "where." As long as I stayed within the
 semantic lines of well-structured HTML, the digital world felt like a place I could finally navigate without a manual
 override.
 
@@ -106,19 +104,19 @@ guidance, I would often fail. If I had any clue where I was going, and we walked
 chaos would completely disrupt my ability to orient myself.
 
 The constant changes in frontend development feel like that construction noise. Every new framework, every new design
-trend, every new tool is like a jackhammer blasting through the mental map I’m trying to build. It’s not just
-overwhelming; it’s actively disruptive to my ability to learn and navigate the space of frontend development.
+trend, every new tool is like a jackhammer blasting through the mental map I'm trying to build. It's not just
+overwhelming; it's actively disruptive to my ability to learn and navigate the space of frontend development.
 
 ## The "C" Friction: The Neighborhood of Addresses
 
 If frontend development is a shifting maze, programming in C is like being given a neighborhood of street signs without
 ever being able to see the neighborhood itself. In C, you have memory addresses and pointers that allow you to access
 specific locations in memory. For most programmers, this is a powerful tool that allows for efficient memory management.
-For me, it’s like being handed a list of street names and house numbers without ever being able to visualize the layout
+For me, it's like being handed a list of street names and house numbers without ever being able to visualize the layout
 of the neighborhood. I can understand that a pointer is a reference to a specific memory address, but I have no mental
 map of where that address is in relation to anything else.
 
-It’s a constant struggle to keep track of these coordinates in my head, and it feels like trying to navigate a city with
+It's a constant struggle to keep track of these coordinates in my head, and it feels like trying to navigate a city with
 no landmarks, no sense of direction, and no capacity to visualize the layout. This is why I found C to be particularly
 challenging and why I gravitated towards languages and tools that allow for more semantic navigation rather than spatial
 navigation.

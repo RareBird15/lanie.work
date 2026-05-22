@@ -1,7 +1,8 @@
 ---
 title: No Home Base
 date: 2026-05-13
-category: Advocacy
+categories:
+  - Advocacy
 tags:
   - disability
   - accessibility
@@ -13,7 +14,7 @@ tags:
   - faith
   - tech
 slug: no-home-base
-summary:
+description: >
   When you're multiply disabled, conservative Christian, and an AI enthusiast, every community rejects part of your
   identity. No single space accepts the whole stack, so I'm building the infrastructure myself.
 ---

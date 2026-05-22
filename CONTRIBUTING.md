@@ -1,97 +1,272 @@
 # Contributing Guidelines
 
-Thank you for your interest in contributing to my digital garden!
+Thank you for your interest in contributing to this digital garden.
 
-Because this site serves as a live accessibility testing ground and my personal workspace, contributions that improve
-screen reader navigation, semantic structure, or workflow automation are always deeply appreciated.
+Because this site serves as a live accessibility testing ground and personal workspace, contributions that improve
+screen reader navigation, semantic structure, documentation, or workflow automation are especially welcome.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Python (version 3.10 or higher)
-- `uv` (Fast Python package installer and resolver)
+- Hugo
+- Python 3.14 or newer
+- `uv`
 - Git
+- `pre-commit`, if working with repository hooks
 
 ### Setup
 
-1. Clone the repository: `git clone https://github.com/RareBird15/lanie.work.git`
-2. Navigate to the directory: `cd lanie.work`
-3. Install dependencies and set up pre-commit hooks (if configured): `uv pip install pre-commit && pre-commit install`
-4. Start the local development server: `uv run make serve`
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/RareBird15/lanie.work.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd lanie.work
+   ```
+
+3. Install Python helper dependencies:
+
+   ```bash
+   uv sync
+   ```
+
+4. Install pre-commit hooks, if needed:
+
+   ```bash
+   uv run pre-commit install
+   ```
+
+5. Start the local Hugo server:
+
+   ```bash
+   hugo server
+   ```
 
 ## Development Workflow
 
 ### Running Locally
 
 ```bash
-# Start the local development server with live reload
-uv run make serve
+# Start the local development server
+hugo server
 
 # Build the static site for production
-uv run make html
+hugo
 
-# Run linters manually (if pre-commit is installed)
-pre-commit run --all-files
+# Run Python helper scripts
+uv run ./scripts/get_buffer_org_ids.py
 
-# Clean generated files
-uv run make clean
+# Run pre-commit checks manually
+uv run pre-commit run --all-files
 ```
 
-### Pre-commit Hooks
+## Buffer Publishing Workflow
 
-This project uses `pre-commit` to maintain code quality and prevent accessibility regressions. Hooks run automatically
-before each commit and include:
+The site uses Buffer for social publishing instead of calling each social platform directly.
+
+The publishing helper script:
+
+1. Reads the generated Hugo RSS feed.
+2. Finds the latest post.
+3. Queues it to configured Buffer channels.
+4. Records the queued post in `data/buffer-published.json`.
+5. Skips posts that were already queued.
+
+Before testing the publish script, build the site:
+
+```bash
+hugo
+uv run ./scripts/publish_latest_to_buffer.py
+```
+
+Required environment variables:
+
+```bash
+BUFFER_API_KEY=your_buffer_api_key
+BUFFER_CHANNEL_IDS=comma,separated,buffer,channel,ids
+BUFFER_FACEBOOK_CHANNEL_IDS=comma,separated,facebook,channel,ids
+```
+
+Do not commit API keys or secrets.
+
+## Pre-commit Hooks
+
+This project uses `pre-commit` to maintain code quality and reduce accessibility regressions.
+
+Hooks may include:
 
 - Trailing whitespace removal
 - End-of-file fixing
-- YAML syntax checking
-- Markdown linting (with custom rules to allow Pelican templating)
+- YAML/TOML syntax checks
+- Markdown linting
+- Python linting or formatting checks
 
-To skip hooks in an emergency (not recommended):
+To run hooks manually:
+
+```bash
+uv run pre-commit run --all-files
+```
+
+To skip hooks in an emergency:
 
 ```bash
 git commit --no-verify
 ```
 
-## Code & Content Style
+Skipping hooks is not recommended.
+
+## Code and Content Style
 
 ### Markdown
 
-- **Headers:** Use ATX-style headers (`#` syntax) strictly sequentially. Do not skip heading levels (e.g., jumping from
-  `##` to `####`), as this disrupts screen reader navigation.
-- **Line Length:** Keep line length under 120 characters (prose-wrap preferred) to make raw files readable.
-- **Lists:** Use dashes (`-`) or asterisks (`*`) for unordered lists. Keep list items concise to respect cognitive load.
-- **Code Blocks:** Always specify a language for fenced code blocks (e.g., `bash`, `python`, `c`).
+- Use ATX-style headers (`#` syntax).
+- Keep heading levels sequential. Do not jump from `##` to `####`.
+- Keep paragraphs short and scannable.
+- Use dashes (`-`) for unordered lists.
+- Always specify a language for fenced code blocks.
+- Use descriptive link text.
 
-### Frontmatter (YAML)
+### Hugo Front Matter
 
-- Use Title Case for keys (e.g., `Title`, `Date`, `Category`).
-- Do not put a space before the colon (use `Key: Value`, not `Key : Value`).
-- Always include a `Summary` for `content/writing/` posts so the automated Pelican index renders correctly.
+Use TOML front matter unless there is a specific reason to use another format.
 
-### Accessibility Standards
+Example:
 
-This site is built around a **Persistent Text** and **Keyboard-First** interaction model.
+```toml
++++
+title = "Your Article Title"
+date = 2026-05-21
+description = "A short summary for previews."
+draft = false
+tags = ["accessibility", "technology"]
+categories = ["Technology"]
++++
+```
 
-- **Alt Text:** All images must have descriptive alt text. Avoid phrases like "Image of" or "Picture of"—screen readers
-  announce this automatically.
-- **Semantic HTML:** Rely on native HTML5 landmarks (nav, main, footer) provided by the Flex theme.
-- **Link Clarity:** Never use "Click here" or "Read more." Link text must describe its destination independently of the
-  surrounding text.
-- **Sensory Agnostic:** Do not provide instructions that rely on spatial relationships (e.g., "click the button on the
-  right") or color alone.
-- **Testing:** If making structural changes, test with NVDA (or another screen reader) and ensure the site remains fully
-  operable via keyboard.
+Guidelines:
+
+- Use lowercase TOML keys.
+- Include a clear `title`.
+- Include a useful `description` for posts.
+- Set `draft = true` for unfinished work.
+- Use meaningful tags and categories.
+
+### Python
+
+Python scripts in this repository are helper tools, not the site generator.
+
+Guidelines:
+
+- Keep scripts small and readable.
+- Prefer clear error messages.
+- Do not hard-code API keys or secrets.
+- Read secrets from environment variables.
+- Avoid platform-specific API integrations when Buffer can handle the publishing layer.
+
+## Accessibility Standards
+
+This site is built around a persistent-text and keyboard-first interaction model.
+
+### Alt Text
+
+All meaningful images must have descriptive alt text.
+
+Avoid phrases like:
+
+- “Image of”
+- “Picture of”
+- “Graphic of”
+
+Screen readers already announce images.
+
+### Semantic Structure
+
+Use semantic HTML and Hugo templates that preserve logical document structure.
+
+Important checks:
+
+- One clear page title.
+- Logical heading order.
+- Descriptive navigation.
+- Descriptive link text.
+- No keyboard traps.
+
+### Link Clarity
+
+Avoid vague link text such as:
+
+- “Click here”
+- “Read more”
+- “Learn more”
+
+Use link text that describes the destination independently.
+
+### Sensory-Agnostic Instructions
+
+Do not write instructions that rely only on:
+
+- Color
+- Shape
+- Visual position
+- Sound
+- Mouse movement
+
+Instead of:
+
+```text
+Click the button on the right.
+```
+
+Use:
+
+```text
+Select the Save button.
+```
+
+### Testing
+
+For structural or layout changes, test that:
+
+1. The site can be navigated by keyboard.
+2. Headings form a logical outline.
+3. Links make sense out of context.
+4. Images have appropriate alt text.
+5. Forms have labels and useful error messages.
+
+Screen reader testing with NVDA, JAWS, VoiceOver, or another screen reader is appreciated when possible.
 
 ## Submitting Changes
 
-1. Create a new branch for your changes (`git checkout -b feature/your-feature-name`).
-2. Make your changes with clear, descriptive commits.
-3. Ensure the site builds successfully (`uv run make html`).
-4. Push your branch and create a Pull Request.
+1. Create a new branch:
 
-## Questions?
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
 
-Feel free to open an issue for any questions or concerns! If you are proposing a major structural change, please open an
-issue first to discuss whether it aligns with the site's low-cognitive-load philosophy.
+2. Make changes with clear, descriptive commits.
+
+3. Build the site:
+
+   ```bash
+   hugo
+   ```
+
+4. Run checks:
+
+   ```bash
+   uv run pre-commit run --all-files
+   ```
+
+5. Push your branch and create a pull request.
+
+## Questions
+
+Open an issue for questions or concerns.
+
+For major structural changes, please open an issue first to discuss whether the change fits the site's accessibility,
+low-cognitive-load, and maintainability goals.

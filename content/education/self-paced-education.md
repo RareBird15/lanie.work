@@ -1,24 +1,22 @@
 ---
-Title: The Value of Self-Paced Education for Learners with Multiple Disabilities
-Date: 2025-12-21
-Modified: 2026-03-31
-Category: Education
-Tags:
-  - Accessibility
-  - Neurodivergent
-  - Blindness
-  - Chronic Illness
+title: The Case for Self-Paced Education
+date: 2025-12-21
+lastmod: 2026-03-31
+categories:
   - Education
-  - Advocacy
-Slug: self-paced-education
-Summary:
+tags:
+  - accessibility
+  - neurodivergent
+  - blindness
+  - chronic-illness
+  - education
+  - advocacy
+slug: self-paced-education
+description: >
   An in-depth essay exploring the challenges faced by multiply disabled learners in traditional education settings, and
   how self-paced education provides a more accessible and flexible alternative.
+showTableOfContents: true
 ---
-
-## Table of Contents
-
-[TOC]
 
 ## Introduction: Why Self-Paced Education Matters
 
@@ -36,11 +34,11 @@ learn in a way that suits my abilities and circumstances.
 This is a long-form essay that explores self-paced education, systemic barriers in traditional and online learning,
 financial constraints, and a vision for more inclusive educational models for multiply disabled learners.
 
-## What “Self-Paced” Really Means
+## What "Self-Paced" Really Means
 
 Many people think of self-paced education as simply learning at one's own speed. While that's a key component, true
 self-paced education encompasses much more. It involves having the freedom to choose when, where, and how to learn. It
-means being able to select the resources and methods that work best for an individual’s unique needs.
+means being able to select the resources and methods that work best for an individual's unique needs.
 
 For me, this has meant utilizing a variety of tools and strategies, such as online courses that allow for flexible
 deadlines, interactive projects, and assistive technologies that cater to my blindness and neurodivergence. This
@@ -118,7 +116,7 @@ sicker.
 Finally, in traditional education settings, you must prove your disability repeatedly to access accommodations. This
 process is exhausting and retraumatizing, especially for those with invisible or fluctuating disabilities. Each new
 course or semester requires fresh documentation and justification, creating a significant administrative burden. This
-constant need to validate one’s disability detracts from learning and exacerbates feelings of alienation. It creates an
+constant need to validate one's disability detracts from learning and exacerbates feelings of alienation. It creates an
 additional layer of barriers that hinders access to education rather than facilitating it.
 
 ## Financial Barriers and the Cost of Inflexibility
@@ -204,7 +202,7 @@ reach their full potential.
 
 That same inclusivity must extend to how financial support is structured. I envision scholarships and financial aid
 models that don't require full-time or even half-time enrollment to be considered valid. Learning shouldn't be
-contingent on a student’s ability to maintain a specific pace, especially when that pace may be incompatible with their
+contingent on a student's ability to maintain a specific pace, especially when that pace may be incompatible with their
 health or disabilities. Financial support should recognize intent, effort, and persistence over time, rather than
 enforcing rigid enrollment thresholds. When funding accommodates reduced course loads, pauses, and nonlinear progress,
 more learners are able to continue sustainably instead of being forced out by systems that equate speed with

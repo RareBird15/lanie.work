@@ -9,55 +9,45 @@ on:
         default: "serious"
   pull_request:
   push:
+    branches: [main]
 
 jobs:
   build-and-accessibility:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout repository
+        uses: actions/checkout@v6
 
-      - name: Install uv
-        uses: astral-sh/setup-uv@v7
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v3
         with:
-          enable-cache: true
-
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: "3.12"
-
-      - name: Install Pelican
-        run: uv pip install --system pelican markdown
-
-      - name: Verify theme exists
-        run: |
-          if [ ! -d themes/reflex/templates ]; then
-            echo "Missing theme at themes/reflex. Ensure the theme files are committed (or checkout submodules if using a submodule)."
-            exit 1
-          fi
+          hugo-version: latest
+          extended: true
 
       - name: Build site
-        run: pelican content -s publishconf.py -o output
+        run: hugo --minify
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: "20"
+          node-version: "22"
 
-      - name: Install pa11y-ci
-        run: npm install -g pa11y-ci
+      - name: Install pa11y-ci and http-server
+        run: npm install -g pa11y-ci http-server
 
       - name: Serve built site
-        run: npx http-server ./output -p 4001 -c-1 &
+        run: npx http-server ./public -p 4001 -c-1 &
+
       - name: Prepare reports directory
         run: mkdir -p reports
 
-      - name: Run accessibility checks (pa11y-ci)
+      - name: Run accessibility checks
         run: |
-          # Ensure pa11y output is captured so artifacts can be uploaded and published
-          pa11y-ci --config .pa11yci.json 2>&1 | tee pa11y-output.txt || true
+          pa11y-ci --config .pa11yci.json 2>&1 | tee pa11y-output.txt
 
       - name: Summarize pa11y output
+        if: always()
         run: |
           echo "# Pa11y output" > reports/PA11Y_SUMMARY.md
           if [ -f pa11y-output.txt ]; then
@@ -67,122 +57,10 @@ jobs:
           fi
 
       - name: Upload accessibility reports
+        if: always()
         uses: actions/upload-artifact@v7
         with:
           name: accessibility-reports
           path: |
             reports/**
             pa11y-output.txt
-            lh-*.json
-            accessibility-reports/**
-
-      - name: Check Axe violations against threshold
-        if: always()
-        env:
-          THRESHOLD: ${{ github.event.inputs.threshold || 'serious' }}
-        run: |
-          case "$THRESHOLD" in
-            minor) MIN=1;;
-            moderate) MIN=2;;
-            serious) MIN=3;;
-            critical) MIN=4;;
-            *) echo "Unknown threshold '$THRESHOLD'"; exit 1;;
-          esac
-
-          count=0
-          for f in reports/axe-*.json; do
-            [ -f "$f" ] || continue
-            add=$(jq --argjson min "$MIN" '[.violations[] | select((if .impact=="critical" then 4 elif .impact=="serious" then 3 elif .impact=="moderate" then 2 elif .impact=="minor" then 1 else 0 end) >= $min)] | length' "$f" 2>/dev/null || echo 0)
-            count=$((count + add))
-          done
-          echo "Violations at or above $THRESHOLD: $count"
-          if [ "$count" -gt 0 ]; then
-            echo "Failing job due to violations >= $THRESHOLD"
-            exit 1
-          fi
-
-      - name: "Debug: GIST_TOKEN presence and scopes"
-        if: always()
-        env:
-          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
-        run: |
-          echo "Checking for GIST_TOKEN presence (token will not be printed)"
-          if [ -n "$GIST_TOKEN" ]; then
-            echo "GIST_TOKEN is set"
-            # Show OAuth scopes associated with the token (no token value printed)
-            curl -sI -H "Authorization: token $GIST_TOKEN" https://api.github.com/user | grep -i 'x-oauth-scopes' || echo "No scope header returned"
-          else
-            echo "GIST_TOKEN is not set in this job environment"
-          fi
-
-      - name: Publish accessibility artifacts to PR (create gist + comment)
-        if: always()
-        env:
-          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          set -euo pipefail
-          payload=/tmp/gist_payload.json
-          echo "Building gist payload from reports/ and pa11y-output.txt"
-          python3 - <<'PY' > "$payload"
-          import os,sys,json
-          files={}
-          rep='reports'
-          if os.path.isdir(rep):
-            for name in os.listdir(rep):
-              full=os.path.join(rep,name)
-              if os.path.isfile(full):
-                # Use a safe filename for Gist (no directory separators).
-                safe_name = f"reports-{os.path.basename(name)}"
-                with open(full,'r',encoding='utf8') as fh:
-                  files[safe_name]={'content': fh.read()}
-          if os.path.exists('pa11y-output.txt'):
-            with open('pa11y-output.txt','r',encoding='utf8') as fh:
-              files['pa11y-output.txt']={'content': fh.read()}
-          if not files:
-            # print empty object
-            print('{}')
-            sys.exit(0)
-          obj={'files': files, 'public': True, 'description': f"Accessibility artifacts for {os.environ.get('GITHUB_REPOSITORY')} (run {os.environ.get('GITHUB_RUN_ID')})"}
-          print(json.dumps(obj))
-          PY
-
-          if [ ! -s "$payload" ]; then
-            echo "No artifact files found to publish as gist."
-            exit 0
-          fi
-
-          echo "Attempting to create gist using ${GIST_TOKEN:+provided GIST_TOKEN}"
-          if [ -n "${GIST_TOKEN:-}" ]; then
-            status=$(curl -s -o /tmp/gist_response.json -w "%{http_code}" -H "Authorization: token $GIST_TOKEN" -H "Content-Type: application/json" -d @"$payload" https://api.github.com/gists)
-          else
-            status=$(curl -s -o /tmp/gist_response.json -w "%{http_code}" -H "Authorization: token $GITHUB_TOKEN" -H "Content-Type: application/json" -d @"$payload" https://api.github.com/gists)
-          fi
-
-          if [ "$status" = "201" ]; then
-            gist_url=$(jq -r '.html_url' /tmp/gist_response.json)
-            echo "Gist created: $gist_url"
-            if [ -f "$GITHUB_EVENT_PATH" ]; then
-              pr=$(jq -r '.pull_request.number // empty' "$GITHUB_EVENT_PATH")
-              if [ -n "$pr" ]; then
-                body="Accessibility artifacts for run $GITHUB_RUN_ID: $gist_url"
-                curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Content-Type: application/json" -d "{\"body\": \"$body\"}" "https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$pr/comments" >/dev/null
-              fi
-            fi
-          else
-            echo "Gist creation failed (HTTP $status):"
-            cat /tmp/gist_response.json || true
-            if [ -f "$GITHUB_EVENT_PATH" ]; then
-              pr=$(jq -r '.pull_request.number // empty' "$GITHUB_EVENT_PATH")
-              if [ -n "$pr" ]; then
-                run_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
-                body="Accessibility artifacts for run $GITHUB_RUN_ID are available on the Actions run page: $run_url"
-                curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Content-Type: application/json" -d "{\"body\": \"$body\"}" "https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$pr/comments" >/dev/null
-                echo "Posted fallback PR comment linking to run $GITHUB_RUN_ID"
-              else
-                echo "Artifacts available at: https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
-              fi
-            else
-              echo "Artifacts available at: https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
-            fi
-          fi

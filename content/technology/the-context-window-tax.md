@@ -1,16 +1,17 @@
 ---
 title: "The Context Window Tax: Why Autonomous Agents Break Low-Income Budgets"
 date: 2026-05-16
-category: Technology
-tags:
-  - Accessibility
-  - AI
-  - Disability
+categories:
   - Technology
-  - Workflow
-  - Automation
+tags:
+  - accessibility
+  - ai
+  - disability
+  - technology
+  - workflow
+  - automation
 slug: context-window-tax
-summary: >
+description: >
   Autonomous agents promise to be powerful assistive tools for disabled people, but their usage-based token models can
   quickly become financially unsustainable for those on fixed incomes. This article explores the "context window tax"
   that arises from the architecture of these systems and discusses the trade-offs of shifting to flat-rate consumer
