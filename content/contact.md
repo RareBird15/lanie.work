@@ -31,7 +31,7 @@ To respect my cognitive load and accessibility needs:
 
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
-<form action="https://form-handler.laniegcarmelo.workers.dev" method="post">
+<form action="/api/submit" method="POST">
   <div>
     <label for="name">Name:</label>
     <br>
@@ -49,10 +49,9 @@ To respect my cognitive load and accessibility needs:
     <br>
     <input type="text" id="subject" name="subject" required>
   </div>
-  <br>
   <div style="display:none;" aria-hidden="true">
     <label for="website_url">Leave this field blank</label>
-    <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off">
+    <input type="text" id="website_url" name="website_url" autocomplete="off">
   </div>
   <br>
   <div>
