@@ -1,10 +1,12 @@
+<!-- markdownlint-disable-file MD024 -->
+
 # Code Blocks to HTML
 
 ## Fenced Code Blocks (No Language)
 
 ### Markdown
 
-```
+```js
 function test() {
   console.log("notice the blank line before this function?");
 }
@@ -27,8 +29,7 @@ function test() {
 ### Markdown
 
 ```md
-> [!TIP]
-> To preserve your formatting within a list, make sure to indent non-fenced code blocks by eight spaces.
+> [!TIP] To preserve your formatting within a list, make sure to indent non-fenced code blocks by eight spaces.
 ```
 
 ### Parsed HTML (GitHub-specific)
@@ -56,15 +57,15 @@ function test() {
 
 ### Parsed HTML
 
-```html
-    <pre><code>
+````html
+<pre><code>
     ```
 
     Look! You can see my backticks.
 
     ```
     </code></pre>
-```
+````
 
 ## Syntax Highlighting (Language Identifier)
 
@@ -126,7 +127,7 @@ puts markdown.to_html
 ## Lists
 
 ```md
-* [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
+- [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
 ```
 
 ```html
@@ -161,5 +162,5 @@ graph TD
 
 ## Closing Notes
 
-* No `language-*` class appears here because **no language identifier** was provided.
-* The inner triple backticks are preserved **as literal text** inside `<code>`.
+- No `language-*` class appears here because **no language identifier** was provided.
+- The inner triple backticks are preserved **as literal text** inside `<code>`.

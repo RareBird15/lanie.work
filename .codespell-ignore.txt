@@ -10,6 +10,7 @@ RareBird_15
 laniecarmelo
 minima
 kramdown
+rouge
 robots.txt
 sitemap.xml
 feed.xml

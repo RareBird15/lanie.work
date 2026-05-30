@@ -1,3 +1,5 @@
+<!-- markdownlint-disable-file MD024 -->
+
 # Basic Markdown to HTML
 
 ## Headings
@@ -33,8 +35,7 @@
 ### Markdown
 
 ```md
-Heading 2
----
+## Heading 2
 ```
 
 ### Parsed HTML
@@ -90,7 +91,7 @@ _This text is italicized_
 ### Bold + Italic
 
 ```md
-***All this text is important***
+**_All this text is important_**
 ```
 
 ```html
@@ -152,8 +153,7 @@ This is a <sup>superscript</sup> text
 ### GitHub Alert (NOTE)
 
 ```md
-> [!NOTE]
-> Useful information.
+> [!NOTE] Useful information.
 ```
 
 ```html
@@ -185,8 +185,7 @@ Use `git status` to list files.
 
 ````md
 ```markdown
-git status
-git add
+git status git add
 ```
 ````
 
@@ -206,9 +205,9 @@ git add
 ### Markdown
 
 ```md
-| Style | Syntax |
-|------|--------|
-| Bold | ** ** |
+| Style | Syntax    |
+| ----- | --------- |
+| Bold  | \*\* \*\* |
 ```
 
 ### Parsed HTML
@@ -259,7 +258,7 @@ git add
 ### Parsed HTML
 
 ```html
-<img src="image.png" alt="Alt text">
+<img src="image.png" alt="Alt text" />
 ```
 
 ---
@@ -327,12 +326,8 @@ git add
 
 ```html
 <ul>
-  <li>
-    <input type="checkbox" checked disabled> Done
-  </li>
-  <li>
-    <input type="checkbox" disabled> Pending
-  </li>
+  <li><input type="checkbox" checked disabled /> Done</li>
+  <li><input type="checkbox" disabled /> Pending</li>
 </ul>
 ```
 
@@ -365,9 +360,7 @@ Here is a footnote[^1].
 ```html
 <p>
   Here is a footnote
-  <sup id="fnref-1">
-    <a href="#fn-1">1</a>
-  </sup>.
+  <sup id="fnref-1"> <a href="#fn-1">1</a> </sup>.
 </p>
 
 <section class="footnotes">
@@ -412,7 +405,7 @@ Here is a footnote[^1].
 ```
 
 ```html
-<img class="emoji" alt="👍" src="...">
+<img class="emoji" alt="👍" src="..." />
 ```
 
 (GitHub replaces emoji with `<img>` tags.)
