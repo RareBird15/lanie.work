@@ -7,8 +7,8 @@ showDate: false
 showTableOfContents: true
 ---
 
-My advocacy is rooted in the belief that technology should be an act of care. I lead and facilitate several text-centric
-communities designed to reduce cognitive load and provide humane alternatives to traditional social media.
+My advocacy is rooted in the belief that technology should be an act of care. I lead several text-centric communities
+designed to reduce cognitive load and offer humane alternatives to traditional social media.
 
 ## Multiple Disabilities Peer Support
 
@@ -17,25 +17,25 @@ disabilities.
 
 ### MultAbilities (GroupMe)
 
-Our primary outpost for those who prefer the simplicity of a linear text stream or SMS-based participation.
+Our main outpost for people who prefer the simplicity of a linear text stream or SMS-based participation.
 
 - **Join:** [MultAbilities on GroupMe](https://groupme.com/join_group/114195450/QWvnthif)
 
 ### MultAbilities (Groups.io)
 
-A structured, low-pressure environment for long-form discussion and resource archiving.
+A structured, low-pressure space for long-form discussion and resource archiving.
 
 - **Join:** [MultAbilities on Groups.io](https://groups.io/g/MultAbilities/)
 
 ### MultAbilities (Discord)
 
-A space for real-time text interaction and community engagement.
+A space for real-time text conversation and community engagement.
 
-- **Join:** [MultAbilities on Discord](https://discord.gg/CAFsB3Wu)
+- **Join:** [MultAbilities on Discord](https://discord.com/invite/CAFsB3Wu)
 
 ### Multiple Disabilities Peer to Peer Support Group (Facebook)
 
-A broad hub for connection and community history. This group retains its original name to maintain its established
+A broad hub for connection and shared community history. This group keeps its original name to maintain its established
 presence following a community merger.
 
 - **Join:**
@@ -45,7 +45,7 @@ presence following a community merger.
 
 ### Online Education for the Disabled
 
-A group for discussing and improving accessibility within digital learning environments.
+A group for discussing and improving accessibility in digital learning environments.
 
 - **Platform:** Groups.io
 - **Join:** [Online Education on Groups.io](https://groups.io/g/online-edu-for-disabled/)
@@ -54,14 +54,14 @@ A group for discussing and improving accessibility within digital learning envir
 
 ### Imago Dei Disability Fellowship
 
-A dedicated space for Christians with any form of disability to find peer support and spiritual community.
+A dedicated space for Christians with any disability to find peer support and spiritual community.
 
 - **Platform:** GroupMe (Accessible via App or SMS)
 - **Join:** [Imago Dei on GroupMe](https://groupme.com/join_group/108240116/DyaeTWa0)
 
 ## Community Philosophy
 
-In all these spaces, I prioritize:
+Across all these spaces, I prioritize:
 
 - **Low Cognitive Load:** Predictable systems that don't overwhelm the nervous system.
 - **Accessibility First:** Tools that are fully navigable via screen readers (specifically NVDA) and keyboard.

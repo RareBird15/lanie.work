@@ -2,14 +2,15 @@
 title: My Conditions in Human Terms
 slug: human-terms
 date: 2026-04-13
-description: A plain-language guide to my diagnoses, focusing on the specific sensations, pain types, and energy costs of each.
+description:
+  A plain-language guide to my diagnoses, focusing on the specific sensations, pain types, and energy costs of each.
 showDate: false
 showTableOfContents: true
 ---
 
-This page serves as a reference for my family, friends, and colleagues. While I've documented my **accessibility notes**
-elsewhere, this list explains the mechanical and physical "why" behind my daily experience, avoiding technical jargon
-where possible.
+This page is a reference for my family, friends, and colleagues. While I've documented my **accessibility notes**
+elsewhere, this list explains the mechanical and physical "why" behind my daily experience, with as little technical
+jargon where possible.
 
 ## Allergies and Postnasal Drip
 
@@ -26,9 +27,8 @@ and adds another layer of complexity to managing my health, as it affects multip
 other conditions. On days when the mucus is thicker or more abundant, it's easier to choke or have a coughing fit, which
 can be both painful and dangerous, especially if it disrupts my breathing or sleep. The constant presence of mucus also
 means that I have to be very careful about my hydration and the products I use on my skin and in my nose, as certain
-ingredients can make the symptoms worse or trigger flare-ups. Overall, the allergies and postnasal drip are a
-significant part of my daily experience and require constant management to prevent them from exacerbating my other
-health issues.
+ingredients can make the symptoms worse or trigger flare-ups. Overall, allergies and postnasal drip are a big part of my
+daily experience and need constant management so they don't make my other health issues worse.
 
 ## The Condition List
 
@@ -76,7 +76,7 @@ migraines often come with nausea and sensitivity to sound.
 #### Fibromyalgia
 
 My nervous system is stuck on a high-pain setting. It creates a heavy, "flu-like" exhaustion and widespread aching that
-never fully subsides. It also causes what I call nerve pain, which is a sharp, shooting sensation that can occur
+never fully subsides. It also causes what I call nerve pain, which is a sharp, shooting sensation that can happen
 anywhere in my body without warning. This nerve pain can be triggered by even the slightest touch or movement, making it
 difficult to find comfortable positions or engage in physical activities. The constant pain and fatigue from
 fibromyalgia also contribute to my overall energy depletion, making it hard to maintain a regular routine or participate
@@ -286,8 +286,8 @@ The "starter motor" for my brain is often broken. Even when I have the desire an
 always send the signal to my body to begin. This is severe enough that tools people often recommend for executive
 dysfunction, like to-do lists or reminders, don't work for me. I can have a clear plan and the motivation to do
 something, but my brain just won't send the signal to start, which can be incredibly frustrating and lead to feelings of
-guilt or shame. This also means that I have to be very careful about how I structure my day and manage my energy, as I
-can't rely on willpower or motivation to get things done.
+guilt or shame. This also means I have to be very careful about how I structure my day and manage my energy, as I can't
+rely on willpower or motivation to get things done.
 
 I have to use a lot of external supports and accommodations to help me manage my executive dysfunction, but even with
 those, it can still be a struggle to get started on tasks, especially when I'm in pain or fatigued. This can lead to a
@@ -305,20 +305,20 @@ frustration and disappointment in myself.
 I don't "feel" the passage of time. Five minutes and five hours feel identical to me, making external timers a
 mechanical necessity for my survival. Without them, I can easily lose track of time and end up in dangerous situations,
 such as forgetting to eat or take medication. This also means that I have to be very careful about how I structure my
-day and manage my time, as I can't rely on my internal sense of time to keep me on track. I have to use a lot of
+day and manage my time, because I can't rely on my internal sense of time to keep me on track. I have to use a lot of
 external supports and accommodations to help me manage my time-blindness, such as alarms, timers, and reminders, but
 even with those, it can still be a struggle to stay on schedule, especially when I'm in pain or fatigued.
 
-This can lead to a lot of missed appointments, forgotten tasks, and difficulty maintaining a regular routine, which can
-further exacerbate my health issues and make it even harder to manage my overall well-being. Additionally, the
-time-blindness can make it difficult to plan and organize my day, as I can't accurately estimate how long tasks will
-take or how much time I have available, which can lead to a lot of mental clutter and overwhelm. I often have a hard
-time breaking down tasks into smaller steps or figuring out how to allocate my time effectively, which can make even
-simple tasks feel insurmountable. This can lead to a lot of avoidance and difficulty following through on commitments,
-which can impact my relationships and overall quality of life. Even when I do manage to stay on schedule, I can have a
-hard time sustaining the effort and focus needed to complete tasks within a reasonable timeframe, which can lead to a
-lot of unfinished projects and a sense of frustration and disappointment in myself. This is exacerbated by my non-24 and
-chronic fatigue, which can make it even harder to manage my time effectively and stay on track with my schedule.
+This can lead to missed appointments, forgotten tasks, and difficulty maintaining a regular routine, which can further
+exacerbate my health issues and make it even harder to manage my overall well-being. Additionally, the time-blindness
+can make it difficult to plan and organize my day, as I can't accurately estimate how long tasks will take or how much
+time I have available, which can lead to a lot of mental clutter and overwhelm. I often have a hard time breaking down
+tasks into smaller steps or figuring out how to allocate my time effectively, which can make even simple tasks feel
+insurmountable. This can lead to avoidance and difficulty following through on commitments, which can impact my
+relationships and overall quality of life. Even when I do manage to stay on schedule, I can have a hard time sustaining
+the effort and focus needed to complete tasks within a reasonable timeframe, which can lead to a lot of unfinished
+projects and a sense of frustration and disappointment in myself. This is exacerbated by my non-24 and chronic fatigue,
+which can make it even harder to manage my time effectively and stay on track with my schedule.
 
 #### Probable CPTSD
 
@@ -336,8 +336,8 @@ physical health issues and make it even harder to manage my overall health.
 #### Major Depressive Disorder and Generalized Anxiety Disorder
 
 The persistent mental fatigue and "background noise" of worry that comes from the high cognitive load of manually
-managing all these systems. This also means that I have to be very careful about how I manage my mental health, as the
-symptoms of depression and anxiety can make it even harder to manage my physical health and advocate for myself
+managing all these systems. This also means that I have to be very careful about how I manage my mental health, because
+the symptoms of depression and anxiety can make it even harder to manage my physical health and advocate for myself
 effectively. The depression can lead to feelings of hopelessness and a lack of motivation, which can make it difficult
 to engage in self-care and seek out support, while the anxiety can lead to constant worry and fear about my health and
 future, which can be overwhelming and exhausting. Additionally, the combination of depression and anxiety can lead to a
@@ -386,7 +386,7 @@ even harder to manage my health effectively.
 Managing these conditions is a full-time job that happens in the background of everything else I do. If I'm resting,
 quiet, or slow to start a task, it's because one or more of these systems is currently requiring my manual attention.
 This page is meant to help people understand the "why" behind my daily experience, so they can better empathize with
-what I'm going through and support me in ways that are meaningful and helpful. It's also a way for me to organize my
+what I'm going through and support me in ways that are meaningful and useful. It's also a way for me to organize my
 thoughts and experiences around my health, and to have a reference that I can share with others when needed. I hope that
 by sharing this information, I can help others understand the complexities of living with multiple chronic conditions
 and the importance of empathy and support in managing health challenges.

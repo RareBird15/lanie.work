@@ -9,17 +9,17 @@ showDate: false
 showTableOfContents: true
 ---
 
-This page documents my **consistent interaction model**. My access needs aren't just preferences; they are the framework
+This page documents my **consistent interaction model**. My access needs aren't just preferences; they're the framework
 that makes programming, gaming, and digital life possible for me as a blind, neurodivergent, and chronically ill user.
 
 ## What Works: The Persistent Text Model
 
-I thrive in systems that are **text-first** and **keyboard-centric**. Information must be persistent so I can process it
-at my own pace.
+I thrive in systems that are **text-first** and **keyboard-centric**. Information has to be persistent so I can process
+it at my own pace.
 
 - **Keyboard-First Interaction:** I rely on standard screen reader navigation (NVDA) and command-line interfaces.
 - **Explicit State:** I need coordinates and structure (e.g., "You are at 10, 20") rather than relative directions.
-- **Query over Memory:** I prefer systems where I can _find_ information (Command Palettes, `fzf`, `tldr`, AI) rather
+- **Query over Memory:** I prefer systems where I can _find_ information (`Command Palettes`, `fzf`, `tldr`, AI) rather
   than having to memorize a thousand unique shortcuts.
 - **Guided Interactivity:** I learn by doing with immediate feedback. "Go build something" without structure doesn't
   work; I need knowledge checks and guided practice.
@@ -27,11 +27,11 @@ at my own pace.
 
 ## Physical & Ergonomic Constraints
 
-My choice of hardware is driven by a need for stability, precision, and low physical fatigue.
+My hardware choices are driven by a need for stability, precision, and less physical fatigue.
 
 - **PC over Everything:** The desktop PC is my primary tool. The tactile feedback of a physical keyboard and the
   precision of keyboard-driven navigation are irreplaceable.
-- **The Mobile Barrier:** I use my iPhone only when necessary. Mobile interfaces are inherently **spatial** and
+- **The Mobile Barrier:** I use my iPhone only when I have to. Mobile interfaces are inherently **spatial** and
   **ephemeral**. Holding a device is physically fatiguing, and my coordination makes small touch targets difficult to
   hit.
 - **The "Large Screen" Fallacy:** Devices like tablets or the **Echo Show 15** are completely unusable for me. A larger
@@ -42,11 +42,10 @@ My choice of hardware is driven by a need for stability, precision, and low phys
 
 ## What Doesn't Work: The Ephemeral Barrier
 
-I struggle with systems that are "ephemeral" (information that appears once and vanishes) or that require spatial
-processing.
+I struggle with systems that are "ephemeral" (information that appears once and vanishes) or require spatial processing.
 
 - **Audio-Heavy Systems:** Audio is ephemeral. If I miss a sound or a voice cue, it's gone. I can't "reread" a sound.
-  Text works better because I can re-process it as many times as needed.
+  Text works better because I can process it as many times as I need.
 - **Spatial Navigation:** Because of **topographical agnosia**, I can't build mental maps of 2D or 3D spaces.
 - **Real-Time Reactions:** My nervous system requires "slower, thoughtful problem-solving." I can't use systems that
   penalize me for taking time to think.
@@ -59,9 +58,9 @@ processing.
 
 ### Programming & Tooling
 
-This is why I prefer **VS Code and the CLI** over mobile or web apps. The CLI is a persistent text stream that I can
-query and manipulate. It's also why I focus on **Python and Backend Tooling** rather than frontend - it's about logic
-and systems, not visual layouts.
+This is why I prefer **VS Code and the CLI** over mobile or web apps. The CLI is a persistent text stream I can query
+and manipulate. It's also why I focus on **Python and Backend Tooling** rather than frontend. It's about logic and
+systems, not visual layouts.
 
 ### Gaming & Interactive Media
 

@@ -12,14 +12,13 @@ tags:
   - cognitive-prosthetic
 slug: ai-as-second-brain
 description: >
-  A personal look at how AI tools serve as a cognitive prosthetic for a multiply disabled
-  user who relies on a custom stack of Pieces, Supermemory, Hermes Agent, and GitHub
-  Copilot to function at baseline.
+  A personal look at how AI tools serve as a cognitive prosthetic for a multiply disabled user who relies on a custom
+  stack of Pieces, Supermemory, Hermes Agent, and GitHub Copilot to function at baseline.
 showTableOfContents: true
 ---
 
-The productivity advice says: use a second brain. Pick a note-taking app, capture everything, link ideas, review
-weekly. Build a system and trust it.
+The productivity advice says: use a second brain. Pick a note-taking app, capture everything, link ideas, review weekly.
+Build a system and trust it.
 
 I've tried most of the popular options. Notion collapsed under its own visual complexity. Obsidian's graph view is a
 spatial nightmare for someone with topographical agnosia. Roam required too much upfront structure on days when I have
@@ -31,25 +30,25 @@ enough executive function to maintain a capture habit, and the stamina to period
 base.
 
 When you have multiple cognitive and physical disabilities, those assumptions collapse. What I needed wasn't a
-note-taking app. I needed a system that could catch what I drop, remember what I forget, act when I can't, and do all
-of that without requiring me to maintain it manually on my worst days.
+note-taking app. I needed a system that could catch what I drop, remember what I forget, act when I can't, and do all of
+that without requiring manual maintenance from me on my worst days.
 
 ## What I Use
 
 ### Pieces MCP Server
 
-Pieces is the backbone of my cross-session memory. Every code snippet I write, every command I run, every note I take
-in VS Code gets captured and indexed. When I come back to a project after a multi-day gap (which happens constantly
-with chronic illness), I can ask Pieces what I was working on and get a real answer instead of spending twenty minutes
-reconstructing my own context. It hooks directly into GitHub Copilot via the MCP server, so the AI assistant I'm
+Pieces is the backbone of my cross-session memory. Every code snippet I write, every command I run, every note I take in
+VS Code gets captured and indexed. When I come back to a project after a multi-day gap (which happens constantly with
+chronic illness), I can ask Pieces what I was working on and get a real answer instead of spending twenty minutes
+reconstructing context from scratch. It hooks directly into GitHub Copilot via the MCP server, so the AI assistant I'm
 already talking to has access to everything I've done.
 
 ### Supermemory
 
 Supermemory handles the web research layer. When I'm reading articles, watching content, or doing deep research on a
-topic, Supermemory indexes it and makes it retrievable later. This matters because I can't rely on browser history or
-my own recall. If I read something important two weeks ago, I won't remember the article title, the site, or even the
-rough content. Supermemory gives me a way to search my own research history semantically, not just by URL or date.
+topic, Supermemory indexes it and makes it retrievable later. This matters because I can't rely on browser history or my
+own recall. If I read something important two weeks ago, I won't remember the article title, the site, or even the rough
+content. Supermemory gives me a way to search my own research history semantically, not just by URL or date.
 
 ### Hermes Agent
 
@@ -74,15 +73,15 @@ requirements. Any solution I build has to function on this stack.
 ### Supporting Tools
 
 Guava Health handles symptom and medication tracking. Sophtron connects to my financial accounts so I can pull
-structured spending and balance data without navigating inaccessible bank interfaces. Both feed into the broader
-picture that Hermes can reference when I need to make decisions about pacing, capacity, or resource allocation.
+structured spending and balance data without navigating inaccessible bank interfaces. Both feed into the broader picture
+that Hermes can reference when I need to make decisions about pacing, capacity, or resource allocation.
 
 ## Why Not Just Use ChatGPT?
 
-The short answer is that ChatGPT doesn't know me. Every session starts from zero. There's no persistent memory of what
-I was working on, what my disabilities are, what accommodations I've already explained, or what tools I'm using. For
+The short answer is that ChatGPT doesn't know me. Every session starts from zero. There's no persistent memory of what I
+was working on, what my disabilities are, what accommodations I've already explained, or what tools I'm using. For
 someone without memory and context continuity challenges, that's a minor inconvenience. For me, it means spending the
-first ten to twenty minutes of every session re-establishing baseline context before I can do any actual work.
+first ten to twenty minutes of every session rebuilding baseline context before I can do any actual work.
 
 Beyond memory, there's the control problem. I can't build custom integrations into ChatGPT. I can't give it direct
 access to my local files, my Hermes logs, or my Pieces snippets. The tool is powerful in isolation but sealed off from
@@ -109,25 +108,25 @@ there. I don't have to reconstruct it from memory I don't reliably have.
 ## How They Help with Specific Struggles
 
 **Memory loss**: Pieces gives me a searchable log of everything I've worked on. I don't need to remember; I need to
-search. Supermemory does the same for research. Hermes logs what it did and when so I can audit my own history.
+search. Supermemory does the same for research. Hermes logs what it did and when so I can check my own history.
 
 **Executive dysfunction**: Hermes handles the task-initiation problem for routine administrative work. I don't need to
 decide to check my inbox, triage calendar conflicts, or log symptoms. The system does it on schedule.
 
 **Health tracking**: Guava captures symptoms and medications. Hermes reads those logs and can surface patterns or flag
-anomalies when I ask. I don't need to maintain a manual health journal on days when I have nothing left.
+anomalies when I ask. I don't need to keep a manual health journal on days when I have nothing left.
 
 **Financial complexity**: Sophtron pulls structured account data. This removes the need to log into inaccessible
 financial interfaces on high-cognitive-load days.
 
-**Accessibility barriers**: The whole stack is keyboard and screen-reader accessible. I built it around NVDA on
-Windows and VoiceOver on iOS. Nothing in the workflow requires me to navigate a visual interface I can't use.
+**Accessibility barriers**: The whole stack is keyboard and screen-reader accessible. I built it around NVDA on Windows
+and VoiceOver on iOS. Nothing in the workflow requires me to navigate a visual interface I can't use.
 
 **Phone anxiety**: Hermes handles communication tasks that would otherwise require phone calls. Copilot handles the
 drafting of emails and messages when word-finding is failing.
 
 **Physical limitations**: Because most of the system runs on a server or in the background, I don't need to be actively
-operating it to benefit from it. Hermes runs while I rest.
+running it to benefit from it. Hermes runs while I rest.
 
 ## Concrete Examples
 
@@ -138,9 +137,9 @@ within two or three minutes.
 **Low-energy logging on a bad day**: I speak a rough health update into my phone. Hermes transcribes it, structures it,
 and logs it. I didn't have to type, navigate, or maintain a format. The data is captured without friction.
 
-**Research without tab management**: I read three articles on a topic. Supermemory indexes them. Two weeks later, I
-need to reference one of them. I search semantically and find it without needing to remember the title, the site, or
-that I even read it.
+**Research without tab management**: I read three articles on a topic. Supermemory indexes them. Two weeks later, I need
+to reference one of them. I search semantically and find it without needing to remember the title, the site, or that I
+even read it.
 
 **Phone-free communication**: I need to respond to something that would normally require a phone call. I draft the
 response in Copilot, adjust it, and send it as a message or email. No call required.
@@ -159,8 +158,8 @@ would otherwise block me from accessing human connection. That's a meaningful di
 ## The Closer
 
 This isn't a productivity system. It's a survival infrastructure. The goal isn't optimization or efficiency or becoming
-a better developer. The goal is baseline functionality on a body and a mind that require constant manual override just
-to stay operational.
+a better developer. The goal is basic functionality on a body and a mind that require constant manual override just to
+stay operational.
 
 If you're multiply disabled and the standard second brain advice has never worked for you, this might be why. The advice
 is built for a different kind of nervous system. What works for me is a system that catches what I drop, remembers what

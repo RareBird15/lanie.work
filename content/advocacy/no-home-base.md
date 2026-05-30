@@ -19,7 +19,7 @@ description: >
   identity. No single space accepts the whole stack, so I'm building the infrastructure myself.
 ---
 
-There is no community that accepts my whole stack. Every space I enter runs me through a filter. Sometimes I get bounced
+There's no community that accepts my whole stack. Every space I enter runs me through a filter. Sometimes I get bounced
 on the disability check. Sometimes on the faith. Sometimes on the AI. I built Hermes Agent because I had nowhere else to
 go.
 
@@ -27,20 +27,20 @@ go.
 
 I never know whether I should lead with my disability profile. The social cost is high regardless.
 
-In tech spaces, not disclosing means screenshots I can't see. People throw visual context at me without filtering.
-Assume I know basics I don't. If I mention I'm blind, autistic, and chronically ill, the reaction shifts. I become a
+In tech spaces, not disclosing means screenshots I can't see. People throw visual context at me without filtering. They
+assume I know basics I don't. If I mention I'm blind, autistic, and chronically ill, the reaction shifts. I become a
 curiosity. People bombard me with questions. I answer. They move on. It never leads to connection. I'm a puzzle, not a
 peer.
 
-Single-issue spaces operate on assumption mismatches. If I show up in a blindness space, the philosophy is
-one-size-fits-all independence. If I need help, I'm doing it wrong.
+Single-issue spaces run on assumption mismatches. If I show up in a blindness space, the philosophy is one-size-fits-all
+independence. If I need help, I'm doing it wrong.
 
-If I enter an autistic space, I find they're often built for lower support needs people who can handle the visual and
+If I enter an autistic space, I find it's often built for people with lower support needs who can handle the visual and
 sensory load. There's an implicit assumption that everyone present is high-functioning enough to manage. My support
-needs are higher than these rooms accommodate, a gap made wider while I'm in the limbo of being reevaluated.
+needs are higher than these rooms accommodate, a gap made wider by the limbo of being reevaluated.
 
 Chronic illness spaces understand fatigue and brain fog. They might even understand neurodivergent sensory overload. But
-add blindness into the mix and their tools fall apart. They post infographics about pacing without alt-text. They share
+add blindness to the mix and their tools fall apart. They post infographics about pacing without alt-text. They share
 spoonie memes that I can't read. They assume my main barrier is energy, not the fundamental way I interface with the
 world. When you live at the intersection of all three, you become an outlier in a room full of outliers. You're too much
 for the spaces meant for the marginalized.
@@ -52,7 +52,7 @@ registers against the weight of a diagnosis list. The technical signal gets over
 ## The Religion Penalty
 
 I'm a conservative Christian. In disabled spaces, this is treated with skepticism or outright hostility. Faith gets read
-as either a liability or a testimony. There is no middle ground where belief just exists alongside disability without
+as either a liability or a testimony. There's no middle ground where belief just exists alongside disability without
 being treated as politically dangerous.
 
 Most disability communities are liberal. The institutions that harm disabled people are often conservative ones. I
@@ -62,17 +62,17 @@ Gnostic texts will get me flagged before I even talk about code or my disabiliti
 
 ## The AI Reflex
 
-If I manage to survive the disclosure trap and the religion penalty, there is always the AI reflex.
+If I manage to survive the disclosure trap and the religion penalty, there's always the AI reflex.
 
 Disabled Techies Slack is one of the spaces I've felt safest in. I still haven't mentioned my AI setup there because the
 ambient baseline is hostile. The pattern isn't a minority opinion. It's the water.
 
 One active member complains about a coworker who asked an AI to write a pull request in their style, and the thread gets
 dozens of sympathetic reactions. Another post describes a boss asking if anyone "cheated" by using AI to summarize a
-book club pick. When someone asks a practical question about using AI for benefits applications, they open by
-apologizing that they are "normally pretty anti-genAI."
+book club pick. When someone asks a practical question about using AI for benefits applications, they start by
+apologizing that they're "normally pretty anti-genAI."
 
-The thread about ambient AI recording devices in doctor's offices gets a pile of facepalming reactions. Not a single
+The thread about ambient AI recording devices in doctor's offices gets a pile of facepalm emoji reactions. Not a single
 person mentions that transcription tools help people with memory issues or cognitive load.
 
 The parking spot without a van ramp gets called out as a real failure. Someone suggests an AI audit and gets instant
@@ -98,11 +98,11 @@ Disabled spaces need to stop treating AI as a moral failing and start treating i
 Accommodation and slop are not the same thing.
 
 Faith spaces need to accept that disabled people can hold conservative beliefs without being a threat. Belief isn't an
-attack vector. Similarly, disabled spaces need to be more accepting of differing values and belief systems.
+attack vector. Similarly, disabled spaces need to be more accepting of different values and belief systems.
 
 ## The Interface Between
 
-I stopped looking for a prebuilt community that accepts the full stack. Started building infrastructure instead.
+I stopped looking for a prebuilt community that accepts the full stack. I started building infrastructure instead.
 
 Hermes Agent runs on a Pi. It checks my calendar. It manages my inbox. It monitors my GoFundMe. It logs health data. I
 built it because no existing group will advocate for me without asking me to sacrifice part of who I am. Hermes doesn't

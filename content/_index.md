@@ -23,15 +23,15 @@ humane, predictable, and inclusive.
 - **Documenting Barriers:** Writing about recurring accessibility challenges in games and interactive media to help
   developers build better experiences for multiply disabled players.
 
-## Explore the Garden
+## Explore My Work
 
 - **[About Me](/about/):** My background, current roles, and learning path.
 - **[Work and Learning](/work-and-learning/):** My technical stack, professional testing focus, and active projects.
-- **[Usability Testing](/usability-testing/):** Want me to test your product? Here's how I approach usability testing
-  and what I can offer.
+- **[Services](/services/):** Accessibility, usability, and product feedback services for websites, apps, games,
+  developer tools, and technical workflows.
 - **[Accessibility Notes](/accessibility-notes/):** Notes on what does and doesn't work for me in digital products.
-- **[Recommended Resources](/recommended-resources/):** A curated list of tools, platforms, and people that help me
-  manage my life, health, and work.
+- **[Tools and Resources](/tools-and-resources/):** A curated list of tools, platforms, and people that help me manage
+  my life, health, and work.
 - **[Community](/community/):** Links to online groups I run.
 - **[Human Terms](/human-terms/):** Plain-language explanations of how my conditions affect me.
 - **[Contact](/contact/):** How to reach me for work, questions, or just to say hi.

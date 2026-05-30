@@ -21,17 +21,17 @@ showTableOfContents: true
 
 ## The Broken Autopilot: Defining the Terrain
 
-Have you ever considered how much of your life is handled by background processes? For most people, basic functions like
-swallowing and breathing are automatic, handled by the system's kernel without any conscious input. For me, these are
-manual system calls. I call this "Manual Mode." I don't have a background thread for swallowing. Every single swallow is
-a conscious execution; if I lose focus, I find myself choking or realizing I've stopped clearing my throat entirely. My
-breathing follows a similar logic. While my body technically keeps me alive, it doesn't do it efficiently. If I'm deep
-in a coding problem, I forget the instruction to breathe deeply. My system starts running on shallow air, my
+Have you ever thought about how much of your life gets handled by background processes? For most people, basic functions
+like swallowing and breathing are automatic, handled by the system's kernel without any conscious input. For me, these
+are manual system calls. I call this "Manual Mode." I don't have a background thread for swallowing. Every single
+swallow is a conscious execution; if I lose focus, I find myself choking or realizing I've stopped clearing my throat
+entirely. My breathing follows a similar logic. While my body technically keeps me alive, it doesn't do it efficiently.
+If I'm deep in a coding problem, I forget the instruction to breathe deeply. My system starts running on shallow air, my
 intracranial pressure spikes, and I end up with a system crash in the form of a debilitating headache. Every breath is a
 manual command, and the CPU cycles required to keep my physical hardware running are cycles I can't use for anything
 else.
 
-This "Manual Mode" isn't just about my physical body; it extends to the very space I inhabit. If navigating my own skin
+This "Manual Mode" isn't just about my physical body; it extends to the space I inhabit. If navigating my own skin
 requires a manual override, navigating my own home requires a total recalculation. This is where Topographical Agnosia
 begins.
 
@@ -43,7 +43,7 @@ automatically knows the layout of a building. My brain doesn't store that data. 
 lived in for three years, is like following a set of text-based directions where I can only see one line at a time. As
 soon as I act on a direction, the instruction disappears.
 
-There's a profound irony in being a stranger in your own home. Knowing where the kitchen is isn't automatic; I solve a
+There's a deep irony in being a stranger in your own home. Knowing where the kitchen is isn't automatic; I solve a
 complex puzzle to get there every time I stand up. Success depends on finding a landmark, like the specific texture of a
 rug or the edge of a bookshelf, to logically deduce my location. Rather than walking through my house, I'm manually
 navigating a series of if/then statements. When I open a door, it's a brand-new discovery. Every trip for a glass of
@@ -54,16 +54,16 @@ Topographical Agnosia provides the missing map, but my neurological "Manual Mode
 Together, they create a reality where I can't afford the luxury of spatial navigation. I simply don't have the spare
 cycles to spend on a world that refuses to stay still.
 
-Most parts of the world are designed for people with the ability to build mental maps, or at least to be able to glance
-around and use visual cues to deduce their location. As a totally blind person with TA, this is a constant source of
-anxiety and exhaustion. The world is a maze without landmarks, and every step is a gamble. However, in the realm of
-programming, especially with tools like the Command Line Interface (CLI), I found a refuge. In programming, you don't
-have to walk through a directory structure or visually scan for files. You can call a name, and the data appears. In a
-terminal, a file's location isn't a point in space; it's a string of characters. I don't need a map to find it; I just
-need its name. This is what I call teleportation. The logic of code allows me to bypass the need for spatial navigation
-entirely. Instead of trying to build a mental map of my codebase, I can rely on semantic logic to get me where I need to
-go. This is why I transitioned from frontend development, which relies heavily on spatial metaphors, to backend
-development and CLI tools that allow for this kind of teleportation.
+Most parts of the world are designed for people who can build mental maps, or at least glance around and use visual cues
+to deduce their location. As a totally blind person with TA, this is a constant source of anxiety and exhaustion. The
+world is a maze without landmarks, and every step is a gamble. However, in the realm of programming, especially with
+tools like the Command Line Interface (CLI), I found a refuge. In programming, you don't have to walk through a
+directory structure or visually scan for files. You can call a name, and the data appears. In a terminal, a file's
+location isn't a point in space; it's a string of characters. I don't need a map to find it; I just need its name. This
+is what I call teleportation. The logic of code allows me to bypass the need for spatial navigation entirely. Instead of
+trying to build a mental map of my codebase, I can rely on semantic logic to get me where I need to go. This is why I
+transitioned from frontend development, which relies heavily on spatial metaphors, to backend development and CLI tools
+that allow for this kind of teleportation.
 
 ## The Frontend Trap: A Map with No Landmarks
 
@@ -82,13 +82,13 @@ override.
 
 ### The Shifting Maze of CSS
 
-When I ventured into CSS and JavaScript, the illusion of stability shattered. The Box Model isn't a box; it's a set of
+When I moved into CSS and JavaScript, the illusion of stability shattered. The Box Model isn't a box; it's a set of
 invisible layers that can change based on the content inside them. The z-index isn't a stack; it's a constantly shifting
 hierarchy that can rearrange itself based on the smallest change.
 
 Responsive design isn't a layout; it's a shape-shifting entity that can look completely different on various devices.
-These concepts aren't just difficult to understand; they're impossible to map in my brain. They feel like a maze that
-changes its walls every time I try to navigate it. The spatial metaphors that these technologies rely on are completely
+These concepts aren't just hard to understand; they're impossible to map in my brain. They feel like a maze that changes
+its walls every time I try to navigate it. The spatial metaphors that these technologies rely on are completely
 inaccessible to me. I can't build a mental model of how elements relate to each other in space, and the constant changes
 mean that even if I could, it would be outdated the moment I try to use it. This is why I found myself increasingly
 frustrated with frontend development and drawn to the more stable, logic-based world of backend development and CLI
@@ -123,21 +123,20 @@ navigation.
 
 ### Bit-Level Blindness
 
-This issue also shows when trying to work with bitwise operations. For example, earlier today I was working on the
+This issue also shows up when I try to work with bitwise operations. For example, earlier today I was working on the
 [Grains exercise](https://exercism.org/tracks/c/exercises/grains) on [Exercism](https://exercism.org), which requires
-you to calculate the number of grains of wheat on a chessboard. One way to do this is using bitwise shifts to calculate
+you to calculate the number of grains of wheat on a chessboard. One way to do this is to use bitwise shifts to calculate
 powers of 2. I was able to do this in Python without any issues because I could focus on the logic of the calculation,
 but in C, when I tried to shift 1 by 64 bits to calculate the total number of grains on the board, the number
-overflowed, and I was unable to understand the output because I had no mental model of how the bits were being
-manipulated in memory. This was like trying to understand a complex machine without ever being able to see its inner
-workings.
+overflowed, and I couldn't understand the output because I had no mental model of how the bits were being manipulated in
+memory. This was like trying to understand a complex machine without ever being able to see its inner workings.
 
 ### The Cost of Emulation: Resource Conflicts
 
-Recognizing that my struggle with C pointers or CSS layouts isn't just a math problem is crucial. It's a Resource
-Conflict. Because of my Topographical Agnosia, my brain can't see space. To compensate, I have to use raw, conscious
-logic to build a temporary, fragile mental model of where a pointer or a div might be. This emulation of spatial
-awareness is a high-power process. It drains the same limited energy bank I use for my "Manual Mode" physical survival.
+Recognizing that my struggle with C pointers or CSS layouts isn't just a math problem matters. It's a Resource Conflict.
+Because of my Topographical Agnosia, my brain can't see space. To compensate, I have to use raw, conscious logic to
+build a temporary, fragile mental model of where a pointer or a div might be. This emulation of spatial awareness is a
+high-power process. It drains the same limited energy bank I use for my "Manual Mode" physical survival.
 
 When I'm forced to act as the "Manual Memory Manager," I'm effectively stealing CPU cycles from my own physical safety.
 If I spend thirty minutes trying to visualize how 64 bits are arranged in a register, I'm not just doing math; I'm
@@ -153,14 +152,14 @@ a module or call a function by name, and the logic of the codebase allows me to 
 ever having to walk through a directory structure. In SQL, I can query a database by specifying the table and
 conditions, and the data appears without me having to navigate through a file system.
 
-This is the kind of teleportation that I find incredibly liberating. It allows me to bypass the need for spatial
-navigation entirely and rely on semantic logic to get me where I need to go. Where C relies on manual memory management,
-Python has automatic garbage collection. This means I don't have to keep track of memory addresses or worry about
-freeing memory; I can just focus on the logic of my code. Similarly, SQL abstracts away the underlying data storage and
-allows me to interact with data using a high-level query language. These tools allow me to teleport to the functionality
-I need without having to navigate through a spatial representation of the codebase. This is why I transitioned from
-frontend development, which relies heavily on spatial metaphors, to backend development and CLI tools that allow for
-this kind of teleportation.
+This is the kind of teleportation I find incredibly liberating. It lets me bypass the need for spatial navigation
+entirely and rely on semantic logic to get me where I need to go. Where C relies on manual memory management, Python has
+automatic garbage collection. This means I don't have to keep track of memory addresses or worry about freeing memory; I
+can just focus on the logic of my code. Similarly, SQL abstracts away the underlying data storage and allows me to
+interact with data using a high-level query language. These tools allow me to teleport to the functionality I need
+without having to navigate through a spatial representation of the codebase. This is why I transitioned from frontend
+development, which relies heavily on spatial metaphors, to backend development and CLI tools that allow for this kind of
+teleportation.
 
 ### The Sanctuary of the Shell
 
@@ -190,10 +189,10 @@ progress through pure facts and data points, demanding no spatial awareness and 
 Voice interfaces present a similar barrier. Between word-finding issues and the energy required to maintain the "Manual
 Mode" of my breathing and speech, real-time voice commands are a huge neurological challenge.
 
-Text-based programming is the solution. It provides a persistent, stable environment where I can read and re-read at my
-own pace. Using comments as landmarks and relying on the logical structure of the code allows me to connect the dots.
-The code stays still on the screen long enough for me to understand the logic, which is crucial for my ability to
-function effectively.
+Text-based programming is my solution. It provides a persistent, stable environment where I can read and re-read at my
+own pace. Using comments as landmarks and relying on the logical structure of the code lets me connect the dots. The
+code stays still on the screen long enough for me to understand the logic, which is crucial for my ability to function
+effectively.
 
 ## Redefining Independence
 
@@ -209,11 +208,11 @@ act like a cartographer doesn't lead to independence; it leads to a total system
 
 ### Success Through Interdependence
 
-Redefining success was a necessity. In the physical world, I was taught that independence meant walking the route; in
-the digital world, I learned that success means teleporting. I don't walk alone anymore, choosing instead to collaborate
+Redefining success was necessary. In the physical world, I was taught that independence meant walking the route; in the
+digital world, I learned that success means teleporting. I don't walk alone anymore, choosing instead to collaborate
 with my tools to offload the spatial work. They handle the file finding and memory management, which frees up my limited
 CPU cycles to do what I do best: solve problems. Using a CLI isn't a crutch or a lesser way of working; it's an
-optimized workflow that offloads the spatial "where" so I can focus on the logical "what." This is Interdependence, and
+optimized workflow that offloads the spatial "where" so I can focus on the logical "what." This is interdependence, and
 for me, it's the only sustainable way to live.
 
 ## Conclusion: The Logician's Victory

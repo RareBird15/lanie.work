@@ -1,9 +1,9 @@
 # Contributing Guidelines
 
-Thank you for your interest in contributing to this digital garden.
+Thank you for your interest in contributing to this site.
 
-Because this site serves as a live accessibility testing ground and personal workspace, contributions that improve
-screen reader navigation, semantic structure, documentation, or workflow automation are especially welcome.
+Because this site serves as a live accessibility testing ground and public workspace, contributions that improve screen
+reader navigation, semantic structure, documentation, or workflow automation are especially welcome.
 
 ## Getting Started
 

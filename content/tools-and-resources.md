@@ -1,0 +1,209 @@
+---
+title: Tools and Resources
+slug: tools-and-resources
+date: 2026-04-13
+description:
+  Tools, platforms, communities, and resources that help me manage technology, health, learning, and daily life.
+showDate: false
+showTableOfContents: true
+---
+
+People ask me a lot what I actually use day to day to get through work and life in a world that wasn't built for me.
+This is my running list of tools and resources I trust and use often.
+
+Some links on this page may be affiliate or referral links. That means I may earn a small commission or account credit
+if you sign up through them, at no extra cost to you. I only recommend things I have personally used or found genuinely
+helpful.
+
+## How I Access Technology
+
+These are the core tools I use to access computers, phones, and the web.
+
+- **[NVDA (NonVisual Desktop Access)](https://www.nvaccess.org/):** My main screen reader. It's free, open source, and
+  highly customizable, which matters a lot in my development workflow.
+- **[Humanware Brailliant BI 40X](https://store.humanware.com/hca/brailliant-bi-40x-braille-display.html):** My
+  refreshable braille display. It's essential for reading and navigating digital content in a way that works for me.
+- **[VoiceOver](https://www.apple.com/accessibility/features/?vision):** I use this on my iPhone for mobile
+  accessibility. It lets me use my phone with gestures, braille, and speech.
+- **[Google Chrome](https://www.google.com/chrome/):** My preferred browser for web-based tasks. It works well with my
+  screen reader, and most of my web work happens there. Chrome Autobrowse can also help when I run into inaccessible
+  sites.
+- **[Betterbird](https://www.betterbird.eu/):** My preferred email client. It's a Thunderbird fork with better
+  accessibility and performance. With the Provider for Google Calendar add-on, it works smoothly with both Google
+  Calendar and Google Tasks.
+
+## Programming and Site Building
+
+These are the tools I use for coding, site work, and backend learning.
+
+- **[VS Code](https://code.visualstudio.com/):** My main editor for Python, Lua, and SQL. It provides a stable,
+  text-first environment that works well with my screen reader.
+- **[Hugo](https://gohugo.io/):** The static site generator I use for this website. I switched from Pelican because Hugo
+  builds much faster, requires fewer plugins, and has accessible themes that need far less tweaking. Its templating is
+  also easier for me to work with than Jinja2.
+- **[The uv Package Manager](https://github.com/astral-sh/uv):** A very fast Python package manager I use for project
+  management and tool syncing.
+- **[GitHub](https://github.com/):** The platform I use for version control and collaboration.
+- **[Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/):** I use this to run a Linux
+  environment (Arch Linux) while keeping the accessibility features I rely on in Windows.
+- **[GitHub Copilot](https://github.com/features/copilot):** An AI coding assistant that helps me write code faster and
+  catch mistakes sooner.
+- **[fzf](https://github.com/junegunn/fzf), [ripgrep](https://github.com/BurntSushi/ripgrep), and
+  [fd](https://github.com/sharkdp/fd):** Command-line search and navigation tools I use every day. They are
+  keyboard-first, produce clean text output, and help me browse filesystems and codebases without visual interfaces.
+- **[Tmux](https://github.com/tmux/tmux):** A terminal multiplexer that keeps my sessions alive across disconnects. I
+  use it to run persistent processes on my headless Raspberry Pi server.
+- **[Arch Linux](https://archlinux.org/):** My Linux distro inside WSL. It gives me full control of my dev environment
+  while I stay on a Windows machine with reliable screen reader support.
+
+## Productivity, Communication, and Digital Security
+
+These tools lower my cognitive load and help me stay organized and secure.
+
+- **[TextExpander](https://textexpander.com/?refby=84d64a7104eb90b1):** I use this to manage repetitive typing, reduce
+  physical fatigue, and avoid having to remember exact strings of text. If you buy a plan through my referral link, I
+  may earn account credit at no extra cost to you.
+- **[Ditto Clipboard Manager](https://ditto-cp.sourceforge.io/):** Lets me keep track of multiple copied items, which
+  cuts down on extra typing.
+- **[1Password](https://1password.com/):** My password manager. It's a key part of my online security and peace of mind.
+- **[Foam](https://docs.foamnotes.com/):** A VS Code-based note system I use for private notes and personal knowledge
+  management.
+- **[Cloudflare](https://www.cloudflare.com/):** I use this for DNS and domain management. This site is hosted on
+  Cloudflare Pages, which has been reliable and accessible for me.
+- **[PureTalk](https://www.puretalk.com/):** My mobile service provider. They offer affordable plans and good enough
+  coverage for where I live.
+- **[Gmail](https://mail.google.com/):** My main email service. I rely on its accessibility and integration with other
+  Google tools.
+- **[Google Calendar](https://calendar.google.com/):** I use this to manage my schedule and appointments. It works well
+  enough with my screen reader for the way I use it.
+- **[Google Tasks](https://tasks.google.com/):** I use this to keep track of my to-dos. It integrates well with Google
+  Calendar and Gmail, which helps me stay organized.
+- **[Tailscale](https://tailscale.com/):** A zero-config VPN that connects all my devices into a private network. I use
+  it to SSH into my headless Raspberry Pi from anywhere without opening ports or wrestling with complex network setup.
+- **[XMPP](https://xmpp.org/) / [Snikket](https://snikket.org/):** I use XMPP for lightweight, decentralized messaging.
+  I run my own Snikket server as my hosted XMPP provider. It's simple to self-host and gives me full control over my
+  communication.
+- **[JMP.chat](https://jmp.chat/):** A bridge service that lets me send and receive SMS and MMS from my computer. It
+  integrates with XMPP, so I can text from my PC with my screen reader. Referral codes are available on request.
+- **[Discord](https://discord.com/):** I use Discord for community chat. Its API integration capabilities also make it
+  useful for workflow automation experiments.
+- **[Unigram (Telegram)](https://unigramdev.github.io/):** My preferred Telegram client on Windows. Its accessibility
+  makes it a reliable messaging platform on both desktop and mobile.
+- **[Pushover](https://pushover.net/):** A notification service that delivers alerts I can't miss, like cron job
+  results, health reminders, or critical system failures. It works across my phone and browser.
+
+## AI Tools and Memory Systems
+
+These are AI tools and memory systems I use or have tried to reduce cognitive load, preserve context, and support
+coding, writing, accessibility analysis, planning, and automation experiments.
+
+- **[ChatGPT](https://chatgpt.com/):** One of my main AI support tools. I use it for coding help, writing support,
+  accessibility analysis, executive-function support, and turning rough thoughts into structured plans.
+- **[Pieces OS](https://pieces.app/):** A local-first memory and workflow tool I use to capture code snippets, project
+  context, web research, and work history across apps. As its screen reader accessibility improves, it's becoming a
+  bigger part of my workflow.
+- **[Google Gemini](https://gemini.google.com/):** I use this for AI-assisted writing, brainstorming, research, and
+  organizing rough thoughts when I'm overwhelmed.
+- **[Ollama](https://ollama.com/):** A local AI model runner I plan to use more after my computer upgrade, especially
+  for experiments that would otherwise be limited by API usage or subscription caps.
+- **[Hermes Agent](https://hermes-agent.nousresearch.com/):** An AI agent platform I've experimented with for automated
+  workflows and personal assistance. I'm not currently running it because cloud model usage became too expensive, but I
+  may revisit it with local models through Ollama.
+
+## Hardware and Custom Solutions
+
+These are tools and custom solutions that make my physical setup work better for me.
+
+- **[Keychron K10 Max](https://www.keychron.com/):** This mechanical keyboard provides the tactile response I need to
+  know exactly where my hands are.
+- **[Apache Restoration and Design](https://apacherestoration.pro):** My mother's contracting business. She has built
+  custom physical solutions for me in the past that respect my tactile needs and energy limits.
+- **[HydroFlask](https://www.hydroflask.com/):** Staying hydrated is a mechanical necessity for managing my health. I
+  use these because they are durable and keep water at a consistent temperature.
+
+## Health and Medical Nutrition
+
+Managing multiple chronic conditions takes a systems approach.
+
+- **[Dr. Kenny Mittelstadt](https://drkennymittelstadt.com/):** My functional medicine practitioner and "root cause
+  detective." He works virtually with patients in Texas, California, and Florida.
+- **[Guava Health](https://guavahealth.com/):** A health tracking platform I use to monitor my symptoms, medications,
+  and trends. This helps me and my doctors make better decisions.
+- **[FullScript](https://fullscript.com/):** The platform I use to reliably source my medical-grade supplements and
+  nutrition powders.
+- **MediClear Plus:** A medical food powder from Thorne I use for nutritional support when my digestive system is
+  struggling.
+- **UltraMeal:** A medical food powder from Metagenics designed to support metabolic health.
+- **[TheraBath paraffin bath](https://www.therabath.com/):** I use this for heat therapy to manage pain and improve
+  circulation in my hands.
+- **Almay deodorant:** I use this deodorant because it's gentle on my skin and doesn't cause irritation, which is
+  important for managing my sensory sensitivities. Unlike most deodorants, it doesn't trigger my skin issues, making it
+  a reliable choice for daily use. I'd include a link, but for some reason their site doesn't list deodorants.
+
+## Learning and Theology
+
+These resources support my self-paced education and spiritual exploration.
+
+- **[Boot.dev](https://www.boot.dev/):** My main platform for backend-focused computer science learning. I'm currently
+  working through its Python, Linux, Git, and backend development tracks, and it has become my favorite way to study CS
+  fundamentals.
+- **[Ledgeroo](https://ledgeroo.com/):** A gamified accounting program I'm using to learn practical bookkeeping and
+  financial workflows for my family's business. Its progressive challenge system helps me work through accounting
+  concepts one step at a time.
+- **[Exercism](https://exercism.org/):** A hands-on coding practice platform I've used for structured exercises,
+  especially for people who learn well by solving small problems.
+- **[Codecademy](https://www.codecademy.com/):** A self-paced learning platform I've used for programming and computer
+  science foundations.
+- **[World Bible Plans](https://www.worldbibleplans.com/):** A resource I use for structured study and reading plans.
+- **[BibleGateway](https://www.biblegateway.com/):** A persistent text resource for looking up and comparing different
+  Bible translations.
+- **[Gnosis.org](http://gnosis.org/):** The primary library I use for exploring broader Christian history and
+  Gnosticism.
+
+## Entertainment and Media
+
+These are my main sources for music, audiobooks, videos, and other media.
+
+- **[YouTube](https://www.youtube.com/):** I use YouTube for a wide range of content, from educational videos to
+  entertainment. It works well enough with my screen reader, and it's useful on days when I don't feel well enough to
+  read or focus deeply.
+- **[Spotify](https://open.spotify.com/):** My go-to music streaming service for playlists, everyday listening, and
+  Christian music.
+- **[Audible](https://www.audible.com/):** I use Audible for audiobooks and podcasts. It's an easy way for me to find
+  and listen to audiobooks.
+
+## Accessible Gaming
+
+These are games I've found more accessible because they prioritize menus, text, and systems over spatial navigation or
+timed reactions.
+
+- **[Trimps](https://trimps.github.io/):** A deep incremental game that's entirely menu-driven and works perfectly with
+  NVDA.
+- **[Evolve](https://pmotschmann.github.io/Evolve/):** A text-based civilization simulation focused on optimization.
+- **[A Dark Room](https://adarkroom.doublespeakgames.com/):** A minimalist text-based game focused on resource
+  management through menus.
+- **[EmpireMUD](https://empiremud.net/):** A text game that uses coordinates and pathing to help me navigate without
+  needing a mental map.
+- **[Stellar Aeon](https://stellaraeon.com:4081/):** A text-based space exploration game with a strategy focus.
+- **[Erion](https://www.erionmud.com/):** A MUD (Multi-User Dungeon) that focuses on exploration and social interaction
+  through text commands.
+
+## Technical and Disability Communities
+
+- **[Disabled Techies Slack](https://invite.disabledtechies.org/join):** A group for tech workers with disabilities.
+  It's one of the places where disabled people in tech can compare notes, ask questions, and support each other.
+- **[AppleVis](https://www.applevis.com/):** A community for blind and low-vision Apple users, with reviews, guides, and
+  community posts about accessibility.
+- **[r/blind](https://www.reddit.com/r/blind/):** A subreddit where blind and visually impaired people share
+  experiences, ask questions, and discuss accessibility and blindness.
+- **[Program-l](https://www.freelists.org/list/program-l):** A mailing list for blind programmers. It's helpful for
+  questions about programming, tools, and accessibility as a blind developer.
+- **[Touching-python](https://groups.io/g/Touching-python):** A mailing list for blind Python programmers. It's useful
+  for Python-specific questions from other blind programmers.
+- **[r/spicyautism](https://www.reddit.com/r/spicyautism/):** A subreddit for autistic people with higher support needs.
+  I find it validating because it talks about parts of autism that often get ignored in lower-support-needs spaces.
+
+---
+
+_Note: Some links on this page may be affiliate or referral links. I only recommend tools, services, and communities
+I've personally used or found genuinely helpful._

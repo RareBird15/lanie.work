@@ -27,9 +27,9 @@ a platform simply because it integrates well. You choose a platform because it a
 constantly weigh the cognitive load of one operating system against the screen reader reliability of another.
 
 Because no single tech giant has solved accessibility across all their products, I can't stay within one walled garden.
-Instead, I have been forced to build a "Franken-System." By stitching together the most accessible parts of Windows,
-Apple, Linux, and Google, I have built a tech stack that actually works for me. But it comes at a steep cost. I have
-traded away seamless integration just to secure the basic ability to use my own devices.
+Instead, I've been forced to build a "Franken-System." By stitching together the most accessible parts of Windows,
+Apple, Linux, and Google, I've built a tech stack that actually works for me. But it comes at a steep cost. I've traded
+away seamless integration just to secure the basic ability to use my own devices.
 
 ## The Hardware Split (Windows PC and iOS)
 
@@ -40,10 +40,10 @@ graphical desktop isn't a viable option for me. The Orca screen reader lacks the
 less assistive software available, and the environment demands unpredictable, cognitively expensive configuration just
 to get basic things working.
 
-Then there is the mobile side. Between my coordination issues, topographical agnosia, fatigue, and blindness, I
-generally dislike using phones. But when I must use one, the iPhone is my only practical choice. iOS provides the most
-predictable screen reader behavior and a highly accessible app ecosystem. I avoid Android because the screen readers do
-not work as well for me, and the operating system feels slower and less accessible overall.
+Then there's the mobile side. Between my coordination issues, topographical agnosia, fatigue, and blindness, I generally
+dislike using phones. But when I must use one, the iPhone is my only practical choice. iOS provides the most predictable
+screen reader behavior and a highly accessible app ecosystem. I avoid Android because the screen readers do not work as
+well for me, and the operating system feels slower and less accessible overall.
 
 This isn't just a tax on my time and energy; it's a financial tax. I can't opt for a budget Android phone or a cheap
 ChromeOS laptop. I'm forced into higher price brackets simply because those are the only devices that offer the baseline
@@ -59,7 +59,7 @@ the continuity features that come with using a Mac. My workflow is full of frict
   This is disorienting and disruptive.
 - **Hardware Gaps:** If I answer a call on my PC, the audio routes correctly, but my current desktop setup lacks a
   microphone to talk back.
-- **Clipboard:** There is no native way to sync text between my iPhone and Windows PC. Third-party clipboard sync
+- **Clipboard:** There's no native way to sync text between my iPhone and Windows PC. Third-party clipboard sync
   solutions exist, but they are often inaccessible or unreliable. This forces me to manually transfer links or notes
   using email or cloud storage.
 - **File Management:** I can't easily access files stored on my PC from my iPhone. I have to use Google Drive as a
@@ -80,12 +80,12 @@ Even though a native Linux desktop is inaccessible to me, I still need Linux. As
 highly accessible and efficient. I spend most of my time writing Python and Bash scripts, and the Linux command line is
 the best place to do that.
 
-When my last PC died, I actually tried to set up a dedicated Linux machine using a Raspberry Pi running Stormux (based
-on Arch Linux ARM). It was a failed experiment. Because the accessibility support was so poor, a task that took one step
-on Windows took ten steps on the Pi. It demanded far too much cognitive energy and physical fatigue, making it a
-completely unsustainable environment.
+When my last PC died, I tried to set up a dedicated Linux machine using a Raspberry Pi running Stormux (based on Arch
+Linux ARM). It was a failed experiment. Because the accessibility support was so poor, a task that took one step on
+Windows took ten steps on the Pi. It demanded far too much cognitive energy and physical fatigue, making it a completely
+unsustainable environment.
 
-This is where my Franken-System requires a compromise. Instead of fighting with dedicated Linux hardware, I use Windows
+This is where my Franken-System needs a compromise. Instead of fighting with dedicated Linux hardware, I use Windows
 Subsystem for Linux (WSL). WSL is the perfect bridge. It allows me to stay inside the accessible Windows desktop
 environment while giving me full access to the powerful Arch Linux command line tools I need. I get the best parts of
 Linux without ever having to navigate an inaccessible graphical interface. I can run my Python scripts, use fzf for
@@ -97,7 +97,7 @@ The latest layer of my Franken-System is Artificial Intelligence. AI has the pot
 prosthetic, helping with everything from word-finding to summarizing complex documents. But even here, the walled
 gardens are closing in.
 
-Windows integrates Copilot, but I have found it lacking in memory and flexibility. There is no way to swap it out for a
+Windows integrates Copilot, but I've found it lacking in memory and flexibility. There's no way to swap it out for a
 different AI provider that might better suit my needs. Apple is the same. iOS uses Siri, and if you want more advanced
 features, your only option is ChatGPT. This lack of choice means I can't tailor my AI assistance to my specific
 disabilities.
@@ -128,7 +128,7 @@ exists.
 
 ## Conclusion
 
-Maintaining this Franken-System is exhausting. Beyond the technical hurdles, there is a significant cognitive cost to
+Maintaining this Franken-System is exhausting. Beyond the technical hurdles, there's a significant cognitive cost to
 this setup. Switching my brain from the keyboard-driven logic of NVDA on Windows to the touch-based gestures of
 VoiceOver on iOS is a constant context switch. It adds a layer of mental fatigue that a unified ecosystem would normally
 eliminate.

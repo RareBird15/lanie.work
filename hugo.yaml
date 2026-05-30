@@ -38,7 +38,8 @@ params:
     showDate: true
     showReadingTime: true
     showTableOfContents: true
-    showTags: true
+    showTaxonomies: true
+    showSeries: true
     showAuthor: false
     showCodeCopyButton: true
 

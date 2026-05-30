@@ -1,0 +1,29 @@
+# lychee.toml
+
+# Keep output readable in VS Code terminal.
+format = "detailed"
+no_progress = true
+
+# Link types to check
+scheme = ["https", "http"]
+
+# Network behavior.
+timeout = 20
+max_retries = 2
+retry_wait_time = 2
+
+# Some sites block bot-like checkers.
+user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/125 Safari/537.36"
+
+# Treat normal success codes as alive, plus common bot-block/rate-limit false positives.
+accept = ["100..=103", "200..=299", "403", "429"]
+
+# Usually useful for local dev.
+exclude_all_private = true
+
+# Sites to exclude
+exclude = [
+  # Facebook rejects automated checks even when links are valid.
+  "^https://www\\.facebook\\.com/",
+  "^https://facebook\\.com/",
+]

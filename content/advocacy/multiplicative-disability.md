@@ -19,8 +19,8 @@ description: >
   wrong. Disabilities compound multiplicatively, and accessibility design that ignores this causes active harm.
 ---
 
-> **Sourcing Note:** The examples in this article are not hypotheticals. They are extracted from my own captured daily
-> logs, technical sessions, and lived experiences. For a plain-language breakdown of the physical mechanics behind my
+> **Sourcing Note:** The examples in this article are not hypotheticals. They come from my own captured daily logs,
+> technical sessions, and lived experiences. For a plain-language breakdown of the physical mechanics behind my
 > diagnoses, see my [Human Terms summary](/human-terms/).
 
 ## The Comfortable Lie of the Sum
@@ -31,13 +31,13 @@ It goes like this: a person has Disability A and Disability B. Their overall dif
 build an accommodation for A, we've reduced the total load to just $B$. Progress has been made. The spreadsheet
 balances. Everyone goes home feeling useful.
 
-In reality, disability isn't an additive sum, but rather a **resource contention issue**. The correct relationship is
-closer to:
+In reality, disability isn't an additive sum. It's a **resource contention issue**. The correct relationship is closer
+to:
 
 $$\text{Lived Difficulty} = (A \times B \times C) \cdot \text{System Design}$$
 
-When the system design ignores the interaction between variables, when the accommodation built for Disability A requires
-a resource already depleted by Disability B, it acts as a multiplier. The result isn't a reduction in load; it's a
+When a system design ignores the interaction between variables, and the accommodation built for Disability A requires a
+resource already depleted by Disability B, it acts as a multiplier. The result isn't a reduction in load; it's a
 **buffer overflow**.
 
 ## System Specifications: Operating in "Manual Mode"
@@ -58,12 +58,12 @@ and esophageal dysmotility, which cause my digestive system to operate unpredict
 airway is compromised by severe allergies, and my swallowing reflex doesn't trigger automatically.
 
 In a standard system, physiological survival is a background daemon. For me, it's a **blocking task** in the foreground.
-It requires constant, conscious CPU cycles. When an accessibility solution for one condition requires a capacity that
-another has already depreciated, the system triggers a `RecursionError` and crashes.
+It requires constant, conscious CPU cycles. When an accessibility solution for one condition requires a capacity another
+condition has already depleted, the system triggers a `RecursionError` and crashes.
 
 ## Case One: The Spatial Audio Trap
 
-Audiogames are consistently held up as the gold standard for blind accessibility. The design assumption is generous and
+Audiogames are often held up as the gold standard for blind accessibility. The design assumption is generous and
 logical: if a player can't see a 3D space, give them directional audio. Let sound carry the spatial information.
 
 For a blind player with a standard spatial mapping "driver," this works. For me, it's a second barrier built directly on
@@ -72,11 +72,11 @@ top of the first.
 Directional audio requires the listener to hear a sound, locate it in 3D space, translate that vector into a navigable
 direction, and execute a command under time pressure. Because of Topographical Agnosia, my brain doesn't have that
 spatial mapping library installed. I have to emulate it in software, manually calculating cardinal references, headings,
-and key-mappings.
+and key mappings.
 
 This emulation isn't free. It costs the exact same CPU cycles I use to maintain "Manual Mode."
 
-When a game layers multiple simultaneous audio cues (enemy positions, environmental feedback, UI alerts) I'm not
+When a game layers multiple simultaneous audio cues (enemy positions, environmental feedback, UI alerts), I'm not
 experiencing "immersive accessibility." I'm experiencing critical resource exhaustion. My cognitive scheduler is
 saturated trying to decode the spatial audio stack while simultaneously issuing the manual commands to swallow, breathe,
 and stay upright. Something gets dropped from the queue. Sometimes it's the game. Sometimes it's my airway.
@@ -88,7 +88,7 @@ for me, they represent a high-latency API call with a massive failure rate, crea
 simultaneous costs:
 
 First, executive retrieval. My word-finding isn't always instant. A voice interface forces a real-time, high-priority
-retrieval call that my system may not have the memory to fulfill, particularly under cognitive load.
+retrieval call that my system may not have enough memory to fulfill, especially under cognitive load.
 
 Second, the manual overhead. Speaking isn't "just talking." It's a sequence of manual motor commands:
 
@@ -116,9 +116,9 @@ The multiplicative nature of disability isn't limited to digital interfaces; it 
 I'm 4'10". That's an immutable hardware constraint. In a standard-height world, reaching over my head is a global
 variable I encounter constantly, from top kitchen cabinets to the highest fridge shelves and the microwave.
 
-I actively try to avoid reaching overhead because it's a high-cost physical function. Reaching over my head actively
-spikes my intracranial pressure. Doing it can easily trigger a multi-day system crash where I'm entirely nonfunctional.
-But avoiding it is incredibly difficult when the physical environment demands it.
+I actively try to avoid reaching overhead because it's a high-cost physical function. Reaching over my head spikes my
+intracranial pressure. Doing it can easily trigger a multi-day system crash where I'm entirely nonfunctional. But
+avoiding it is incredibly difficult when the physical environment demands it.
 
 Earlier today, this environmental mismatch created a classic system deadlock.
 
@@ -166,7 +166,7 @@ The compounding variables don't stop at fluid management:
 - **Missing Dependencies:** My severe allergies are worsened by dry air. The machine's built-in humidifier was
   ineffective without heated tubing.
 - **Bureaucratic Multiplication:** Medicaid refused to cover the heated tubing, claiming it wasn't "medically
-  necessary" - an additive-model policy that ignores the multiplicative reality of my allergies and airway. I had to pay
+  necessary": an additive-model policy that ignores the multiplicative reality of my allergies and airway. I had to pay
   the $134 cost out of pocket just to attempt to use the machine.
 - **System Rejection:** The combination of the irritating straps (even with special covers), the pooling saliva, the dry
   air, and my sensory processing issues created an unbearable sensory load. I would take the mask off in the middle of
@@ -193,15 +193,15 @@ as a permanent system error. Neurological overload became my baseline state. The
 of independence, the worse every other condition became, because their definition of independence required me to spend
 resources I was already allocating just to stay alive.
 
-When I communicated this, the institution's additive model had no way to process it. Because their spreadsheet did not
+When I communicated this, the institution's additive model had no way to process it. Because their spreadsheet didn't
 have a multiplication operator, my physical collapse was interpreted as resistance, psychological instability, and a
 failure of motivation. My valedictorian status was removed. My assistive technology was confiscated. Scholarships were
 withdrawn. Had my mom not intervened and fought for me to return the next year, I wouldn't have been allowed to walk the
 stage at graduation. The institution's failure to account for the multiplicative nature of my disabilities resulted in
 active punishment for the predictable consequences of their design choices.
 
-This is what happens when a system designed for singly-disabled users applies the additive model to a multiply-disabled
-body: it produces institutional punishment for the predictable consequences of an unfunded mandate.
+This is what happens when a system designed around one access need at a time applies the additive model to a
+multiply-disabled body: it produces institutional punishment for the predictable consequences of an unfunded mandate.
 
 ## Memory-Backed Evidence from Captures
 
@@ -250,7 +250,7 @@ features simultaneously, and they conflict?**
 - What happens when keyboard navigation requires spatial mental modeling that competes with the user's limited physical
   resource pool?
 - What happens when the user would benefit from switch control, but it doesn't work with screen readers?
-- What happens when the user has a condition affecting their ability to type but also needs a screen reader, which
+- What happens when the user has a condition affecting their ability to type but also relies on a screen reader, which
   doesn't work with either voice commands or switch control?
 
 Multiplicative design requires **modular architecture**:
@@ -261,7 +261,7 @@ Multiplicative design requires **modular architecture**:
   of sustained vocal output from a user whose attention is partially allocated to breathing isn't a "free" resource.
 - **Intersection as the Norm:** When a system is designed with a "blind user" or "autistic user" as its primary persona,
   it's underspecified. The CDC estimates that over half of adults with disabilities have more than one. Designing for
-  the intersection isn't an "advanced feature". It's **stable code**.
+  the intersection isn't an "advanced feature." It's **stable code**.
 - **Transparency over Perfection:** Sometimes needs conflict. The solution isn't to declare one need more legitimate.
   Expose the configuration, accept incompleteness, and allow the user to manage their own resource allocation.
 

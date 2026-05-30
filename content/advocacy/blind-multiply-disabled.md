@@ -22,14 +22,14 @@ description: >
 
 This is a personal narrative about my experience as a blind, multiply disabled student in a residential school setting.
 It reflects my lived experience and my understanding as an adult, informed by later medical and psychological
-evaluation.
+evaluations.
 
 This account isn't intended as an attack on individual staff members. It's an account of systemic failure, medical
 misattribution, and institutional decision-making, and of the long-term impact those failures have had on my health,
 functioning, and sense of safety.
 
-I'm sharing this because I believe these patterns matter, not only for understanding my own life, but because I'm
-concerned they may still affect other students.
+I'm sharing this because these patterns matter, not just for understanding my own life, but because they may still
+affect other students.
 
 ## Early Experiences and Context
 
@@ -38,15 +38,15 @@ summer programs at the Texas School for the Blind and Visually Impaired (TSBVI).
 instruction for me; I received Braille education and other blindness-related training at home.
 
 The summer programs mattered because they provided something else: community. I was around other blind children, in an
-environment where my blindness was understood and unremarkable. Those experiences were largely positive and did not
-cause harm.
+environment where my blindness was understood and unremarkable. Those experiences were largely positive and didn't cause
+harm.
 
 I began attending TSBVI as a full-time residential student for high school at age fourteen.
 
 ## High School: Early Stability
 
 For the first couple of years of high school, my experience at TSBVI was mostly positive. I lived in a dorm with other
-students, had structure, and was not yet being pushed aggressively toward adult transition or independence benchmarks.
+students, had structure, and wasn't yet being pushed hard toward adult transition goals or independence benchmarks.
 
 At times, expectations felt high or overly rigid, but there were buffers: peer support, routine, and a contained
 environment. I was able to function within this structure, and I did well academically.
@@ -57,8 +57,8 @@ believe that anything else was going on.
 ## Medical Harm and Misattribution
 
 When I was sixteen, I experienced severe head and eye pain. This was initially ignored and later misdiagnosed as
-glaucoma when the severity could no longer be dismissed. In reality, I was experiencing idiopathic intracranial
-hypertension (IIH), a neurological condition.
+glaucoma once the pain could no longer be dismissed. In reality, I was experiencing idiopathic intracranial hypertension
+(IIH), a neurological condition.
 
 Because of the misdiagnosis and the intensity of the pain, light sensitivity, and vision changes from one day to the
 next, I ultimately had my eye surgically removed. After I healed, I returned to school under the assumption, shared by
@@ -77,19 +77,19 @@ believed at the time was a comprehensive autism evaluation. I was diagnosed with
 Spectrum Disorder) and the school claimed they had done a full assessment of my needs.
 
 The transition program dramatically increased demands related to independence, self-direction, and performance, while
-simultaneously reducing supports. I repeatedly communicated that the expectations were too much and that I was
-struggling physically and cognitively.
+reducing supports. I repeatedly communicated that the expectations were too much and that I was struggling physically
+and cognitively.
 
 My body began to collapse under the strain. I developed symptoms consistent with fibromyalgia and severe nervous system
 overload. Instead of slowing down, reassessing medically, or increasing support, pressure continued.
 
-The evaluation conducted that year did not include comprehensive neuropsychological assessment. I later learned that the
-diagnosis given to me (PDD-NOS) functioned largely as a catch-all and was treated differently, and with fewer supports,
+The evaluation done that year didn't include a comprehensive neuropsychological assessment. I later learned that the
+diagnosis given to me (PDD-NOS) functioned largely as a catch-all. It was treated differently, and with fewer supports,
 than a full autism diagnosis. The testing approach also mixed child and adult instruments in a way that later evaluators
-have told me was inappropriate. Neuropsychology should have been involved much earlier. This explains why many of my
+have told me was inappropriate. Neuropsychology should have been involved earlier. This helps explain why many of my
 needs were missed. As a result, I've been unable to access appropriate supports. I'm now seeking a full reevaluation.
 
-Despite this, the institution treated my difficulties as failures of coping or compliance rather than signs of serious
+Despite this, the school treated my difficulties as failures of coping or compliance rather than signs of serious
 neurological and developmental mismatch.
 
 ## Withdrawal of Support and Punitive Actions
@@ -104,10 +104,10 @@ In addition to being removed from the program:
 - I was nearly prevented from returning to walk at graduation; my mother had to fight for me to be allowed to do so the
   following year.
 
-These actions occurred even though the evaluation conducted at the time recommended _more_ support, not less.
+These actions happened even though the evaluation conducted at the time recommended _more_ support, not less.
 
-The message I received was clear: once I could no longer perform independence as defined by the institution, I was no
-longer worthy of recognition, resources, or care.
+The message I received was clear: once I could no longer perform independence as the school defined it, I was no longer
+worthy of recognition, resources, or care.
 
 ## What Was Missed
 
@@ -137,11 +137,11 @@ disbelieved, and abandoned at a critical developmental stage.
 
 ## Why I'm Sharing This
 
-I am not sharing this to relive the past or to assign individual blame.
+I'm not sharing this to relive the past or to assign individual blame.
 
-I'm sharing it because I'm concerned that the same philosophical framing - treating blindness as a single-axis
-explanation and prioritizing independence without sufficient attention to multiple disabilities, neurological safety, or
-trauma - may still be causing harm.
+I'm sharing it because I'm concerned the same framing may still be causing harm: treating blindness as a single-axis
+explanation and prioritizing independence without enough attention to multiple disabilities, neurological safety, or
+trauma.
 
 If this happened to me, it may be happening to others.
 

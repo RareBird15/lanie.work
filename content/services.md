@@ -12,10 +12,10 @@ I'm currently available for freelance accessibility, usability, and product feed
 developer tools, and technical workflows from the perspective of a blind, autistic, and chronically ill assistive
 technology user.
 
-My focus is practical: I help teams understand where real users get blocked, confused, overloaded, or excluded.
+My focus is practical. I help teams understand where real users get blocked, confused, overloaded, or excluded.
 
-I do not provide legal accessibility audits, WCAG certification, VPATs, or formal compliance sign-off. Instead, I
-provide lived-experience feedback on whether a product is actually usable, understandable, and humane.
+I don't provide legal accessibility audits, WCAG certification, VPATs, or formal compliance sign-off. Instead, I provide
+lived-experience feedback on whether a product is actually usable, understandable, and humane.
 
 ## My Perspective
 
@@ -93,7 +93,7 @@ This can include:
 
 ### Focused Bug and Issue Notes
 
-I do not replace a full QA team, but I can provide focused issue-style notes for specific workflows.
+I don't replace a full QA team, but I can provide focused issue-style notes for specific workflows.
 
 Depending on the project, my notes may include:
 
@@ -163,11 +163,11 @@ I can provide feedback in a structured format, such as:
 
 To make sure we're a good fit, here are the boundaries of my services:
 
-- **Not a legal compliance audit:** I do not provide WCAG certification, VPATs, ACRs, or legal accessibility sign-off.
-- **Not full regression QA:** I do not replace a dedicated QA team or test every feature in a large product after every
+- **Not a legal compliance audit:** I don't provide WCAG certification, VPATs, ACRs, or legal accessibility sign-off.
+- **Not full regression QA:** I don't replace a dedicated QA team or test every feature in a large product after every
   release.
-- **Not visual design review:** I do not evaluate visual polish, branding, color, or layout aesthetics.
-- **Not emergency support:** I work best with flexible, asynchronous projects rather than urgent same-day deadlines.
+- **Not visual design review:** I don't evaluate visual polish, branding, color, or layout aesthetics.
+- **Not emergency support:** I work best with flexible, asynchronous projects, not urgent same-day deadlines.
 
 What I do provide is practical, lived-experience feedback on whether a product is usable, understandable, and humane for
 disabled users.
