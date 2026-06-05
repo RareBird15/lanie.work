@@ -24,7 +24,7 @@ I don't just look for broken code; I look for broken experiences.
 My testing is grounded in daily experience with blindness, neurodivergence, chronic illness, fatigue, cognitive load,
 and assistive technology. I pay attention to barriers that automated tools and checklists often miss.
 
-I evaluate technology through the framework I document in my **[Accessibility Notes](/accessibility-notes/)**,
+I evaluate technology through the framework I document in my **[Accessibility Notes](/accessibility-notes/).**,
 including:
 
 - **Keyboard-Centricity:** Is the tool fully usable without a mouse?

@@ -212,7 +212,7 @@ my code editor, I can trace these conflicts in my own automated captures:
   the energy required to maintain the 'Manual Mode' of my breathing and speech, real-time voice commands are a huge
   neurological challenge."
 - **2026-04-15 (Browser capture, article analysis):** "The Spatial Trap of Sound... Audiogames... rely on directional
-  audio... My brain can't process this data... [it] drains the same limited energy bank I use for manual mode physical
+  audio... My brain can't process this data... it drains the same limited energy bank I use for manual mode physical
   survival."
 - **2026-04-18 (Browser capture, dictation friction):** "Voice assistants don't understand unless the command is
   perfectly formed... if I forget a word, use the wrong one..." and "This is a classic accessibility mismatch."

@@ -2,6 +2,7 @@
 title: Tools and Resources
 slug: tools-and-resources
 date: 2026-04-13
+lastmod: 2026-06-05
 description:
   Tools, platforms, communities, and resources that help me manage technology, health, learning, and daily life.
 showDate: false
@@ -80,11 +81,11 @@ These tools lower my cognitive load and help me stay organized and secure.
   Calendar and Gmail, which helps me stay organized.
 - **[Tailscale](https://tailscale.com/):** A zero-config VPN that connects all my devices into a private network. I use
   it to SSH into my headless Raspberry Pi from anywhere without opening ports or wrestling with complex network setup.
-- **[XMPP](https://xmpp.org/) / [Snikket](https://snikket.org/):** I use XMPP for lightweight, decentralized messaging.
-  I run my own Snikket server as my hosted XMPP provider. It's simple to self-host and gives me full control over my
-  communication.
-- **[JMP.chat](https://jmp.chat/):** A bridge service that lets me send and receive SMS and MMS from my computer. It
-  integrates with XMPP, so I can text from my PC with my screen reader. Referral codes are available on request.
+- **[Google Workspace Starter](https://workspace.google.com/):** I use Google Workspace Starter for domain email. It
+  gives me professional email for my domains while still letting me use the Google tools and accessibility workflows I
+  already know.
+- **[Google Voice](https://voice.google.com/):** I use Google Voice for texts and calls from my computer. Being able to
+  manage communication from my PC matters because desktop workflows are often much easier for me than phone-first ones.
 - **[Discord](https://discord.com/):** I use Discord for community chat. Its API integration capabilities also make it
   useful for workflow automation experiments.
 - **[Unigram (Telegram)](https://unigramdev.github.io/):** My preferred Telegram client on Windows. Its accessibility
@@ -99,9 +100,6 @@ coding, writing, accessibility analysis, planning, and automation experiments.
 
 - **[ChatGPT](https://chatgpt.com/):** One of my main AI support tools. I use it for coding help, writing support,
   accessibility analysis, executive-function support, and turning rough thoughts into structured plans.
-- **[Pieces OS](https://pieces.app/):** A local-first memory and workflow tool I use to capture code snippets, project
-  context, web research, and work history across apps. As its screen reader accessibility improves, it's becoming a
-  bigger part of my workflow.
 - **[Google Gemini](https://gemini.google.com/):** I use this for AI-assisted writing, brainstorming, research, and
   organizing rough thoughts when I'm overwhelmed.
 - **[Ollama](https://ollama.com/):** A local AI model runner I plan to use more after my computer upgrade, especially
@@ -109,6 +107,9 @@ coding, writing, accessibility analysis, planning, and automation experiments.
 - **[Hermes Agent](https://hermes-agent.nousresearch.com/):** An AI agent platform I've experimented with for automated
   workflows and personal assistance. I'm not currently running it because cloud model usage became too expensive, but I
   may revisit it with local models through Ollama.
+- **[Google AI Pro](https://one.google.com/about/google-ai-plans/):** I use Google AI Pro through my personal Google
+  account for Gemini, Google Drive storage, and AI features that are bundled into the plan. It's especially useful
+  because it fits into the Google ecosystem I already use and can be shared with family.
 
 ## Hardware and Custom Solutions
 
