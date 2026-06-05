@@ -6,7 +6,7 @@ charset-normalizer==3.4.7
     # via requests
 feedparser==6.0.12
     # via lanie-work (pyproject.toml)
-idna==3.16
+idna==3.18
     # via requests
 python-dotenv==1.2.2
     # via lanie-work (pyproject.toml)
