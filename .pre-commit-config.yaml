@@ -46,6 +46,7 @@ repos:
         name: Lint Markdown files
         args: ["--config", ".markdownlint.json"]
         files: \.md$
+        exclude: ^\.github/
 
   # YAML linting
   - repo: https://github.com/adrienverge/yamllint
