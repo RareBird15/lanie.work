@@ -10,7 +10,7 @@ idna==3.18
     # via requests
 python-dotenv==1.2.2
     # via lanie-work (pyproject.toml)
-requests==2.33.1
+requests==2.34.2
     # via lanie-work (pyproject.toml)
 sgmllib3k==1.0.0
     # via feedparser
