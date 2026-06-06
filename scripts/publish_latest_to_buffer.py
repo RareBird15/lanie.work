@@ -297,7 +297,8 @@ def get_latest_post_from_feed(feed_file: Path) -> tuple[str, str, list[str]]:
 
 def format_social_post(title: str, url: str, tags: list[str]) -> str:
     """Create the text that Buffer will queue."""
-    hashtags = " ".join(f"#{tag}" for tag in tags)
+    unique_tags = list(dict.fromkeys(tag for tag in tags if tag))
+    hashtags = " ".join(f"#{tag}" for tag in unique_tags)
 
     parts = [
         f"New post: {title}",
