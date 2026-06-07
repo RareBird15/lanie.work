@@ -1,0 +1,55 @@
+[tools]
+go = "1.26.2"
+hugo = "0.162.1"
+node = "24"
+python = "3.14"
+uv = "0.11.18"
+wrangler = { version = "4.98.0", allow_builds = [
+  "esbuild",
+  "sharp",
+  "workerd",
+] }
+
+[tasks.sync]
+description = "Install or update Python dependencies"
+run = "uv sync"
+
+[tasks.hooks-install]
+description = "Install pre-commit hooks"
+run = "uv run pre-commit install"
+
+[tasks.dev]
+description = "Run Hugo local server with drafts and future posts"
+run = "hugo server --buildDrafts --buildFuture"
+
+[tasks.build]
+description = "Build site for production"
+run = "hugo --minify"
+
+[tasks.check]
+description = "Run all pre-commit checks"
+run = "uv run pre-commit run --all-files"
+
+[tasks.local-ci]
+description = "Run sync, checks, and production build"
+run = "mise run sync && mise run check && mise run build"
+
+[tasks.publish-buffer]
+description = "Build site and queue latest post to Buffer"
+run = "hugo --minify && uv run ./scripts/publish_latest_to_buffer.py"
+
+[tasks.worker-dev]
+description = "Run Cloudflare Worker locally"
+run = "cd services/form-handler && wrangler dev"
+
+[tasks.worker-deploy]
+description = "Deploy Cloudflare Worker"
+run = "cd services/form-handler && wrangler deploy"
+
+[tasks.a11y-serve]
+description = "Serve built site on port 4001"
+run = "npx http-server ./public -p 4001 -c-1"
+
+[tasks.a11y-check]
+description = "Run pa11y checks using repo config"
+run = "npx pa11y-ci --config .pa11yci.json"

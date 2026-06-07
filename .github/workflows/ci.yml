@@ -17,12 +17,13 @@ jobs:
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v3.2.1
         with:
-          hugo-version: latest
+          hugo-version: 0.162.1
           extended: true
 
       - name: Install uv
         uses: astral-sh/setup-uv@v8.2.0
         with:
+          version: 0.11.18
           enable-cache: true
 
       - name: Set up Python
