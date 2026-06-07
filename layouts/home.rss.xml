@@ -30,7 +30,7 @@
     <link>{{ .Permalink }}</link>
     <description>Recent content on {{ .Site.Title }}</description>
     <generator>Hugo</generator>
-    <language>{{ site.Language.Locale }}</language>
+    <language>{{ site.LanguageCode }}</language>
     {{- with $authorEmail }}
       <managingEditor>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</managingEditor>
     {{- end }}
