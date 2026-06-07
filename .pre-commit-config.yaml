@@ -66,11 +66,13 @@ repos:
         exclude: ^(package(-lock)?\.json|LICENSE|CNAME|go\.sum|uv\.lock|data/buffer-published\.json)$
 
   # Shell script linting
-  - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.11.0.1
+  - repo: local
     hooks:
       - id: shellcheck
         name: ShellCheck shell scripts
+        entry: shellcheck
+        language: system
+        types: [shell]
 
   # GitHub Actions linting
   - repo: https://github.com/rhysd/actionlint
