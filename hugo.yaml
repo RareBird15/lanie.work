@@ -1,5 +1,5 @@
 baseURL: https://lanie.work/
-languageCode: en-us
+locale: en-us
 title: "Lanie: Faith, Tech, and Advocacy"
 
 # Tells Hugo to build the search index and standard feeds
@@ -38,6 +38,8 @@ params:
     showDate: true
     showReadingTime: true
     showTableOfContents: true
+    showRelatedContent: true
+    relatedContentLimit: 5
     showTaxonomies: true
     showSeries: true
     showAuthor: false
@@ -91,3 +93,12 @@ markup:
 module:
   imports:
     - path: github.com/jpanther/congo/v2
+
+related:
+  includeNewer: true
+  threshold: 15
+  indices:
+    - name: tags
+      weight: 90
+    - name: categories
+      weight: 70
