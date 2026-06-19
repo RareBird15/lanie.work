@@ -23,24 +23,20 @@ humane, predictable, and inclusive.
 - **Documenting Barriers:** Writing about recurring accessibility challenges in games and interactive media to help
   developers build better experiences for multiply disabled players.
 
-## Explore My Work
+## Start Here
 
-- **[About Me](/about/):** My background, current roles, and learning path.
-- **[Work and Learning](/work-and-learning/):** My technical stack, professional testing focus, and active projects.
-- **[Services](/services/):** Accessibility, usability, and product feedback services for websites, apps, games,
-  developer tools, and technical workflows.
-- **[Accessibility Notes](/accessibility-notes/):** Notes on what does and doesn't work for me in digital products.
-- **[Tools and Resources](/tools-and-resources/):** A curated list of tools, platforms, and people that help me manage
-  my life, health, and work.
-- **[Community](/community/):** Links to online groups I run.
-- **[Human Terms](/human-terms/):** Plain-language explanations of how my conditions affect me.
-- **[Contact](/contact/):** How to reach me for work, questions, or just to say hi.
-- **[Browse by Topic](/tags/):** See all tags with post counts, or browse [categories](/categories/).
-- **Writing:** Explore my thoughts on [Technology](/technology/), [Gaming](/gaming/), [Education](/education/), and
-  [Advocacy](/advocacy/).
+- **New to my work?** Read [About Me](/about/) and [Work and Learning](/work-and-learning/).
+- **Need accessibility context?** Start with [Accessibility Notes](/accessibility-notes/) and
+  [Human Terms](/human-terms/).
+- **Looking for tools I use or recommend?** See [Tools and Resources](/tools-and-resources/).
+- **Looking for services?** Visit [Services](/services/).
+- **Want essays?** Browse [Technology](/technology/), [Advocacy](/advocacy/), [Gaming](/gaming/), and
+  [Education](/education/).
+- **Looking by topic?** Browse [Tags](/tags/) or [Categories](/categories/).
+- **Need to contact me or find my communities?** Go to [Contact](/contact/) or [Community](/community/).
 
 ---
 
-_Faith, technology, and disability advocacy - working toward a more accessible world._
+_Faith, technology, and disability advocacy, working toward a more accessible world._
 
 _This site is intentionally small, updated selectively, and designed for clarity over volume._
