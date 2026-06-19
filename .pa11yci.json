@@ -6,7 +6,13 @@
       "args": ["--no-sandbox", "--disable-setuid-sandbox"]
     }
   },
-  "urls": ["http://localhost:4001/", "http://localhost:4001/writing/", "http://localhost:4001/about/"],
+  "urls": [
+    "http://localhost:4001/",
+    "http://localhost:4001/about/",
+    "http://localhost:4001/technology/",
+    "http://localhost:4001/tags/",
+    "http://localhost:4001/categories/"
+  ],
   "reporter": "html",
   "output": "accessibility-reports"
 }

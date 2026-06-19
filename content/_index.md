@@ -35,6 +35,7 @@ humane, predictable, and inclusive.
 - **[Community](/community/):** Links to online groups I run.
 - **[Human Terms](/human-terms/):** Plain-language explanations of how my conditions affect me.
 - **[Contact](/contact/):** How to reach me for work, questions, or just to say hi.
+- **[Browse by Topic](/tags/):** See all tags with post counts, or browse [categories](/categories/).
 - **Writing:** Explore my thoughts on [Technology](/technology/), [Gaming](/gaming/), [Education](/education/), and
   [Advocacy](/advocacy/).
 

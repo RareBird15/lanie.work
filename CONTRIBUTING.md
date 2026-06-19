@@ -133,27 +133,30 @@ Skipping hooks is not recommended.
 
 ### Hugo Front Matter
 
-Use TOML front matter unless there is a specific reason to use another format.
+Use YAML front matter.
 
 Example:
 
-```toml
-+++
-title = "Your Article Title"
-date = 2026-05-21
-description = "A short summary for previews."
-draft = false
-tags = ["accessibility", "technology"]
-categories = ["Technology"]
-+++
+```yaml
+---
+title: Your Article Title
+date: 2026-05-21
+description: A short summary for previews.
+draft: false
+tags:
+  - accessibility
+  - technology
+categories:
+  - Technology
+---
 ```
 
 Guidelines:
 
-- Use lowercase TOML keys.
+- Use lowercase YAML keys.
 - Include a clear `title`.
 - Include a useful `description` for posts.
-- Set `draft = true` for unfinished work.
+- Set `draft: true` for unfinished work.
 - Use meaningful tags and categories.
 
 ### Python

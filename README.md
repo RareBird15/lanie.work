@@ -19,22 +19,25 @@ work.
 To add a new essay or article:
 
 1. Create a new Markdown file in the appropriate Hugo content folder.
-2. Add TOML front matter.
+2. Add YAML front matter.
 3. Write the post content below the front matter.
 4. Build and preview locally.
 5. Commit and push.
 
 Example post front matter:
 
-```toml
-+++
-title = "Your Article Title"
-date = 2026-05-21
-description = "A short description for summaries and previews."
-draft = false
-tags = ["accessibility", "technology"]
-categories = ["Technology"]
-+++
+```yaml
+---
+title: Your Article Title
+date: 2026-05-21
+description: A short description for summaries and previews.
+draft: false
+tags:
+  - accessibility
+  - technology
+categories:
+  - Technology
+---
 ```
 
 ## Quick Start
@@ -125,8 +128,8 @@ lanie.work/
 ├── public/                          # Generated site output
 ├── scripts/                         # Python helper scripts
 ├── static/                          # Static assets
-├── themes/                          # Hugo theme files or modules, if used
-├── workers/                         # Cloudflare Worker code
+├── themes/                          # Legacy theme submodules, if any
+├── services/form-handler/           # Cloudflare Worker code
 ├── .github/
 │   └── workflows/                   # CI/CD workflows
 ├── pyproject.toml                   # Python helper dependencies

@@ -66,6 +66,12 @@ menu:
     - name: Education
       url: /education/
       weight: 60
+    - name: Tags
+      url: /tags/
+      weight: 65
+    - name: Categories
+      url: /categories/
+      weight: 66
     - name: Contact
       url: /contact/
       weight: 70
