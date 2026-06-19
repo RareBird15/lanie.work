@@ -5,14 +5,11 @@ categories:
   - Advocacy
 tags:
   - disability
-  - accessibility
-  - AI
+  - ai
   - community
-  - advocacy
   - identity
   - intersectionality
   - faith
-  - technology
 slug: no-home-base
 description: >
   When you're multiply disabled, conservative Christian, and an AI enthusiast, every community rejects part of your

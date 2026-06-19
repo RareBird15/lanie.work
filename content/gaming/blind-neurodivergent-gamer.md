@@ -9,7 +9,6 @@ tags:
   - neurodivergent
   - blindness
   - chronic-illness
-  - gaming
 slug: blind-neurodivergent-gamer
 description: >
   A personal reflection on the barriers and joys of gaming with multiple disabilities, focusing on why text-first,

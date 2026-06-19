@@ -159,6 +159,63 @@ Guidelines:
 - Set `draft: true` for unfinished work.
 - Use meaningful tags and categories.
 
+### Taxonomy Guide (Categories and Tags)
+
+Use categories for broad shelves and tags for cross-cutting topics.
+
+Categories:
+
+- Use exactly 1 category for essays and articles.
+- Current primary categories are `Technology`, `Advocacy`, `Gaming`, and `Education`.
+- Do not add categories to core site pages like About, Contact, Services, Human Terms, or Tools and Resources.
+
+Tags:
+
+- Use 3 to 6 tags per post.
+- Keep tags lowercase and kebab-case (example: `chronic-illness`, not `Chronic Illness`).
+- Tags should describe recurring themes people might browse across categories.
+- Do not repeat the category as a tag (example: category `Technology` + tag `technology` is redundant).
+- If unsure, use fewer tags. Over-tagging usually hurts discovery more than under-tagging.
+
+Preferred site tag vocabulary:
+
+- `accessibility`
+- `disability`
+- `workflow`
+- `ai`
+- `neurodivergent`
+- `blindness`
+- `chronic-illness`
+- `personal`
+- `communication`
+- `cli`
+- `automation`
+- `cognitive-prosthetic`
+- `community`
+- `identity`
+- `intersectionality`
+- `faith`
+- `medical-trauma`
+- `voip`
+- `desktop-first`
+- `google-voice`
+- `python`
+- `topographical-agnosia`
+
+Quick decision process:
+
+1. Pick the one category the post primarily belongs to.
+2. Add 2 or 3 topic tags (what the post is about).
+3. Add 1 or 2 audience/problem tags (who it helps or what constraint it addresses).
+4. Remove any tag that only repeats the category or appears in almost every post without adding meaning.
+
+Discovery tips:
+
+- Good tags are stable labels you expect to reuse across multiple posts.
+- Avoid one-off novelty tags unless you plan to write a series on that theme.
+- Keep wording consistent over time (`ai` everywhere, not a mix of `AI`, `ai-tools`, and `artificial-intelligence`
+  unless needed).
+
 ### Python
 
 Python scripts in this repository are helper tools, not the site generator.

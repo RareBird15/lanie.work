@@ -5,8 +5,6 @@ draft: false
 categories:
   - Advocacy
 tags:
-  - advocacy
-  - accessibility
   - disability
   - neurodivergent
   - communication

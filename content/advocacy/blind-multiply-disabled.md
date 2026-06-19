@@ -5,7 +5,7 @@ lastmod: 2026-03-31
 categories:
   - Advocacy
 tags:
-  - advocacy
+  - disability
   - medical-trauma
   - blindness
   - neurodivergent

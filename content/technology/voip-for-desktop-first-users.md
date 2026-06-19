@@ -7,12 +7,9 @@ categories:
 tags:
   - accessibility
   - disability
-  - technology
   - workflow
   - voip
   - desktop-first
-  - iphone
-  - windows
   - google-voice
 slug: "voip-for-desktop-first-users"
 description: >

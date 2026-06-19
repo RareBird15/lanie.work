@@ -9,7 +9,6 @@ tags:
   - cli
   - chronic-illness
   - neurodivergent
-  - philosophy
   - python
   - topographical-agnosia
 slug: teleporting-through-code

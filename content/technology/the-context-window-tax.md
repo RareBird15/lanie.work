@@ -7,7 +7,6 @@ tags:
   - accessibility
   - ai
   - disability
-  - technology
   - workflow
   - automation
 slug: context-window-tax

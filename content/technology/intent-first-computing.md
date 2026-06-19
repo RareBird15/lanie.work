@@ -6,7 +6,6 @@ categories:
 tags:
   - accessibility
   - disability
-  - technology
   - ai
   - workflow
   - cognitive-prosthetic

@@ -6,13 +6,12 @@ math: true
 categories:
   - Advocacy
 tags:
-  - Accessibility
-  - Advocacy
-  - Blindness
-  - Neurodivergent
-  - Chronic Illness
-  - Disability
-  - Philosophy
+  - accessibility
+  - blindness
+  - neurodivergent
+  - chronic-illness
+  - disability
+  - philosophy
 slug: multiplicative-disability
 description: >
   The common assumption is that multiple disabilities are additive: two disabilities means twice the difficulty. This is

@@ -9,7 +9,6 @@ tags:
   - neurodivergent
   - blindness
   - chronic-illness
-  - education
   - advocacy
 slug: self-paced-education
 description: >
