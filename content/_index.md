@@ -32,7 +32,7 @@ humane, predictable, and inclusive.
 - **Looking for services?** Visit [Services](/services/).
 - **Want essays?** Browse [Technology](/technology/), [Advocacy](/advocacy/), [Gaming](/gaming/), and
   [Education](/education/).
-- **Looking by topic?** Browse [Tags](/tags/) or [Categories](/categories/).
+- **Looking for a specific topic?** Browse [Tags](/tags/) or [Categories](/categories/).
 - **Need to contact me or find my communities?** Go to [Contact](/contact/) or [Community](/community/).
 
 ---
