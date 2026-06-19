@@ -9,6 +9,8 @@
   "urls": [
     "http://localhost:4001/",
     "http://localhost:4001/about/",
+    "http://localhost:4001/services/",
+    "http://localhost:4001/contact/",
     "http://localhost:4001/technology/",
     "http://localhost:4001/tags/",
     "http://localhost:4001/categories/"

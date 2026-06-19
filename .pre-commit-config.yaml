@@ -73,6 +73,11 @@ repos:
         entry: shellcheck
         language: system
         types: [shell]
+      - id: check-taxonomy
+        name: Check taxonomy consistency
+        entry: uv run ./scripts/check_taxonomy.py
+        language: system
+        pass_filenames: false
 
   # GitHub Actions linting
   - repo: https://github.com/rhysd/actionlint
