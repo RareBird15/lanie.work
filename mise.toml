@@ -1,8 +1,8 @@
 [tools]
 go = "1.26.4"
 hugo = "0.162.1"
-node = "24"
-python = "3.14"
+node = "24.17.0"
+python = "3.14.6"
 uv = "0.11.19"
 wrangler = { version = "4.98.0", allow_builds = [
   "esbuild",
