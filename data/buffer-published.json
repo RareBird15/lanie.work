@@ -41,6 +41,20 @@
         "buffer_post_id": "6a23b89ea0f5aeb6f4d9741a",
         "queued_at": "2026-06-06T06:05:18.735010+00:00"
       }
+    },
+    "https://lanie.work/technology/voip-for-desktop-first-users/": {
+      "6a0f8fce090476fb99471de7": {
+        "buffer_post_id": "6a34eb33d55e2d06b561bf94",
+        "queued_at": "2026-06-19T07:09:39.314123+00:00"
+      },
+      "6a0f900a090476fb99471f86": {
+        "buffer_post_id": "6a34eb3330c2afd4614ecf8a",
+        "queued_at": "2026-06-19T07:09:39.542047+00:00"
+      },
+      "6a0f903f090476fb994720fb": {
+        "buffer_post_id": "6a34eb33edb235f3e8aa0133",
+        "queued_at": "2026-06-19T07:09:39.767891+00:00"
+      }
     }
   }
 }
