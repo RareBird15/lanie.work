@@ -12,7 +12,7 @@ tags:
   - identity
   - intersectionality
   - faith
-  - tech
+  - technology
 slug: no-home-base
 description: >
   When you're multiply disabled, conservative Christian, and an AI enthusiast, every community rejects part of your
