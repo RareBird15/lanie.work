@@ -4,7 +4,7 @@ hugo = "0.162.1"
 node = "24.17.0"
 python = "3.14.6"
 uv = "0.11.23"
-wrangler = { version = "4.98.0", allow_builds = [
+wrangler = { version = "4.103.0", allow_builds = [
   "esbuild",
   "sharp",
   "workerd",
