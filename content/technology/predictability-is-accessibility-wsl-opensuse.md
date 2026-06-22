@@ -5,9 +5,7 @@ categories:
   - Technology
 tags:
   - accessibility
-  - disability
   - linux
-  - workflow
   - wsl
   - opensuse
   - raspberry-pi
