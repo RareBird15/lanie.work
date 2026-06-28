@@ -59,6 +59,9 @@ menu:
     - name: Advocacy
       url: /advocacy/
       weight: 30
+    - name: Beyond Blindness
+      url: /beyond-blindness/
+      weight: 35
     - name: Technology
       url: /technology/
       weight: 40
