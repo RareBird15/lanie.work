@@ -1,12 +1,15 @@
 ---
-title: Tools and Resources
-slug: tools-and-resources
+title: Resources
+slug: resources
 date: 2026-04-13
-lastmod: 2026-06-05
+lastmod: 2026-06-28
 description:
-  Tools, platforms, communities, and resources that help me manage technology, health, learning, and daily life.
+  Tools, platforms, communities, and resources that help me manage technology, accessibility, health, learning, and
+  daily life.
 showDate: false
 showTableOfContents: true
+aliases:
+  - /tools-and-resources/
 ---
 
 People ask me a lot what I actually use day to day to get through work and life in a world that wasn't built for me.
@@ -15,6 +18,17 @@ This is my running list of tools and resources I trust and use often.
 Some links on this page may be affiliate or referral links. That means I may earn a small commission or account credit
 if you sign up through them, at no extra cost to you. I only recommend things I have personally used or found genuinely
 helpful.
+
+## Site Resources
+
+These pages provide context for my work, language, and accessibility perspective.
+
+- **[Beyond Blindness](/beyond-blindness/):** A family resource for blind students, families, and advocates when
+  blindness is not the whole story.
+- **[Accessibility Notes](/accessibility-notes/):** Notes on accessibility, usability, and real-world barriers that
+  affect disabled users.
+- **[Human Terms](/human-terms/):** Plain-language explanations of disability, access, technology, and systems concepts.
+- **[Community](/community/):** Places where I can be found online and communities connected to my work.
 
 ## How I Access Technology
 
@@ -46,15 +60,15 @@ These are the tools I use for coding, site work, and backend learning.
   management and tool syncing.
 - **[GitHub](https://github.com/):** The platform I use for version control and collaboration.
 - **[Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/):** I use this to run a Linux
-  environment (Arch Linux) while keeping the accessibility features I rely on in Windows.
+  environment (openSUSE) while keeping the accessibility features I rely on in Windows.
 - **[GitHub Copilot](https://github.com/features/copilot):** An AI coding assistant that helps me write code faster and
   catch mistakes sooner.
 - **[fzf](https://github.com/junegunn/fzf), [ripgrep](https://github.com/BurntSushi/ripgrep), and
   [fd](https://github.com/sharkdp/fd):** Command-line search and navigation tools I use every day. They are
   keyboard-first, produce clean text output, and help me browse filesystems and codebases without visual interfaces.
 - **[Tmux](https://github.com/tmux/tmux):** A terminal multiplexer that keeps my sessions alive across disconnects. I
-  use it to run persistent processes on my headless Raspberry Pi server.
-- **[Arch Linux](https://archlinux.org/):** My Linux distro inside WSL. It gives me full control of my dev environment
+  use it to run persistent processes on WSL.
+- **[openSUSE](https://www.opensuse.org/):** My Linux distro inside WSL. It gives me full control of my dev environment
   while I stay on a Windows machine with reliable screen reader support.
 
 ## Productivity, Communication, and Digital Security
@@ -79,8 +93,8 @@ These tools lower my cognitive load and help me stay organized and secure.
   enough with my screen reader for the way I use it.
 - **[Google Tasks](https://tasks.google.com/):** I use this to keep track of my to-dos. It integrates well with Google
   Calendar and Gmail, which helps me stay organized.
-- **[Tailscale](https://tailscale.com/):** A zero-config VPN that connects all my devices into a private network. I use
-  it to SSH into my headless Raspberry Pi from anywhere without opening ports or wrestling with complex network setup.
+- **[Tailscale](https://tailscale.com/):** A zero-config VPN that connects my devices into a private network. I use it
+  for secure device access without opening ports or wrestling with complex network setup.
 - **[Google Workspace Starter](https://workspace.google.com/):** I use Google Workspace Starter for domain email. It
   gives me professional email for my domains while still letting me use the Google tools and accessibility workflows I
   already know.
@@ -130,11 +144,6 @@ Managing multiple chronic conditions takes a systems approach.
   detective." He works virtually with patients in Texas, California, and Florida.
 - **[Guava Health](https://guavahealth.com/):** A health tracking platform I use to monitor my symptoms, medications,
   and trends. This helps me and my doctors make better decisions.
-- **[FullScript](https://fullscript.com/):** The platform I use to reliably source my medical-grade supplements and
-  nutrition powders.
-- **MediClear Plus:** A medical food powder from Thorne I use for nutritional support when my digestive system is
-  struggling.
-- **UltraMeal:** A medical food powder from Metagenics designed to support metabolic health.
 - **[TheraBath paraffin bath](https://www.therabath.com/):** I use this for heat therapy to manage pain and improve
   circulation in my hands.
 - **Almay deodorant:** I use this deodorant because it's gentle on my skin and doesn't cause irritation, which is

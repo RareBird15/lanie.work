@@ -53,37 +53,31 @@ menu:
     - name: About
       url: /about/
       weight: 10
+    - name: Services
+      url: /services/
+      weight: 20
     - name: Work & Learning
       url: /work-and-learning/
-      weight: 20
-    - name: Advocacy
-      url: /advocacy/
       weight: 30
     - name: Beyond Blindness
       url: /beyond-blindness/
-      weight: 35
-    - name: Technology
-      url: /technology/
       weight: 40
-    - name: Gaming
-      url: /gaming/
+    - name: Resources
+      url: /resources/
       weight: 50
-    - name: Education
-      url: /education/
-      weight: 60
-    - name: Tags
-      url: /tags/
-      weight: 65
-    - name: Categories
-      url: /categories/
-      weight: 66
     - name: Contact
       url: /contact/
-      weight: 70
+      weight: 60
     # OPTIONAL: Adds an explicit Search link to your navigation menu
     - name: Search
       pageRef: search
+      weight: 70
+    - name: Tags
+      url: /tags/
       weight: 80
+    - name: Categories
+      url: /categories/
+      weight: 90
 
 markup:
   goldmark:

@@ -16,8 +16,8 @@ humane, predictable, and inclusive.
   real-world barriers that automated testing often misses.
 - **Low-Cognitive-Load Systems:** Developing and promoting designs that respect a user's sensory needs and mental
   energy.
-- **Self-Paced Systems Learning:** Studying Computer Science (Python, SQL, Lua) and Linux systems (Arch/WSL) with an
-  emphasis on keyboard-centric, CLI-driven workflows.
+- **Self-Paced Systems Learning:** Studying Computer Science (Python, SQL, Lua) and Linux systems (openSUSE on WSL) with
+  an emphasis on keyboard-centric, CLI-driven workflows.
 - **Faith-Informed Advocacy:** Approaching technology and disability rights through a lens of service and spiritual
   exploration, currently focused on broader Christian history and Gnosticism.
 - **Documenting Barriers:** Writing about recurring accessibility challenges in games and interactive media to help
@@ -39,4 +39,4 @@ humane, predictable, and inclusive.
 
 _Faith, technology, and disability advocacy, working toward a more accessible world._
 
-_This site is intentionally small, updated selectively, and designed for clarity over volume._
+_This site is intentionally focused, updated selectively, and designed for clarity over volume._
