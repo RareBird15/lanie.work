@@ -28,7 +28,7 @@ humane, predictable, and inclusive.
 - **New to my work?** Read [About Me](/about/) and [Work and Learning](/work-and-learning/).
 - **Need accessibility context?** Start with [Accessibility Notes](/accessibility-notes/) and
   [Human Terms](/human-terms/).
-- **Looking for tools I use or recommend?** See [Tools and Resources](/tools-and-resources/).
+- **Looking for tools I use or recommend?** See [Resources](/resources/).
 - **Looking for services?** Visit [Services](/services/).
 - **Want essays?** Browse [Technology](/technology/), [Advocacy](/advocacy/), [Gaming](/gaming/), and
   [Education](/education/).
