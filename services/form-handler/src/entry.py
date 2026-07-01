@@ -3,18 +3,48 @@
 
 from __future__ import annotations
 
+import importlib
 import json
-from typing import TYPE_CHECKING, Protocol
+from typing import Protocol
 from urllib.parse import urlencode
 
-if TYPE_CHECKING:
-    from workers import Request, Response, WorkerEntrypoint
-    from workers import (
-        fetch as workers_fetch,  # type: ignore[import-not-found]
-    )
-else:
-    from workers import Request, Response, WorkerEntrypoint
-    from workers import fetch as workers_fetch
+_workers = importlib.import_module("workers")
+Request = _workers.Request
+Response = _workers.Response
+WorkerEntrypoint = _workers.WorkerEntrypoint
+workers_fetch = _workers.fetch
+
+SUCCESS_MESSAGE = "Success! Your message was sent."
+INTERNAL_ERROR_MESSAGE = "Internal error. Please try again later."
+EMAIL_SERVICE_ERROR_MESSAGE = "Email service error. Please try again later."
+SPAM_CHECK_FAILED_MESSAGE = "Spam check failed."
+MAX_EMAIL_LENGTH = 254
+ALLOWED_FORM_CONTENT_TYPES = (
+    "application/x-www-form-urlencoded",
+    "multipart/form-data",
+)
+
+EXPECTED_ACTION = "contact_form"
+ALLOWED_HOSTNAMES = {"lanie.work", "www.lanie.work"}
+
+BANNED_EMAILS = {
+    "no.reply.willyfrangois@gmail.com",
+}
+
+BANNED_KEYWORDS = {
+    "t.me/",
+    "wa.me/",
+    "million messages",
+}
+
+MAX_MESSAGE_LINKS = 2
+
+
+class FormDataLike(Protocol):
+    """Protocol for `Request.form_data()` results used by this worker."""
+
+    def get(self, key: str) -> object:
+        """Return a submitted form value for the provided key."""
 
 
 class Env(Protocol):
@@ -31,8 +61,7 @@ class Default(WorkerEntrypoint):
         """Handle incoming HTTP requests with spam protection.
 
         Returns:
-            Response: HTTP response containing success or error details.
-
+            Response: Result of form validation and delivery.
         """
         env: Env = self.env  # type: ignore[assignment]
 
@@ -40,119 +69,194 @@ class Default(WorkerEntrypoint):
             return Response("Method Not Allowed", status=405)
 
         try:
+            content_type = (request.headers.get("content-type") or "").lower()
+            if not is_allowed_content_type(content_type):
+                return fake_success()
+
             form_data = await request.form_data()
+            return await process_submission(request, env, form_data)
+        # Intentionally broad fallback so unexpected runtime errors never leak.
+        except Exception:  # noqa: BLE001
+            return Response(INTERNAL_ERROR_MESSAGE, status=500)
 
-            # 1. Honeypot check
-            # If a bot fills out this hidden field, reject the request immediately.
-            honeypot = str(form_data.get("website_url") or "").strip()
-            if honeypot:
-                return Response("Spam detected.", status=400)
 
-            # 2. Extract the Turnstile token
-            token = str(form_data.get("cf-turnstile-response") or "").strip()
-            if not token:
-                return Response("Spam check missing.", status=400)
+async def process_submission(
+    request: Request,
+    env: Env,
+    form_data: FormDataLike,
+) -> Response:
+    """Validate and process a contact form submission.
 
-            # 3. Verify the token with Cloudflare
-            verify_body = urlencode(
-                {
-                    "secret": env.TURNSTILE_SECRET_KEY,
-                    "response": token,
-                },
-            )
+    Returns:
+        Response: Success, fixable error, or spam rejection response.
+    """
+    honeypot = str(form_data.get("website_url") or "").strip()
+    if honeypot:
+        return fake_success()
 
-            verify_res = await workers_fetch(
-                "https://challenges.cloudflare.com/turnstile/v0/siteverify",
-                method="POST",
-                headers={"Content-Type": "application/x-www-form-urlencoded"},
-                body=verify_body,
-            )
+    token = str(form_data.get("cf-turnstile-response") or "").strip()
+    if not token:
+        return Response("Spam check missing.", status=400)
 
-            if not verify_res.ok:
-                return Response("Spam check could not be verified.", status=502)
+    if not await verify_turnstile(request, env, token):
+        return Response(SPAM_CHECK_FAILED_MESSAGE, status=403)
 
-            verify_data = await verify_res.json()
-            if not isinstance(verify_data, dict) or not verify_data.get("success"):
-                return Response("Spam check failed.", status=403)
+    user_name = str(form_data.get("name") or "Anonymous").strip()[:100]
+    user_email = str(form_data.get("email") or "").strip()[:MAX_EMAIL_LENGTH]
+    user_subject = str(form_data.get("subject") or "No Subject").strip()[:150]
+    user_message = str(form_data.get("message") or "").strip()[:5000]
 
-            # 4. Extract and normalize form fields
-            user_name = str(form_data.get("name") or "Anonymous").strip()[:100]
-            user_email = str(form_data.get("email") or "").strip()[:254]
-            user_subject = str(form_data.get("subject") or "No Subject").strip()[:150]
-            user_message = str(form_data.get("message") or "").strip()[:5000]
+    validation_error = validate_input(user_email, user_message)
+    if validation_error is not None:
+        return validation_error
 
-            if not user_message:
-                return Response("Message is required.", status=400)
+    if should_soft_block(user_email, user_subject, user_message):
+        return fake_success()
 
-            if not is_valid_basic_email(user_email):
-                return Response("Please provide a valid email address.", status=400)
+    was_sent = await send_via_brevo(
+        env=env,
+        user_name=user_name,
+        user_email=user_email,
+        user_subject=user_subject,
+        user_message=user_message,
+    )
+    return (
+        fake_success()
+        if was_sent
+        else Response(EMAIL_SERVICE_ERROR_MESSAGE, status=502)
+    )
 
-            # 5. Sender blocking
-            banned_emails = {
-                "no.reply.willyfrangois@gmail.com",
-            }
 
-            if user_email.lower() in banned_emails:
-                return Response("Sender blocked.", status=403)
+async def verify_turnstile(request: Request, env: Env, token: str) -> bool:
+    """Return True when Turnstile verification succeeds for this form."""
+    remote_ip = request.headers.get("CF-Connecting-IP") or ""
+    verify_body = urlencode(
+        {
+            "secret": env.TURNSTILE_SECRET_KEY,
+            "response": token,
+            "remoteip": remote_ip,
+        },
+    )
 
-            # 6. Keyword filtering
-            banned_keywords = {
-                "t.me/",
-                "wa.me/",
-                "million messages",
-            }
+    verify_res = await workers_fetch(
+        "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+        method="POST",
+        headers={"Content-Type": "application/x-www-form-urlencoded"},
+        body=verify_body,
+    )
+    if not verify_res.ok:
+        return False
 
-            message_lower = user_message.lower()
-            subject_lower = user_subject.lower()
+    try:
+        verify_data = await verify_res.json()
+    except ValueError:
+        return False
 
-            for keyword in banned_keywords:
-                if keyword in message_lower or keyword in subject_lower:
-                    return Response("Message blocked by content filter.", status=403)
+    if not isinstance(verify_data, dict):
+        return False
 
-            # 7. Send email through Brevo
-            email_payload = {
-                "sender": {
-                    "name": "Lanie: Faith, Tech & Advocacy",
-                    "email": "contact@lanie.work",
-                },
-                "to": [{"email": "lanie@lanie.work"}],
-                "replyTo": {
-                    "email": user_email,
-                    "name": user_name,
-                },
-                "subject": f"[{user_subject}] Message from {user_name}",
-                "textContent": (
-                    f"Name: {user_name}\n"
-                    f"Email: {user_email}\n\n"
-                    f"Subject: {user_subject}\n\n"
-                    f"Message:\n{user_message}"
-                ),
-            }
+    if not verify_data.get("success"):
+        return False
 
-            brevo_res = await workers_fetch(
-                "https://api.brevo.com/v3/smtp/email",
-                method="POST",
-                headers={
-                    "accept": "application/json",
-                    "content-type": "application/json",
-                    "api-key": env.BREVO_API_KEY,
-                },
-                body=json.dumps(email_payload),
-            )
+    if verify_data.get("action") != EXPECTED_ACTION:
+        return False
 
-            if not brevo_res.ok:
-                return Response(
-                    "Email service error. Please try again later.",
-                    status=502,
-                )
+    return verify_data.get("hostname") in ALLOWED_HOSTNAMES
 
-            return Response("Success! Your message was sent.", status=200)
 
-        except Exception:
-            return Response(
-                "Internal error. Please try again later.",
-                status=500,
-            )
+def validate_input(user_email: str, user_message: str) -> Response | None:
+    """Return a fixable user-facing error response, or None if valid."""
+    if not user_message:
+        return Response("Message is required.", status=400)
+
+    if not is_valid_basic_email(user_email):
+        return Response("Please provide a valid email address.", status=400)
+
+    return None
+
+
+def is_allowed_content_type(content_type: str) -> bool:
+    """Return True when the request content type matches expected form posts."""
+    return any(allowed in content_type for allowed in ALLOWED_FORM_CONTENT_TYPES)
+
+
+def should_soft_block(user_email: str, user_subject: str, user_message: str) -> bool:
+    """Return True when a submission looks like spam and should be silently dropped."""
+    normalized_email = user_email.lower()
+    if normalized_email in BANNED_EMAILS:
+        return True
+
+    message_lower = user_message.lower()
+    subject_lower = user_subject.lower()
+
+    for keyword in BANNED_KEYWORDS:
+        if keyword in message_lower or keyword in subject_lower:
+            return True
+
+    if count_links(user_subject) > 0:
+        return True
+
+    return count_links(user_message) > MAX_MESSAGE_LINKS
+
+
+def count_links(text: str) -> int:
+    """Count rough link patterns in plain text.
+
+    Returns:
+        int: Count of `http://`, `https://`, and `www.` occurrences.
+    """
+    lowered = text.lower()
+    return lowered.count("http://") + lowered.count("https://") + lowered.count("www.")
+
+
+def fake_success() -> Response:
+    """Return a generic success response used for soft spam drops."""
+    return Response(SUCCESS_MESSAGE, status=200)
+
+
+async def send_via_brevo(
+    *,
+    env: Env,
+    user_name: str,
+    user_email: str,
+    user_subject: str,
+    user_message: str,
+) -> bool:
+    """Send an email through Brevo.
+
+    Returns:
+        bool: True when the Brevo API accepts the request.
+    """
+    email_payload = {
+        "sender": {
+            "name": "Lanie: Faith, Tech & Advocacy",
+            "email": "contact@lanie.work",
+        },
+        "to": [{"email": "lanie@lanie.work"}],
+        "replyTo": {
+            "email": user_email,
+            "name": user_name,
+        },
+        "subject": f"[{user_subject}] Message from {user_name}",
+        "textContent": (
+            f"Name: {user_name}\n"
+            f"Email: {user_email}\n\n"
+            f"Subject: {user_subject}\n\n"
+            f"Message:\n{user_message}"
+        ),
+    }
+
+    brevo_res = await workers_fetch(
+        "https://api.brevo.com/v3/smtp/email",
+        method="POST",
+        headers={
+            "accept": "application/json",
+            "content-type": "application/json",
+            "api-key": env.BREVO_API_KEY,
+        },
+        body=json.dumps(email_payload),
+    )
+    return bool(brevo_res.ok)
 
 
 def is_valid_basic_email(email: str) -> bool:
@@ -163,7 +267,7 @@ def is_valid_basic_email(email: str) -> bool:
     if not email:
         return False
 
-    if len(email) > 254:
+    if len(email) > MAX_EMAIL_LENGTH:
         return False
 
     if "@" not in email:
