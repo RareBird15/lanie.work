@@ -137,8 +137,9 @@ Even with all the barriers I've faced in traditional settings, I've found ways t
 has been the biggest reason I could keep going. By choosing courses and programs with flexibility in scheduling and
 pacing, I've been able to shape my learning around my needs.
 
-I now learn using a combination of platforms like Codecademy and Exercism, while mastering my own systems with Arch
-Linux, Python, and CLI-driven workflows. I'm also exploring broader Christian history and Gnosticism at my own pace.
+I now learn using a combination of platforms like Codecademy and Exercism, while mastering my own systems with
+openSUSE on WSL, Python, and CLI-driven workflows. I'm also exploring broader Christian history and Gnosticism at my
+own pace.
 These resources let me learn, take breaks when needed, and revisit material as often as necessary. I've also found that
 project-based learning and hands-on work help me retain information far better than lecture-based methods.
 

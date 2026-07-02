@@ -86,9 +86,9 @@ unsustainable environment.
 
 This is where my Franken-System needs a compromise. Instead of fighting with dedicated Linux hardware, I use Windows
 Subsystem for Linux (WSL). WSL is the perfect bridge. It allows me to stay inside the accessible Windows desktop
-environment while giving me full access to the powerful Arch Linux command line tools I need. I get the best parts of
-Linux without ever having to navigate an inaccessible graphical interface. I can run my Python scripts, use fzf for
-fuzzy finding, and manage my development environment all within WSL.
+environment while giving me full access to the Linux command line tools I need. I now run openSUSE in WSL, which gives
+me the best parts of Linux without ever having to navigate an inaccessible graphical interface. I can run my Python
+scripts, use fzf for fuzzy finding, and manage my development environment all within WSL.
 
 ## The AI Barrier
 

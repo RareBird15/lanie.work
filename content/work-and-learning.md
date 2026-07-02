@@ -32,9 +32,8 @@ trends, I focus on the "bones" of computing:
 
 - **Programming:** Working through the **Codecademy Computer Science path** (currently ~22% complete), with a focus on
   **Python, Lua, and SQL**.
-- **Linux Mastery:** Running **Arch Linux via WSL** as my primary development environment.
-- **Dotfile Management:** Using **`chezmoi`** to maintain a consistent, accessible CLI environment across Windows and
-  Linux.
+- **Linux Mastery:** Running **openSUSE via WSL** as my primary development environment.
+- **Environment Consistency:** Maintaining a stable, accessible CLI environment across Windows and Linux.
 - **Environment Tooling:** Using **`uv`** for Python package management and **Docker** for isolated service testing.
 
 ## Structured Learning & Certifications

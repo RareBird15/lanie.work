@@ -24,8 +24,7 @@ focus includes:
 
 - **Computer Science & Systems:** Growing my skills in Python, SQL, backend development, and Linux systems through
   Boot.dev and hands-on projects.
-- **Linux & Tooling:** Building fluency with Arch Linux, CLI-driven workflows, and automation tools like `chezmoi` and
-  `uv`.
+- **Linux & Tooling:** Building fluency with openSUSE on WSL, CLI-driven workflows, and automation tools like `uv`.
 - **Business Systems & Accounting:** Learning practical accounting through Ledgeroo so I can better support bookkeeping,
   software decisions, and financial workflows for Apache Restoration & Design.
 - **Theology & History:** Exploring broader Christian history and Gnosticism. I value spiritual exploration that looks
