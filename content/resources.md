@@ -51,6 +51,8 @@ These are the core tools I use to access computers, phones, and the web.
 
 These are the tools I use for coding, site work, and backend learning.
 
+### Core Stack
+
 - **[VS Code](https://code.visualstudio.com/):** My main editor for Python, Lua, and SQL. It provides a stable,
   text-first environment that works well with my screen reader.
 - **[Hugo](https://gohugo.io/):** The static site generator I use for this website. I switched from Pelican because Hugo
@@ -63,6 +65,9 @@ These are the tools I use for coding, site work, and backend learning.
   environment (openSUSE) while keeping the accessibility features I rely on in Windows.
 - **[GitHub Copilot](https://github.com/features/copilot):** An AI coding assistant that helps me write code faster and
   catch mistakes sooner.
+
+### CLI and Terminal Workflow
+
 - **[fzf](https://github.com/junegunn/fzf), [ripgrep](https://github.com/BurntSushi/ripgrep), and
   [fd](https://github.com/sharkdp/fd):** Command-line search and navigation tools I use every day. They are
   keyboard-first, produce clean text output, and help me browse filesystems and codebases without visual interfaces.
@@ -75,26 +80,24 @@ These are the tools I use for coding, site work, and backend learning.
 
 These tools lower my cognitive load and help me stay organized and secure.
 
+### Writing and Daily Organization
+
 - **[TextExpander](https://textexpander.com/?refby=84d64a7104eb90b1):** I use this to manage repetitive typing, reduce
   physical fatigue, and avoid having to remember exact strings of text. If you buy a plan through my referral link, I
   may earn account credit at no extra cost to you.
 - **[Ditto Clipboard Manager](https://ditto-cp.sourceforge.io/):** Lets me keep track of multiple copied items, which
   cuts down on extra typing.
-- **[1Password](https://1password.com/):** My password manager. It's a key part of my online security and peace of mind.
 - **[Foam](https://docs.foamnotes.com/):** A VS Code-based note system I use for private notes and personal knowledge
   management.
-- **[Cloudflare](https://www.cloudflare.com/):** I use this for DNS and domain management. This site is hosted on
-  Cloudflare Pages, which has been reliable and accessible for me.
-- **[PureTalk](https://www.puretalk.com/):** My mobile service provider. They offer affordable plans and good enough
-  coverage for where I live.
+
+### Email, Calendar, and Communication
+
 - **[Gmail](https://mail.google.com/):** My main email service. I rely on its accessibility and integration with other
   Google tools.
 - **[Google Calendar](https://calendar.google.com/):** I use this to manage my schedule and appointments. It works well
   enough with my screen reader for the way I use it.
 - **[Google Tasks](https://tasks.google.com/):** I use this to keep track of my to-dos. It integrates well with Google
   Calendar and Gmail, which helps me stay organized.
-- **[Tailscale](https://tailscale.com/):** A zero-config VPN that connects my devices into a private network. I use it
-  for secure device access without opening ports or wrestling with complex network setup.
 - **[Google Workspace Starter](https://workspace.google.com/):** I use Google Workspace Starter for domain email. It
   gives me professional email for my domains while still letting me use the Google tools and accessibility workflows I
   already know.
@@ -107,23 +110,38 @@ These tools lower my cognitive load and help me stay organized and secure.
 - **[Pushover](https://pushover.net/):** A notification service that delivers alerts I can't miss, like cron job
   results, health reminders, or critical system failures. It works across my phone and browser.
 
+### Security, Hosting, and Network
+
+- **[1Password](https://1password.com/):** My password manager. It's a key part of my online security and peace of mind.
+- **[Cloudflare](https://www.cloudflare.com/):** I use this for DNS and domain management. This site is hosted on
+  Cloudflare Pages, which has been reliable and accessible for me.
+- **[Tailscale](https://tailscale.com/):** A zero-config VPN that connects my devices into a private network. I use it
+  for secure device access without opening ports or wrestling with complex network setup.
+- **[PureTalk](https://www.puretalk.com/):** My mobile service provider. They offer affordable plans and good enough
+  coverage for where I live.
+
 ## AI Tools and Memory Systems
 
 These are AI tools and memory systems I use or have tried to reduce cognitive load, preserve context, and support
 coding, writing, accessibility analysis, planning, and automation experiments.
 
+### Active Tools
+
 - **[ChatGPT](https://chatgpt.com/):** One of my main AI support tools. I use it for coding help, writing support,
   accessibility analysis, executive-function support, and turning rough thoughts into structured plans.
 - **[Google Gemini](https://gemini.google.com/):** I use this for AI-assisted writing, brainstorming, research, and
   organizing rough thoughts when I'm overwhelmed.
+- **[Google AI Pro](https://one.google.com/about/google-ai-plans/):** I use Google AI Pro through my personal Google
+  account for Gemini, Google Drive storage, and AI features that are bundled into the plan. It's especially useful
+  because it fits into the Google ecosystem I already use and can be shared with family.
+
+### Experimental or Occasional
+
 - **[Ollama](https://ollama.com/):** A local AI model runner I plan to use more after my computer upgrade, especially
   for experiments that would otherwise be limited by API usage or subscription caps.
 - **[Hermes Agent](https://hermes-agent.nousresearch.com/):** An AI agent platform I've experimented with for automated
   workflows and personal assistance. I'm not currently running it because cloud model usage became too expensive, but I
   may revisit it with local models through Ollama.
-- **[Google AI Pro](https://one.google.com/about/google-ai-plans/):** I use Google AI Pro through my personal Google
-  account for Gemini, Google Drive storage, and AI features that are bundled into the plan. It's especially useful
-  because it fits into the Google ecosystem I already use and can be shared with family.
 
 ## Hardware and Custom Solutions
 

@@ -30,7 +30,16 @@ To respect my cognitive load and access needs:
 
 ## Send a Message
 
+If the form below doesn't load or submit, or if Turnstile is blocking you, email me directly at [lanie@lanie.work](mailto:lanie@lanie.work).
+That inbox is here as an accessibility fallback when the form isn't usable.
+
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<noscript>
+  JavaScript is required for the form. If you're using a no-JS setup, email me directly at
+  <a href="mailto:lanie@lanie.work">lanie@lanie.work</a>.
+  This email option is the accessibility fallback for no-JS and form-failure cases.
+</noscript>
 
 <form action="/api/submit" method="POST">
   <div>

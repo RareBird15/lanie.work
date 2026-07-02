@@ -1,0 +1,49 @@
+{{ define "main" }}
+  <article class="prose max-w-full dark:prose-invert">
+    <header>
+      <h1>{{ .Title | emojify }}</h1>
+    </header>
+    <section>{{ .Content }}</section>
+  </article>
+
+  {{ $mainSections := .Site.Params.mainSections | default (slice "blog") }}
+  {{ $postsPerPage := .Site.Params.blog.postsPerPage | default 12 }}
+  {{ $pages := where .Site.RegularPages "Section" "in" $mainSections }}
+  {{ $pages = where $pages "Params.hidden" "!=" true }}
+  {{ $pages = $pages.ByDate.Reverse }}
+  {{ $paginator := .Paginate $pages $postsPerPage }}
+
+  <section class="mt-8">
+    <h2 class="text-2xl font-semibold">Recent Posts</h2>
+
+    {{ if gt (len $paginator.Pages) 0 }}
+      {{ range $paginator.Pages }}
+        {{ partial "article-link.html" . }}
+      {{ end }}
+
+      {{ if gt $paginator.TotalPages 1 }}
+        <nav class="mt-8 flex items-center justify-between" aria-label="Blog pagination">
+          <div>
+            {{ if $paginator.HasPrev }}
+              <a class="text-primary-700 underline decoration-2 underline-offset-2 dark:text-primary-400" href="{{ $paginator.Prev.URL }}">
+                Newer posts
+              </a>
+            {{ end }}
+          </div>
+          <p class="text-sm text-neutral-600 dark:text-neutral-300">
+            Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}
+          </p>
+          <div>
+            {{ if $paginator.HasNext }}
+              <a class="text-primary-700 underline decoration-2 underline-offset-2 dark:text-primary-400" href="{{ $paginator.Next.URL }}">
+                Older posts
+              </a>
+            {{ end }}
+          </div>
+        </nav>
+      {{ end }}
+    {{ else }}
+      <p class="mt-4 text-neutral-700 dark:text-neutral-300">No posts are published yet.</p>
+    {{ end }}
+  </section>
+{{ end }}

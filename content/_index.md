@@ -25,15 +25,23 @@ humane, predictable, and inclusive.
 
 ## Start Here
 
-- **New to my work?** Read [About Me](/about/) and [Work and Learning](/work-and-learning/).
-- **Need accessibility context?** Start with [Accessibility Notes](/accessibility-notes/) and
+### New Here
+
+- Read [About Me](/about/) and [Work and Learning](/work-and-learning/).
+- If you need accessibility context first, start with [Accessibility Notes](/accessibility-notes/) and
   [Human Terms](/human-terms/).
-- **Looking for tools I use or recommend?** See [Resources](/resources/).
-- **Looking for services?** Visit [Services](/services/).
-- **Want essays?** Browse [Technology](/technology/), [Advocacy](/advocacy/), [Gaming](/gaming/), and
+
+### Browse Content
+
+- For essays, browse [Technology](/technology/), [Advocacy](/advocacy/), [Gaming](/gaming/), and
   [Education](/education/).
-- **Looking for a specific topic?** Browse [Tags](/tags/) or [Categories](/categories/).
-- **Need to contact me or find my communities?** Go to [Contact](/contact/) or [Community](/community/).
+- For topic-based browsing, use [Blog](/blog/), [Tags](/tags/), or [Categories](/categories/).
+
+### Work With Me
+
+- For services, visit [Services](/services/).
+- For tools and recommendations, see [Resources](/resources/).
+- To reach me or find my communities, go to [Contact](/contact/) or [Community](/community/).
 
 ---
 
