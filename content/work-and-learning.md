@@ -37,6 +37,55 @@ trends, I focus on the "bones" of computing:
   Linux.
 - **Environment Tooling:** Using **`uv`** for Python package management and **Docker** for isolated service testing.
 
+## Structured Learning & Certifications
+
+Alongside hands-on projects, I use structured courses to build a stronger foundation in backend development,
+command-line workflows, accessibility, and assistive technology.
+
+### Backend and Python Foundations
+
+My current learning focus is Boot.dev’s backend-oriented curriculum, where I’ve completed courses and projects covering
+Python, Linux, Git, object-oriented programming, functional programming, and command-line application development.
+
+Recent completed work includes:
+
+- **Learn to Code in Python:** Python fundamentals including variables, functions, scope, loops, data structures, error
+  handling, unit testing, debugging, and type hints.
+- **Build a Bookbot in Python:** A local command-line application that analyzes novels and other plain text files, then
+  generates word and character count reports.
+- **Build Asteroids with Python and Pygame:** A playable arcade-style game using Python, Pygame, object-oriented design,
+  collision detection, keyboard input, and a real-time game loop.
+- **Learn Object-Oriented Programming in Python:** Practice with classes, objects, methods, inheritance, encapsulation,
+  and reusable code structure.
+- **Learn Git:** Core version control workflows including repositories, staging, commits, branches, merges, conflict
+  resolution, and project history.
+- **Learn Linux:** Command-line workflows for navigating filesystems, managing files and directories, running scripts,
+  using pipes and standard input/output, inspecting processes, permissions, and installing developer tools.
+- **Learn Functional Programming in Python:** First-class functions, pure functions, immutability, recursion, closures,
+  currying, decorators, function transformations, and sum types.
+
+### Command Line and General Programming Foundations
+
+Earlier coursework through Codecademy and Sololearn helped build my foundation in programming concepts, terminal
+workflows, and developer vocabulary.
+
+- **Codecademy Learn the Command Line:** Filesystem navigation, file and directory management, input/output redirection,
+  and command-line environment configuration.
+- **Codecademy Code Foundations Skill Path:** Introductory programming concepts across computer science, web
+  development, and data science.
+- **Sololearn C++ Tutorial Course:** Foundational programming concepts including syntax, variables, control flow,
+  functions, object-oriented basics, and problem solving.
+
+### Accessibility and Assistive Technology
+
+I also hold NV Access certifications that support my accessibility testing work and lived experience with screen-reader
+workflows.
+
+- **NVDA Certified Expert:** General proficiency with the NVDA screen reader, nonvisual navigation, assistive technology
+  support, and helping others use NVDA effectively.
+- **NVDA Certified Expert with Microsoft Word:** Proficiency using NVDA with Microsoft Word through keyboard-based
+  document workflows.
+
 ## Technical Projects & Advocacy
 
 ### Operational IT Support
