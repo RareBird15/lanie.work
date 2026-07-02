@@ -30,8 +30,8 @@ To respect my cognitive load and access needs:
 
 ## Send a Message
 
-If the form below doesn't load or submit, or if Turnstile is blocking you, email me directly at [lanie@lanie.work](mailto:lanie@lanie.work).
-That inbox is here as an accessibility fallback when the form isn't usable.
+If the form below doesn't load or submit, or if Turnstile is blocking you, email me directly at
+[lanie@lanie.work](mailto:lanie@lanie.work). That inbox is here as an accessibility fallback when the form isn't usable.
 
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
