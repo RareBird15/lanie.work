@@ -28,6 +28,16 @@ To respect my cognitive load and access needs:
 3. **Accessibility First:** If you're reaching out for feedback on a project, please include a link to your project or
    documentation so I can evaluate whether it fits my interaction model.
 
+## Reporting Accessibility Issues
+
+If you're reporting an accessibility issue on this site, these details help me fix it faster:
+
+1. **Page URL:** The exact page where the issue happened.
+2. **Device and browser:** For example, iPhone + Safari, Android + Chrome, Windows + Edge.
+3. **Zoom or magnification level:** If relevant.
+4. **What happened:** What was hard to use or confusing.
+5. **What you expected instead:** What outcome would have made it work better.
+
 ## Send a Message
 
 If the form below doesn't load or submit, or if Turnstile is blocking you, email me directly at

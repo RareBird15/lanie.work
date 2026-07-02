@@ -155,6 +155,19 @@ lanie.work/
 - **Keyboard-first:** Pages and interactive elements should work without a mouse.
 - **No spatial reliance:** Avoid instructions that depend on visual placement, color alone, or layout alone.
 
+### Accessibility Baseline
+
+These are baseline decisions to preserve when making future design or content updates:
+
+- **Navigation:** Mobile menu uses compact spacing and always-visible underlines so links are easier to identify.
+- **Links in content:** In-body links use visible underlines with stronger thickness and contrast for readability.
+- **Table of contents:** TOC stays expanded on desktop and defaults collapsed on smaller screens.
+- **Blog browsing:** Blog is a top-level page that aggregates recent posts with pagination.
+- **Contact fallback:** If the form or Turnstile fails (or JavaScript is disabled), contact fallback is
+  [lanie@lanie.work](mailto:lanie@lanie.work).
+
+When changing styles or navigation structure, re-check these behaviors to avoid regressions.
+
 ## Contributing
 
 Contributions are welcome, especially improvements to accessibility, semantic structure, documentation, and workflow
