@@ -1,0 +1,22 @@
+/* Improve readability across main content without making list pages too large. */
+
+.prose {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.prose :where(p, li, blockquote):not(:where([class~="not-prose"] *)) {
+  line-height: 1.75;
+}
+
+.prose :where(blockquote):not(:where([class~="not-prose"] *)) {
+  font-style: normal;
+}
+
+.prose :where(p, li):not(:where([class~="not-prose"] *)) {
+  color: #1f2937;
+}
+
+.dark .prose :where(p, li):not(:where([class~="not-prose"] *)) {
+  color: #e5e7eb;
+}
