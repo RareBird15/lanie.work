@@ -71,6 +71,9 @@ menu:
     - name: Blog
       url: /blog/
       weight: 60
+    - name: Support
+      url: /support/
+      weight: 65
     - name: Contact
       url: /contact/
       weight: 70

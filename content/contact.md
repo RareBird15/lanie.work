@@ -16,6 +16,7 @@ days to respond. I value clear, direct, thoughtful communication.
 - **Facebook:** [RareBirdLanie](https://www.facebook.com/RareBirdLanie/): Where I share visual updates and community
   posts.
 - **Professional:** [LinkedIn](https://www.linkedin.com/in/laniecarmelo) or [GitHub](https://github.com/RareBird15).
+- **Support:** [GoFundMe and current needs](/support/).
 
 ## Communication Preferences
 

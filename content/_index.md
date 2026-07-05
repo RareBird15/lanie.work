@@ -30,6 +30,7 @@ humane, predictable, and inclusive.
 - Read [About Me](/about/) and [Work and Learning](/work-and-learning/).
 - If you need accessibility context first, start with [Accessibility Notes](/accessibility-notes/) and
   [Human Terms](/human-terms/).
+- If you want to help with current medical, accessibility, and stability needs, visit [Support](/support/).
 
 ### Browse Content
 
