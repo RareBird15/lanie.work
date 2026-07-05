@@ -22,6 +22,9 @@ days to respond. I value clear, direct, thoughtful communication.
 
 To respect my cognitive load and access needs:
 
+If you're reaching out because of something I wrote, please read [Reading This Site](/reading-this-site/) first. It
+explains how I label topics, why this site does not have comments, and what kind of contact is welcome.
+
 1. **Text over Voice:** I don't do well with voice calls or "ephemeral" audio. Please send a text-based message so I can
    process it at my own pace.
 2. **Explicit Context:** When reaching out, please be clear about your intent. "Query over memory" applies here too. I

@@ -51,8 +51,11 @@ I value **slower, thoughtful problem-solving**. In a world of high-velocity tech
 
 ## Home Base
 
-This site is my public home base. It's intentionally small, updated selectively, and focused on clarity over volume. I
-spend my free time experimenting with assistive technology, building small tools, loom knitting, and playing deep,
+This site is my public home base. It's intentionally small, updated selectively, and focused on clarity over volume. If
+you're new here, [Reading This Site](/reading-this-site/) explains how the site is organized, what I write about, and
+the boundaries I keep around this space.
+
+I spend my free time experimenting with assistive technology, building small tools, loom knitting, and playing deep,
 text-based automation games like _Trimps_ and _Evolve_.
 
 I'm especially interested in how overlapping disabilities (blindness, neurodivergence, and chronic illness) interact
