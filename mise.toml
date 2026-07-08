@@ -3,7 +3,7 @@ go = "1.26.4"
 hugo = "0.163.3"
 node = "24.18.0"
 python = "3.14.6"
-uv = "0.11.25"
+uv = "0.11.28"
 wrangler = { version = "latest", allow_builds = [
   "esbuild",
   "sharp",
