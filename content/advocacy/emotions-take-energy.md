@@ -1,7 +1,7 @@
 ---
 title: "Emotions Take Energy"
 date: 2026-07-08
-draft: true
+draft: false
 categories:
   - Advocacy
 tags:
