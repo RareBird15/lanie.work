@@ -23,6 +23,6 @@ jobs:
         uses: cloudflare/wrangler-action@v4.0.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          wranglerVersion: 4.105.0
+          wranglerVersion: 4.110.0
           workingDirectory: "services/form-handler"
           command: deploy
