@@ -2,8 +2,7 @@
 title: Work and Learning
 slug: work-and-learning
 date: 2026-03-31
-description:
-  A summary of my professional usability testing, self-paced technical learning, and current areas of focus.
+description: A summary of my professional usability testing, self-paced technical learning, and current areas of focus.
 showDate: false
 showTableOfContents: true
 ---
@@ -27,8 +26,7 @@ automated tools often miss, especially where multiple disabilities overlap.
 
 ## Computer Science & Systems
 
-I'm a self-paced technical learner. Rather than chasing the latest frontend trends, I focus on the "bones" of
-computing:
+I'm a self-paced technical learner. Rather than chasing the latest frontend trends, I focus on the "bones" of computing:
 
 - **Programming:** Working through the **Codecademy Computer Science path** (currently ~22% complete), with a focus on
   **Python, Lua, and SQL**.
@@ -38,8 +36,8 @@ computing:
 
 ## Structured Learning & Certifications
 
-Alongside hands-on projects, I use structured courses to build a stronger foundation in programming,
-command-line workflows, accessibility, and assistive technology.
+Alongside hands-on projects, I use structured courses to build a stronger foundation in programming, command-line
+workflows, accessibility, and assistive technology.
 
 ### Python and Systems Foundations
 

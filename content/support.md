@@ -27,8 +27,8 @@ My GoFundMe helps with urgent needs such as:
 ## Why accessible technology matters
 
 My computer and Braille display are not luxuries. They're part of how I read, write, communicate, manage appointments,
-study technology, prototype small tools with AI assistance, do part-time work, participate in advocacy, and keep as
-much independence as possible.
+study technology, prototype small tools with AI assistance, do part-time work, participate in advocacy, and keep as much
+independence as possible.
 
 When those tools fail, my world gets much smaller.
 

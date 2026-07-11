@@ -14,8 +14,8 @@ Hi, I'm Lanie.
 I'm a Christian, a blind, autistic, chronically ill disability and technology writer, accessibility advocate, and
 technical generalist. I provide freelance accessibility, usability, and product feedback from the perspective of someone
 who relies on assistive technology every day. My work is driven by a desire to make technology more inclusive,
-practical, and humane. I treat accessibility not just as a technical checkbox, but as a reflection of care, dignity,
-and faith.
+practical, and humane. I treat accessibility not just as a technical checkbox, but as a reflection of care, dignity, and
+faith.
 
 ## My Learning Path
 
