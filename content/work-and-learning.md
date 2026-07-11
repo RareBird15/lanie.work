@@ -3,7 +3,7 @@ title: Work and Learning
 slug: work-and-learning
 date: 2026-03-31
 description:
-  A summary of my professional usability testing, self-paced Computer Science studies, and technical interests.
+  A summary of my professional usability testing, self-paced technical learning, and current areas of focus.
 showDate: false
 showTableOfContents: true
 ---
@@ -27,8 +27,8 @@ automated tools often miss, especially where multiple disabilities overlap.
 
 ## Computer Science & Systems
 
-I'm currently a self-paced student moving through a Computer Science curriculum. Rather than chasing the latest frontend
-trends, I focus on the "bones" of computing:
+I'm a self-paced technical learner. Rather than chasing the latest frontend trends, I focus on the "bones" of
+computing:
 
 - **Programming:** Working through the **Codecademy Computer Science path** (currently ~22% complete), with a focus on
   **Python, Lua, and SQL**.
@@ -38,13 +38,13 @@ trends, I focus on the "bones" of computing:
 
 ## Structured Learning & Certifications
 
-Alongside hands-on projects, I use structured courses to build a stronger foundation in backend development,
+Alongside hands-on projects, I use structured courses to build a stronger foundation in programming,
 command-line workflows, accessibility, and assistive technology.
 
-### Backend and Python Foundations
+### Python and Systems Foundations
 
-My current learning focus is Boot.dev’s backend-oriented curriculum, where I’ve completed courses and projects covering
-Python, Linux, Git, object-oriented programming, functional programming, and command-line application development.
+I used Boot.dev as a structured foundation and completed courses and projects covering Python, Linux, Git,
+object-oriented programming, functional programming, and command-line application development.
 
 Recent completed work includes:
 

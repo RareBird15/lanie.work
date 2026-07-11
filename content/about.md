@@ -3,7 +3,7 @@ title: About Lanie
 slug: about
 date: 2026-03-31
 description:
-  Christian, backend learner, accessibility advocate, and freelance accessibility/usability tester working at the
+  Christian, accessibility-focused technical generalist, and freelance accessibility/usability tester working at the
   intersection of faith, technology, and disability.
 showDate: false
 showTableOfContents: true
@@ -11,19 +11,20 @@ showTableOfContents: true
 
 Hi, I'm Lanie.
 
-I'm a Christian, a blind, autistic, chronically ill backend learner and accessibility advocate. I provide freelance
-accessibility, usability, and product feedback from the perspective of someone who relies on assistive technology every
-day. My work is driven by a desire to make technology more inclusive, practical, and humane. I treat accessibility not
-just as a technical checkbox, but as a reflection of care, dignity, and faith.
+I'm a Christian, a blind, autistic, chronically ill disability and technology writer, accessibility advocate, and
+technical generalist. I provide freelance accessibility, usability, and product feedback from the perspective of someone
+who relies on assistive technology every day. My work is driven by a desire to make technology more inclusive,
+practical, and humane. I treat accessibility not just as a technical checkbox, but as a reflection of care, dignity,
+and faith.
 
 ## My Learning Path
 
-I'm a self-paced Computer Science student. Because traditional education often doesn't provide the accessibility and
-accommodations I need, I've built my own curriculum around logic, systems, and low-cognitive-load design. My current
+I'm a self-paced technical learner. Because traditional education often doesn't provide the accessibility and
+accommodations I need, I've built my own learning path around logic, systems, and low-cognitive-load design. My current
 focus includes:
 
-- **Computer Science & Systems:** Growing my skills in Python, SQL, backend development, and Linux systems through
-  Boot.dev and hands-on projects.
+- **Computer Science & Systems:** Growing my skills in Python, SQL, APIs, and Linux systems through hands-on projects,
+  selective coursework, and AI-assisted prototyping.
 - **Linux & Tooling:** Building fluency with openSUSE on WSL, CLI-driven workflows, and automation tools like `uv`.
 - **Business Systems & Accounting:** Learning practical accounting through Ledgeroo so I can better support bookkeeping,
   software decisions, and financial workflows for Apache Restoration & Design.

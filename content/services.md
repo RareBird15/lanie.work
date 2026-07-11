@@ -81,7 +81,7 @@ My feedback can include:
 ### Developer Tool, CLI, and Documentation Feedback
 
 I can test developer tools, command-line workflows, setup instructions, and technical onboarding from the perspective of
-a disabled backend learner and screen reader user.
+a disabled accessibility advocate, technical generalist, and screen reader user.
 
 This can include:
 
