@@ -31,8 +31,7 @@ params:
     layout: page
     showRecent: false
 
-  mainSections:
-    ["work-and-learning", "advocacy", "technology", "gaming", "education"]
+  mainSections: ["advocacy", "technology", "gaming", "education", "faith"]
 
   article:
     showDate: true

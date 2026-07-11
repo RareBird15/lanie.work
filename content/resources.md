@@ -173,7 +173,7 @@ Managing multiple chronic conditions takes a systems approach.
 These resources support my self-paced education and spiritual exploration.
 
 - **[Boot.dev](https://www.boot.dev/):** One of the main platforms I used to build foundations in Python, Linux, Git,
-  and backend concepts. It helped me build a stronger technical base I still use.
+  and technical concepts. It helped me build a stronger technical base I still use.
 - **[Ledgeroo](https://ledgeroo.com/):** A gamified accounting program I'm using to learn practical bookkeeping and
   financial workflows for my family's business. Its progressive challenge system helps me work through accounting
   concepts one step at a time.
