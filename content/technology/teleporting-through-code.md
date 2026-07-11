@@ -61,8 +61,8 @@ directory structure or visually scan for files. You can call a name, and the dat
 location isn't a point in space; it's a string of characters. I don't need a map to find it; I just need its name. This
 is what I call teleportation. The logic of code allows me to bypass the need for spatial navigation entirely. Instead of
 trying to build a mental map of my codebase, I can rely on semantic logic to get me where I need to go. This is why I
-transitioned from frontend development, which relies heavily on spatial metaphors, to CLI and logic-focused tools
-that allow for this kind of teleportation.
+transitioned from frontend development, which relies heavily on spatial metaphors, to CLI and logic-focused tools that
+allow for this kind of teleportation.
 
 ## The Frontend Trap: A Map with No Landmarks
 
