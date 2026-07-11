@@ -36,7 +36,7 @@ humane, predictable, and inclusive.
 
 ### Browse Content
 
-- For essays, browse [Technology](/technology/), [Advocacy](/advocacy/), [Gaming](/gaming/), and
+- For essays, browse [Technology](/technology/), [Advocacy](/advocacy/), [Gaming](/gaming/), [Faith](/faith/), and
   [Education](/education/).
 - For topic-based browsing, use [Blog](/blog/), [Tags](/tags/), or [Categories](/categories/).
 - Subscribe to updates with the [RSS feed](/index.xml).

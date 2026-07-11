@@ -14,7 +14,7 @@ tags:
 slug: teleporting-through-code
 description: >
   A personal exploration of how severe Topographical Agnosia shaped my transition from the visual chaos of frontend
-  development to the semantic stability of the CLI and backend logic.
+  development to the semantic stability of the CLI and logic-focused tools.
 showTableOfContents: true
 ---
 
@@ -61,7 +61,7 @@ directory structure or visually scan for files. You can call a name, and the dat
 location isn't a point in space; it's a string of characters. I don't need a map to find it; I just need its name. This
 is what I call teleportation. The logic of code allows me to bypass the need for spatial navigation entirely. Instead of
 trying to build a mental map of my codebase, I can rely on semantic logic to get me where I need to go. This is why I
-transitioned from frontend development, which relies heavily on spatial metaphors, to backend development and CLI tools
+transitioned from frontend development, which relies heavily on spatial metaphors, to CLI and logic-focused tools
 that allow for this kind of teleportation.
 
 ## The Frontend Trap: A Map with No Landmarks
@@ -90,8 +90,7 @@ These concepts aren't just hard to understand; they're impossible to map in my b
 its walls every time I try to navigate it. The spatial metaphors that these technologies rely on are completely
 inaccessible to me. I can't build a mental model of how elements relate to each other in space, and the constant changes
 mean that even if I could, it would be outdated the moment I try to use it. This is why I found myself increasingly
-frustrated with frontend development and drawn to the more stable, logic-based world of backend development and CLI
-tools.
+frustrated with frontend development and drawn to the more stable, logic-based world of CLI and logic-focused tools.
 
 ### The Jackhammer of Change
 
@@ -142,7 +141,7 @@ If I spend thirty minutes trying to visualize how 64 bits are arranged in a regi
 exhausting the neurons that tell me how to stay upright and keep my airway clear. For me, a system overload in code can
 lead to a literal system crash in my body.
 
-## The Backend Haven: Teleporting with Logic
+## The Logic Haven: Teleporting with Code
 
 ### Teleporting with Python and SQL
 
@@ -157,7 +156,7 @@ automatic garbage collection. This means I don't have to keep track of memory ad
 can just focus on the logic of my code. Similarly, SQL abstracts away the underlying data storage and allows me to
 interact with data using a high-level query language. These tools allow me to teleport to the functionality I need
 without having to navigate through a spatial representation of the codebase. This is why I transitioned from frontend
-development, which relies heavily on spatial metaphors, to backend development and CLI tools that allow for this kind of
+development, which relies heavily on spatial metaphors, to CLI and logic-focused tools that allow for this kind of
 teleportation.
 
 ### The Sanctuary of the Shell

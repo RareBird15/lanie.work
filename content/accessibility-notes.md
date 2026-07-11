@@ -59,7 +59,7 @@ I struggle with systems that are "ephemeral" (information that appears once and 
 ### Programming & Tooling
 
 This is why I prefer **VS Code and the CLI** over mobile or web apps. The CLI is a persistent text stream I can query
-and manipulate. It's also why I focus on **Python and Backend Tooling** rather than frontend. It's about logic and
+and manipulate. It's also why I focus on **Python and automation tools** rather than frontend. It's about logic and
 systems, not visual layouts.
 
 ### Gaming & Interactive Media
