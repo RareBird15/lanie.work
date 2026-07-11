@@ -12,6 +12,7 @@ If you want to explore by broad theme, start with these sections:
 - [Advocacy](/advocacy/)
 - [Gaming](/gaming/)
 - [Education](/education/)
+- [Faith](/faith/)
 
 If you want to browse by metadata instead of section:
 
