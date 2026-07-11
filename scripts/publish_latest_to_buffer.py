@@ -1,9 +1,10 @@
+# Copyright (C) 2026 RareBird15
 """Publish the latest Hugo RSS post to Buffer.
 
 This script:
 - Reads the latest post from a local Hugo RSS feed
-- Queues the post in Buffer for configured channels
-- Avoids queueing the same URL to the same channel twice
+- Publishes the post immediately to Buffer for configured channels
+- Avoids publishing the same URL to the same channel twice
 - Handles Facebook's required post type metadata
 
 Required environment variables:
@@ -23,7 +24,7 @@ import logging
 import os
 from datetime import UTC, datetime
 from pathlib import Path
-from typing import Any, Final, Protocol, cast
+from typing import Any, Final, NamedTuple, Protocol, cast
 
 import feedparser
 import requests
@@ -87,7 +88,7 @@ class FeedFileNotFoundError(FileNotFoundError):
         """Build a message with recovery guidance for missing feed files."""
         super().__init__(
             f"Feed file not found: {feed_file}\n"
-            "Run Hugo first, or set BLOG_FEED_FILE to the correct feed path."
+            "Run Hugo first, or set BLOG_FEED_FILE to the correct feed path.",
         )
 
 
@@ -129,7 +130,11 @@ def get_env(name: str) -> str | None:
 
 
 def require_env(name: str) -> str:
-    """Return a required environment variable or raise a clear error."""
+    """Return a required environment variable or raise a clear error.
+
+    Raises:
+        MissingEnvironmentVariableError: If the environment variable is not set.
+    """
     value = get_env(name)
 
     if value is None:
@@ -159,7 +164,15 @@ def get_state_file() -> Path:
 
 
 def get_channel_ids() -> list[str]:
-    """Read comma-separated Buffer channel IDs from BUFFER_CHANNEL_IDS."""
+    """Read comma-separated Buffer channel IDs from BUFFER_CHANNEL_IDS.
+
+    Returns:
+        A list of non-empty channel IDs.
+
+    Raises:
+        EmptyBufferChannelIdsError: If BUFFER_CHANNEL_IDS is set but contains no valid
+            IDs.
+    """
     raw_channel_ids = require_env("BUFFER_CHANNEL_IDS")
 
     channel_ids = [
@@ -175,7 +188,11 @@ def get_channel_ids() -> list[str]:
 
 
 def get_facebook_channel_ids() -> set[str]:
-    """Read comma-separated Facebook Buffer channel IDs."""
+    """Read comma-separated Facebook Buffer channel IDs.
+
+    Returns:
+        A set of non-empty Facebook channel IDs, or an empty set if none are configured.
+    """
     raw_channel_ids = get_env("BUFFER_FACEBOOK_CHANNEL_IDS")
 
     if raw_channel_ids is None:
@@ -189,7 +206,15 @@ def get_facebook_channel_ids() -> set[str]:
 
 
 def buffer_graphql(query: str, variables: dict[str, Any]) -> dict[str, Any]:
-    """Send a GraphQL request to Buffer."""
+    """Send a GraphQL request to Buffer.
+
+    Returns:
+        The parsed JSON response data.
+
+    Raises:
+        BufferGraphQLError: If the response contains GraphQL errors.
+        BufferHttpError: If the HTTP request fails.
+    """
     token = require_env("BUFFER_API_KEY")
 
     response = requests.post(
@@ -217,7 +242,15 @@ def buffer_graphql(query: str, variables: dict[str, Any]) -> dict[str, Any]:
 
 
 def load_publish_state(state_file: Path) -> dict[str, Any]:
-    """Load the local publish state file."""
+    """Load the local publish state file.
+
+    Returns:
+        A JSON object with a 'published' key, or an empty state if the file does not
+            exist.
+
+    Raises:
+        InvalidPublishStateError: If the state file exists but is not a JSON object.
+    """
     if not state_file.exists():
         return {"published": {}}
 
@@ -247,7 +280,7 @@ def already_published(
     post_url: str,
     channel_id: str,
 ) -> bool:
-    """Return True if this URL was already queued for this channel."""
+    """Return True if this URL was already published to this channel."""
     published = state.get("published", {})
     post_record = published.get(post_url, {})
     channel_record = post_record.get(channel_id)
@@ -261,18 +294,34 @@ def mark_published(
     channel_id: str,
     buffer_post_id: str,
 ) -> None:
-    """Record that this URL was queued for this channel."""
+    """Record that this URL was published for this channel."""
     published = state.setdefault("published", {})
     post_record = published.setdefault(post_url, {})
 
     post_record[channel_id] = {
         "buffer_post_id": buffer_post_id,
-        "queued_at": datetime.now(UTC).isoformat(),
+        "published_at": datetime.now(UTC).isoformat(),
     }
 
 
-def get_latest_post_from_feed(feed_file: Path) -> tuple[str, str, list[str]]:
-    """Read the latest post title, URL, and tags from the local RSS feed."""
+class FeedPost(NamedTuple):
+    """A single post extracted from the RSS feed."""
+
+    title: str
+    url: str
+    tags: list[str]
+
+
+def get_recent_posts_from_feed(feed_file: Path, max_posts: int = 10) -> list[FeedPost]:
+    """Read recent posts from the local RSS feed, newest first.
+
+    Returns:
+        A list of FeedPost objects, up to max_posts in length.
+
+    Raises:
+        EmptyFeedError: If the feed has no entries.
+        FeedFileNotFoundError: If the feed file does not exist.
+    """
     if not feed_file.exists():
         raise FeedFileNotFoundError(feed_file)
 
@@ -281,22 +330,30 @@ def get_latest_post_from_feed(feed_file: Path) -> tuple[str, str, list[str]]:
     if not parsed_feed.entries:
         raise EmptyFeedError(feed_file)
 
-    latest = parsed_feed.entries[0]
-    title = latest.title.strip()
-    url = latest.link.strip()
+    posts: list[FeedPost] = []
 
-    raw_tags = getattr(latest, "tags", [])
-    tags = [
-        tag["term"].replace(" ", "")
-        for tag in raw_tags
-        if isinstance(tag, dict) and tag.get("term")
-    ]
+    for entry in parsed_feed.entries[:max_posts]:
+        title = entry.title.strip()
+        url = entry.link.strip()
 
-    return title, url, tags
+        raw_tags = getattr(entry, "tags", [])
+        tags = [
+            tag["term"].replace(" ", "")
+            for tag in raw_tags
+            if isinstance(tag, dict) and tag.get("term")
+        ]
+
+        posts.append(FeedPost(title=title, url=url, tags=tags))
+
+    return posts
 
 
 def format_social_post(title: str, url: str, tags: list[str]) -> str:
-    """Create the text that Buffer will queue."""
+    """Create the text that Buffer will publish.
+
+    Returns:
+        A string containing the post title, URL, and hashtags.
+    """
     unique_tags = list(dict.fromkeys(tag for tag in tags if tag))
     hashtags = " ".join(f"#{tag}" for tag in unique_tags)
 
@@ -311,8 +368,12 @@ def format_social_post(title: str, url: str, tags: list[str]) -> str:
     return "\n\n".join(parts).strip()
 
 
-def queue_buffer_post(channel_id: str, text: str) -> str | None:
-    """Queue one post for one Buffer channel and return its Buffer post ID."""
+def publish_buffer_post(channel_id: str, text: str) -> str | None:
+    """Publish one post immediately to one Buffer channel and return its Buffer post ID.
+
+    Returns:
+        The Buffer post ID if successful, or None if there was an error.
+    """
     mutation = """
     mutation CreatePost($input: CreatePostInput!) {
       createPost(input: $input) {
@@ -335,7 +396,7 @@ def queue_buffer_post(channel_id: str, text: str) -> str | None:
         "channelId": channel_id,
         "text": text,
         "schedulingType": "automatic",
-        "mode": "addToQueue",
+        "mode": "shareNow",
         "assets": [],
     }
 
@@ -343,7 +404,7 @@ def queue_buffer_post(channel_id: str, text: str) -> str | None:
         post_input["metadata"] = {
             "facebook": {
                 "type": "post",
-            }
+            },
         }
 
     variables = {
@@ -365,46 +426,67 @@ def queue_buffer_post(channel_id: str, text: str) -> str | None:
 
 
 def publish_latest_post() -> bool:
-    """Publish the latest feed post to all configured Buffer channels."""
+    """Publish recent feed posts to all configured Buffer channels.
+
+    Iterates through the most recent feed entries so that posts sharing
+    the same date are not skipped when one has already been published.
+
+    Returns:
+        True if all posts were published successfully, False if any failures occurred.
+    """
     feed_file = get_feed_file()
     state_file = get_state_file()
 
-    title, url, tags = get_latest_post_from_feed(feed_file)
+    recent_posts = get_recent_posts_from_feed(feed_file)
     channel_ids = get_channel_ids()
     state = load_publish_state(state_file)
-    text = format_social_post(title, url, tags)
 
-    logger.info("Latest post: %s", title)
-    logger.info("URL: %s", url)
+    logger.info("Found %s recent posts in feed.", len(recent_posts))
     logger.info("Channels configured: %s", len(channel_ids))
 
     any_failures = False
     state_changed = False
 
-    for channel_id in channel_ids:
-        if already_published(state, url, channel_id):
-            logger.info("Already queued for channel %s. Skipping.", channel_id)
-            continue
+    for post in recent_posts:
+        logger.info("Checking post: %s", post.title)
+        logger.info("URL: %s", post.url)
 
-        try:
-            buffer_post_id = queue_buffer_post(channel_id, text)
-        except Exception:
-            logger.exception("Failed to queue Buffer post for channel %s", channel_id)
-            any_failures = True
-            continue
+        text = format_social_post(post.title, post.url, post.tags)
 
-        if buffer_post_id is None:
-            any_failures = True
-            continue
+        all_channels_published = True
 
-        logger.info(
-            "Queued Buffer post %s for channel %s",
-            buffer_post_id,
-            channel_id,
-        )
+        for channel_id in channel_ids:
+            if already_published(state, post.url, channel_id):
+                logger.info("Already published to channel %s. Skipping.", channel_id)
+                continue
 
-        mark_published(state, url, channel_id, buffer_post_id)
-        state_changed = True
+            all_channels_published = False
+
+            try:
+                buffer_post_id = publish_buffer_post(channel_id, text)
+            except Exception:
+                logger.exception(
+                    "Failed to publish Buffer post for channel %s",
+                    channel_id,
+                )
+                any_failures = True
+                continue
+
+            if buffer_post_id is None:
+                any_failures = True
+                continue
+
+            logger.info(
+                "Published Buffer post %s to channel %s",
+                buffer_post_id,
+                channel_id,
+            )
+
+            mark_published(state, post.url, channel_id, buffer_post_id)
+            state_changed = True
+
+        if all_channels_published:
+            logger.info("Post already published to all channels. Moving on.")
 
     if state_changed:
         save_publish_state(state_file, state)
@@ -414,7 +496,11 @@ def publish_latest_post() -> bool:
 
 
 def main() -> int:
-    """Run the publisher."""
+    """Run the publisher.
+
+    Returns:
+        0 if all posts were published successfully, 1 if any failures occurred.
+    """
     logging.basicConfig(level=logging.INFO, format="%(message)s")
     load_environment()
 

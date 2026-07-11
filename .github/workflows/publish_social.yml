@@ -41,7 +41,7 @@ jobs:
       - name: Build Hugo site
         run: hugo --minify
 
-      - name: Queue latest post in Buffer
+      - name: Publish latest post to Buffer
         env:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
           BUFFER_CHANNEL_IDS: ${{ secrets.BUFFER_CHANNEL_IDS }}
