@@ -1,6 +1,6 @@
 ---
 title: "The Dog Who Chose Me"
-date: 2026-07-13
+date: 2026-07-12
 draft: false
 categories:
   - Advocacy
