@@ -130,6 +130,10 @@
       "6a0f903f090476fb994720fb": {
         "buffer_post_id": "6a54c1e2dc1fd58870774b92",
         "published_at": "2026-07-13T10:45:56.508439+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "6a55f2a0bea8dae82b729b57",
+        "published_at": "2026-07-14T08:26:09.751642+00:00"
       }
     },
     "https://lanie.work/advocacy/what-the-system-doesnt-count/": {
@@ -204,6 +208,10 @@
         "buffer_post_id": "manual-dedup",
         "note": "Manually added \u2014 local script posted before Buffer step was removed",
         "published_at": "2026-07-14T06:54:19.000000+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "6a55f29d00593a11013ab228",
+        "published_at": "2026-07-14T08:26:06.971892+00:00"
       }
     },
     "https://lanie.work/reading-this-site/": {
@@ -313,6 +321,10 @@
       "6a0f903f090476fb994720fb": {
         "buffer_post_id": "6a54d0e1eafae12609c5709a",
         "published_at": "2026-07-13T11:49:54.692342+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "6a55f29fdb7491373e111e64",
+        "published_at": "2026-07-14T08:26:08.358382+00:00"
       }
     },
     "https://lanie.work/technology/predictability-is-accessibility-wsl-opensuse/": {
