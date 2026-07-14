@@ -12,6 +12,11 @@
       "6a0f903f090476fb994720fb": {
         "buffer_post_id": "6a43168ac1a435f7fb035440",
         "queued_at": "2026-06-30T01:06:18.225327+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "manual-skip",
+        "note": "Pre-marked as published to prevent bulk LinkedIn posting during channel swap",
+        "published_at": "2026-07-14T00:00:00.000000+00:00"
       }
     },
     "https://lanie.work/advocacy/emotions-take-energy/": {
@@ -26,6 +31,11 @@
       "6a0f903f090476fb994720fb": {
         "buffer_post_id": "6a4ef68d7006796191a4dbaf",
         "queued_at": "2026-07-09T01:17:02.175488+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "manual-skip",
+        "note": "Pre-marked as published to prevent bulk LinkedIn posting during channel swap",
+        "published_at": "2026-07-14T00:00:00.000000+00:00"
       }
     },
     "https://lanie.work/advocacy/grieving-the-version-of-me/": {
@@ -40,6 +50,11 @@
       "6a0f903f090476fb994720fb": {
         "buffer_post_id": "6a45618d890ffd8d704f4127",
         "queued_at": "2026-07-01T18:50:53.452388+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "manual-skip",
+        "note": "Pre-marked as published to prevent bulk LinkedIn posting during channel swap",
+        "published_at": "2026-07-14T00:00:00.000000+00:00"
       }
     },
     "https://lanie.work/advocacy/highly-verbal-does-not-mean-words-are-easy/": {
@@ -54,6 +69,11 @@
       "6a0f903f090476fb994720fb": {
         "buffer_post_id": "6a34c8482860b3191c56a647",
         "queued_at": "2026-06-19T04:40:40.583470+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "manual-skip",
+        "note": "Pre-marked as published to prevent bulk LinkedIn posting during channel swap",
+        "published_at": "2026-07-14T00:00:00.000000+00:00"
       }
     },
     "https://lanie.work/advocacy/the-cost-of-appearing-functional/": {
@@ -71,6 +91,11 @@
         "buffer_post_id": "manual-dedup",
         "note": "Manually added \u2014 local script posted but state was never committed",
         "published_at": "2026-07-13T12:09:36.000000+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "manual-skip",
+        "note": "Pre-marked as published to prevent bulk LinkedIn posting during channel swap",
+        "published_at": "2026-07-14T00:00:00.000000+00:00"
       }
     },
     "https://lanie.work/advocacy/the-dog-who-chose-me/": {
@@ -85,6 +110,11 @@
       "6a0f903f090476fb994720fb": {
         "buffer_post_id": "6a5331664835bc01be2a8912",
         "published_at": "2026-07-12T06:17:11.692601+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "manual-skip",
+        "note": "Pre-marked as published to prevent bulk LinkedIn posting during channel swap",
+        "published_at": "2026-07-14T00:00:00.000000+00:00"
       }
     },
     "https://lanie.work/advocacy/the-words-that-dont-translate/": {
@@ -114,6 +144,11 @@
       "6a0f903f090476fb994720fb": {
         "buffer_post_id": "6a54c98710649df6c95607ac",
         "published_at": "2026-07-13T11:18:33.123256+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "manual-skip",
+        "note": "Pre-marked as published to prevent bulk LinkedIn posting during channel swap",
+        "published_at": "2026-07-14T00:00:00.000000+00:00"
       }
     },
     "https://lanie.work/beyond-blindness/": {
@@ -128,6 +163,11 @@
       "6a0f903f090476fb994720fb": {
         "buffer_post_id": "6a412f4c7ebc14f15f0d1831",
         "queued_at": "2026-06-28T14:27:24.882668+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "manual-skip",
+        "note": "Pre-marked as published to prevent bulk LinkedIn posting during channel swap",
+        "published_at": "2026-07-14T00:00:00.000000+00:00"
       }
     },
     "https://lanie.work/faith/when-bible-study-became-too-complicated/": {
@@ -142,6 +182,11 @@
       "6a0f903f090476fb994720fb": {
         "buffer_post_id": "6a51df255e5a2e39df9e312f",
         "published_at": "2026-07-11T06:13:58.294233+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "manual-skip",
+        "note": "Pre-marked as published to prevent bulk LinkedIn posting during channel swap",
+        "published_at": "2026-07-14T00:00:00.000000+00:00"
       }
     },
     "https://lanie.work/gaming/everrealm-alpha-playtest/": {
@@ -173,6 +218,11 @@
       "6a0f903f090476fb994720fb": {
         "buffer_post_id": "6a4a06347e52c06f81b80bb2",
         "queued_at": "2026-07-05T07:22:28.672563+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "manual-skip",
+        "note": "Pre-marked as published to prevent bulk LinkedIn posting during channel swap",
+        "published_at": "2026-07-14T00:00:00.000000+00:00"
       }
     },
     "https://lanie.work/support/": {
@@ -187,6 +237,11 @@
       "6a0f903f090476fb994720fb": {
         "buffer_post_id": "6a49fdac7e52c06f81b7c9be",
         "queued_at": "2026-07-05T06:46:04.530746+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "manual-skip",
+        "note": "Pre-marked as published to prevent bulk LinkedIn posting during channel swap",
+        "published_at": "2026-07-14T00:00:00.000000+00:00"
       }
     },
     "https://lanie.work/technology/context-window-tax/": {
@@ -201,6 +256,11 @@
       "6a0f903f090476fb994720fb": {
         "buffer_post_id": "6a0f9bb6f273a8b3a83e1ba2",
         "queued_at": "2026-05-21T23:56:38.640582+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "manual-skip",
+        "note": "Pre-marked as published to prevent bulk LinkedIn posting during channel swap",
+        "published_at": "2026-07-14T00:00:00.000000+00:00"
       }
     },
     "https://lanie.work/technology/intent-first-computing/": {
@@ -215,6 +275,11 @@
       "6a0f903f090476fb994720fb": {
         "buffer_post_id": "6a23b89ea0f5aeb6f4d9741a",
         "queued_at": "2026-06-06T06:05:18.735010+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "manual-skip",
+        "note": "Pre-marked as published to prevent bulk LinkedIn posting during channel swap",
+        "published_at": "2026-07-14T00:00:00.000000+00:00"
       }
     },
     "https://lanie.work/technology/learning-enough-to-change-direction/": {
@@ -229,6 +294,11 @@
       "6a0f903f090476fb994720fb": {
         "buffer_post_id": "6a51bb615e5a2e39df9cad02",
         "queued_at": "2026-07-11T03:41:22.076688+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "manual-skip",
+        "note": "Pre-marked as published to prevent bulk LinkedIn posting during channel swap",
+        "published_at": "2026-07-14T00:00:00.000000+00:00"
       }
     },
     "https://lanie.work/technology/one-ai-one-life-one-room/": {
@@ -257,6 +327,11 @@
       "6a0f903f090476fb994720fb": {
         "buffer_post_id": "6a3968fa0a0c315b6f5bf699",
         "queued_at": "2026-06-22T16:55:22.880194+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "manual-skip",
+        "note": "Pre-marked as published to prevent bulk LinkedIn posting during channel swap",
+        "published_at": "2026-07-14T00:00:00.000000+00:00"
       }
     },
     "https://lanie.work/technology/voip-for-desktop-first-users/": {
@@ -271,6 +346,11 @@
       "6a0f903f090476fb994720fb": {
         "buffer_post_id": "6a34eb33edb235f3e8aa0133",
         "queued_at": "2026-06-19T07:09:39.767891+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "manual-skip",
+        "note": "Pre-marked as published to prevent bulk LinkedIn posting during channel swap",
+        "published_at": "2026-07-14T00:00:00.000000+00:00"
       }
     }
   }
