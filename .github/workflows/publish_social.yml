@@ -4,6 +4,11 @@ on:
   check_run:
     types: [completed]
 
+# Prevent concurrent runs from racing and double-posting
+concurrency:
+  group: publish-to-socials
+  cancel-in-progress: false
+
 jobs:
   publish:
     if: github.event.check_run.conclusion == 'success' && github.event.check_run.name == 'Cloudflare Pages'
