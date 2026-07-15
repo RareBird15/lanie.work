@@ -170,13 +170,14 @@ Managing multiple chronic conditions takes a systems approach.
 
 ## Learning and Theology
 
-These resources support my self-paced education and spiritual exploration.
+These resources support my writing, advocacy, and spiritual exploration.
 
-- **[Boot.dev](https://www.boot.dev/):** One of the main platforms I used to build foundations in Python, Linux, Git,
-  and technical concepts. It helped me build a stronger technical base I still use.
-- **[Ledgeroo](https://ledgeroo.com/):** A gamified accounting program I'm using to learn practical bookkeeping and
-  financial workflows for my family's business. Its progressive challenge system helps me work through accounting
-  concepts one step at a time.
+- **[Boot.dev](https://www.boot.dev/):** A platform I used to build my technical foundations in
+  Python, Linux, Git, and core programming concepts. The skills I built there still inform my
+  accessibility testing and technology writing today.
+- **[Ledgeroo](https://ledgeroo.com/):** A gamified accounting program I use for practical
+  bookkeeping and financial workflows for my family's business. Its progressive challenge
+  system helps me work through accounting concepts one step at a time.
 - **[Exercism](https://exercism.org/):** A hands-on coding practice platform I've used for structured exercises,
   especially for people who learn well by solving small problems.
 - **[Codecademy](https://www.codecademy.com/):** A self-paced learning platform I've used for programming and computer

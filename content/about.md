@@ -17,29 +17,45 @@ who relies on assistive technology every day. My work is driven by a desire to m
 practical, and humane. I treat accessibility not just as a technical checkbox, but as a reflection of care, dignity, and
 faith.
 
-## My Learning Path
+## What I Do
 
-I'm a self-paced technical learner. Because traditional education often doesn't provide the accessibility and
-accommodations I need, I've built my own learning path around logic, systems, and low-cognitive-load design. My current
-focus includes:
+I write about the intersection of disability, technology, and faith. My work is grounded in
+lived experience as a multiply disabled person who relies on assistive technology every day.
+I've written about accessibility, privacy, chronic illness, long-term care, education
+barriers, and what it means to build a life when the systems around you weren't designed for
+you.
 
-- **Computer Science & Systems:** Growing my skills in Python, SQL, APIs, and Linux systems through hands-on projects,
-  selective coursework, and AI-assisted prototyping.
-- **Linux & Tooling:** Building fluency with openSUSE on WSL, CLI-driven workflows, and automation tools like `uv`.
-- **Business Systems & Accounting:** Learning practical accounting through Ledgeroo so I can better support bookkeeping,
-  software decisions, and financial workflows for Apache Restoration & Design.
-- **Theology & History:** Exploring broader Christian history and Gnosticism. I value spiritual exploration that looks
-  beyond narrow traditional frameworks to find deeper meaning and historical context.
+My current focus includes:
+
+- **Disability Writing & Advocacy:** Essays and articles about accessibility, chronic illness,
+  neurodivergence, and the compounding effects of multiple disabilities. My work has appeared
+  on this site and has been submitted to publications like Rooted in Rights.
+- **Accessibility & Usability Testing:** Freelance feedback on websites, apps, games, developer
+  tools, and technical workflows from the perspective of a multiply disabled assistive
+  technology user.
+- **Game Development:** I design and direct Everrealm, a screen-reader-first kingdom-building
+  game built for blind and multiply disabled players.
+- **Theology & History:** Exploring broader Christian history and Gnosticism. I value spiritual
+  exploration that looks beyond narrow traditional frameworks to find deeper meaning and
+  historical context.
 
 ## Projects & Roles
 
-My advocacy is rooted in operational support and community participation:
+My work spans writing, advocacy, accessibility testing, and game development:
 
-- **Apache Restoration & Design:** I'm the **IT Manager and Tech Support** for my mother's restoration business. I
-  handle software evaluation, systems setup, and operational documentation to keep the business running smoothly.
-- **Accessibility, Usability, and Product Feedback:** I provide freelance feedback on websites, apps, games, developer
-  tools, and technical workflows. My focus is identifying where products break down for real disabled users, especially
-  people with overlapping access needs.
+- **lanie.work:** I write essays and articles about disability, technology, accessibility,
+  chronic illness, and faith. My writing focuses on the lived experience of being multiply
+  disabled in systems that weren't designed for complexity.
+- **Everrealm:** I design and direct a screen-reader-first kingdom-building game built
+  specifically for blind and multiply disabled players. I set the vision and direct AI-assisted
+  implementation rather than coding hands-on.
+- **Apache Restoration & Design:** I'm the **IT Manager and Tech Support** for my mother's
+  restoration business. I handle software evaluation, systems setup, and operational
+  documentation to keep the business running smoothly.
+- **Accessibility, Usability, and Product Feedback:** I provide freelance feedback on
+  websites, apps, games, developer tools, and technical workflows. My focus is identifying
+  where products break down for real disabled users, especially people with overlapping
+  access needs.
 
 ## My Philosophy
 
@@ -56,7 +72,7 @@ This site is my public home base. It's intentionally small, updated selectively,
 you're new here, [Reading This Site](/reading-this-site/) explains how the site is organized, what I write about, and
 the boundaries I keep around this space.
 
-I spend my free time experimenting with assistive technology, building small tools, loom knitting, and playing deep,
+I spend my free time writing, directing game development, loom knitting, and playing deep,
 text-based automation games like _Trimps_ and _Evolve_.
 
 I'm especially interested in how overlapping disabilities (blindness, neurodivergence, and chronic illness) interact
