@@ -19,43 +19,36 @@ faith.
 
 ## What I Do
 
-I write about the intersection of disability, technology, and faith. My work is grounded in
-lived experience as a multiply disabled person who relies on assistive technology every day.
-I've written about accessibility, privacy, chronic illness, long-term care, education
-barriers, and what it means to build a life when the systems around you weren't designed for
-you.
+I write about the intersection of disability, technology, and faith. My work is grounded in lived experience as a
+multiply disabled person who relies on assistive technology every day. I've written about accessibility, privacy,
+chronic illness, long-term care, education barriers, and what it means to build a life when the systems around you
+weren't designed for you.
 
 My current focus includes:
 
-- **Disability Writing & Advocacy:** Essays and articles about accessibility, chronic illness,
-  neurodivergence, and the compounding effects of multiple disabilities. My work has appeared
-  on this site and has been submitted to publications like Rooted in Rights.
-- **Accessibility & Usability Testing:** Freelance feedback on websites, apps, games, developer
-  tools, and technical workflows from the perspective of a multiply disabled assistive
-  technology user.
-- **Game Development:** I design and direct Everrealm, a screen-reader-first kingdom-building
-  game built for blind and multiply disabled players.
-- **Theology & History:** Exploring broader Christian history and Gnosticism. I value spiritual
-  exploration that looks beyond narrow traditional frameworks to find deeper meaning and
-  historical context.
+- **Disability Writing & Advocacy:** Essays and articles about accessibility, chronic illness, neurodivergence, and the
+  compounding effects of multiple disabilities. My work has appeared on this site and has been submitted to publications
+  like Rooted in Rights.
+- **Accessibility & Usability Testing:** Freelance feedback on websites, apps, games, developer tools, and technical
+  workflows from the perspective of a multiply disabled assistive technology user.
+- **Game Development:** I design and direct Everrealm, a screen-reader-first kingdom-building game built for blind and
+  multiply disabled players.
+- **Theology & History:** Exploring broader Christian history and Gnosticism. I value spiritual exploration that looks
+  beyond narrow traditional frameworks to find deeper meaning and historical context.
 
 ## Projects & Roles
 
 My work spans writing, advocacy, accessibility testing, and game development:
 
-- **lanie.work:** I write essays and articles about disability, technology, accessibility,
-  chronic illness, and faith. My writing focuses on the lived experience of being multiply
-  disabled in systems that weren't designed for complexity.
-- **Everrealm:** I design and direct a screen-reader-first kingdom-building game built
-  specifically for blind and multiply disabled players. I set the vision and direct AI-assisted
-  implementation rather than coding hands-on.
-- **Apache Restoration & Design:** I'm the **IT Manager and Tech Support** for my mother's
-  restoration business. I handle software evaluation, systems setup, and operational
-  documentation to keep the business running smoothly.
-- **Accessibility, Usability, and Product Feedback:** I provide freelance feedback on
-  websites, apps, games, developer tools, and technical workflows. My focus is identifying
-  where products break down for real disabled users, especially people with overlapping
-  access needs.
+- **lanie.work:** I write essays and articles about disability, technology, accessibility, chronic illness, and faith.
+  My writing focuses on the lived experience of being multiply disabled in systems that weren't designed for complexity.
+- **Everrealm:** I design and direct a screen-reader-first kingdom-building game built specifically for blind and
+  multiply disabled players. I set the vision and direct AI-assisted implementation rather than coding hands-on.
+- **Apache Restoration & Design:** I'm the **IT Manager and Tech Support** for my mother's restoration business. I
+  handle software evaluation, systems setup, and operational documentation to keep the business running smoothly.
+- **Accessibility, Usability, and Product Feedback:** I provide freelance feedback on websites, apps, games, developer
+  tools, and technical workflows. My focus is identifying where products break down for real disabled users, especially
+  people with overlapping access needs.
 
 ## My Philosophy
 
@@ -72,8 +65,8 @@ This site is my public home base. It's intentionally small, updated selectively,
 you're new here, [Reading This Site](/reading-this-site/) explains how the site is organized, what I write about, and
 the boundaries I keep around this space.
 
-I spend my free time writing, directing game development, loom knitting, and playing deep,
-text-based automation games like _Trimps_ and _Evolve_.
+I spend my free time writing, directing game development, loom knitting, and playing deep, text-based automation games
+like _Trimps_ and _Evolve_.
 
 I'm especially interested in how overlapping disabilities (blindness, neurodivergence, and chronic illness) interact
 with technology. My long-term goal is to support or build a nonprofit that recognizes these complexities rather than

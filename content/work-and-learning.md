@@ -2,7 +2,9 @@
 title: Work and Learning
 slug: work-and-learning
 date: 2026-03-31
-description: A summary of my professional usability testing, disability writing and advocacy, game development, and technical background.
+description:
+  A summary of my professional usability testing, disability writing and advocacy, game development, and technical
+  background.
 showDate: false
 showTableOfContents: true
 ---
@@ -26,36 +28,32 @@ automated tools often miss, especially where multiple disabilities overlap.
 
 ## Disability Writing & Advocacy
 
-My primary work is writing about the intersection of disability, technology, and faith. I've
-published essays on accessibility, privacy, chronic illness, long-term care, education
-barriers, and the compounding effects of multiple disabilities. My writing draws on lived
-experience as a blind, autistic, chronically ill person navigating systems that weren't
-designed for complexity.
+My primary work is writing about the intersection of disability, technology, and faith. I've published essays on
+accessibility, privacy, chronic illness, long-term care, education barriers, and the compounding effects of multiple
+disabilities. My writing draws on lived experience as a blind, autistic, chronically ill person navigating systems that
+weren't designed for complexity.
 
-I've submitted work to publications like Rooted in Rights and write regularly for this site
-across Technology, Advocacy, Gaming, Faith, and Education categories.
+I've submitted work to publications like Rooted in Rights and write regularly for this site across Technology, Advocacy,
+Gaming, Faith, and Education categories.
 
 ## Game Development: Everrealm
 
-I design and direct **Everrealm**, a screen-reader-first kingdom-building game built for blind
-and multiply disabled players. I set the creative and accessibility vision, design game
-mechanics, and direct AI-assisted implementation rather than coding hands-on. The game is in
-active development with regular releases.
+I design and direct **Everrealm**, a screen-reader-first kingdom-building game built for blind and multiply disabled
+players. I set the creative and accessibility vision, design game mechanics, and direct AI-assisted implementation
+rather than coding hands-on. The game is in active development with regular releases.
 
 ## Technical Background
 
-My technical skills were built through self-paced learning, including Python, Linux systems,
-and CLI-driven workflows. While I no longer code hands-on, this foundation informs my
-accessibility testing, my writing about technology, and my ability to direct AI-assisted
-development.
+My technical skills were built through self-paced learning, including Python, Linux systems, and CLI-driven workflows.
+While I no longer code hands-on, this foundation informs my accessibility testing, my writing about technology, and my
+ability to direct AI-assisted development.
 
-- **Programming background:** Python fundamentals, object-oriented and functional programming,
-  version control with Git, and command-line application development. Built through
-  platforms including Boot.dev, Codecademy, and Exercism.
-- **Linux & Tooling:** Proficient with openSUSE on WSL, CLI-driven workflows, and tools like
-  `uv` for package management.
-- **Accessibility Testing Tools:** NVDA (primary), JAWS, VoiceOver, and keyboard-driven
-  testing across web, CLI, and game environments.
+- **Programming background:** Python fundamentals, object-oriented and functional programming, version control with Git,
+  and command-line application development. Built through platforms including Boot.dev, Codecademy, and Exercism.
+- **Linux & Tooling:** Proficient with openSUSE on WSL, CLI-driven workflows, and tools like `uv` for package
+  management.
+- **Accessibility Testing Tools:** NVDA (primary), JAWS, VoiceOver, and keyboard-driven testing across web, CLI, and
+  game environments.
 
 ## Operational IT Support
 
@@ -77,12 +75,11 @@ believe good technology should be an act of care, not just a feat of engineering
 
 ### Everrealm
 
-**Everrealm** is a screen-reader-first kingdom-building game designed for blind and multiply
-disabled players. I direct the game's design, accessibility vision, and development roadmap,
-working with AI-assisted implementation to build mechanics that prioritize nonvisual access,
-low cognitive load, and keyboard-centric play.
+**Everrealm** is a screen-reader-first kingdom-building game designed for blind and multiply disabled players. I direct
+the game's design, accessibility vision, and development roadmap, working with AI-assisted implementation to build
+mechanics that prioritize nonvisual access, low cognitive load, and keyboard-centric play.
 
 The game is in active development with regular releases on GitHub.
 
-- **[Everrealm on GitHub](https://github.com/rarebird15/everrealm)** – Explore the game,
-  contribute, or follow development.
+- **[Everrealm on GitHub](https://github.com/rarebird15/everrealm)** – Explore the game, contribute, or follow
+  development.

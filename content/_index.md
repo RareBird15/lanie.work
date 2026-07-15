@@ -16,9 +16,8 @@ humane, predictable, and inclusive.
   real-world barriers that automated testing often misses.
 - **Low-Cognitive-Load Systems:** Developing and promoting designs that respect a user's sensory needs and mental
   energy.
-- **Self-Paced Systems Learning:** Building technical literacy through Python, Linux systems
-  (openSUSE on WSL), and CLI-driven workflows, with an emphasis on keyboard-centric tools that
-  work with screen readers.
+- **Self-Paced Systems Learning:** Building technical literacy through Python, Linux systems (openSUSE on WSL), and
+  CLI-driven workflows, with an emphasis on keyboard-centric tools that work with screen readers.
 - **Faith-Informed Advocacy:** Approaching technology and disability rights through a lens of service and spiritual
   exploration, currently focused on broader Christian history and Gnosticism.
 - **Documenting Barriers:** Writing about recurring accessibility challenges in games and interactive media to help
