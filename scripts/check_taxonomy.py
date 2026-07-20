@@ -3,7 +3,7 @@
 
 Rules:
 - Exactly one category per post.
-- 3 to 6 tags per post.
+- 3 to 8 tags per post.
 - Tags must be lowercase kebab-case.
 - Tags must not duplicate the category (case-insensitive).
 """
@@ -92,8 +92,8 @@ def main() -> int:
                 f"{rel}: expected exactly 1 category, found {len(categories)}"
             )
 
-        if not (3 <= len(tags) <= 6):
-            errors.append(f"{rel}: expected 3-6 tags, found {len(tags)}")
+        if not (3 <= len(tags) <= 8):
+            errors.append(f"{rel}: expected 3-8 tags, found {len(tags)}")
 
         if len(set(tags)) != len(tags):
             errors.append(f"{rel}: has duplicate tags")
