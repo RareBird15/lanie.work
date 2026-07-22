@@ -131,6 +131,20 @@
         "published_at": "2026-07-14T00:00:00.000000+00:00"
       }
     },
+    "https://lanie.work/advocacy/the-gap-nobodys-building-for/": {
+      "6a0f900a090476fb99471f86": {
+        "buffer_post_id": "6a601a68cdc1cdd7f75f67d5",
+        "published_at": "2026-07-22T01:18:39.092147+00:00"
+      },
+      "6a0f903f090476fb994720fb": {
+        "buffer_post_id": "6a601a6fcdc1cdd7f75f683a",
+        "published_at": "2026-07-22T01:18:40.358343+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "6a601a6753f69b7224078b5d",
+        "published_at": "2026-07-22T01:18:32.763690+00:00"
+      }
+    },
     "https://lanie.work/advocacy/the-words-that-dont-translate/": {
       "6a0f8fce090476fb99471de7": {
         "buffer_post_id": "manual-dedup",
