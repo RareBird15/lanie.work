@@ -1,16 +1,30 @@
 ---
-title: Community & Advocacy
-slug: community
+title: Connect
+slug: connect
 date: 2026-04-05
-description: Dedicated spaces for peer support, resource sharing, and connection within the disabled community.
+description: Where to find me online and the communities I lead for multiply disabled people.
 showDate: false
 showTableOfContents: true
+aliases:
+  - /community/
 ---
+
+## Find Me Online
+
+- **Website:** [Lanie: Faith, Tech, and Advocacy](https://lanie.work) — My writing, advocacy, and projects.
+- **Email:** [lanie@lanie.work](mailto:lanie@lanie.work) — The most direct way to reach me.
+- **Mastodon:** [@RareBird15@allovertheplace.ca](https://allovertheplace.ca/@RareBird15) — My main social home base for accessibility advocacy and tech talk.
+- **LinkedIn:** [laniecarmelo](https://www.linkedin.com/in/laniecarmelo) — Professional networking and published writing.
+- **Facebook Page:** [Lanie: Faith, Tech, and Advocacy](https://www.facebook.com/RareBirdLanie/) — Community posts and updates.
+- **GitHub:** [RareBird15](https://github.com/RareBird15) — Source code for Everrealm, WordPredictor, and other projects.
+- **Reddit:** [Laniebird91](https://www.reddit.com/user/Laniebird91/) — Disability and tech discussions.
+
+## Communities I Lead
 
 My advocacy is rooted in the belief that technology should be an act of care. I lead several text-centric communities
 designed to reduce cognitive load and offer humane alternatives to traditional social media.
 
-## Multiple Disabilities Peer Support
+### Multiple Disabilities Peer Support
 
 These groups, collectively known as **MultAbilities**, focus on the unique challenges of navigating overlapping
 disabilities.
@@ -31,7 +45,7 @@ A structured, low-pressure space for long-form discussion and resource archiving
 
 A space for real-time text conversation and community engagement.
 
-- **Join:** [MultAbilities on Discord](https://discord.com/invite/CAFsB3Wu)
+- **Join:** [MultAbilities on Discord](https://discord.gg/8YDDFN2QD)
 
 ### Multiple Disabilities Peer to Peer Support Group (Facebook)
 

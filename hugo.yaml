@@ -73,6 +73,9 @@ menu:
     - name: Support
       url: /support/
       weight: 65
+    - name: Connect
+      url: /connect/
+      weight: 68
     - name: Contact
       url: /contact/
       weight: 70

@@ -28,7 +28,7 @@ These pages provide context for my work, language, and accessibility perspective
 - **[Accessibility Notes](/accessibility-notes/):** Notes on accessibility, usability, and real-world barriers that
   affect disabled users.
 - **[Human Terms](/human-terms/):** Plain-language explanations of disability, access, technology, and systems concepts.
-- **[Community](/community/):** Places where I can be found online and communities connected to my work.
+- **[Connect](/connect/):** Places where I can be found online and communities I lead.
 
 ## How I Access Technology
 

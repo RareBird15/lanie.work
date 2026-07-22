@@ -11,12 +11,9 @@ days to respond. I value clear, direct, thoughtful communication.
 
 ## Where to Find Me
 
-- **Mastodon:** [@RareBird15@allovertheplace.ca](https://allovertheplace.ca/@RareBird15): My main social home base for
-  accessibility advocacy and tech talk.
-- **Facebook:** [RareBirdLanie](https://www.facebook.com/RareBirdLanie/): Where I share visual updates and community
-  posts.
-- **Professional:** [LinkedIn](https://www.linkedin.com/in/laniecarmelo) or [GitHub](https://github.com/RareBird15).
-- **Support:** [GoFundMe and current needs](/support/).
+For all my social profiles, community links, and where to find me online, visit the [Connect](/connect/) page.
+
+If you want to reach me directly, email is best: [lanie@lanie.work](mailto:lanie@lanie.work).
 
 ## Communication Preferences
 

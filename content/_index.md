@@ -45,7 +45,7 @@ humane, predictable, and inclusive.
 
 - For services, visit [Services](/services/).
 - For tools and recommendations, see [Resources](/resources/).
-- To reach me or find my communities, go to [Contact](/contact/) or [Community](/community/).
+- To reach me or find my communities, go to [Contact](/contact/) or [Connect](/connect/).
 
 ---
 
