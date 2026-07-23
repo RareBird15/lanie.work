@@ -32,13 +32,28 @@ independence as possible.
 
 When those tools fail, my world gets much smaller.
 
-## Donate or share
+## Medical and living costs (GoFundMe)
 
-You can support the fundraiser here:
+My GoFundMe helps with urgent needs such as basic living expenses, medical
+supplies, transportation, and accessible technology. You can support the
+fundraiser here:
 
-[Support my GoFundMe](https://www.gofundme.com/f/help-lanie-stay-safe-and-stable/cl/o?utm_campaign=man_sharesheet_dash&utm_content=amp20_t1&utm_medium=customer&utm_source=copy_link&lang=en_US&ts=1783232302)
+[Support my GoFundMe](https://gofund.me/0a62fcaa3)
 
 If you can't donate, sharing the fundraiser also helps.
+
+## Support my work
+
+If you'd like to support my writing, game development, and advocacy work
+beyond the fundraiser, you can:
+
+- [Ko-fi](https://ko-fi.com/rarebird15) — One-time tips or monthly support. No
+  platform fees on tips.
+- [GitHub Sponsors](https://github.com/sponsors/RareBird15) — Sponsor my
+  open-source projects, including Everrealm and WordPredictor.
+
+My writing and tools are free and always will be. Support is appreciated and
+never expected.
 
 ## Follow updates
 
