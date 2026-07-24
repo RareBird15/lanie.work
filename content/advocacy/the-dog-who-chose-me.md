@@ -35,6 +35,8 @@ lap. He'd claimed me. And between that and the smile she saw on my face, she cou
 
 She was wrong about not keeping him.
 
+{{< figure src="lanie-and-squeaker.jpg" alt="Lanie holding Squeaker, a small black and tan miniature pinscher with grey around his muzzle, in her lap. Both are looking at the camera." caption="Me and Squeaker." >}}
+
 He was wrong about very few things in his life. He was wrong about the possum being a horse. He was wrong about Peep the
 chicken being a threat to his existence. He was wrong about closed doors being a personal attack.
 
