@@ -177,5 +177,9 @@ disabled users.
 If you're building a product, tool, game, website, or workflow and want practical feedback from a disabled assistive
 technology user, I'd be glad to hear from you.
 
-Please reach out through my **[Contact Page](/contact/)** with a short description of what you would like tested and
-what kind of feedback would be most helpful.
+You can [book a usability testing session directly](https://calendar.app.google/PoC5QfW34pmc79ee8) (60 minutes, $75) or
+reach out through my [Contact Page](/contact/) with a short description of what you would like tested and what kind of
+feedback would be most helpful.
+
+If you'd like to support my work beyond a testing engagement, visit my [Support page](/support/) for other ways to
+help, including Ko-fi, GitHub Sponsors, and my GoFundMe.

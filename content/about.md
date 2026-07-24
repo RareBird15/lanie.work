@@ -71,3 +71,5 @@ like _Trimps_ and _Evolve_.
 I'm especially interested in how overlapping disabilities (blindness, neurodivergence, and chronic illness) interact
 with technology. My long-term goal is to support or build a nonprofit that recognizes these complexities rather than
 treating them in isolation.
+
+If my work has been useful to you, [support my work](/support/) or [book a usability testing session](/services/).

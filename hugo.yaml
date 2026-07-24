@@ -17,6 +17,12 @@ params:
   header:
     layout: basic
 
+  footer:
+    showCopyright: true
+    showThemeAttribution: false
+    showAppearanceSwitcher: true
+    showScrollToTop: true
+
   author:
     name: "Lanie"
     bio: "Working at the intersection of faith, technology, and disability advocacy."
@@ -24,8 +30,7 @@ params:
       - mastodon: "https://allovertheplace.ca/@RareBird15"
       - github: "https://github.com/RareBird15"
       - LinkedIn: "https://www.linkedin.com/in/laniecarmelo/"
-      - CodeStats: "https://codestats.net/users/RareBird15"
-      - Boot.dev Profile: "https://www.boot.dev/u/rarebird15"
+      - Ko-fi: "https://ko-fi.com/rarebird15"
 
   homepage:
     layout: page
