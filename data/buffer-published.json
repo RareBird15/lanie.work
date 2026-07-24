@@ -90,6 +90,20 @@
         "published_at": "2026-07-14T00:00:00.000000+00:00"
       }
     },
+    "https://lanie.work/advocacy/the-account-nobody-can-deposit-to/": {
+      "6a0f900a090476fb99471f86": {
+        "buffer_post_id": "6a62cc1a6f9e9fb040cba49b",
+        "published_at": "2026-07-24T02:21:21.439204+00:00"
+      },
+      "6a0f903f090476fb994720fb": {
+        "buffer_post_id": "6a62cc21b7a65f989c92bf35",
+        "published_at": "2026-07-24T02:21:22.794205+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "6a62cc186f9e9fb040cba475",
+        "published_at": "2026-07-24T02:21:13.945052+00:00"
+      }
+    },
     "https://lanie.work/advocacy/the-cost-of-appearing-functional/": {
       "6a0f8fce090476fb99471de7": {
         "buffer_post_id": "manual-dedup",
