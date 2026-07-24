@@ -73,6 +73,16 @@ A dedicated space for Christians with any disability to find peer support and sp
 - **Platform:** GroupMe (Accessible via App or SMS)
 - **Join:** [Imago Dei on GroupMe](https://groupme.com/join_group/108240116/DyaeTWa0)
 
+## Book Time With Me
+
+I offer three types of appointments. All sessions are conducted over Google Meet.
+
+- **[Usability Testing Session (60 min, $75)](https://calendar.app.google/PoC5QfW34pmc79ee8)** — Moderated accessibility and usability testing for websites, apps, and assistive technology. I'm a blind, multiply disabled screen reader user with professional testing experience.
+- **[Collaboration Call (45 min, free)](https://calendar.app.google/rEBUKD29KkMQwCbk6)** — For collaborators, partners, researchers, or anyone interested in working together on writing, advocacy, or accessibility projects.
+- **[Community Chat (30 min, free)](https://calendar.app.google/FU1smqrGSXBouVbk9)** — A one-on-one conversation for community members, advocates, or anyone who wants to connect.
+
+I live with Non-24 sleep disorder and chronic fatigue, which means my waking hours are unpredictable. I may need to reschedule at the last minute. I'll always give as much notice as I can, and I appreciate your understanding. If I cancel, I'll offer the next available slot or work with you to find a time that fits.
+
 ## Community Philosophy
 
 Across all these spaces, I prioritize:
