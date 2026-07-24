@@ -7,7 +7,7 @@ outputs:
   home: [HTML, RSS, JSON]
 
 params:
-  colorScheme: congo
+  colorScheme: cherry
   defaultAppearance: auto
   autoSwitchAppearance: true
 
@@ -33,14 +33,17 @@ params:
       - Ko-fi: "https://ko-fi.com/rarebird15"
 
   homepage:
-    layout: page
-    showRecent: false
+    layout: profile
+    showRecent: true
+    recentLimit: 5
 
   mainSections: ["advocacy", "technology", "gaming", "education", "faith"]
 
   article:
     showDate: true
     showReadingTime: true
+    showWordCount: true
+    showBreadcrumbs: true
     showTableOfContents: true
     showRelatedContent: true
     relatedContentLimit: 5
@@ -48,9 +51,16 @@ params:
     showSeries: true
     showAuthor: false
     showCodeCopyButton: true
+    sharingLinks:
+      - mastodon
+      - linkedin
+      - email
+      - reddit
 
   list:
     showSummary: true
+    showTableOfContents: true
+    showBreadcrumbs: true
 
   blog:
     postsPerPage: 12
