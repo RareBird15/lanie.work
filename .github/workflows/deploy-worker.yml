@@ -1,12 +1,13 @@
 name: Deploy Form Handler Worker
 
+# DISABLED: The contact form has migrated to Formspree and the subscribe
+# form has migrated to Buttondown. This Worker is no longer needed.
+# Keeping the workflow file for historical reference. To re-enable,
+# remove the "workflow_dispatch" restriction below and restore the
+# push trigger.
+
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - "services/form-handler/**"
-      - ".github/workflows/deploy-worker.yml"
 
 jobs:
   deploy:

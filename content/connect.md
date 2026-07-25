@@ -19,6 +19,13 @@ aliases:
 - **GitHub:** [RareBird15](https://github.com/RareBird15) — Source code for Everrealm, WordPredictor, and other projects.
 - **Reddit:** [Laniebird91](https://www.reddit.com/user/Laniebird91/) — Disability and tech discussions.
 
+## Get New Posts by Email
+
+Want to know when I publish something new? Enter your email below and you'll get a
+notification whenever a new post goes out.
+
+{{< subscribe-form >}}
+
 ## Communities I Lead
 
 My advocacy is rooted in the belief that technology should be an act of care. I lead several text-centric communities

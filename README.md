@@ -12,7 +12,8 @@ work.
 - **Static site:** Built with [Hugo](https://gohugo.io/) for fast, reliable static publishing.
 - **Automated deployment:** Deployed through GitHub Actions and Cloudflare Pages.
 - **Social publishing helper:** Python helper scripts can queue new posts to Buffer-connected social channels.
-- **Contact form:** A Cloudflare Worker handles contact form submissions with Turnstile spam protection.
+- **Contact form:** Handled by [Formspree](https://formspree.io) with Turnstile spam protection. The previous Cloudflare Worker (`services/form-handler/`) is deprecated and no longer deployed.
+- **Newsletter:** Handled by [Buttondown](https://buttondown.com/RareBird15) with RSS-to-email automation. Subscribers get an email automatically each time a new post is published.
 
 ## Writing Workflow
 

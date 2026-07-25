@@ -1,12 +1,19 @@
 # Copyright (c) 2026 Lanie
-"""Cloudflare worker for contact form with Turnstile verification."""
+"""Cloudflare worker for contact form and newsletter subscriptions.
+
+DEPRECATED (July 2026): This Worker is no longer deployed. The contact form
+has migrated to Formspree (https://formspree.io/f/mqergapg) and the newsletter
+subscribe form has migrated to Buttondown (https://buttondown.com/RareBird15).
+The code is preserved here for reference. The deploy workflow has been
+restricted to manual dispatch only.
+"""
 
 from __future__ import annotations
 
 import importlib
 import json
 from typing import Protocol
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urlparse
 
 _workers = importlib.import_module("workers")
 Request = _workers.Request
@@ -25,6 +32,7 @@ ALLOWED_FORM_CONTENT_TYPES = (
 )
 
 EXPECTED_ACTION = "contact_form"
+SUBSCRIBE_ACTION = "newsletter_subscribe"
 ALLOWED_HOSTNAMES = {"lanie.work", "www.lanie.work"}
 
 BANNED_EMAILS = {
@@ -39,6 +47,11 @@ BANNED_KEYWORDS = {
 
 MAX_MESSAGE_LINKS = 2
 
+SUBSCRIBE_SUCCESS_MESSAGE = "Success! Check your inbox for a confirmation email."
+SUBSCRIBE_ERROR_MESSAGE = "Something went wrong. Please try again later."
+SUBSCRIBE_DUPLICATE_MESSAGE = "You're already subscribed!"
+SUBSCRIBE_INVALID_EMAIL_MESSAGE = "Please provide a valid email address."
+
 
 class FormDataLike(Protocol):
     """Protocol for `Request.form_data()` results used by this worker."""
@@ -51,6 +64,7 @@ class Env(Protocol):
     """Protocol for environment variables."""
 
     BREVO_API_KEY: str
+    BREVO_LIST_ID: str
     TURNSTILE_SECRET_KEY: str
 
 
@@ -59,6 +73,9 @@ class Default(WorkerEntrypoint):
 
     async def fetch(self, request: Request) -> Response:
         """Handle incoming HTTP requests with spam protection.
+
+        Routes to the contact form handler or the newsletter subscribe handler
+        based on the URL path.
 
         Returns:
             Response: Result of form validation and delivery.
@@ -74,9 +91,14 @@ class Default(WorkerEntrypoint):
                 return fake_success()
 
             form_data = await request.form_data()
+            path = urlparse(request.url).path
+
+            if path == "/api/subscribe":
+                return await process_subscription(request, env, form_data)
+
             return await process_submission(request, env, form_data)
         # Intentionally broad fallback so unexpected runtime errors never leak.
-        except Exception:  # noqa: BLE001
+        except Exception:
             return Response(INTERNAL_ERROR_MESSAGE, status=500)
 
 
@@ -127,7 +149,12 @@ async def process_submission(
     )
 
 
-async def verify_turnstile(request: Request, env: Env, token: str) -> bool:
+async def verify_turnstile(
+    request: Request,
+    env: Env,
+    token: str,
+    expected_action: str = EXPECTED_ACTION,
+) -> bool:
     """Return True when Turnstile verification succeeds for this form."""
     remote_ip = request.headers.get("CF-Connecting-IP") or ""
     verify_body = urlencode(
@@ -158,7 +185,7 @@ async def verify_turnstile(request: Request, env: Env, token: str) -> bool:
     if not verify_data.get("success"):
         return False
 
-    if verify_data.get("action") != EXPECTED_ACTION:
+    if verify_data.get("action") != expected_action:
         return False
 
     return verify_data.get("hostname") in ALLOWED_HOSTNAMES
@@ -282,3 +309,88 @@ def is_valid_basic_email(email: str) -> bool:
         return False
 
     return not any(char.isspace() for char in email)
+
+
+async def process_subscription(
+    request: Request,
+    env: Env,
+    form_data: FormDataLike,
+) -> Response:
+    """Validate and process a newsletter subscription request.
+
+    Returns:
+        Response: Success, fixable error, or spam rejection response.
+    """
+    honeypot = str(form_data.get("website_url") or "").strip()
+    if honeypot:
+        return Response(SUBSCRIBE_SUCCESS_MESSAGE, status=200)
+
+    token = str(form_data.get("cf-turnstile-response") or "").strip()
+    if not token:
+        return Response("Spam check missing.", status=400)
+
+    if not await verify_turnstile(request, env, token, SUBSCRIBE_ACTION):
+        return Response(SPAM_CHECK_FAILED_MESSAGE, status=403)
+
+    user_email = str(form_data.get("email") or "").strip()[:MAX_EMAIL_LENGTH]
+
+    if not is_valid_basic_email(user_email):
+        return Response(SUBSCRIBE_INVALID_EMAIL_MESSAGE, status=400)
+
+    if user_email.lower() in BANNED_EMAILS:
+        return Response(SUBSCRIBE_SUCCESS_MESSAGE, status=200)
+
+    result = await subscribe_via_brevo(env=env, user_email=user_email)
+
+    if result == "created":
+        return Response(SUBSCRIBE_SUCCESS_MESSAGE, status=200)
+    if result == "duplicate":
+        return Response(SUBSCRIBE_DUPLICATE_MESSAGE, status=200)
+    return Response(SUBSCRIBE_ERROR_MESSAGE, status=502)
+
+
+async def subscribe_via_brevo(*, env: Env, user_email: str) -> str:
+    """Add a contact to the newsletter list via the Brevo API.
+
+    Returns:
+        str: "created" on success, "duplicate" if already exists, "error" on failure.
+    """
+    list_id = int(env.BREVO_LIST_ID)
+    contact_payload = {
+        "email": user_email,
+        "listIds": [list_id],
+        "updateEnabled": True,
+    }
+
+    brevo_res = await workers_fetch(
+        "https://api.brevo.com/v3/contacts",
+        method="POST",
+        headers={
+            "accept": "application/json",
+            "content-type": "application/json",
+            "api-key": env.BREVO_API_KEY,
+        },
+        body=json.dumps(contact_payload),
+    )
+
+    if brevo_res.ok:
+        return "created"
+
+    # 400 with "already exists" means the contact is already in our account.
+    # We need to check if they're already on the list, and add them if not.
+    if brevo_res.status == 400:
+        # Try adding the contact to the list directly
+        add_payload = {"emails": [user_email]}
+        add_res = await workers_fetch(
+            f"https://api.brevo.com/v3/contacts/lists/{list_id}/contacts/add",
+            method="POST",
+            headers={
+                "accept": "application/json",
+                "content-type": "application/json",
+                "api-key": env.BREVO_API_KEY,
+            },
+            body=json.dumps(add_payload),
+        )
+        if add_res.ok:
+            return "duplicate"
+    return "error"

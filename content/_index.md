@@ -41,6 +41,13 @@ humane, predictable, and inclusive.
 - For topic-based browsing, use [Blog](/blog/), [Tags](/tags/), or [Categories](/categories/).
 - Subscribe to updates with the [RSS feed](/index.xml).
 
+### Get New Posts by Email
+
+Want to know when I publish something new? Enter your email below and you'll get a
+notification whenever a new post goes out.
+
+{{< subscribe-form >}}
+
 ### Work With Me
 
 - For services, visit [Services](/services/).

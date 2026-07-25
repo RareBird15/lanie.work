@@ -52,7 +52,7 @@ If the form below doesn't load or submit, or if Turnstile is blocking you, email
   This email option is the accessibility fallback for no-JS and form-failure cases.
 </noscript>
 
-<form action="/api/submit" method="POST">
+<form action="https://formspree.io/f/mqergapg" method="POST">
   <div>
     <label for="name">Name:</label>
     <br>
