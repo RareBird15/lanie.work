@@ -25,6 +25,7 @@ params:
 
   author:
     name: "Lanie"
+    image: "profile.jpg"
     bio: "Working at the intersection of faith, technology, and disability advocacy."
     links:
       - mastodon: "https://allovertheplace.ca/@RareBird15"
