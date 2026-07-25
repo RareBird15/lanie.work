@@ -36,6 +36,12 @@ designed to reduce cognitive load and offer humane alternatives to traditional s
 These groups, collectively known as **MultAbilities**, focus on the unique challenges of navigating overlapping
 disabilities.
 
+### MultAbilities (Slack)
+
+A working community for people with multiple disabilities and the allies who want to help build with us. This is where MultAbilities Academy is taking shape. Includes Sable, an AI assistant who can answer questions about the project, explain concepts, and help you find what you need.
+
+- **Join:** [MultAbilities on Slack](https://join.slack.com/t/multabilities/shared_invite/zt-4500c82hg-YgsCuuihKw5Neqhd1dUCow)
+
 ### MultAbilities (GroupMe)
 
 Our main outpost for people who prefer the simplicity of a linear text stream or SMS-based participation.
