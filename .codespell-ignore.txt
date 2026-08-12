@@ -1,2 +1,5 @@
 TAKS
 stings
+rouge
+CNA
+ore
