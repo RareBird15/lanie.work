@@ -325,4 +325,4 @@ Erion is free to play. Connect with any MUD client (MUSHclient, VIPMud, TinTin++
 - **Port:** 1234
 
 The blind support page with the soundpack and setup instructions is at
-[erionmud.com](https://erionmud.com).
+[erionmud.com/blindsupport.php](https://www.erionmud.com/blindsupport.php).
