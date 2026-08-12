@@ -25,6 +25,11 @@ jobs:
           hugo-version: 0.164.0
           extended: true
 
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.24'
+
       - name: Build site
         run: hugo --minify
 
