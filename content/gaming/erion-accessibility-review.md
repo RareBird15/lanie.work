@@ -316,3 +316,13 @@ exploring a world I can actually navigate.
 
 For the first time in a MUD, I'm playing the game instead of fighting
 it.
+
+## How to Connect
+
+Erion is free to play. Connect with any MUD client (MUSHclient, VIPMud, TinTin++) at:
+
+- **Host:** erionmud.com
+- **Port:** 1234
+
+The blind support page with the soundpack and setup instructions is at
+[erionmud.com](https://erionmud.com).
