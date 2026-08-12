@@ -1,20 +1,15 @@
 {
   "defaults": {
+    "timeout": 30000,
     "standard": "WCAG2AA",
-    "wait": 1000,
-    "chromeLaunchConfig": {
-      "args": ["--no-sandbox", "--disable-setuid-sandbox"]
-    }
+    "runners": ["htmlcs"]
   },
   "urls": [
     "http://localhost:4001/",
-    "http://localhost:4001/about/",
-    "http://localhost:4001/services/",
-    "http://localhost:4001/contact/",
+    "http://localhost:4001/advocacy/",
     "http://localhost:4001/technology/",
-    "http://localhost:4001/tags/",
-    "http://localhost:4001/categories/"
-  ],
-  "reporter": "html",
-  "output": "accessibility-reports"
+    "http://localhost:4001/faith/",
+    "http://localhost:4001/gaming/",
+    "http://localhost:4001/education/"
+  ]
 }
