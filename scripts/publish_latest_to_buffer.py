@@ -22,6 +22,7 @@ from __future__ import annotations
 import json
 import logging
 import os
+import time
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any, Final, NamedTuple, Protocol, cast
@@ -208,37 +209,61 @@ def get_facebook_channel_ids() -> set[str]:
 def buffer_graphql(query: str, variables: dict[str, Any]) -> dict[str, Any]:
     """Send a GraphQL request to Buffer.
 
+    Retries transient server errors (HTTP 5xx) with exponential backoff, since
+    Buffer occasionally returns 502/504 during brief outages. A single bad
+    gateway should not fail the whole publish run.
+
     Returns:
         The parsed JSON response data.
 
     Raises:
         BufferGraphQLError: If the response contains GraphQL errors.
-        BufferHttpError: If the HTTP request fails.
+        BufferHttpError: If the HTTP request fails after all retries.
     """
     token = require_env("BUFFER_API_KEY")
 
-    response = requests.post(
-        BUFFER_API_URL,
-        headers={
-            "Authorization": f"Bearer {token}",
-            "Content-Type": "application/json",
-        },
-        json={
-            "query": query,
-            "variables": variables,
-        },
-        timeout=20,
-    )
+    max_attempts = 4
+    base_delay = 2.0
 
-    if not response.ok:
-        raise BufferHttpError(response.status_code, response.text)
+    for attempt in range(1, max_attempts + 1):
+        response = requests.post(
+            BUFFER_API_URL,
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Content-Type": "application/json",
+            },
+            json={
+                "query": query,
+                "variables": variables,
+            },
+            timeout=20,
+        )
 
-    data = response.json()
+        if response.ok:
+            data = response.json()
 
-    if "errors" in data:
-        raise BufferGraphQLError(data["errors"])
+            if "errors" in data:
+                raise BufferGraphQLError(data["errors"])
 
-    return cast("dict[str, Any]", data["data"])
+            return cast("dict[str, Any]", data["data"])
+
+        # Retry only transient server errors (5xx). Client errors (4xx) are
+        # not retried because they indicate a bad request or auth problem.
+        if response.status_code < 500 or attempt == max_attempts:
+            raise BufferHttpError(response.status_code, response.text)
+
+        delay = base_delay * (2 ** (attempt - 1))
+        logger.warning(
+            "Buffer returned HTTP %s (attempt %d/%d). Retrying in %.1fs...",
+            response.status_code,
+            attempt,
+            max_attempts,
+            delay,
+        )
+        time.sleep(delay)
+
+    # Unreachable: the loop always raises or returns. Kept for type checkers.
+    raise BufferHttpError(0, "unreachable")
 
 
 def load_publish_state(state_file: Path) -> dict[str, Any]:
