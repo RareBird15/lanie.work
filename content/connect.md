@@ -68,15 +68,6 @@ presence following a community merger.
 - **Join:**
   [Multiple Disabilities Peer to Peer Support Group on Facebook](https://www.facebook.com/groups/multipledisabilities)
 
-## Educational Advocacy
-
-### Online Education for the Disabled
-
-A group for discussing and improving accessibility in digital learning environments.
-
-- **Platform:** Groups.io
-- **Join:** [Online Education on Groups.io](https://groups.io/g/online-edu-for-disabled/)
-
 ## Faith-Based Support
 
 ### Imago Dei Disability Fellowship
