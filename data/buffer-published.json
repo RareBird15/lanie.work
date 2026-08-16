@@ -201,6 +201,20 @@
         "published_at": "2026-07-22T01:18:32.763690+00:00"
       }
     },
+    "https://lanie.work/advocacy/the-standing-order/": {
+      "6a0f900a090476fb99471f86": {
+        "buffer_post_id": "6a81ecdb12d0699d89a77e62",
+        "published_at": "2026-08-16T17:01:20.486752+00:00"
+      },
+      "6a0f903f090476fb994720fb": {
+        "buffer_post_id": "6a81ece03486edd56d160415",
+        "published_at": "2026-08-16T17:01:21.803997+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "6a81ecd9cb308e1e8d918139",
+        "published_at": "2026-08-16T17:01:15.125888+00:00"
+      }
+    },
     "https://lanie.work/advocacy/the-words-that-dont-translate/": {
       "6a0f8fce090476fb99471de7": {
         "buffer_post_id": "manual-dedup",
