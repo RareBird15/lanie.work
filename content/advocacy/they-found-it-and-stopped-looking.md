@@ -56,7 +56,7 @@ He had his whole family convinced. He had school staff convinced. He had my mom 
 
 My mom went my entire childhood thinking I was just blind. No other disabilities. She had the signs in front of her the whole time and no framework to read them. She'd had to give me enemas and a special soy formula. When she tried to breastfeed me, I always seemed hungry, and I hurt her badly enough that she described her breasts as looking like hamburger meat. She thought it was colic.
 
-There were signs of autism too, and of me not being comfortable in my own body. I talked early but walked late. I crawled and walked the same day, when I was two. My mom thought it was because I couldn't see what I wanted to go for, so she'd line M&Ms along the side of the couch to lure me. I cried unless I was in the swing with the vacuum running. Or on top of the washer while it was going. Or being held while my dad drove me around, so my mom could sleep.
+There were signs of autism too, and of me not being comfortable in my own body. I talked early but walked late. I crawled and walked the same day, when I was two. My mom thought it was because I couldn't see what I wanted to go for, so she'd line Oreo cookies along the side of the couch to lure me. I cried unless I was in the swing with the vacuum running. Or on top of the washer while it was going. Or being held while my dad drove me around, so my mom could sleep.
 
 Those weren't quirks. That was a nervous system asking for what it needed, years before anyone had a name for it.
 
