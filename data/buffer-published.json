@@ -229,6 +229,20 @@
         "published_at": "2026-08-16T17:01:15.125888+00:00"
       }
     },
+    "https://lanie.work/advocacy/the-tide-and-the-undertow/": {
+      "6a0f900a090476fb99471f86": {
+        "buffer_post_id": "6a89defe859b98c365f2a550",
+        "published_at": "2026-08-22T17:40:17.718459+00:00"
+      },
+      "6a0f903f090476fb994720fb": {
+        "buffer_post_id": "6a89df02c5db1e9cdce7522f",
+        "published_at": "2026-08-22T17:40:19.254993+00:00"
+      },
+      "6a55efc080cc80cdcaaff111": {
+        "buffer_post_id": "6a89defd859b98c365f2a51c",
+        "published_at": "2026-08-22T17:40:14.325038+00:00"
+      }
+    },
     "https://lanie.work/advocacy/the-words-that-dont-translate/": {
       "6a0f8fce090476fb99471de7": {
         "buffer_post_id": "manual-dedup",
