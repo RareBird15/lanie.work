@@ -8,7 +8,7 @@ feedparser==6.0.14
     # via lanie-work (pyproject.toml)
 idna==3.19
     # via requests
-python-dotenv==1.2.2
+python-dotenv==1.2.3
     # via lanie-work (pyproject.toml)
 requests==2.34.2
     # via lanie-work (pyproject.toml)
