@@ -1,7 +1,7 @@
 ---
 title: "The Computer They Almost Didn't Let Me Bring"
 date: 2026-07-13
-draft: true
+draft: false
 categories:
   - Advocacy
 tags:
@@ -27,7 +27,7 @@ They said yes. And that yes is the reason I can do anything.
 
 For me, a computer is communication. It's how I talk to the world. It's regulation, because when I'm autistic and
 overloaded, having a screen reader and a keyboard and a predictable text interface is what brings my nervous system back
-down. It's learning, because I'm a student. It's advocacy, because I write about disability rights from inside the
+down. It's learning, because I'm always learning. It's advocacy, because I write about disability rights from inside the
 system that's supposed to be caring for me. It's community, because every disabled space I belong to is online. It's
 independence, because with it I can manage my own schedule, my own writing, my own research, and my own care
 coordination without depending on someone else to do it for me.
@@ -56,7 +56,7 @@ optional. They are survival needs.
 
 The system counted whether I needed a bed. It almost didn't count whether I needed my life.
 
-I'm writing this from that computer. I've published 23 articles from it. I built an accessible game from it. I advocated
+I'm writing this from that computer. I've published more than 50 articles from it. I built an accessible game from it. I advocated
 for myself and other disabled people from it. I did all of it from a nursing home room on a desktop tower that someone
 almost said no to.
 
