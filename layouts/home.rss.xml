@@ -59,7 +59,7 @@
         {{- range .GetTerms "categories" }}
           <category domain="{{ .Permalink }}">{{ .LinkTitle }}</category>
         {{- end }}
-        <description>{{ .Summary | transform.XMLEscape | safeHTML }}</description>
+        <description>{{ .Description | transform.XMLEscape | safeHTML }}</description>
         <content:encoded>{{ `<![CDATA[` | safeHTML }}{{ .Content | safeHTML }}{{ `]]>` | safeHTML }}</content:encoded>
       </item>
     {{- end }}
