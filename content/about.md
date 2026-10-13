@@ -31,8 +31,8 @@ My current focus includes:
   like Rooted in Rights.
 - **Accessibility & Usability Testing:** Freelance feedback on websites, apps, games, developer tools, and technical
   workflows from the perspective of a multiply disabled assistive technology user.
-- **Game Development:** I design and direct Everrealm, a screen-reader-first kingdom-building game built for blind and
-  multiply disabled players.
+- **Game Development:** I design and direct two screen-reader-first browser games built for blind and multiply disabled
+  players: Everrealm, a kingdom-building game, and Alembic, a text alchemy game.
 - **Theology & History:** Exploring broader Christian history and Gnosticism. I value spiritual exploration that looks
   beyond narrow traditional frameworks to find deeper meaning and historical context.
 
@@ -44,6 +44,8 @@ My work spans writing, advocacy, accessibility testing, and game development:
   My writing focuses on the lived experience of being multiply disabled in systems that weren't designed for complexity.
 - **Everrealm:** I design and direct a screen-reader-first kingdom-building game built specifically for blind and
   multiply disabled players. I set the vision and direct AI-assisted implementation rather than coding hands-on.
+- **Alembic:** A screen-reader-first text alchemy game. Combine elements to discover 132 of them and chase 26 milestone
+  goals, each read aloud with a line of flavor. Free, browser-based, and open source.
 - **Apache Restoration & Design:** I'm the **IT Manager and Tech Support** for my mother's restoration business. I
   handle software evaluation, systems setup, and operational documentation to keep the business running smoothly.
 - **Accessibility, Usability, and Product Feedback:** I provide freelance feedback on websites, apps, games, developer

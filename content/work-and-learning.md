@@ -36,11 +36,13 @@ weren't designed for complexity.
 I've submitted work to publications like Rooted in Rights and write regularly for this site across Technology, Advocacy,
 Gaming, Faith, and Education categories.
 
-## Game Development: Everrealm
+## Game Development
 
-I design and direct **Everrealm**, a screen-reader-first kingdom-building game built for blind and multiply disabled
-players. I set the creative and accessibility vision, design game mechanics, and direct AI-assisted implementation
-rather than coding hands-on. The game is in active development with regular releases.
+I design and direct screen-reader-first browser games built for blind and multiply disabled players. I set the creative
+and accessibility vision, design game mechanics, and direct AI-assisted implementation rather than coding hands-on.
+
+- **Everrealm**: a kingdom-building game, in active development with regular releases.
+- **Alembic**: a text alchemy game, in alpha.
 
 ## Technical Background
 
@@ -83,3 +85,14 @@ The game is in active development with regular releases on GitHub.
 
 - **[Everrealm on GitHub](https://github.com/rarebird15/everrealm)** – Explore the game, contribute, or follow
   development.
+
+### Alembic
+
+**Alembic** is a screen-reader-first text alchemy game. Start with four elements (Fire, Water, Earth, and Air) and
+combine them two at a time to discover 132 elements and chase 26 milestone goals, every one with a short line of flavor
+read aloud when you find it. No drag-and-drop, no timers, no fail states.
+
+The game is in alpha and saves your progress automatically in the browser. The source is open on GitHub.
+
+- **[Play Alembic](https://alembic.lanie.work)** – free, runs in any browser, no account.
+- **[Alembic on GitHub](https://github.com/RareBird15/alembic)** – explore the code or follow development.
