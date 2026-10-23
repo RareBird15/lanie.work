@@ -2,7 +2,7 @@
 title: Resources
 slug: resources
 date: 2026-04-13
-lastmod: 2026-06-28
+lastmod: 2026-10-23
 description:
   Tools, platforms, communities, and resources that help me manage technology, accessibility, health, learning, and
   daily life.
@@ -35,46 +35,18 @@ These pages provide context for my work, language, and accessibility perspective
 These are the core tools I use to access computers, phones, and the web.
 
 - **[NVDA (NonVisual Desktop Access)](https://www.nvaccess.org/):** My main screen reader. It's free, open source, and
-  highly customizable, which matters a lot in my development workflow.
-- **[Humanware Brailliant BI 40X](https://store.humanware.com/hca/brailliant-bi-40x-braille-display.html):** My
-  refreshable braille display. It's essential for reading and navigating digital content in a way that works for me.
+  highly customizable, which matters a lot in my workflow.
 - **[VoiceOver](https://www.apple.com/accessibility/features/?vision):** I use this on my iPhone for mobile
   accessibility. It lets me use my phone with gestures, braille, and speech.
 - **[Google Chrome](https://www.google.com/chrome/):** My preferred browser for web-based tasks. It works well with my
   screen reader, and most of my web work happens there. Chrome Autobrowse can also help when I run into inaccessible
   sites.
-- **[Betterbird](https://www.betterbird.eu/):** My preferred email client. It's a Thunderbird fork with better
-  accessibility and performance. With the Provider for Google Calendar add-on, it works smoothly with both Google
-  Calendar and Google Tasks.
 
-## Programming and Site Building
+## This Website
 
-These are the tools I use for coding, site work, and technical learning.
-
-### Core Stack
-
-- **[VS Code](https://code.visualstudio.com/):** My main editor for Python, Lua, and SQL. It provides a stable,
-  text-first environment that works well with my screen reader.
-- **[Hugo](https://gohugo.io/):** The static site generator I use for this website. I switched from Pelican because Hugo
-  builds much faster, requires fewer plugins, and has accessible themes that need far less tweaking. Its templating is
-  also easier for me to work with than Jinja2.
-- **[The uv Package Manager](https://github.com/astral-sh/uv):** A very fast Python package manager I use for project
-  management and tool syncing.
-- **[GitHub](https://github.com/):** The platform I use for version control and collaboration.
-- **[Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/):** I use this to run a Linux
-  environment (openSUSE) while keeping the accessibility features I rely on in Windows.
-- **[GitHub Copilot](https://github.com/features/copilot):** An AI coding assistant that helps me write code faster and
-  catch mistakes sooner.
-
-### CLI and Terminal Workflow
-
-- **[fzf](https://github.com/junegunn/fzf), [ripgrep](https://github.com/BurntSushi/ripgrep), and
-  [fd](https://github.com/sharkdp/fd):** Command-line search and navigation tools I use every day. They are
-  keyboard-first, produce clean text output, and help me browse filesystems and codebases without visual interfaces.
-- **[Tmux](https://github.com/tmux/tmux):** A terminal multiplexer that keeps my sessions alive across disconnects. I
-  use it to run persistent processes on WSL.
-- **[openSUSE](https://www.opensuse.org/):** My Linux distro inside WSL. It gives me full control of my dev environment
-  while I stay on a Windows machine with reliable screen reader support.
+- **[Hugo](https://gohugo.io/):** The static site generator behind this website. It builds fast and has accessible
+  themes that need little tweaking.
+- **[GitHub](https://github.com/):** Where the source for this site, Everrealm, and my other projects lives.
 
 ## Productivity, Communication, and Digital Security
 
@@ -87,13 +59,13 @@ These tools lower my cognitive load and help me stay organized and secure.
   may earn account credit at no extra cost to you.
 - **[Ditto Clipboard Manager](https://ditto-cp.sourceforge.io/):** Lets me keep track of multiple copied items, which
   cuts down on extra typing.
-- **[Foam](https://docs.foamnotes.com/):** A VS Code-based note system I use for private notes and personal knowledge
-  management.
+- **[Obsidian](https://obsidian.md/):** My note-taking and personal knowledge management app. It's where I keep my
+  notes, projects, and writing plans.
 
 ### Email, Calendar, and Communication
 
-- **[Gmail](https://mail.google.com/):** My main email service. I rely on its accessibility and integration with other
-  Google tools.
+- **[Gmail](https://mail.google.com/):** My main email service. I use it in the browser, which keeps everything in one
+  place and works well with my screen reader.
 - **[Google Calendar](https://calendar.google.com/):** I use this to manage my schedule and appointments. It works well
   enough with my screen reader for the way I use it.
 - **[Google Tasks](https://tasks.google.com/):** I use this to keep track of my to-dos. It integrates well with Google
@@ -123,25 +95,25 @@ These tools lower my cognitive load and help me stay organized and secure.
 ## AI Tools and Memory Systems
 
 These are AI tools and memory systems I use or have tried to reduce cognitive load, preserve context, and support
-coding, writing, accessibility analysis, planning, and automation experiments.
+writing, accessibility analysis, planning, and automation experiments.
 
 ### Active Tools
 
-- **[ChatGPT](https://chatgpt.com/):** One of my main AI support tools. I use it for coding help, writing support,
-  accessibility analysis, executive-function support, and turning rough thoughts into structured plans.
 - **[Google Gemini](https://gemini.google.com/):** I use this for AI-assisted writing, brainstorming, research, and
   organizing rough thoughts when I'm overwhelmed.
 - **[Google AI Pro](https://one.google.com/about/google-ai-plans/):** I use Google AI Pro through my personal Google
   account for Gemini, Google Drive storage, and AI features that are bundled into the plan. It's especially useful
   because it fits into the Google ecosystem I already use and can be shared with family.
 
+### Active Personal Assistant
+
+- **[Hermes Agent](https://hermes-agent.nousresearch.com/):** An AI agent I use for personal assistance and automation.
+  It helps me with email, website updates, writing, and day-to-day tasks.
+
 ### Experimental or Occasional
 
 - **[Ollama](https://ollama.com/):** A local AI model runner I plan to use more after my computer upgrade, especially
   for experiments that would otherwise be limited by API usage or subscription caps.
-- **[Hermes Agent](https://hermes-agent.nousresearch.com/):** An AI agent platform I've experimented with for automated
-  workflows and personal assistance. I'm not currently running it because cloud model usage became too expensive, but I
-  may revisit it with local models through Ollama.
 
 ## Hardware and Custom Solutions
 
@@ -149,8 +121,6 @@ These are tools and custom solutions that make my physical setup work better for
 
 - **[Keychron K10 Max](https://www.keychron.com/):** This mechanical keyboard provides the tactile response I need to
   know exactly where my hands are.
-- **[Apache Restoration and Design](https://apacherestoration.pro):** My mother's contracting business. She has built
-  custom physical solutions for me in the past that respect my tactile needs and energy limits.
 - **[HydroFlask](https://www.hydroflask.com/):** Staying hydrated is a mechanical necessity for managing my health. I
   use these because they are durable and keep water at a consistent temperature.
 
@@ -172,16 +142,6 @@ Managing multiple chronic conditions takes a systems approach.
 
 These resources support my writing, advocacy, and spiritual exploration.
 
-- **[Boot.dev](https://www.boot.dev/):** A platform I used to build my technical foundations in Python, Linux, Git, and
-  core programming concepts. The skills I built there still inform my accessibility testing and technology writing
-  today.
-- **[Ledgeroo](https://ledgeroo.com/):** A gamified accounting program I use for practical bookkeeping and financial
-  workflows for my family's business. Its progressive challenge system helps me work through accounting concepts one
-  step at a time.
-- **[Exercism](https://exercism.org/):** A hands-on coding practice platform I've used for structured exercises,
-  especially for people who learn well by solving small problems.
-- **[Codecademy](https://www.codecademy.com/):** A self-paced learning platform I've used for programming and computer
-  science foundations.
 - **[World Bible Plans](https://www.worldbibleplans.com/):** A resource I use for structured study and reading plans.
 - **[BibleGateway](https://www.biblegateway.com/):** A persistent text resource for looking up and comparing different
   Bible translations.
@@ -210,11 +170,11 @@ timed reactions.
 - **[Evolve](https://pmotschmann.github.io/Evolve/):** A text-based civilization simulation focused on optimization.
 - **[A Dark Room](https://adarkroom.doublespeakgames.com/):** A minimalist text-based game focused on resource
   management through menus.
-- **[EmpireMUD](https://empiremud.net/):** A text game that uses coordinates and pathing to help me navigate without
-  needing a mental map.
 - **[Stellar Aeon](https://stellaraeon.com:4081/):** A text-based space exploration game with a strategy focus.
 - **[Erion](https://www.erionmud.com/):** A MUD (Multi-User Dungeon) that focuses on exploration and social interaction
   through text commands.
+- **[Idle Ant Farm](https://idle-ant-farm.com/):** An idle game about managing an ant farm. It's driven by text and
+  numbers, which I can track with my screen reader.
 
 ## Technical and Disability Communities
 
@@ -224,10 +184,6 @@ timed reactions.
   community posts about accessibility.
 - **[r/blind](https://www.reddit.com/r/blind/):** A subreddit where blind and visually impaired people share
   experiences, ask questions, and discuss accessibility and blindness.
-- **[Program-l](https://www.freelists.org/list/program-l):** A mailing list for blind programmers. It's helpful for
-  questions about programming, tools, and accessibility as a blind developer.
-- **[Touching-python](https://groups.io/g/Touching-python):** A mailing list for blind Python programmers. It's useful
-  for Python-specific questions from other blind programmers.
 - **[r/spicyautism](https://www.reddit.com/r/spicyautism/):** A subreddit for autistic people with higher support needs.
   I find it validating because it talks about parts of autism that often get ignored in lower-support-needs spaces.
 

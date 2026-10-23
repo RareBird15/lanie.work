@@ -40,7 +40,7 @@ disabilities.
 
 A working community for people with multiple disabilities and the allies who want to help build with us. This is where MultAbilities Academy is taking shape. Includes Sable, an AI assistant who can answer questions about the project, explain concepts, and help you find what you need.
 
-- **Join:** [MultAbilities on Slack](https://join.slack.com/t/multabilities/shared_invite/zt-4500c82hg-YgsCuuihKw5Neqhd1dUCow)
+- **Join:** Slack is invite-based. Email me at [lanie@lanie.work](mailto:lanie@lanie.work) or use the [contact form](/contact/) and mention MultAbilities, and I'll send you an invite.
 
 ### MultAbilities (GroupMe)
 
